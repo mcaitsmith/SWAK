@@ -927,7 +927,9 @@ screen history():
 
 ## This determines what tags are allowed to be displayed on the history screen.
 
-define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
+# define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
+define gui.history_allow_tags = { "rt", "rb", "art", "color" }
+
 
 
 style history_window is empty

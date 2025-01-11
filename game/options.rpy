@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("SWAK")
+define config.name = _("Project Penumbral")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -30,6 +30,12 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+GAME MECHANICS
+
+- FLOWERS: find a flower somewhere in the passage of time. FLOWERS exist across time.\n
+- CHOICES: determine which branch of history is followed.\n
+- SKIPPING: pauses in-game time\n
+- HISTORY: reveals trigger points in time. These are points that may be affected by the other mechanics.
 """)
 
 
