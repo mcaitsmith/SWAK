@@ -6,7 +6,7 @@ label mainrun:
 
     delilah "Dialogue START{alt}{noalt}{color=#f00} hidden code{/color}{/noalt}{/alt}"
 
-    call intro
+    call intro from _call_intro
 
     delilah "Dialogue END"
 

@@ -126,7 +126,7 @@ label start:
     $ renpy.block_rollback() # prevent rollback before this point
     $ config.rollback_enabled = True # re-enable rollback
 
-    call checkrun
+    call checkrun from _call_checkrun
 
     jump mainrun
 

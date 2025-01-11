@@ -22,7 +22,7 @@ label dinner_convo:
             delilah "Dialogue choice" (callback = functools.partial(inctime, trig=True))
             "go with Sandra":
                 hide cody with dissolve
-                call smoke_break
+                call smoke_break from _call_smoke_break
             "stay inside":
                 delilah "In this scene, the player talks with Cody and discovers that he found one of the glowing flowers in the front yard. If Delilah asks for it back he attempts to bargain for it, but, being a little brat, tears it apart instead of giving it to you. You can reattempt the conversation as many times as you want, trying different options each time, even explaining the situation with Julian to him, but he laughs and rips the flower up every time."
                 show sandra neutral at right with dissolve
