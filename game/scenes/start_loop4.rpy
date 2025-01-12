@@ -5,7 +5,7 @@ label start_loop4:
     delilah "She takes inventory and reminds herself that there are only two flowers left to find."
     delilah "The player can continue with the story by going and"
     menu:
-        delilah "Dialogue choice" (callback = functools.partial(inctime, trig=True))
+        delilah "Dialogue choice" (callback = functools.partial(inctime))
         "Open the door for her mom":
             hide julian with dissolve
             jump open_door

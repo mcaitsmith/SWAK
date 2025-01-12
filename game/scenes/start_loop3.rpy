@@ -3,7 +3,7 @@
 label start_loop3:
     delilah "Delilah sees that she now has two flowers in hand and is back at the start of the evening. From here the player can immediately"
     menu:
-        delilah "Dialogue choice" (callback = functools.partial(inctime, trig=True))
+        delilah "Dialogue choice" (callback = functools.partial(inctime))
         "go back to the shore":
             jump back_to_shore
         "Open the door":

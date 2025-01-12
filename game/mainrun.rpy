@@ -8,6 +8,9 @@ label mainrun:
 
     call intro from _call_intro
 
+    $ renpy.choice_for_skipping() # stop skipping
+    $ _skipping = False
+
     delilah "Dialogue END"
 
     hide delilah with dissolve

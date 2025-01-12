@@ -11,7 +11,7 @@ label back_to_shore_final:
         pass
     delilah "Delilah has three possible choices she can follow from here:"
     menu:
-        delilah "Dialogue choice" (callback = functools.partial(inctime, trig=True))
+        delilah "Dialogue choice" (callback = functools.partial(inctime))
         "Ending 1":
             delilah "Delilah can force Julian to take the flowers and go home, resulting in a heartfelt moment in which they tearfully say goodbye and kiss. The story ends with her going to take care of her brother and mom as they endure the crisis that lies ahead."
             hide julian with dissolve

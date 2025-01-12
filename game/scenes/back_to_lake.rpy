@@ -2,10 +2,10 @@
 
 label back_to_lake:
     show bg scene3 with dissolve
-    delilah "Sandra is receptive and follows Delilah back to the lake but when they get there Julian is gone. Sandra believes Delilah that there is a boy out there who needs help, but she decides that it's best to just ignore the situation. \"Someone will find him and get him help, let's just go inside.\" "
-    delilah "Delilah is deeply disturbed by this."
+    delilah "Sandra is receptive and follows Delilah back to the lake but when they get there Julian is gone. Sandra believes Delilah that there is a boy out there who needs help, but she decides that it's best to just ignore the situation. \"Someone will find him and get him help, let's just go inside.\" " (callback = functools.partial(inctime, checkskip=True))
+    delilah "Delilah is deeply disturbed by this." (callback = functools.partial(inctime, checkskip=True))
     menu:
-        delilah "Dialogue choice" (callback = functools.partial(inctime, trig=True))
+        delilah "Dialogue choice" (callback = functools.partial(inctime, checkskip=True))
         "go search for Julian":
             hide sandra with dissolve
             jump search_for_julian
