@@ -5,7 +5,7 @@
 
 init python:   
     import functools 
-    time = 0 #initialize time
+    gametime = 0 #initialize time
     phase = 0 # initialize phase
     run = 1 # initialize run
 
@@ -23,12 +23,12 @@ init python:
 
     # define function to increment time by 1 every line of dialogue + add flowers/triggers
     def inctime(event, interact=True, fnum=None, g1=False, g2=False,g3=False,g4=False,g5=False, checkskip=False,**kwargs):
-        global time
+        global gametime
         global flowers
         global moonglitches
         global solves
         if event == "begin":
-            time +=1
+            gametime +=1
 
             if fnum == 1:
                 flowers.flower1 = True
@@ -139,9 +139,9 @@ init python:
             self.ending3 = False
 
     def history_time_callback(x):
-        global time
+        global gametime
         global run
-        x.what = "RUN " + str(run) + " | TIME " + str(time) + "\n" + x.what
+        x.what = "RUN " + str(run) + " | TIME " + str(gametime) + "\n" + x.what
     config.history_callbacks.append(history_time_callback)
     # Add new function to the history callbacks
     # if history_trigger_callback not in config.history_callbacks:
@@ -168,6 +168,7 @@ image moon_phase4 = ConditionSwitch(
     "True", "images/props/moon_phase4.png")
 image moon_phase5 = "images/props/moon_phase5.png"
 
+# Moon puzzle loop 2
 # 1 starts at phase 2 - rollback to 2 (1) - skip to 3 (2) - click right choice to 4 (3) - skip to 5 (4)
 # note need to have "Unseen Text" or "After Choices" selected in prefs for skipping to work
 
@@ -193,14 +194,29 @@ image moon_phase4_glitch:
     "images/props/moon_phase5.png"
 
 screen showtime: # screen for showing time
-    # text "Time [time]" xpos 0.1 ypos 0.1
-    if puzzles.loop2 and not solves.loop2:
-        text "Glitches: 1-[moonglitches.glitch1] 2-[moonglitches.glitch2] 3-[moonglitches.glitch3] 4-[moonglitches.glitch4] 5-[moonglitches.glitch5]" xpos 0.1 ypos 0.1
-    if solves.loop2:
-        text "Glitches: solved!" xpos 0.1 ypos 0.1
+    # text "Time [gametime]" xpos 0.1 ypos 0.1
+    if run==2 and puzzles.loop2 and not solves.loop2:
+        if moonglitches.glitch1:
+            add 'images/props/moon_phase1.png' zoom 0.3 xpos 0.1 ypos 0.15
+        if moonglitches.glitch2:
+            add 'images/props/moon_phase2.png' zoom 0.3 xpos 0.15 ypos 0.15
+        if moonglitches.glitch3:
+            add 'images/props/moon_phase3.png' zoom 0.3 xpos 0.2 ypos 0.15
+        if moonglitches.glitch4:
+            add 'images/props/moon_phase4.png' zoom 0.3 xpos 0.25 ypos 0.15
+        if moonglitches.glitch5:
+            add 'images/props/moon_phase5.png' zoom 0.3 xpos 0.3 ypos 0.15
+        # text "Glitches: 1-[moonglitches.glitch1] 2-[moonglitches.glitch2] 3-[moonglitches.glitch3] 4-[moonglitches.glitch4] 5-[moonglitches.glitch5]" xpos 0.1 ypos 0.1
+    if run==2 and solves.loop2:
+        # text "Glitches: solved!" xpos 0.1 ypos 0.1
+        add 'images/props/moon_phase1.png' zoom 0.3 xpos 0.1 ypos 0.15
+        add 'images/props/moon_phase2.png' zoom 0.3 xpos 0.15 ypos 0.15
+        add 'images/props/moon_phase3.png' zoom 0.3 xpos 0.2 ypos 0.15
+        add 'images/props/moon_phase4.png' zoom 0.3 xpos 0.25 ypos 0.15
+        add 'images/props/moon_phase5.png' zoom 0.3 xpos 0.3 ypos 0.15
 
 screen eclipse: # screen for showing eclipse
-    if phase == 0:
+    if phase == 0 or phase > 5:
         add 'images/props/moon.png' xpos 0.6 ypos 0.05
     elif phase == 1:
         add 'moon_phase1' xpos 0.6 ypos 0.05
@@ -215,13 +231,14 @@ screen eclipse: # screen for showing eclipse
 
 screen showflower: # screen for showing flowers
     if flowers.flower1:
-        text "Flower 1" xpos 0.1 ypos 0.15
+        add 'images/props/flower.png' zoom 0.5 xpos 0.1 ypos 0.025
+        # text "Flower 1" xpos 0.1 ypos 0.15
     if flowers.flower2:
-        text "Flower 2" xpos 0.1 ypos 0.2
+        add 'images/props/flower.png' zoom 0.5 xpos 0.15 ypos 0.025
     if flowers.flower3:
-        text "Flower 3" xpos 0.1 ypos 0.25
+        add 'images/props/flower.png' zoom 0.5 xpos 0.2 ypos 0.025
     if flowers.flower4:
-        text "Flower 4" xpos 0.1 ypos 0.3
+        add 'images/props/flower.png' zoom 0.5 xpos 0.25 ypos 0.025
 
 screen flower1_pick:
     imagebutton:
