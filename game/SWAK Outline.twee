@@ -1,0 +1,288 @@
+:: StoryTitle
+SWAK Outline
+
+
+:: StoryData
+{
+  "ifid": "B303849E-4BB3-4096-A814-511045A623BF",
+  "format": "Harlowe",
+  "format-version": "3.3.5",
+  "start": "Game Start",
+  "zoom": 1
+}
+
+
+:: Game Start {"position":"600,1500","size":"100,100"}
+Start
+
+Delilah was stuck. She was between the tumultuous indignities of adolescence and the quiet ennui of adulthood, frozen in place before this choice that life had presented her with. Right on the line of 'too old to be acting like this' and 'too young to be trusted.' 
+
+Sandra: "So, have you considered what colleges you want to tour next summer?"
+
+She waited till the end of the ride to ask her daughter this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that.
+
+Delilah: "That's not for another nine months."
+
+Sandra: "Sooner than you think, Del. Always good to get a head start. Plus, I have my friend who teaches at State. Could get you a tour any time you like!"
+
+Cody: "Ugh, I can't wait for you to be gone."
+
+Delilah: "Shut up, insect." She punches her little brother in the arm.
+
+Cody: "Ow!"
+
+Sandra: "Oh hush, you'll be missing her when she's gone. Just you wait." 
+
+Cody: "Yeah right. She'll be back every weekend, I bet, if she doesn't flunk out that is." 
+
+Delilah: "I said shut up!"
+
+Cody: "Make me!" 
+
+Sandra: "Quiet! We're here!" 
+
+The house was lifeless, suspended in time until the two weekends per year that they used the place. Nearly every house on the block was someone's home away from home, loved only by the landscaping and housekeeping staff that kept them from becoming a cobweb metropolis of wild animals.
+
+Delilah was thinking a lot lately about the difference between a house and a home. For most of her life, she thought they were synonymous. But recently she realized that a home was a place you felt at home, a house was a place you lived in.
+
+She didn't feel at home anywhere. Not anymore. 
+
+Sandra: "Hey, Del, my front door key isn't working." 
+
+Delilah: "So?"
+
+Sandra: "So...can you go try the backdoor? The spare should still be under the tacklebox next to the hottub."
+
+[Fine.]
+[Make Cody do it!]
+[Do it yourself.]
+
+Sandra: "Thanks, Del. You're a peach."
+
+Cody: "Yeah, Del, thanks." He laughs. 
+
+Delilah stamped her feet, making sure the earth could feel how unfair this situation was.
+
+Each house in the neighborhood backed up to the lake, a fleet of boats and jetskis parked at each private dock. It was fun to spend the summer here as a kid, when Dad would take them out on the water, but now...well, things were different. 
+
+[[Wait, who is that?|notice shadowy figure]]
+
+[[Just open the damn door.|Ignore shadowy figure]]
+
+
+
+:: General Notes {"position":"700,200","size":"100,100"}
+General Notes
+
+Lines with single brackets [like this] are meant to be dialogue choices that both lead to the same outcome. 
+
+Characters: 
+
+Delilah: 
+- Typically an overachiever in school who has recently started acting out in very overt and self-destructive ways. Her grades are slipping and her friendships are becoming distant. Few conversations between her and family don't end in an explosive fight. 
+- Three months ago she found a letter from another woman in her dad's suitcase, indicating that he's been unfaithful on his business trips. She stole the note and left it in her mother's dresser drawer, so as to carefully let her know what is going on. Nothing came of it and Delilah has been frustrated with the lack of accountability. She feels that her entire family is a joke. 
+
+Sandra: 
+- Delilah and Cody's mother. She works as a real-estate agent in the suburbs outside of Chicago but her husband is the primary breadwinner as a CFO to local investing firm. 
+- She isn't sure why Delilah has been acting out but is losing her patience more and more every day. Part of her thinks that it's just typical teenager angst but even she wasn't this bad as a kid. 
+- She found a love letter from another woman addressed to her husband in her dresser drawer. The letter was filled with graphic sexual details but also incredibly sweet and thoughtful observations about the man she'd been married to for 20 years. She found the letter three months ago and is giving the decision to leave him some weight. 
+- Sandra has decided not to tell her children about it until the time is right. She desperately wants to protect her kids from this discovery. They aren't ready to know yet.
+
+Cody: 
+- Barely 13 and thinks he's smarter than everyone else. Considers himself a "child prodigy" despite his slightly-above-average grades.
+- Obsessed with comic books, especially "arachno-kid". Still plays with toys in secret despite telling everyone at school that he sold his "collectibles".
+- He's snarky and bugs his sister but only to diffuse the tension that keeps popping up. For the past three months, she's been acting like a real jerk for no reason. 
+
+Julian: 
+- Lives in a flowershop with his grandparents. Was out picking the famously incandescent and rare "Selene Lillies" when the world around him suddenly took on a new shape. Where there was an empty field was now a luxury housing development. Everything looks alien here to him. This weird girl in the distance keeps staring at him.
+- Julian lost his parents when he was very young in a plane crash. His grandparents are as good to him as any guardian could be, but their lack of energy meant they couldn't fully 'play' with him growing up. Their failing health meant he had to take care of them from a fairly young age. Because of that, he grew up quickly. What some adults would refer to as "mature for his age" can be recognized by the observant as a deeply held belief that the entire world rest on his shoulders. He can't ask for help. He can't admit when he doesn't know what to do next. 
+- A bouquet of Selene Lillies would sell for enough to keep the lights on for six months at least. 
+- In this new place, he's worried what will happen to his grandparents if he doesn't get back soon. 
+
+
+:: Go get help {"position":"2100,100","size":"100,100"}
+If the player rejects this idea and goes for help, she runs down the street, finds a payphone, and calls for an ambulance. By the time paramedics arrive, there is nobody on the lakeshore. 
+
+The game stops here unless the player uses the history function to try a different choice. 
+
+
+:: Ignore shadowy figure {"position":"1000,1500","size":"100,100"}
+Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house.
+
+Between the dust filling the air, and the mountain of mailbox coupons dropped off by the housekeepers, it's like walking into a snowglobe. Dad's woodcarving projects fill the living room. 
+
+
+:: Intro {"position":"800,500","size":"100,100"}
+Game begins with Delilah, a sixteen year old girl, arriving at her family's lakehouse. It's just her, her mother, and her obnoxious little brother, Cody. They're spending a weekend away while dad is on one of his many frequent business trips. He's frequently absent these days.
+
+Delilah is deeply unhappy for reasons we don't yet know but she gives her mother a hard time and antagonizes Cody. 
+
+When they arrive, it's close to sunset. The key to the front door isn't working so Delilah has been told to try using the back door. She goes around the back and sees the lake. She sees something just along the shore. The player might stop for a moment or go unlock the door. If they stop for a moment they see what looks lke a shadowy figure standing in the distance. Is that a person? If the player has chosen to linger, her mom shouts for her to open the door. 
+
+[[Open the door]]
+
+[[Wait, haven't I been here before? |start loop 2]]
+
+[[Oh god that hurt |start loop 3]]
+
+[[Im sorry I had to do that|start loop 4]]
+
+
+:: Open the door {"position":"1550,525","size":"100,100"}
+Delilah lingers in the house for a moment, taking in childhood memories at the lake house. She examines a few artifacts of her father's presence before her mother and brother start banging on the door. She lets them in and thinks a bit about the figure she saw on the shoreline. 
+
+Fast forward to dinner. Things are tense. Cody tries to break the silence by being his quippy doofusy self and Delilah tears him a new one. A brief, bitter exchange occurs and Mom quickly shuts them down. This is a mistake. Now the attention is on her and the elephant in the room: Where is dad? The player is presented with several dialogue choices in this conversation, all with the same results but conveying different pieces of information about who these people are.
+
+Mom and Delilah fight. Delilah seems to be pushing her buttons, vying to get her to admit to... something...we aren't sure yet, but Mom is stubborn. No matter what she will not acknowledge that anything is amiss. Dinner ends abruptly and Delilah storms out.
+
+[[Outside]]
+
+With one flower in possession, Delilah is quick to let her mom and brother in. She tells them that there's a boy by the lake who needs medical attention.
+
+[[back to the lake]]
+
+
+:: Outside {"position":"2100,500","size":"100,100"}
+After dinner, Delilah is standing along the lake shore watching the waves crash against the rocks. She's contemplating running away forever, abandoning her family and never seeing them again. She wants to grow up. But she also thinks of Cody and despite how much she loathes him, she can't stand imagining him growing up alone. The player is presented with the choice to leave or not but this first round results in the same way regardless. 
+
+She hears movement behind her and turns around. Standing there is Julian, a strange boy around her age, clutching his side in pain and kneeling to the ground. In his hand he's holding a glowing flower. He collapses. 
+
+Delilah takes the flower, presented as a player choice, and notices that something feels different. 
+
+[ end of introduction loop ] 
+
+NOTE:
+If the flower has already been taken on a first loop, there is nothing in Julian's hands. Instead he just collapses then and there. The game stops until the player uses history to try a different passage option. Same happens if Delilah searches for Julian after dinner on the second loop. 
+
+
+:: Stay with him {"position":"2100,300","size":"100,100"}
+(if the player already tried to get help, there is an additional line about deciding that the only option is to just stay here with him)
+
+Delilah decides to stay there on the lakeshore with Julian. They formally introduce each other and talk a bit about their lives. Julian seems resigned to die here, laments about what will happen to his grandparents without him. A few minor dialogue choices are present here which let the player have different responses to various questions/statements, but nothing that alters the course of the game. 
+
+After a moderately lengthy conversation in which Delilah and Julian start a budding friendship with some romantic tension, he begins to die, thanking her for staying with him so he didn't have to die alone. 
+
+After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option. 
+
+
+:: back to the lake {"position":"1575,250","size":"100,100"}
+Sandra is receptive and follows Delilah back to the lake but when they get there Julian is gone. Sandra believes Delilah that there is a boy out there who needs help, but she decides that it's best to just ignore the situation. "Someone will find him and get him help, let's just go inside." 
+
+Delilah is deeply disturbed by this. 
+
+The player can either [[go search for Julian]]
+
+Or [[go back inside]]
+
+
+:: go back inside {"position":"1800,300","size":"100,100"}
+If the player goes back inside, Delilah experiences the dinner conversation again, except her attitude is much harsher with more options to antagonize Cody and Sandra. We get a few more clues as to what is truly upsetting Delilah but we don't outright know it yet. 
+
+The dinner ends in a much more explosive manner than the first time and Delilah can either [[run outside|Outside]]
+
+Or [[tell off her mom before going outside|Outside]]
+
+With the second option Delilah says some incredibly hurtful things, the sort that would make a relationship impossible to fix. It's obvious how hurt Sandra is. Then she goes back to the regular "outside" passage
+
+
+:: go back to the shore {"position":"1325,775","size":"100,100"}
+Delilah goes to the shore to find Julian there again. They're both confused as to how they're alive but they think the Selene Lillies are the source of this. They talk a bit about the time loop situation they're in. Julian shares what he knows about the Selene Lillies: that they're extremely rare and mysterious flowers local to his world. Julian explains that he was in the process of making a bouquet when he found himself here. He thinks that by getting all five flowers he might be able to break the loop and go home. Because of his unstable physical state, he needs Delilah to find all five flowers on her own. 
+
+The player can come back to this scene at any time during the third loop to engage in optional dialogue with Julian. 
+
+When the player is done with this conversation, Delilah can hear her mom calling and can then [[unlock the door for her mom]] 
+
+
+
+:: go search for Julian {"position":"1900,150","size":"100,100"}
+Delilah goes outside to look for the boy she saw. She walks down the shoreline for a while before finding him laying on top of some rocks, fading in and out of consciousness. He's glad to see Delilah again and apologizes for disappearing. He's switching between her reality and his repeatedly and being in her reality is killing him. He describes it almost like "being a weed in someone else's garden". And that he is being pruned. Delilah panics and asks if there is anything she can do. He just asks that she stay with him for a while, talk to him while he dies. 
+
+[[Go get help]]
+
+[[Stay with him]]
+
+
+:: going to the shore for the fourth time {"position":"1200,1000","size":"100,100"}
+At the shore, Julian is standing there waiting for you to meet with him. Delilah tells him about the conversation she just had with Cody, how difficult it was. Julian feels for her and apologizes for her having to go through that. This confuses Delilah since his life is at stake. Sort of dwarfs in comparison. Julian doesn't see it that way. His martyr complex comes through in this moment. 
+
+They discuss that there are only two flowers left to find. Delilah is confounded by where it could be. Julian then notices it just floating in the water near their feet. Easy peasy, right? Not quite.
+
+As Delilah reaches into the water, a fish swims up and eats the flower. Crap. Julian starts to disappear but then suggests Delilah find a way to catch the fish
+
+(Record scratch. All of this is good, and I like it, but also the story is getting a bit big for a one month game jam. Note that I would want to follow this thread for a larger version of the game but for the sake of the jam, I think we need to just cut to the ending of the game from here.)
+
+At the shore, Julian is standing there waiting for you to meet with him. Deliah tells him about the conversation she just had with Cody, how difficult it was. Julian feels for her and apologizes for putting her through that. This confuses Delilah since his life is at stake. Sort of dwarfs in comparison. Julian doesn't see it that way. His martyr complex comes through in this moment. 
+
+They discuss that there is only ONE flower left to find. Delilah is confounded by where it could be. Julian acts suspicious, clutching his shirt pocket. Delilah notices that it's glowing and asks what he has. 
+
+Julian admits to having the flower and apologizes. He admits that he's enjoyed being here with her and wants to be there to comfort her for the family crisis that she's about to endure when she goes home. 
+
+Delilah has three possible choices she can follow from here:
+
+- Delilah can force Julian to take the flowers and go home, resulting in a heartfelt moment in which they tearfully say goodbye and kiss. The story ends with her going to take care of her brother and mom as they endure the crisis that lies ahead. 
+
+- Delilah can embrace Julian with the flowers and follow him back to his world where she will suddenly be trapped in a time loop there.
+
+- Delilah can agree to remain in the time loop with him as the game simply restarts and the time loop begins again. 
+
+
+:: investigate the lake shore {"position":"1300,300","size":"100,100"}
+Delilah goes by the shore to find Julian standing there confused. He remembers Delilah and then everything fading to black. He's afraid of you but then starts to remember that she took the flower from him before everything went black. 
+
+As the two talk, Julian keels over in pain. Delilah asks what's wrong but not even he knows. Delilah's mom calls for her. She leaves to go get help. 
+
+[[Open the door]]
+
+
+:: notice shadowy figure {"position":"800,1600","size":"100,100"}
+Along the shoreline is what looks like a person standing there, but it's hard to make out.
+
+["Hey! You there!"]
+["Can I help you with something?"]
+[Quietly move closer]
+
+They move behind a tree and disappear completely, as if vanishing in thin air.
+
+[[Whatever. Probably one of the landscapers.|Ignore shadowy figure]]
+
+
+:: smoke break {"position":"1700,800","size":"100,100"}
+Delilah and Sandra talk. Delilah considers telling her about Julian but doesn't even bother since she's already seen that her mom doesn't care and will do nothing. In this scene, Delilah reveals to her mom that she knows about her father's infidelity. Sandra is shocked at first, not sure what to make of this discovery. She apologizes for not saying something sooner, but justifies her actions as best as she can. Sandra really is just doing her best while trying to hide her broken heart from her children. 
+
+She ends the conversation by saying "don't tell your brother, I don't think he could handle it." 
+
+After she leaves, Delilah looks out onto the shoreline and sees Julian's body in the distance. Dead. The game stops here unless you roll back.
+
+
+:: start loop 2 {"position":"1100,300","size":"100,100"}
+With the first flower obtained, Delilah is able to access history and make new choices. A new line is added to the intro in which Delilah notices one of the flowers in her hand. The first choice that becomes available is whether to open the door or [[investigate the lake shore]]
+
+Opening the door immediately will lead the player back to the same loop.
+
+
+
+
+:: start loop 3 {"position":"1100,650","size":"100,100"}
+Delilah sees that she now has two flowers in hand and is back at the start of the evening. From here the player can immediately [[go back to the shore]] or [[Open the door]]
+
+
+:: start loop 4 {"position":"1000,900","size":"100,100"}
+At the start of the fourth loop, Delilah is remorseful of having to put Cody through that. When she interacts with him again in the opening sequence, he is completely ignorant of the conversation they just had. Delilah makes a mental note not to put him through that again. 
+
+She takes inventory and reminds herself that there are only two flowers left to find. 
+
+The player can continue with the story by going and [[opening the door for her mom|Open the door]]
+
+Or [[going to the shore for the fourth time]]
+
+
+:: unlock the door for her mom {"position":"1500,800","size":"100,100"}
+Now looking for the Selene Lillies, Delilah proceeds with the previously established dinner scene with Cody and her mom. However, she is a bit less antagonistic of them as she now has a new goal of saving Julian. During dinner, she notices something glowing in Cody's pocket. Sandra steps out to have a smoke while Cody and Delilah clean up the kitchen. 
+
+In this scene, the player talks with Cody and discovers that he found one of the glowing flowers in the front yard. If Delilah asks for it back he attempts to bargain for it, but, being a little brat, tears it apart instead of giving it to you. You can reattempt the conversation as many times as you want, trying different options each time, even explaining the situation with Julian to him, but he laughs and rips the flower up every time. 
+
+After Cody rips up the flower, the player can punch Cody just as Sandra walks in. Delilah gets in trouble and Sandra tells her to come outside. [[smoke break]] 
+
+If the player has completed the smoke break conversation, a new dialogue option is available with Cody in which she can tell him everything about their father's infidelity. Just as Sandra said, the news is devastating and he refuses to accept it, but you go further and further by sharing details from the letter Delilah read. Each detail hurts him more and more. He looks at the flower for a moment, questioning everything he's ever known, and then leaves it on the counter. 
+
+Delilah gets the flower and is able to roll back and start the fourth loop.
