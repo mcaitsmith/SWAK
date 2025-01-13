@@ -2,9 +2,13 @@
 
 label stay_with_him:
     $ phase += 1
+    show screen eclipse onlayer background_overlay with Dissolve(2.0)
+    pause 1.0
     delilah "(if the player already tried to get help, there is an additional line about deciding that the only option is to just stay here with him)"
     delilah "Delilah decides to stay there on the lakeshore with Julian. They formally introduce each other and talk a bit about their lives. Julian seems resigned to die here, laments about what will happen to his grandparents without him. A few minor dialogue choices are present here which let the player have different responses to various questions/statements, but nothing that alters the course of the game."
     $ phase += 1
+    show screen eclipse onlayer background_overlay with Dissolve(2.0)
+    pause 1.0
     delilah "After a moderately lengthy conversation in which Delilah and Julian start a budding friendship with some romantic tension, he begins to die, thanking her for staying with him so he didn't have to die alone."
     hide julian onlayer characters with dissolve
     if not flowers.flower2:

@@ -6,6 +6,8 @@ label open_door:
     show sandra neutral onlayer characters at center_right with dissolve
     if run == 3 and loop3_investigate:
         $ phase += 1
+        show screen eclipse onlayer background_overlay with Dissolve(2.0)
+        pause 1.0
         jump dinner_convo
     elif run == 2 and loop2_investigate:
         delilah "With one flower in possession, Delilah is quick to let her mom and brother in. She tells them that there's a boy by the lake who needs medical attention." (callback = functools.partial(inctime, checkskip=True))
@@ -13,9 +15,13 @@ label open_door:
         jump back_to_lake
     else:
         $ phase += 1
+        show screen eclipse onlayer background_overlay with Dissolve(2.0)
+        pause 1.0
         # glitch 4 - phase 3
         $ moonglitch4 = True
-        delilah "Delilah lingers in the house for a moment, taking in childhood memories at the lake house. She examines a few artifacts of her father's presence before her mother and brother start banging on the door. She lets them in and thinks a bit about the figure she saw on the shoreline." (callback = functools.partial(inctime, g4=True))
+        delilah "Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house." (callback = functools.partial(inctime, g4=True))
+        delilah "Between the dust filling the air, and the mountain of mailbox coupons dropped off by the housekeepers, it's like walking into a snowglobe. Dad's woodcarving projects fill the living room." (callback = functools.partial(inctime,checkskip=True))
+        # delilah "Delilah lingers in the house for a moment, taking in childhood memories at the lake house. She examines a few artifacts of her father's presence before her mother and brother start banging on the door. She lets them in and thinks a bit about the figure she saw on the shoreline." (callback = functools.partial(inctime, g4=True))
         $ moonglitch4 = False
         jump dinner_convo
 
@@ -45,6 +51,8 @@ label dinner_convo:
         jump outside
     elif run == 2 and loop2_investigate:
         $ phase += 1
+        show screen eclipse onlayer background_overlay with Dissolve(2.0)
+        pause 1.0
         delilah "If the player goes back inside, Delilah experiences the dinner conversation again, except her attitude is much harsher with more options to antagonize Cody and Sandra. We get a few more clues as to what is truly upsetting Delilah but we don't outright know it yet."
         delilah "The dinner ends in a much more explosive manner than the first time and Delilah can either"
         menu:
@@ -61,6 +69,8 @@ label dinner_convo:
     else:
         delilah "Fast forward to dinner. Things are tense. Cody tries to break the silence by being his quippy doofusy self and Delilah tears him a new one. A brief, bitter exchange occurs and Mom quickly shuts them down. This is a mistake. Now the attention is on her and the elephant in the room: Where is dad? The player is presented with several dialogue choices in this conversation, all with the same results but conveying different pieces of information about who these people are." (callback = functools.partial(inctime,checkskip=True))
         $ phase += 1
+        show screen eclipse onlayer background_overlay with Dissolve(2.0)
+        pause 1.0
         # glitch 5 - phase 4
         $ moonglitch5 = True
         menu:

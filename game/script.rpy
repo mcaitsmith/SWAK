@@ -208,8 +208,6 @@ screen showtime: # screen for showing time
 
 screen eclipse: # screen for showing eclipse
 
-    # layer "background_overlay"
-
     if phase == 0 or phase > 5:
         add 'images/props/moon.png' xalign 0.5 ypos 0.05
     elif phase == 1:
@@ -264,6 +262,20 @@ define julian = Character("Julian",image="julian",callback=inctime)
 define cody = Character("Cody",image="cody",callback=inctime)
 define sandra = Character("Sandra",image="sandra",callback=inctime)
 
+image julian fade:
+    "images/chars/julian neutral.png"
+    alpha 0.0
+    linear 0.05 alpha 0.03
+    linear 0.05 alpha 0.0
+    0.25
+    linear 0.05 alpha 0.1
+    linear 0.05 alpha 0.0
+    0.25
+    linear 0.05 alpha 0.06
+    linear 0.05 alpha 0.0
+    0.5
+    repeat
+
 # image side delilah neutral = "side delilah neutral.png"
 # image side delilah happy = "side delilah happy.png"
 
@@ -279,7 +291,7 @@ transform center_left:
 transform center_right:
     xalign 0.7 yalign 1.0
 
-define config.layers = [ 'master', 'background','background_overlay','characters','transient', 'screens', 'overlay' ]
+define config.layers = [ 'master', 'background','background_overlay','characters','transient', 'screens', 'overlay', 'interface' ]
 $ config.tag_layer['bg'] = 'background'
 
 # check run
@@ -312,16 +324,15 @@ label start:
     $ loop3_investigate = False
     $ smoke_break = False
 
-    show screen showtime
-    show screen showflower
-    show screen eclipse onlayer background_overlay
-
-    scene bg scene1 with dissolve
-
     "BEGIN"
 
     $ renpy.block_rollback() # prevent rollback before this point
     $ config.rollback_enabled = True # re-enable rollback
+
+    scene bg black with dissolve
+
+    show screen showtime onlayer interface
+    show screen showflower onlayer interface
 
     call checkrun from _call_checkrun
 
