@@ -18,5 +18,5 @@ label start_loop2:
             jump investigate_lakeshore
         "Open the door":
             $ moonglitch3 = False
-            hide julian with dissolve
+            hide julian onlayer characters with dissolve
             jump open_door

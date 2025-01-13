@@ -7,9 +7,9 @@ label back_to_lake:
     menu:
         delilah "Dialogue choice" (callback = functools.partial(inctime, checkskip=True))
         "go search for Julian":
-            hide sandra with dissolve
+            hide sandra onlayer characters with dissolve
             jump search_for_julian
         "go back inside":
             show bg scene2 with dissolve
-            show cody happy at center with dissolve
+            show cody happy onlayer characters at center with dissolve
             jump dinner_convo

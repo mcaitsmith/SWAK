@@ -1,8 +1,5 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.0
-
 init python:   
     import functools 
     gametime = 0 #initialize time
@@ -147,12 +144,6 @@ init python:
     # if history_trigger_callback not in config.history_callbacks:
     #     config.history_callbacks.append(history_time_callback)
 
-define narrator = Character(None,callback=None)
-define delilah = Character("Delilah",callback=inctime)
-define julian = Character("Julian",callback=inctime)
-define cody = Character("Cody",callback=inctime)
-define sandra = Character("Sandra",callback=inctime)
-
 image moon_phase1 = ConditionSwitch(
     "run == 2 and moonglitch2 == True and not solves.loop2", "moon_phase1_glitch",
     "True", "images/props/moon_phase1.png")
@@ -216,18 +207,22 @@ screen showtime: # screen for showing time
         add 'images/props/moon_phase5.png' zoom 0.3 xpos 0.3 ypos 0.15
 
 screen eclipse: # screen for showing eclipse
+
+    # layer "background_overlay"
+
     if phase == 0 or phase > 5:
-        add 'images/props/moon.png' xpos 0.6 ypos 0.05
+        add 'images/props/moon.png' xalign 0.5 ypos 0.05
     elif phase == 1:
-        add 'moon_phase1' xpos 0.6 ypos 0.05
+        add 'moon_phase1' xalign 0.5 ypos 0.05
+        # text "test" xalign 0.5 ypos 0.2
     elif phase == 2:
-        add 'moon_phase2' xpos 0.6 ypos 0.05
+        add 'moon_phase2' xalign 0.5 ypos 0.05
     elif phase == 3:
-        add "moon_phase3" xpos 0.6 ypos 0.05
+        add "moon_phase3" xalign 0.5 ypos 0.05
     elif phase == 4:
-        add "moon_phase4" xpos 0.6 ypos 0.05
+        add "moon_phase4" xalign 0.5 ypos 0.05
     elif phase == 5:
-        add "moon_phase5" xpos 0.6 ypos 0.05
+        add "moon_phase5" xalign 0.5 ypos 0.05
 
 screen showflower: # screen for showing flowers
     if flowers.flower1:
@@ -260,11 +255,32 @@ screen flower_glitch:
         yalign 0.5
         idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.0
+
+define narrator = Character(None,callback=None)
+define delilah = Character("Delilah",image="delilah",callback=inctime)
+define julian = Character("Julian",image="julian",callback=inctime)
+define cody = Character("Cody",image="cody",callback=inctime)
+define sandra = Character("Sandra",image="sandra",callback=inctime)
+
+# image side delilah neutral = "side delilah neutral.png"
+# image side delilah happy = "side delilah happy.png"
+
 # define scene bgs
 image bg scene1 = "#4680bd"
 image bg scene2 = "#f0c047"
 image bg scene3 = "#5646bd"
 image bg black = "#000000"
+
+# define custom positions for sprites
+transform center_left:
+    xalign 0.3 yalign 1.0
+transform center_right:
+    xalign 0.7 yalign 1.0
+
+define config.layers = [ 'master', 'background','background_overlay','characters','transient', 'screens', 'overlay' ]
+$ config.tag_layer['bg'] = 'background'
 
 # check run
 label checkrun:
@@ -298,7 +314,7 @@ label start:
 
     show screen showtime
     show screen showflower
-    show screen eclipse
+    show screen eclipse onlayer background_overlay
 
     scene bg scene1 with dissolve
 

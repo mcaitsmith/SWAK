@@ -14,13 +14,13 @@ label back_to_shore_final:
         delilah "Dialogue choice" (callback = functools.partial(inctime))
         "Ending 1":
             delilah "Delilah can force Julian to take the flowers and go home, resulting in a heartfelt moment in which they tearfully say goodbye and kiss. The story ends with her going to take care of her brother and mom as they endure the crisis that lies ahead."
-            hide julian with dissolve
+            hide julian onlayer characters with dissolve
             show bg black with dissolve
             $ endings.ending1 = True
             return
         "Ending 2":
             delilah "Delilah can embrace Julian with the flowers and follow him back to his world where she will suddenly be trapped in a time loop there."
-            hide delilah with dissolve
+            # hide delilah with dissolve
             show bg black with dissolve
             $ endings.ending2 = True
             return

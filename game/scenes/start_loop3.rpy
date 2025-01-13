@@ -7,5 +7,5 @@ label start_loop3:
         "go back to the shore":
             jump back_to_shore
         "Open the door":
-            hide julian with dissolve
+            hide julian onlayer characters with dissolve
             jump open_door

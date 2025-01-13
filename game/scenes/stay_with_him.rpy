@@ -6,7 +6,7 @@ label stay_with_him:
     delilah "Delilah decides to stay there on the lakeshore with Julian. They formally introduce each other and talk a bit about their lives. Julian seems resigned to die here, laments about what will happen to his grandparents without him. A few minor dialogue choices are present here which let the player have different responses to various questions/statements, but nothing that alters the course of the game."
     $ phase += 1
     delilah "After a moderately lengthy conversation in which Delilah and Julian start a budding friendship with some romantic tension, he begins to die, thanking her for staying with him so he didn't have to die alone."
-    hide julian with dissolve
+    hide julian onlayer characters with dissolve
     if not flowers.flower2:
         if not solves.loop2:
             $ puzzles.loop2 = True # unlock puzzle

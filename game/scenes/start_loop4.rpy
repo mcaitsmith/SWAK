@@ -7,7 +7,7 @@ label start_loop4:
     menu:
         delilah "Dialogue choice" (callback = functools.partial(inctime))
         "Open the door for her mom":
-            hide julian with dissolve
+            hide julian onlayer characters with dissolve
             jump open_door
         "going to the shore for the fourth time":
             jump back_to_shore_final
