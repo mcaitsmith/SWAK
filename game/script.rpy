@@ -61,8 +61,9 @@ init python:
     #     config.history_callbacks.append(history_time_callback)
 
 # Declare characters used by this game.
-define narrator = Character(None,callback=None)
+define narrator = Character(None,callback=None,what_style="centered_text", window_style="centered_window")
 define delilah = Character("Delilah",image="delilah",callback=inctime)
+define delilah_thoughts = Character("Delilah",image="delilah",what_prefix='(', what_suffix=')', what_italic=True,callback=inctime)
 define julian = Character("Julian",image="julian",callback=inctime)
 define cody = Character("Cody",image="cody",callback=inctime)
 define sandra = Character("Sandra",image="sandra",callback=inctime)
@@ -88,6 +89,47 @@ image bg scene2 = "#f0c047"
 image bg scene3 = "#5646bd"
 image bg black = "#000000"
 
+# define flower images
+image flower_run2:
+    "images/props/flower.png"
+    zoom 0.6
+    linear 0.05 alpha 0.7
+    linear 0.05 alpha 1
+    0.25
+    linear 0.05 alpha 0.4
+    linear 0.05 alpha 1
+    0.25
+    linear 0.05 alpha 0.8
+    linear 0.05 alpha 1
+    0.5
+    repeat
+image flower_run3:
+    "images/props/flower.png"
+    zoom 0.6
+    linear 0.05 alpha 0.8
+    linear 0.05 alpha 1
+    0.5
+    linear 0.05 alpha 0.7
+    linear 0.05 alpha 1
+    0.25
+    linear 0.05 alpha 0.4
+    linear 0.05 alpha 1
+    0.25
+    repeat
+image flower_run4:
+    "images/props/flower.png"
+    zoom 0.6
+    linear 0.05 alpha 0.4
+    linear 0.05 alpha 1
+    0.25
+    linear 0.05 alpha 0.8
+    linear 0.05 alpha 1
+    0.5
+    linear 0.05 alpha 0.7
+    linear 0.05 alpha 1
+    0.25
+    repeat
+
 # define custom positions for sprites
 transform center_left:
     xalign 0.3 yalign 1.0
@@ -102,13 +144,35 @@ $ config.tag_layer['bg'] = 'background'
 label checkrun:
     if flowers.flower3:
         $ run = 4
+        show flower_run2:
+            xalign 0.4
+            yalign 0.6
+        show flower_run3:
+            xalign 0.5
+            yalign 0.6
+        show flower_run4:
+            xalign 0.6
+            yalign 0.6
     elif flowers.flower2:
         $ run = 3
+        show flower_run2:
+            xalign 0.45
+            yalign 0.6
+        show flower_run3:
+            xalign 0.55
+            yalign 0.6
     elif flowers.flower1:
         $ run = 2
+        show flower_run2:
+            xalign 0.5
+            yalign 0.6
     else:
         $ run = 1
-    "RUN [run]"
+    "7 PM"
+    hide flower_run2
+    hide flower_run3
+    hide flower_run4
+    # "RUN [run]"
     return
 
 # increase eclipse phase on screen
@@ -117,6 +181,9 @@ label incphase:
     show screen eclipse onlayer background_overlay with Dissolve(2.0)
     pause 1.0
     return
+
+screen endscreen:
+    text "END" xalign 0.5 yalign 0.5
 
 # The game starts here.
 
@@ -135,7 +202,8 @@ label start:
     $ loop3_investigate = False
     $ smoke_break = False
 
-    "BEGIN"
+    # "BEGIN"
+    pause 2.0
 
     $ renpy.block_rollback() # prevent rollback before this point
     $ config.rollback_enabled = True # re-enable rollback
