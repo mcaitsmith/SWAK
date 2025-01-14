@@ -1,9 +1,9 @@
 ﻿# The script of the game goes in this file.
 
 label outside:
-    $ phase += 1
-    show screen eclipse onlayer background_overlay with Dissolve(2.0)
-    pause 1.0
+
+    call incphase
+    
     show bg scene3 with dissolve
     delilah "The door slams behind Delilah. She stands on the back patio and gazes out at the water for a moment. What would happen if she just started walking? The thought creeps into her mind. What if she just picked a direction and started walking indefinitely? Would she find peace? It was a possibility."
     pause 1.0
@@ -34,9 +34,9 @@ label outside:
     # show julian sad onlayer characters at center with dissolve
     delilah "She hears movement behind her and turns around. Standing there is Julian, a strange boy around her age, clutching his side in pain and kneeling to the ground. In his hand he's holding a glowing flower. He collapses."
     delilah "He holds out the flower."
-    $ phase += 1
-    show screen eclipse onlayer background_overlay with Dissolve(2.0)
-    pause 1.0
+    
+    call incphase
+
     if not flowers.flower1:
         call screen flower1_pick
         delilah "Once Delilah takes the glowing flower in hand, the boy goes limp. He's maybe a year or two older than her, she guesses."

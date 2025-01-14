@@ -22,6 +22,8 @@ label intro:
     hide cody onlayer characters
     hide sandra onlayer characters
     show bg scene1
+
+    # show moon/eclipse at beginning of run
     show screen eclipse onlayer background_overlay
     with Dissolve(3.0)
     pause 2.0
@@ -30,9 +32,7 @@ label intro:
     delilah "Delilah was thinking a lot lately about the difference between a house and a home. For most of her life, she thought they were synonymous. But recently she realized that a home was a place you felt at home, a house was a place you lived in."
     delilah "She didn't feel at home anywhere. Not anymore."
 
-    $ phase += 1
-    show screen eclipse onlayer background_overlay with Dissolve(2.0)
-    pause 1.0
+    call incphase
 
     show sandra neutral onlayer characters at center
     sandra "Hey, Del, my front door key isn't working."
@@ -53,21 +53,23 @@ label intro:
     cody "He laughs."
     delilah "Delilah stamped her feet, making sure the earth could feel how unfair this situation was."
 
-    # delilah happy "Game begins with Delilah, a sixteen year old girl, arriving at her family's lakehouse. It's just her, her mother, and her obnoxious little brother, Cody. They're spending a weekend away while dad is on one of his many frequent business trips. He's frequently absent these days."
-    # delilah "Delilah is deeply unhappy for reasons we don't yet know but she gives her mother a hard time and antagonizes Cody."
-
     hide cody onlayer characters
     hide sandra onlayer characters
     with dissolve
-    pause 2.0
-    # possible transition to new bg or maybe zoom in current one
+
+    pause 2.0 # possible transition to new bg or maybe zoom in current one
+
     delilah "Each house in the neighborhood backed up to the lake, a fleet of boats and jetskis parked at each private dock. It was fun to spend the summer here as a kid, when Dad would take them out on the water, but now...well, things were different."
     pause 1.0
+
     show julian fade onlayer characters at center:
         zoom 0.7 # in distance
     pause 3.0
-    if run == 2: # glitch 2 - phase 1
+
+    # glitch 2 - phase 1
+    if run == 2:
         $ moonglitch2 = True
+
     menu:
         delilah " " (callback = functools.partial(inctime))
         "Wait, who is that?":
@@ -84,34 +86,26 @@ label intro:
                 "Wait, haven't I been here before?" if run == 2:
                     delilah "Wait, haven't I been here before?"
                     jump start_loop2
+                "Oh god that hurt" if run == 3:
+                    delilah "Oh god that hurt"
+                    jump start_loop3
+                "Im sorry I had to do that" if run == 4:
+                    delilah "Im sorry I had to do that"
+                    jump start_loop4
+
             hide julian fade onlayer characters with Dissolve(3.0)
             pause 2.0
+
             delilah "Whatever. Probably one of the landscapers."
         "Just open the damn door.":
             hide julian fade onlayer characters
             with { "characters" : Dissolve(3.0) }
+
             delilah "Just open the damn door."
+
             if run == 2:
                 $ moonglitch2 = False
-    pause 2.0 # play unlocking sound here
 
-    show bg black with dissolve
-    pause 1.0
     jump open_door
-    # delilah "When they arrive, it's close to sunset. The key to the front door isn't working so Delilah has been told to try using the back door. She goes around the back and sees the lake. She sees something just along the shore. The player might stop for a moment or go unlock the door. If they stop for a moment they see what looks lke a shadowy figure standing in the distance. Is that a person? If the player has chosen to linger, her mom shouts for her to open the door."
-    # # glitch 2 - phase 1
-    # $ moonglitch2 = True
-    # menu:
-    #     delilah "Dialogue choice" (callback = functools.partial(inctime,checkskip=True))
-    #     "Open the door":
-    #         $ moonglitch2 = False
-    #         hide julian onlayer characters with dissolve
-    #         jump open_door
-    #     "Wait, haven't I been here before?" if run == 2:
-    #         jump start_loop2
-    #     "Oh god that hurt" if run == 3:
-    #         jump start_loop3
-    #     "Im sorry I had to do that" if run == 4:
-    #         jump start_loop4
 
     return

@@ -1,22 +1,23 @@
 ﻿# The script of the game goes in this file.
 
 label open_door:
-    # show bg scene2 with dissolve
-    # show cody happy onlayer characters at center_left with dissolve
-    # show sandra neutral onlayer characters at center_right with dissolve
+
+    pause 2.0 # play unlocking sound here
+
+    show bg black with dissolve
+    pause 1.0
+
     if run == 3 and loop3_investigate:
-        $ phase += 1
-        show screen eclipse onlayer background_overlay with Dissolve(2.0)
-        pause 1.0
+        call incphase
+
         jump dinner_convo
     elif run == 2 and loop2_investigate:
         delilah "With one flower in possession, Delilah is quick to let her mom and brother in. She tells them that there's a boy by the lake who needs medical attention." (callback = functools.partial(inctime, checkskip=True))
         hide cody onlayer characters with dissolve
         jump back_to_lake
     else:
-        $ phase += 1
-        show screen eclipse onlayer background_overlay with Dissolve(2.0)
-        pause 1.0
+        call incphase
+
         # glitch 4 - phase 3
         $ moonglitch4 = True
         delilah "Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house." (callback = functools.partial(inctime, g4=True))
@@ -66,9 +67,8 @@ label dinner_convo:
         hide sandra onlayer characters with dissolve
         jump outside
     elif run == 2 and loop2_investigate:
-        $ phase += 1
-        show screen eclipse onlayer background_overlay with Dissolve(2.0)
-        pause 1.0
+        call incphase
+
         delilah "If the player goes back inside, Delilah experiences the dinner conversation again, except her attitude is much harsher with more options to antagonize Cody and Sandra. We get a few more clues as to what is truly upsetting Delilah but we don't outright know it yet."
         delilah "The dinner ends in a much more explosive manner than the first time and Delilah can either"
         menu:
@@ -112,9 +112,9 @@ label dinner_convo:
         cody "I wonder why Dad prefers his business trips to being here!" (callback = functools.partial(inctime,checkskip=True))
         hide cody onlayer characters with dissolve
         # delilah "Fast forward to dinner. Things are tense. Cody tries to break the silence by being his quippy doofusy self and Delilah tears him a new one. A brief, bitter exchange occurs and Mom quickly shuts them down. This is a mistake. Now the attention is on her and the elephant in the room: Where is dad? The player is presented with several dialogue choices in this conversation, all with the same results but conveying different pieces of information about who these people are." (callback = functools.partial(inctime,checkskip=True))
-        $ phase += 1
-        show screen eclipse onlayer background_overlay with Dissolve(2.0)
-        pause 1.0
+
+        call incphase
+
         # glitch 5 - phase 4
         $ moonglitch5 = True
         menu:

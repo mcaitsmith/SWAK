@@ -3,9 +3,9 @@
 label start_loop2:
     delilah "With the first flower obtained, Delilah is able to access history and make new choices." (callback = functools.partial(inctime, g2=True))
     $ moonglitch2 = False
-    $ phase += 1
-    show screen eclipse onlayer background_overlay with Dissolve(2.0)
-    pause 1.0
+
+    call incphase
+    
     # glitch 1 - phase 2
     $ moonglitch1 = True
     delilah "A new line is added to the intro in which Delilah notices one of the flowers in her hand." (callback = functools.partial(inctime, g1=True, checkskip=True))
