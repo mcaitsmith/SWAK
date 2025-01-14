@@ -1,9 +1,9 @@
 ﻿# The script of the game goes in this file.
 
 label open_door:
-    show bg scene2 with dissolve
-    show cody happy onlayer characters at center_left with dissolve
-    show sandra neutral onlayer characters at center_right with dissolve
+    # show bg scene2 with dissolve
+    # show cody happy onlayer characters at center_left with dissolve
+    # show sandra neutral onlayer characters at center_right with dissolve
     if run == 3 and loop3_investigate:
         $ phase += 1
         show screen eclipse onlayer background_overlay with Dissolve(2.0)
@@ -20,9 +20,25 @@ label open_door:
         # glitch 4 - phase 3
         $ moonglitch4 = True
         delilah "Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house." (callback = functools.partial(inctime, g4=True))
-        delilah "Between the dust filling the air, and the mountain of mailbox coupons dropped off by the housekeepers, it's like walking into a snowglobe. Dad's woodcarving projects fill the living room." (callback = functools.partial(inctime,checkskip=True))
-        # delilah "Delilah lingers in the house for a moment, taking in childhood memories at the lake house. She examines a few artifacts of her father's presence before her mother and brother start banging on the door. She lets them in and thinks a bit about the figure she saw on the shoreline." (callback = functools.partial(inctime, g4=True))
         $ moonglitch4 = False
+        delilah "With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood." (callback = functools.partial(inctime,checkskip=True))
+        delilah "She looks across the foyer to see Cody pressing his nose against the window, banging his hand on the glass like a zombie." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Open the door" (callback = functools.partial(inctime,checkskip=True))
+        # open door sound here
+        pause 1.0
+        show sandra neutral onlayer characters at center
+        sandra "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed." (callback = functools.partial(inctime,checkskip=True))
+        show cody happy onlayer characters at center_right
+        cody "Yes, very gracious." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Hey, are there still landscapers working in the yard?" (callback = functools.partial(inctime,checkskip=True))
+        sandra "Landscapers? Not at this hour, no. Why do you ask?" (callback = functools.partial(inctime,checkskip=True))
+        delilah "Could've sworn I saw someone out back. Thought it might have been a landscaper." (callback = functools.partial(inctime,checkskip=True))
+        sandra "Probably just one of the neighbor kids, I wouldn't worry about it." (callback = functools.partial(inctime,checkskip=True))
+        hide cody onlayer characters
+        hide sandra onlayer characters
+        with dissolve
+        # delilah "Delilah lingers in the house for a moment, taking in childhood memories at the lake house. She examines a few artifacts of her father's presence before her mother and brother start banging on the door. She lets them in and thinks a bit about the figure she saw on the shoreline." (callback = functools.partial(inctime, g4=True))
+        # $ moonglitch4 = False
         jump dinner_convo
 
 label dinner_convo:
@@ -67,21 +83,71 @@ label dinner_convo:
                 hide sandra onlayer characters with dissolve
                 jump outside
     else:
-        delilah "Fast forward to dinner. Things are tense. Cody tries to break the silence by being his quippy doofusy self and Delilah tears him a new one. A brief, bitter exchange occurs and Mom quickly shuts them down. This is a mistake. Now the attention is on her and the elephant in the room: Where is dad? The player is presented with several dialogue choices in this conversation, all with the same results but conveying different pieces of information about who these people are." (callback = functools.partial(inctime,checkskip=True))
+        show bg scene2 with Dissolve(2.0)
+        delilah "Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate." (callback = functools.partial(inctime,checkskip=True))
+        show cody happy onlayer characters at center
+        delilah "He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it. Delilah watches in horror." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Can't even eat pizza like a normal person?" (callback = functools.partial(inctime,checkskip=True))
+        cody "I can't help it if my eccentricities extend to my dining preferences." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Eccentricities? Is that what they're calling being a little weirdo now?" (callback = functools.partial(inctime,checkskip=True))
+        delilah "Sandra sits down at the table with nothing but a salad on her plate." (callback = functools.partial(inctime,checkskip=True))
+        show sandra neutral onlayer characters at right
+        sandra "Oh, hush, Del, you used to have particular eating habits too." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!" (callback = functools.partial(inctime,checkskip=True))
+        cody "I'm not exactly shouting from the roof tops about being related to a wastoid either." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Bite me!" (callback = functools.partial(inctime,checkskip=True))
+        cody "Bitch..." (callback = functools.partial(inctime,checkskip=True))
+        cody "he says under his breath." (callback = functools.partial(inctime,checkskip=True))
+        delilah "You little!" (callback = functools.partial(inctime,checkskip=True))
+        delilah "She stands up and raises her fist like she's going to punch him from across the table." (callback = functools.partial(inctime,checkskip=True))
+        sandra "Hey! Hey! Relax!" (callback = functools.partial(inctime,checkskip=True))
+        delilah "Make him apologize!" (callback = functools.partial(inctime,checkskip=True))
+        sandra "Cody...will you please apologize to your sister for calling her a b-word?" (callback = functools.partial(inctime,checkskip=True))
+        cody "She started it!" (callback = functools.partial(inctime,checkskip=True))
+        sandra "Cody...things are hard enough as is..." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Delilah crosses her arms and raises an eyebrow." (callback = functools.partial(inctime,checkskip=True))
+        cody "I'm sorry...that you're a bitch." (callback = functools.partial(inctime,checkskip=True))
+        sandra "That's it! Upstairs, now!" (callback = functools.partial(inctime,checkskip=True))
+        cody "He drops his bare crusts in the trash dramatically then heads for the stairs." (callback = functools.partial(inctime,checkskip=True))
+        cody "I wonder why Dad prefers his business trips to being here!" (callback = functools.partial(inctime,checkskip=True))
+        hide cody onlayer characters with dissolve
+        # delilah "Fast forward to dinner. Things are tense. Cody tries to break the silence by being his quippy doofusy self and Delilah tears him a new one. A brief, bitter exchange occurs and Mom quickly shuts them down. This is a mistake. Now the attention is on her and the elephant in the room: Where is dad? The player is presented with several dialogue choices in this conversation, all with the same results but conveying different pieces of information about who these people are." (callback = functools.partial(inctime,checkskip=True))
         $ phase += 1
         show screen eclipse onlayer background_overlay with Dissolve(2.0)
         pause 1.0
         # glitch 5 - phase 4
         $ moonglitch5 = True
         menu:
-            delilah "Dialogue Choice" (callback = functools.partial(inctime, g5=True))
-            "Choice 1":
+            delilah " " (callback = functools.partial(inctime, g5=True))
+            "What a little brat":
                 $ moonglitch5 = False
-                delilah "dialogue 1"
-            "Choice 2":
+                delilah "What a little brat"
+            "I can't believe you let him get away with that.":
                 $ moonglitch5 = False
-                delilah "dialogue 2"
-        delilah "Mom and Delilah fight. Delilah seems to be pushing her buttons, vying to get her to admit to... something...we aren't sure yet, but Mom is stubborn. No matter what she will not acknowledge that anything is amiss. Dinner ends abruptly and Delilah storms out."
-        hide cody onlayer characters with dissolve
+                delilah "I can't believe you let him get away with that."
+        sandra "Well, Del, you don't exactly make it easy by antagonizing him."
+        delilah "I don't antagonize him..."
+        delilah "she thought about the last words he said before storming off."
+        delilah "He's right though, about Dad, I mean."
+        sandra "Your dad wishes he could be here more than anything in the world. Work has been brutal lately."
+        delilah "She laughs."
+        delilah "Yeah, I'm sure."
+        sandra "What's that supposed to mean?"
+        delilah "I think you know what I mean."
+        sandra "No, I don't, and you should watch what you say or you'll regret it."
+        delilah "Is that a promise?"
+        sandra "Don't you start."
+        menu:
+            delilah " " (callback = functools.partial(inctime))
+            "Dad can't stand you.":
+                delilah "Dad can't stand you."
+            "It's your fault he isn't here.":
+                delilah "It's your fault he isn't here."
+            "This family is a joke.":
+                delilah "This family is a joke."
+        sandra "Upstairs. Now."
+        delilah "Fuck you, I'm going for a walk."
+        # delilah "Mom and Delilah fight. Delilah seems to be pushing her buttons, vying to get her to admit to... something...we aren't sure yet, but Mom is stubborn. No matter what she will not acknowledge that anything is amiss. Dinner ends abruptly and Delilah storms out."
+        # hide cody onlayer characters with dissolve
         hide sandra onlayer characters with dissolve
         jump outside

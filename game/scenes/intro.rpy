@@ -63,7 +63,8 @@ label intro:
     # possible transition to new bg or maybe zoom in current one
     delilah "Each house in the neighborhood backed up to the lake, a fleet of boats and jetskis parked at each private dock. It was fun to spend the summer here as a kid, when Dad would take them out on the water, but now...well, things were different."
     pause 1.0
-    show julian fade onlayer characters at center
+    show julian fade onlayer characters at center:
+        zoom 0.7 # in distance
     pause 3.0
     if run == 2: # glitch 2 - phase 1
         $ moonglitch2 = True
@@ -93,6 +94,9 @@ label intro:
             if run == 2:
                 $ moonglitch2 = False
     pause 2.0 # play unlocking sound here
+
+    show bg black with dissolve
+    pause 1.0
     jump open_door
     # delilah "When they arrive, it's close to sunset. The key to the front door isn't working so Delilah has been told to try using the back door. She goes around the back and sees the lake. She sees something just along the shore. The player might stop for a moment or go unlock the door. If they stop for a moment they see what looks lke a shadowy figure standing in the distance. Is that a person? If the player has chosen to linger, her mom shouts for her to open the door."
     # # glitch 2 - phase 1

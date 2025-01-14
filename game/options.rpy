@@ -85,6 +85,8 @@ define config.main_menu_music = "audio/music/SWAK Test MSTR.ogg"
 define config.enter_transition = dissolve
 define config.exit_transition = dissolve
 
+define config.hard_rollback_limit = 10000 # increase rollback limit
+
 
 ## Between screens of the game menu.
 
