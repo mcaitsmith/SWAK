@@ -2,7 +2,13 @@
 
 label intro:
 
+    # car scene: basic shaking rearview mirror at top on top of black
+    # D's reflection in it only for run screen + first narration, then fades out as she turns away
+    # ambient car driving sfx
+
     # initial narration only on first run it appears
+    # note: narration text style 80s typewriter text but glowy
+    # run/end text in retro 80s font with outline/drop shadow
 
     # delilah_thoughts neutral "Delilah was stuck. She was between the tumultuous indignities of adolescence and the quiet ennui of adulthood, frozen in place before this choice that life had presented her with. Right on the line of 'too old to be acting like this' and 'too young to be trusted.'"
     if run == 1:

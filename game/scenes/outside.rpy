@@ -6,6 +6,9 @@ label outside:
     
     show bg scene3 with dissolve
 
+    "9 PM"
+    pause 1.0
+
     delilah_thoughts "The door slams behind Delilah." # replace with door slam sfx
 
     if run == 1:

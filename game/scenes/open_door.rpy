@@ -2,6 +2,9 @@
 
 label open_door:
 
+    # open door scene: black with transparent window to moon + door windowpanes showing lake scene
+    # once open door window fades to open door cutout
+
     pause 2.0 # play unlocking sound here
 
     show bg black with dissolve
@@ -10,14 +13,23 @@ label open_door:
     if run == 3 and loop3_investigate:
         call incphase
 
+        "8 PM"
+        pause 1.0
+
         jump dinner_convo
     elif run == 2 and loop2_investigate:
+        "8 PM"
+        pause 1.0
+
         delilah "With one flower in possession, Delilah is quick to let her mom and brother in. She tells them that there's a boy by the lake who needs medical attention." (callback = functools.partial(inctime, checkskip=True))
         hide cody onlayer characters with dissolve
         jump back_to_lake
     else:
         
         call incphase
+
+        "8 PM"
+        pause 1.0
 
         # glitch 4 - phase 3
         if run == 2:

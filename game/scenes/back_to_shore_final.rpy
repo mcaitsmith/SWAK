@@ -1,6 +1,12 @@
 ﻿# The script of the game goes in this file.
 
 label back_to_shore_final:
+
+    call incphase
+
+    "8 PM"
+    pause 1.0
+
     delilah "At the shore, Julian is standing there waiting for you to meet with him. Deliah tells him about the conversation she just had with Cody, how difficult it was. Julian feels for her and apologizes for putting her through that. This confuses Delilah since his life is at stake. Sort of dwarfs in comparison. Julian doesn't see it that way. His martyr complex comes through in this moment."
     delilah "They discuss that there is only ONE flower left to find. Delilah is confounded by where it could be. Julian acts suspicious, clutching his shirt pocket. Delilah notices that it's glowing and asks what he has."
     delilah "Julian admits to having the flower and apologizes. He admits that he's enjoyed being here with her and wants to be there to comfort her for the family crisis that she's about to endure when she goes home."
@@ -9,6 +15,9 @@ label back_to_shore_final:
         delilah "Delilah takes the flower" (callback = functools.partial(inctime, fnum=4))
     else:
         pass
+
+    call incphase # should end up at totality for final choice
+
     delilah "Delilah has three possible choices she can follow from here:"
     menu:
         delilah "Dialogue choice" (callback = functools.partial(inctime))
