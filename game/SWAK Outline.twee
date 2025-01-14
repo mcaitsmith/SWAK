@@ -12,7 +12,55 @@ SWAK Outline
 }
 
 
-:: Game Start {"position":"600,1500","size":"100,100"}
+:: Dinner scene first loop {"position":"1200,1500","size":"100,100"}
+Fade in
+
+Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate. He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it. Delilah watches in horror. 
+
+Delilah: "Can't even eat pizza like a normal person?"
+Cody: "I can't help it if my eccentricities extend to my dining preferences."
+Delilah: "Eccentricities? Is that what they're calling being a little weirdo now?"
+
+Sandra sits down at the table with nothing but a salad on her plate. 
+
+Sandra: "Oh, hush, Del, you used to have particular eating habits too."
+Delilah: "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!" 
+Cody: "I'm not exactly shouting from the roof tops about being related to a wastoid either."
+Delilah: "Bite me!"
+Cody: "Bitch..." he says under his breath.
+Delilah: "You little!" She stands up and raises her fist like she's going to punch him from across the table.
+Sandra: "Hey! Hey! Relax!"
+Delilah: "Make him apologize!"
+Sandra: "Cody...will you please apologize to your sister for calling her a b-word?"
+Cody: "She started it!"
+Sandra: "Cody...things are hard enough as is..."
+Delilah: Delilah crosses her arms and raises an eyebrow.
+Cody: "I'm sorry...that you're a bitch."
+Sandra: "That's it! Upstairs, now!" 
+Cody: He drops his bare crusts in the trash dramatically then heads for the stairs. "I wonder why Dad prefers his business trips to being here!"
+
+["What a little brat"]
+["I can't believe you let him get away with that."]
+
+Sandra: "Well, Del, you don't exactly make it easy by antagonizing him."
+Delilah: "I don't antagonize him..." she thought about the last words he said before storming off. "He's right though, about Dad, I mean."
+Sandra: "Your dad wishes he could be here more than anything in the world. Work has been brutal lately."
+Delilah: She laughs. "Yeah, I'm sure."
+Sandra: "What's that supposed to mean?"
+Delilah: "I think you know what I mean."
+Sandra: "No, I don't, and you should watch what you say or you'll regret it." 
+Delilah: "Is that a promise?"
+Sandra: "Don't you start."
+["Dad can't stand you."]
+["It's your fault he isn't here."]
+["This family is a joke."]
+Sandra: "Upstairs. Now." 
+Delilah: "Fuck you, I'm going for a walk."
+
+[[Outside first loop]]
+
+
+:: Game Start {"position":"500,1500","size":"100,100"}
 Start
 
 Delilah was stuck. She was between the tumultuous indignities of adolescence and the quiet ennui of adulthood, frozen in place before this choice that life had presented her with. Right on the line of 'too old to be acting like this' and 'too young to be trusted.' 
@@ -109,7 +157,21 @@ The game stops here unless the player uses the history function to try a differe
 :: Ignore shadowy figure {"position":"1000,1500","size":"100,100"}
 Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house.
 
-Between the dust filling the air, and the mountain of mailbox coupons dropped off by the housekeepers, it's like walking into a snowglobe. Dad's woodcarving projects fill the living room. 
+With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood.
+
+She looks across the foyer to see Cody pressing his nose against the window, banging his hand on the glass like a zombie.
+[Open the door]
+Sandra: "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed."
+Cody: "Yes, very gracious."
+Delilah: "Hey, are there still landscapers working in the yard?"
+Sandra: "Landscapers? Not at this hour, no. Why do you ask?"
+Delilah: "Could've sworn I saw someone out back. Thought it might have been a landscaper."
+Sandra: "Probably just one of the neighbor kids, I wouldn't worry about it."
+
+Fade to black
+[[Dinner scene first loop]]
+
+
 
 
 :: Intro {"position":"800,500","size":"100,100"}
@@ -155,6 +217,28 @@ NOTE:
 If the flower has already been taken on a first loop, there is nothing in Julian's hands. Instead he just collapses then and there. The game stops until the player uses history to try a different passage option. Same happens if Delilah searches for Julian after dinner on the second loop. 
 
 
+:: Outside first loop {"position":"1400,1500","size":"100,100"}
+The door slams behind Delilah. She stands on the back patio and gazes out at the water for a moment. What would happen if she just started walking? The thought creeps into her mind. What if she just picked a direction and started walking indefinitely? Would she find peace? It was a possibility. 
+
+Along the shoreline, by the rocks, she sees that shadowy figure once again standing just out of view.
+ 
+ ["Hey, I can see you!"]
+ ["This is private property, asshole!"]
+ [Silently approach]
+ 
+ The figure stumbles for a moment and then collapses on the rocks. 
+ 
+ Delilah: "Hey!" She runs down the hill towards the lakeshore.
+ 
+ Delilah: "Hey, are you okay?!" 
+ 
+ Laying on rocks, trembling in agony, is a boy clutching a glowing flower. He looks at Delilah with equal parts desperation and shock. 
+ 
+ He holds out the flower.
+ 
+ [[Take the flower]]
+
+
 :: Stay with him {"position":"2100,300","size":"100,100"}
 (if the player already tried to get help, there is an additional line about deciding that the only option is to just stay here with him)
 
@@ -163,6 +247,16 @@ Delilah decides to stay there on the lakeshore with Julian. They formally introd
 After a moderately lengthy conversation in which Delilah and Julian start a budding friendship with some romantic tension, he begins to die, thanking her for staying with him so he didn't have to die alone. 
 
 After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option. 
+
+
+:: Take the flower {"position":"1600,1500","size":"100,100"}
+Once Delilah takes the glowing flower in hand, the boy goes limp. He's maybe a year or two older than her, she guesses. 
+
+Delilah: "Oh my God! Oh my God!" She looks around at the empty stillness of the night. "Somebody help! Somebody help! He's not moving!" 
+
+The End
+
+[[The player can rollback to the beginning from here|Game Start]]
 
 
 :: back to the lake {"position":"1575,250","size":"100,100"}
