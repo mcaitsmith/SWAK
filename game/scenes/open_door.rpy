@@ -28,19 +28,19 @@ label open_door:
         
         call incphase
 
-        "8 PM"
-        pause 1.0
-
         # glitch 4 - phase 3
         if run == 2:
             $ moonglitch4 = True
 
-        # add footsteps/ backdoor opening sfx
-        delilah_thoughts "Sure enough, the key was still under the tacklebox, just where Dad always kept it." (callback = functools.partial(inctime, g4=True))
-        # delilah_thoughts "Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house." (callback = functools.partial(inctime, g4=True))
-        
+        "8 PM" (callback = functools.partial(inctime, g4=True))
+        pause 1.0
+
         if run == 2:
             $ moonglitch4 = False
+
+        # add footsteps/ backdoor opening sfx
+        delilah_thoughts "Sure enough, the key was still under the tacklebox, just where Dad always kept it." (callback = functools.partial(inctime,checkskip=True))
+        # delilah_thoughts "Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house." (callback = functools.partial(inctime, g4=True))
 
         if run == 1:
             "With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood." (callback = functools.partial(inctime,checkskip=True))

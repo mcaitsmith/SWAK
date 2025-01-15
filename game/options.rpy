@@ -29,15 +29,6 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-# define gui.about = _p("""
-# GAME MECHANICS
-
-# - FLOWERS: find a flower somewhere in the passage of time. FLOWERS exist across time.\n
-# - CHOICES: determine which branch of history is followed.\n
-# - SKIPPING: pauses in-game time\n
-# - HISTORY: reveals trigger points in time. These are points that may be affected by the other mechanics.
-# """)
-
 define gui.about = _p("""
 """)
 

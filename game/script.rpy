@@ -19,6 +19,10 @@ init python:
     moonglitch4 = False
     moonglitch5 = False
 
+    # How to play text
+init:
+    default playtext = "HOW TO PLAY\nMake choices to control your future.\nRoll back with the Back button to return to the past.\nSkip across time with the Skip button.\nReview your History to remember what happened.\nNot everything follows the rules of time and space."
+
 init:
     call init_screens # define UI screens
     call init_moonglitchimages # define moon glitch images
@@ -182,9 +186,6 @@ label incphase:
     pause 1.0
     return
 
-screen endscreen:
-    text "END" xalign 0.5 yalign 0.5
-
 # The game starts here.
 
 label start:
@@ -201,6 +202,10 @@ label start:
     $ loop2_investigate = False
     $ loop3_investigate = False
     $ smoke_break = False
+
+    show screen howtoplay
+    $ renpy.pause()
+    hide screen howtoplay
 
     # "BEGIN"
     pause 2.0

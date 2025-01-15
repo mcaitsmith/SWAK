@@ -86,4 +86,10 @@ label init_screens:
             yalign 0.5
             idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 
+    screen howtoplay:
+        text "[playtext]" xalign 0.5 yalign 0.5 text_align 0.5
+        
+    screen endscreen:
+        text "END" xalign 0.5 yalign 0.5
+
     return
