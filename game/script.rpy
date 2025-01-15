@@ -93,6 +93,10 @@ image bg scene2 = "#f0c047"
 image bg scene3 = "#5646bd"
 image bg black = "#000000"
 
+image rearview = "images/props/rearview.png"
+image reflection = "images/props/rearview_reflection.png"
+image windshield = "images/props/windshield.png"
+
 # define flower images
 image flower_run2:
     "images/props/flower.png"
@@ -172,6 +176,11 @@ label checkrun:
             yalign 0.6
     else:
         $ run = 1
+    if run >= 2:
+        show reflection:
+            xalign 0.5
+            yalign 0.05
+        with { "master" : Dissolve(1.0) }
     "7 PM"
     hide flower_run2
     hide flower_run3
@@ -218,6 +227,18 @@ label start:
     show screen moonglitchscreen onlayer interface
     show screen flowerscreen onlayer interface
 
+    show rearview:
+        xalign 0.5
+        yalign 0.05
+        # linear 0.05 yoffset 5
+        # linear 0.05 yoffset 0
+        # pause 0.2
+        # linear 0.05 yoffset 5
+        # linear 0.05 yoffset 0
+        # pause 1.0
+        # repeat
+
+    with { "master" : Dissolve(1.0) }
     call checkrun from _call_checkrun
 
     jump mainrun

@@ -11,8 +11,18 @@ label intro:
     # run/end text in retro 80s font with outline/drop shadow
 
     # delilah_thoughts neutral "Delilah was stuck. She was between the tumultuous indignities of adolescence and the quiet ennui of adulthood, frozen in place before this choice that life had presented her with. Right on the line of 'too old to be acting like this' and 'too young to be trusted.'"
+    show windshield behind rearview at truecenter 
+    show bg scene1 with dissolve
+    
     if run == 1:
+        show reflection:
+            xalign 0.5
+            yalign 0.05
+        with { "master" : Dissolve(1.0) }
         "Delilah is stuck. Between the tumultuous indignities of adolescence and the quiet ennui of adulthood, frozen in place before this choice that life has presented her with. Right on the line of 'too old to be acting like this' and 'too young to be trusted.'"
+    pause 1.0
+    hide reflection with dissolve
+    pause 1.0
     show sandra neutral onlayer characters at center_right
     sandra "So, have you considered what colleges you want to tour next summer?"
     # delilah_thoughts "She waited till the end of the ride to ask her daughter this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
@@ -32,6 +42,8 @@ label intro:
 
     hide cody onlayer characters
     hide sandra onlayer characters
+    hide windshield
+    hide rearview
     show bg scene1
 
     # show moon/eclipse at beginning of run
