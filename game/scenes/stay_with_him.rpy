@@ -53,12 +53,13 @@ label stay_with_him:
     if not flowers.flower2:
         delilah_thoughts "Several feet above me, another nearly identical glowing flower dangles on the edge of a tree branch."
         # delilah_thoughts "Several feet above her, another nearly identical glowing flower dangles on the edge of a tree branch."
+    if not flowers.flower2:
         if not solves.loop2:
             $ puzzles.loop2 = True # unlock puzzle
             call screen flower_glitch
         else:
             call screen flower2_pick
-        delilah "After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option."
+        # delilah "After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option."
         # delilah "After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option." (callback = functools.partial(inctime, fnum=2))
     else:
         pass
