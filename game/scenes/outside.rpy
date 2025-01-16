@@ -73,6 +73,8 @@ label outside:
         delilah "Oh my God! Oh my God!"
         delilah_thoughts "She looks around at the empty stillness of the night." # replace with animated sprite
         delilah "Somebody help! Somebody help! He's not moving!" 
+        # PLACEHOLDER LINE
+        "(add some line here to hint to player that they have to rollback to first screen)"
 
     else:
         
