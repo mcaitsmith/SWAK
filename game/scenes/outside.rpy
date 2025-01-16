@@ -9,7 +9,8 @@ label outside:
     "9 PM"
     pause 1.0
 
-    delilah_thoughts "The door slams behind Delilah." # replace with door slam sfx
+    delilah_thoughts "The door slams behind me." # replace with door slam sfx
+    # delilah_thoughts "The door slams behind Delilah." # replace with door slam sfx
 
     if run == 1:
         "She stands on the back patio and gazes out at the water for a moment. What would happen if she just started walking? The thought creeps into her mind. What if she just picked a direction and started walking indefinitely? Would she find peace? It's a possibility."
@@ -26,10 +27,12 @@ label outside:
     
     menu:
         delilah " " (callback = functools.partial(inctime))
-        "Hey, I can see you!":
+        "Hey, I can see you!" if run == 1:
             delilah "Hey, I can see you!"
-        "This is private property, asshole!":
+        "This is private property, asshole!" if run == 1:
             delilah "This is private property, asshole!"
+        "Hey! Do you need help?!" if run == 2:
+            delilah "Hey! Do you need help?!"
         "Silently approach":
             delilah_thoughts "Silently approach"
 
@@ -48,13 +51,17 @@ label outside:
         zoom 1.0
     pause 2.0
 
-    delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching a glowing flower."
-    delilah_thoughts "He looks at Delilah with equal parts desperation and shock." # replace with expression change
-    delilah_thoughts "He holds out the flower."
-    
     call incphase
 
     if not flowers.flower1:
+        delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching a glowing flower."
+    else:
+        delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching...nothing."
+    delilah_thoughts "He looks at Delilah with equal parts desperation and shock." # replace with expression change
+
+    if not flowers.flower1:
+
+        delilah_thoughts "He holds out the flower."
 
         call screen flower1_pick
 
@@ -69,7 +76,7 @@ label outside:
 
     else:
         
-        delilah "If the flower has already been taken on a first loop, there is nothing in Julian's hands. Instead he just collapses then and there. The game stops until the player uses history to try a different passage option. Same happens if Delilah searches for Julian after dinner on the second loop."
+        # delilah "If the flower has already been taken on a first loop, there is nothing in Julian's hands. Instead he just collapses then and there. The game stops until the player uses history to try a different passage option. Same happens if Delilah searches for Julian after dinner on the second loop."
         hide julian onlayer characters with Dissolve(3.0)
 
     $ phase = 0 # reset

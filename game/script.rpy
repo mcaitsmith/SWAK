@@ -69,6 +69,7 @@ define narrator = Character(None,callback=None,what_style="centered_text", windo
 define delilah = Character("Delilah",image="delilah",callback=inctime)
 define delilah_thoughts = Character("Delilah",image="delilah",what_prefix='(', what_suffix=')', what_italic=True,callback=inctime)
 define julian = Character("Julian",image="julian",callback=inctime)
+define boy = Character("???",image="julian",callback=inctime)
 define cody = Character("Cody",image="cody",callback=inctime)
 define sandra = Character("Sandra",image="sandra",callback=inctime)
 

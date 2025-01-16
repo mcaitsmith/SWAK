@@ -112,15 +112,15 @@ label intro:
                     delilah "Can I help you with something?"
                 "Quietly move closer":
                     delilah_thoughts "Quietly move closer"
-                "Wait, haven't I been here before?" if run == 2:
-                    delilah_thoughts "Wait, haven't I been here before?"
+                "Wait...I'm getting a sense of Deja Vu..." if run == 2:
+                    delilah_thoughts "Wait...I'm getting a sense of Deja Vu..."
                     jump start_loop2
-                "Oh god that hurt" if run == 3:
-                    delilah "Oh god that hurt"
-                    jump start_loop3
-                "Im sorry I had to do that" if run == 4:
-                    delilah_thoughts "Im sorry I had to do that"
-                    jump start_loop4
+                # "Oh god that hurt" if run == 3:
+                #     delilah "Oh god that hurt"
+                #     jump start_loop3
+                # "Im sorry I had to do that" if run == 4:
+                #     delilah_thoughts "Im sorry I had to do that"
+                #     jump start_loop4
 
             hide julian fade onlayer characters with Dissolve(3.0)
             pause 2.0
