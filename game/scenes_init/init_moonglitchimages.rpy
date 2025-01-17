@@ -18,24 +18,30 @@ label init_moonglitchimages:
     image moon_phase5 = "images/props/moon_phase5.png"
 
     image moon_phase1_glitch:
-        Glitch("images/props/moon_phase1.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-        linear 1
-        "images/props/moon_phase2.png"
+        # Glitch("images/props/moon_phase1.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        # linear 1
+        # "images/props/moon_phase2.png"
+        Glitch("images/props/moon_phase2.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
     image moon_phase2_glitch:
-        Glitch("images/props/moon_phase2.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-        linear 1
-        "images/props/moon_phase1.png"
+        # Glitch("images/props/moon_phase2.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        # linear 1
+        # "images/props/moon_phase1.png"
+        Glitch("images/props/moon_phase1.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
     image moon_phase2_glitch2:
-        Glitch("images/props/moon_phase2.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-        linear 1
-        "images/props/moon_phase3.png"
-    image moon_phase3_glitch:
+        # Glitch("images/props/moon_phase2.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        # linear 1
+        # "images/props/moon_phase3.png"
         Glitch("images/props/moon_phase3.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-        linear 1
-        "images/props/moon_phase4.png"
-    image moon_phase4_glitch:
+    image moon_phase3_glitch:
+        # Glitch("images/props/moon_phase3.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        # linear 1
+        # "images/props/moon_phase4.png"
         Glitch("images/props/moon_phase4.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-        linear 1
-        "images/props/moon_phase5.png"
+
+    image moon_phase4_glitch:
+        # Glitch("images/props/moon_phase4.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        # linear 1
+        # "images/props/moon_phase5.png"
+        Glitch("images/props/moon_phase5.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 
     return
