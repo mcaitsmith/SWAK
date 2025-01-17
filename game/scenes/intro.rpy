@@ -11,18 +11,21 @@ label intro:
     # run/end text in retro 80s font with outline/drop shadow
 
     # delilah_thoughts neutral "Delilah was stuck. She was between the tumultuous indignities of adolescence and the quiet ennui of adulthood, frozen in place before this choice that life had presented her with. Right on the line of 'too old to be acting like this' and 'too young to be trusted.'"
-    show windshield behind rearview at truecenter 
-    show bg scene1 with dissolve
+
+    # show windshield behind rearview at truecenter 
+
+    # show bg scene1 with dissolve
     
     if run == 1:
-        show reflection:
-            xalign 0.5
-            yalign 0.05
-        with { "master" : Dissolve(1.0) }
+        # show reflection:
+        #     xalign 0.5
+        #     yalign 0.05
+        # with { "master" : Dissolve(1.0) }
+
         "Delilah is stuck. Between the tumultuous indignities of adolescence and the quiet ennui of adulthood, frozen in place before this choice that life has presented her with. Right on the line of 'too old to be acting like this' and 'too young to be trusted.'"
     pause 1.0
-    hide reflection with dissolve
-    pause 1.0
+    # hide reflection with dissolve
+    # pause 1.0
     show sandra neutral onlayer characters at center_right
     sandra "So, have you considered what colleges you want to tour next summer?"
     # delilah_thoughts "She waited till the end of the ride to ask her daughter this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
@@ -42,8 +45,8 @@ label intro:
 
     hide cody onlayer characters
     hide sandra onlayer characters
-    hide windshield
-    hide rearview
+    # hide windshield
+    # hide rearview
     show bg scene1
 
     # show moon/eclipse at beginning of run
@@ -95,10 +98,6 @@ label intro:
         zoom 0.7 # in distance
     pause 3.0
 
-    # glitch 2 - phase 1
-    if run == 2:
-        $ moonglitch2 = True
-
     menu:
         delilah " " (callback = functools.partial(inctime))
         "Wait, who is that?":
@@ -112,8 +111,8 @@ label intro:
                     delilah "Can I help you with something?"
                 "Quietly move closer":
                     delilah_thoughts "Quietly move closer"
-                "Wait...I'm getting a sense of Deja Vu..." if run == 2:
-                    delilah_thoughts "Wait...I'm getting a sense of Deja Vu..."
+                "{color=#f00}Wait...I'm getting a sense of Deja Vu...{/color}" if run == 2:
+                    delilah_thoughts_run2 "Wait...I'm getting a sense of Deja Vu..."
                     jump start_loop2
                 # "Oh god that hurt" if run == 3:
                 #     delilah "Oh god that hurt"
@@ -131,9 +130,6 @@ label intro:
             with { "characters" : Dissolve(3.0) }
 
             delilah_thoughts "Just open the damn door."
-
-            if run == 2:
-                $ moonglitch2 = False
 
     jump open_door
 

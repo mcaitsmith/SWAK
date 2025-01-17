@@ -22,10 +22,10 @@ label open_door:
         call unlock_door
 
         if run == 2:
-            "As soon as she opens the door, Delilah grabs her mom by the hand." (callback = functools.partial(inctime, checkskip=True))
-        delilah "There's a boy in the backyard! He needs help! Come on!"
-        sandra "What? Hold on! Who is?"
-        delilah "Some guy! I don't know who he is but he needs help!"
+            "{color=#f00}As soon as she opens the door, Delilah grabs her mom by the hand.{/color}" (callback = functools.partial(inctime, checkskip=True))
+        delilah_run2 "There's a boy in the backyard! He needs help! Come on!"
+        sandra_run2 "What? Hold on! Who is?"
+        delilah_run2 "Some guy! I don't know who he is but he needs help!"
 
         # delilah "With one flower in possession, Delilah is quick to let her mom and brother in. She tells them that there's a boy by the lake who needs medical attention." (callback = functools.partial(inctime, checkskip=True))
         # hide cody onlayer characters with dissolve
@@ -82,7 +82,7 @@ label dinner_convo:
     elif run == 2 and loop2_investigate:
         call incphase
 
-        "8 PM"
+        "8 PM" (callback = functools.partial(inctime,checkskip=True))
         pause 1.0
 
         call argument
@@ -136,10 +136,10 @@ label argument:
     
     sandra "Oh, hush, Del, you used to have particular eating habits too." (callback = functools.partial(inctime,checkskip=True))
     if run == 2 and loop2_investigate:
-        delilah "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway." (callback = functools.partial(inctime,checkskip=True))
-        cody "Wastoid. I can't believe we're related." (callback = functools.partial(inctime,checkskip=True))
-        delilah "At the rate Dad's going, I wouldn't be surprised if we weren't related afterall." (callback = functools.partial(inctime,checkskip=True))
-        sandra "What do you mean by that?" (callback = functools.partial(inctime,checkskip=True))
+        delilah_run2 "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway." (callback = functools.partial(inctime,checkskip=True))
+        cody_run2 "Wastoid. I can't believe we're related." (callback = functools.partial(inctime,checkskip=True))
+        delilah_run2 "At the rate Dad's going, I wouldn't be surprised if we weren't related afterall." (callback = functools.partial(inctime,checkskip=True))
+        sandra_run2 "What do you mean by that?" (callback = functools.partial(inctime,checkskip=True))
     else:
         delilah "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!" (callback = functools.partial(inctime,checkskip=True))
         cody "I'm not exactly shouting from the roof tops about being related to a wastoid either." (callback = functools.partial(inctime,checkskip=True))
@@ -148,14 +148,14 @@ label argument:
     # make line above small text to replace line below
     cody "he says under his breath." (callback = functools.partial(inctime,checkskip=True))
     if run == 2 and loop2_investigate:
-        delilah "Fuck you." (callback = functools.partial(inctime,checkskip=True))
+        delilah_run2 "Fuck you." (callback = functools.partial(inctime,checkskip=True))
     else:
         delilah "You little!" (callback = functools.partial(inctime,checkskip=True))
         # replace line below with animated sprites
         delilah_thoughts "She stands up and raises her fist like she's going to punch him from across the table." (callback = functools.partial(inctime,checkskip=True))
     sandra "Hey! Hey! Relax!" (callback = functools.partial(inctime,checkskip=True))
     if run == 2 and loop2_investigate:
-        delilah "Oh, now you want to intervene?" (callback = functools.partial(inctime,checkskip=True))
+        delilah_run2 "Oh, now you want to intervene?" (callback = functools.partial(inctime,checkskip=True))
     else:
         delilah "Make him apologize!" (callback = functools.partial(inctime,checkskip=True))
     sandra "Cody...will you please apologize to your sister for calling her a b-word?" (callback = functools.partial(inctime,checkskip=True))
@@ -172,7 +172,7 @@ label argument:
 
     call incphase
 
-    # glitch 5 - phase 4
+    # glitch 5 - phase 2
     if run == 2:
         $ moonglitch5 = True
     menu:
@@ -185,20 +185,20 @@ label argument:
             if run == 2:
                 $ moonglitch5 = False
             delilah "I can't believe you let him get away with that."
-        "He's right you know." if run == 2 and loop2_investigate:
+        "{color=#f00}He's right you know.{/color}" if run == 2 and loop2_investigate:
             if run == 2:
                 $ moonglitch5 = False
-            delilah "He's right you know."
-        "Setting a great example for your kids, Sandra." if run == 2 and loop2_investigate:
+            delilah_run2 "He's right you know."
+        "{color=#f00}Setting a great example for your kids, Sandra.{/color}" if run == 2 and loop2_investigate:
             if run == 2:
                 $ moonglitch5 = False
-            delilah "Setting a great example for your kids, Sandra."
+            delilah_run2 "Setting a great example for your kids, Sandra."
     sandra "Well, Del, you don't exactly make it easy by antagonizing him."
     if run == 2 and loop2_investigate:
-        delilah "I'm not doing anything. I'm just like you, Sandra."
-        sandra "What is this about?"
-        delilah_thoughts "She laughs." # replace with sfx
-        delilah "You know what really pisses me off about this whole situation? You won't even admit to what we already know."
+        delilah_run2 "I'm not doing anything. I'm just like you, Sandra."
+        sandra_run2 "What is this about?"
+        delilah_thoughts_run2 "She laughs." # replace with sfx
+        delilah_run2 "You know what really pisses me off about this whole situation? You won't even admit to what we already know."
     else:
         delilah "I don't antagonize him..."
         delilah_thoughts "Those last words he said before storming off..."
@@ -211,11 +211,11 @@ label argument:
     delilah "I think you know what I mean."
     sandra "No, I don't, and you should watch what you say or you'll regret it."
     if run == 2 and loop2_investigate:
-        delilah "I dare you to be honest with me. Just show a single shred of honesty and respect to your children and just tell us: why isn't Dad here?"
+        delilah_run2 "I dare you to be honest with me. Just show a single shred of honesty and respect to your children and just tell us: why isn't Dad here?"
         pause 1.0
-        delilah_thoughts "Her throat trembles, like she's choking on the words."
-        sandra "He's on a business trip, Del."
-        delilah "That's what I thought. I'll be outside."
+        delilah_thoughts_run2 "Her throat trembles, like she's choking on the words."
+        sandra_run2 "He's on a business trip, Del."
+        delilah_run2 "That's what I thought. I'll be outside."
     else:
         delilah "Is that a promise?"
         sandra "Don't you start."

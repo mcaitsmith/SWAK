@@ -27,7 +27,7 @@ label init_loop2puzzle:
                     moonglitches.glitch4 = False
                     moonglitches.glitch5 = False
 
-                if g2==True and renpy.in_rollback() and moonglitches.glitch1: # if rolled back from 1 to 2
+                if g2==True and not renpy.in_rollback() and not renpy.is_skipping() and moonglitches.glitch1: # if did not roll back or skip from 1 to 2
                     moonglitches.glitch2 = True
                 elif g2==True:
                     moonglitches.glitch2 = False
