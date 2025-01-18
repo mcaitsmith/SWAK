@@ -2,7 +2,7 @@
 
 label back_to_shore_final:
 
-    call incphase
+    call incphase from _call_incphase
 
     "8 PM"
     pause 1.0
@@ -16,7 +16,7 @@ label back_to_shore_final:
     else:
         pass
 
-    call incphase # should end up at totality for final choice
+    call incphase from _call_incphase_1 # should end up at totality for final choice
 
     delilah "Delilah has three possible choices she can follow from here:"
     menu:

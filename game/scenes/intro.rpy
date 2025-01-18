@@ -62,7 +62,7 @@ label intro:
     # delilah_thoughts "Delilah was thinking a lot lately about the difference between a house and a home. For most of her life, she thought they were synonymous. But recently she realized that a home was a place you felt at home, a house was a place you lived in."
     # delilah_thoughts "She didn't feel at home anywhere. Not anymore."
 
-    call incphase
+    call incphase from _call_incphase_4
 
     show sandra neutral onlayer characters at center
     sandra "Hey, Del, my front door key isn't working."

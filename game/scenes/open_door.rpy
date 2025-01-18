@@ -11,7 +11,7 @@ label open_door:
     pause 1.0
 
     if run == 3 and loop3_investigate:
-        call incphase
+        call incphase from _call_incphase_5
 
         "8 PM"
         pause 1.0
@@ -19,7 +19,7 @@ label open_door:
         jump dinner_convo
     elif run == 2 and loop2_investigate:
 
-        call unlock_door
+        call unlock_door from _call_unlock_door
 
         if run == 2:
             "{color=#f00}As soon as she opens the door, Delilah grabs her mom by the hand.{/color}" (callback = functools.partial(inctime, checkskip=True))
@@ -32,12 +32,12 @@ label open_door:
         jump back_to_lake
     else:
         
-        call incphase
+        call incphase from _call_incphase_6
 
         "8 PM" (callback = functools.partial(inctime,checkskip=True))
         pause 1.0
 
-        call unlock_door
+        call unlock_door from _call_unlock_door_1
         
         sandra "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed." (callback = functools.partial(inctime,checkskip=True))
         
@@ -80,18 +80,18 @@ label dinner_convo:
         hide sandra onlayer characters with dissolve
         jump outside
     elif run == 2 and loop2_investigate:
-        call incphase
+        call incphase from _call_incphase_7
 
         "8 PM" (callback = functools.partial(inctime,checkskip=True))
         pause 1.0
 
-        call argument
+        call argument from _call_argument
 
         jump outside
 
     else:
         
-        call argument
+        call argument from _call_argument_1
 
         jump outside
 
@@ -170,7 +170,7 @@ label argument:
     
     hide cody onlayer characters with dissolve
 
-    call incphase
+    call incphase from _call_incphase_8
 
     # glitch 5 - phase 2
     if run == 2:

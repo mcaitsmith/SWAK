@@ -24,10 +24,10 @@ init:
     default playtext = "HOW TO PLAY\nMake choices to control your future.\nRoll back with the Back button to return to the past.\nSkip across time with the Skip button.\nReview your History to remember what happened.\nNot everything follows the rules of time and space."
 
 init:
-    call init_screens # define UI screens
-    call init_moonglitchimages # define moon glitch images
-    call init_loop2puzzle # define function for loop 2 puzzle
-    call init_classes # define persistent variable classes
+    call init_screens from _call_init_screens # define UI screens
+    call init_moonglitchimages from _call_init_moonglitchimages # define moon glitch images
+    call init_loop2puzzle from _call_init_loop2puzzle # define function for loop 2 puzzle
+    call init_classes from _call_init_classes # define persistent variable classes
 
 init python:
     # define function to increment time by 1 every line of dialogue + add flowers/triggers
@@ -105,33 +105,33 @@ image reflection = "images/props/rearview_reflection.png"
 image windshield = "images/props/windshield.png"
 
 # define flower images
+image flower_run1:
+    "images/props/flower.png"
+    zoom 0.6
+    linear 0.05 alpha 0.7
+    linear 0.05 alpha 1
+    0.25
+    linear 0.05 alpha 0.4
+    linear 0.05 alpha 1
+    0.25
+    linear 0.05 alpha 0.8
+    linear 0.05 alpha 1
+    0.5
+    repeat
 image flower_run2:
     "images/props/flower.png"
     zoom 0.6
+    linear 0.05 alpha 0.8
+    linear 0.05 alpha 1
+    0.5
     linear 0.05 alpha 0.7
     linear 0.05 alpha 1
     0.25
     linear 0.05 alpha 0.4
     linear 0.05 alpha 1
     0.25
-    linear 0.05 alpha 0.8
-    linear 0.05 alpha 1
-    0.5
     repeat
 image flower_run3:
-    "images/props/flower.png"
-    zoom 0.6
-    linear 0.05 alpha 0.8
-    linear 0.05 alpha 1
-    0.5
-    linear 0.05 alpha 0.7
-    linear 0.05 alpha 1
-    0.25
-    linear 0.05 alpha 0.4
-    linear 0.05 alpha 1
-    0.25
-    repeat
-image flower_run4:
     "images/props/flower.png"
     zoom 0.6
     linear 0.05 alpha 0.4
@@ -159,26 +159,30 @@ $ config.tag_layer['bg'] = 'background'
 label checkrun:
     if flowers.flower3:
         $ run = 4
-        show flower_run2:
-            xalign 0.4
+        show flower_run1:
+            xalign 0.515
             yalign 0.6
+            rotate 25
+        show flower_run2:
+            xalign 0.485
+            yalign 0.6
+            rotate -25
         show flower_run3:
             xalign 0.5
             yalign 0.6
-        show flower_run4:
-            xalign 0.6
-            yalign 0.6
     elif flowers.flower2:
         $ run = 3
+        show flower_run1:
+            xalign 0.51
+            yalign 0.6
+            rotate 15
         show flower_run2:
-            xalign 0.45
+            xalign 0.49
             yalign 0.6
-        show flower_run3:
-            xalign 0.55
-            yalign 0.6
+            rotate -15
     elif flowers.flower1:
         $ run = 2
-        show flower_run2:
+        show flower_run1:
             xalign 0.5
             yalign 0.6
     else:
@@ -189,9 +193,9 @@ label checkrun:
     #         yalign 0.05
     #     with { "master" : Dissolve(1.0) }
     "7 PM"
+    hide flower_run1
     hide flower_run2
     hide flower_run3
-    hide flower_run4
     # "RUN [run]"
     return
 

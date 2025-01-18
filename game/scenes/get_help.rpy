@@ -2,7 +2,7 @@
 
 label get_help:
 
-    call incphase
+    call incphase from _call_incphase_2
 
     delilah_run2 "No, no, you need help!"
     boy_run2 "Please...just stay..."
@@ -21,7 +21,7 @@ label get_help:
     delilah_thoughts_run2 "I explain the situation, the boy down on the rocks who was dying from some unseen condition. They take me at my word and follow me down the hill towards the lake."
     # delilah_thoughts "She explains the situation, the boy down on the rocks who was dying from some unseen condition. They take her at her word and follow her down the hill towards the lake."
 
-    call incphase
+    call incphase from _call_incphase_3
     # delilah "If the player rejects this idea and goes for help, she runs down the street, finds a payphone, and calls for an ambulance. By the time paramedics arrive, there is nobody on the lakeshore."
     show bg scene3 with dissolve
 

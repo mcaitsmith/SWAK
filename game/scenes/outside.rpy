@@ -2,7 +2,7 @@
 
 label outside:
 
-    call incphase
+    call incphase from _call_incphase_9
     
     show bg scene3 with dissolve
 
@@ -51,7 +51,7 @@ label outside:
         zoom 1.0
     pause 2.0
 
-    call incphase
+    call incphase from _call_incphase_10
 
     if not flowers.flower1:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching a glowing flower."

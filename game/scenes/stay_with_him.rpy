@@ -10,7 +10,7 @@ label stay_with_him:
 
     boy_run2 "Thank you."
 
-    call incphase
+    call incphase from _call_incphase_13
     
     delilah_run2 "So...what do you want to do to fill the time? It could be a while till you, y'know..."
     boy_run2 "Hmm. Why don't you tell me about yourself? What's your name? What brings you out here to this fine patch of jagged rocks?"
@@ -43,7 +43,7 @@ label stay_with_him:
     delilah_thoughts_run2 "He tilts his head back and the light drains from his eyes."
     hide julian onlayer characters with dissolve
 
-    call incphase
+    call incphase from _call_incphase_14
 
     delilah_thoughts_run2 "He's gone again. I stare at his body, trying to process that I've now witnessed death twice in the same 24-hour period."
     # delilah_thoughts "He's gone again. Delilah stares at his body, trying to process that she has now witnessed death twice in the same 24-hour period."

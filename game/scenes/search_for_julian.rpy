@@ -16,7 +16,7 @@ label search_for_julian:
     delilah_run2 "Oh! I'm sorry! I'm sorry!"
     boy_run2 "Watch where you're stepping! Ow."
 
-    call incphase
+    call incphase from _call_incphase_11
 
     delilah_run2 "There you are! Where did you go before? I was trying to help you!"
     boy_run2 "Wasn't up to me. I keep popping in and out like that. Ending up different places around the lake."
