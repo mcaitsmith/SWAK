@@ -12,7 +12,17 @@ SWAK Outline
 }
 
 
-:: Dinner scene first loop {"position":"1200,1500","size":"100,100"}
+:: "Wait...I'm getting a sense of Deja Vu..." {"position":"800,1300","size":"100,100"}
+Deliliah looks down to see a glowing flower in her hand. A dam ruptures and she can see the image of that boy dying on the lakeshore burned into her mind. 
+
+This has already happened. The dinner. The fight. The boy dying in their backyard. 
+
+[[Go to the lakeshore]]
+
+[[Open the backdoor for Mom and Cody|Ignore shadowy figure]]
+
+
+:: Dinner scene first loop {"position":"1400,1500","size":"100,100"}
 Fade in
 
 Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate. He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it. Delilah watches in horror. 
@@ -58,6 +68,91 @@ Sandra: "Upstairs. Now."
 Delilah: "Fuck you, I'm going for a walk."
 
 [[Outside first loop]]
+
+
+:: Dinner scene second loop {"position":"1600,1200","size":"100,100"}
+Delilah: "Fine."
+
+Fade out
+
+Fade In
+
+Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate. He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it. Delilah watches in horror. 
+
+Delilah: "Can't even eat pizza like a normal person?"
+Cody: "I can't help it if my eccentricities extend to my dining preferences."
+Delilah: "You disgust me."
+
+Sandra sits down at the table with nothing but a salad on her plate. 
+
+Sandra: "Oh, hush, Del, you used to have particular eating habits too."
+Delilah: "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway."
+Cody: "Wastoid. I can't believe we're related."
+Delilah: "'At the rate Dad's going, I wouldn't be surprised if we weren't related afterall."
+Sandra: "What do you mean by that?"
+Cody: "Bitch..." he says under his breath.
+Delilah: "Fuck you."
+Sandra: "Hey! Hey! Relax!"
+Delilah: "Oh, now you want to intervene?"
+Sandra: "Cody...will you please apologize to your sister for calling her a b-word?"
+Cody: "She started it!"
+Sandra: "Cody...things are hard enough as is..."
+Cody: "I'm sorry...that you're a bitch."
+Sandra: "That's it! Upstairs, now!" 
+Cody: He drops his bare crusts in the trash dramatically then heads for the stairs. "I wonder why Dad prefers his business trips to being here!"
+
+["He's right you know."]
+["Setting a great example for your kids, Sandra."]
+
+Sandra: "Well, Del, you don't exactly make it easy by antagonizing him."
+Delilah: "I'm not doing anything. I'm just like you, Sandra."
+Sandra: "What is this about?"
+Delilah: She laughs. "You know what realy pisses me off about this whole situation? You won't even admit to what we already know."
+Sandra: "What's that supposed to mean?"
+Delilah: "I think you know what I mean."
+Sandra: "No, I don't, and you should watch what you say or you'll regret it." 
+Delilah: "I dare you to be honest with me. Just show a single shred of honesty and respect to your children and just tell us: why isn't Dad here?"
+Sandra:Her throat trembles, like she's choking on the words.  "He's on a business trip, Del."
+Delilah: "That's what I thought. I'll be outside."
+
+[[Go outside|Outside second loop]]
+
+
+:: Find Julian {"position":"1450,1050","size":"100,100"}
+This guy, whoever he is, would die if they did nothing. So, Delilah went walking along the lakeshore, hopping across fences and docks. 
+
+She thought to call out for him, but remembered that she didn't know his name. What would she yell out? "Boy!" "Hello? I'm looking for a boy!" No. Instead, she walked around in the dark.
+
+Delilah, stepping across a pile of rocks, feels something person-shaped under her heel.
+
+???: "Ow!"
+
+Delilah: "Oh! I'm sorry! I'm sorry!" 
+
+???: "Watch where you're stepping! Ow."
+
+Delilah: "There you are! Where did you go before? I was trying to help you!"
+
+???: "Wasn't up to me. I keep popping in and out like that. Ending up different places around the lake."
+
+Delilah: "Popping in and out?"
+
+???: "Yeah. Like one minute I'm picking flowers around a deserted lake and the next there's a whole neighborhood built around it and a rude girl stepping on me. I keep going back and forth."
+
+Delilah: "Oh no, you're delirious. How much blood have you lost?"
+
+???: "None. I haven't lost any. But I AM dying, unfortunately."
+
+Delilah: "What? How?"
+
+???: "It already happened once before. You were there, and it's about to happen again."
+
+Delilah: "What can I do to help? Should I go get an ambulance?"
+
+???: "Something tells me that won't help...honestly what I'd really appreciate is if you stuck around and kept me company. Y'know, just stay till the last light goes out."
+
+[[Stay with him|Stay with him loop 2]]
+[[Go get help|Go get help loop 2]]
 
 
 :: Game Start {"position":"500,1500","size":"100,100"}
@@ -117,6 +212,9 @@ Each house in the neighborhood backed up to the lake, a fleet of boats and jetsk
 
 [[Just open the damn door.|Ignore shadowy figure]]
 
+If the player has previously gotten a single flower
+[["Wait...I'm getting a sense of Deja Vu..."]]
+
 
 
 :: General Notes {"position":"700,200","size":"100,100"}
@@ -152,6 +250,40 @@ Julian:
 If the player rejects this idea and goes for help, she runs down the street, finds a payphone, and calls for an ambulance. By the time paramedics arrive, there is nobody on the lakeshore. 
 
 The game stops here unless the player uses the history function to try a different choice. 
+
+
+:: Go get help loop 2 {"position":"1675,1075","size":"100,100"}
+Delilah: "No, no, you need help!"
+
+???: "Please...just stay..."
+
+But before she could answer him, her feet were already carrying her to the nearest road. Along the dark roads, illuminated by street lamps, she tried to find a payphone. After fifteen minutes of searching she found one and dialed 9-1-1. 
+
+Thirty minutes pass and paramedics arrive. 
+
+She explains the situation, the boy down on the rocks who was dying from some unseen condition. They take her at her word and follow her down the hill towards the lake. 
+
+When they get there, the boy has disappeared once again. Not a trace of him is left behind. 
+
+The End.
+
+
+:: Go to the lakeshore {"position":"1000,1300","size":"100,100"}
+Delilah runs down the hill. The air is silent, aside from the sound of the water lapping against the rocks. 
+
+Did she imagine the whole thing? That must be it. There is no boy dying on the lakeshore.
+
+A shadow materializes out of the corner of her eye. It slowly peels into existence until it takes the shape of a person. Then finally a face and body forms...the one from her memory.
+
+???: He gasps for air, looking around frantically.
+
+Delilah: "Oh my God, you're..."
+
+???: "S-stay away from me..." he clutches his side, trying and failing to hold himself up. 
+
+Delilah: "It's okay! You're okay! Just stay here, I'll get help!"
+
+[[get help]]
 
 
 :: Ignore shadowy figure {"position":"1000,1500","size":"100,100"}
@@ -217,7 +349,7 @@ NOTE:
 If the flower has already been taken on a first loop, there is nothing in Julian's hands. Instead he just collapses then and there. The game stops until the player uses history to try a different passage option. Same happens if Delilah searches for Julian after dinner on the second loop. 
 
 
-:: Outside first loop {"position":"1400,1500","size":"100,100"}
+:: Outside first loop {"position":"1800,1500","size":"100,100"}
 The door slams behind Delilah. She stands on the back patio and gazes out at the water for a moment. What would happen if she just started walking? The thought creeps into her mind. What if she just picked a direction and started walking indefinitely? Would she find peace? It was a possibility. 
 
 Along the shoreline, by the rocks, she sees that shadowy figure once again standing just out of view.
@@ -239,6 +371,25 @@ Along the shoreline, by the rocks, she sees that shadowy figure once again stand
  [[Take the flower]]
 
 
+:: Outside second loop {"position":"1800,1200","size":"100,100"}
+The door slams behind Delilah. She stands on the back patio and gazes out at the water for a moment. What would happen if she just started walking? The thought creeps into her mind. What if she just picked a direction and started walking indefinitely? Would she find peace? It was a possibility. 
+
+Along the shoreline, by the rocks, she sees that shadowy figure once again standing just out of view.
+ 
+ ["Hey! Do you need help?!"]
+ [Silently approach]
+ 
+ The figure stumbles for a moment and then collapses on the rocks. 
+ 
+ Delilah: "Hey!" She runs down the hill towards the lakeshore.
+ 
+ Delilah: "Hey, are you okay?!" 
+ 
+ Laying on rocks, trembling in agony, is a boy clutching...nothing. He looks at Delilah with equal parts desperation and shock. 
+ 
+ The End.
+
+
 :: Stay with him {"position":"2100,300","size":"100,100"}
 (if the player already tried to get help, there is an additional line about deciding that the only option is to just stay here with him)
 
@@ -249,7 +400,67 @@ After a moderately lengthy conversation in which Delilah and Julian start a budd
 After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option. 
 
 
-:: Take the flower {"position":"1600,1500","size":"100,100"}
+:: Stay with him loop 2 {"position":"1675,950","size":"100,100"}
+Delilah: "Okay. I'll stay with you." She sits down on a patch of grass just above his head. 
+
+???: "Thank you."
+
+Delilah: "So...what do you want to do to fill the time? It could be a while till you, y'know..."
+
+???: "Hmm. Why don't you tell me about yourself? What's your name? What brings you out here to this fine patch of jagged rocks?"
+
+Delilah: She chuckles painfully. "I'm Delilah. Uh, just here on a short weekend trip with the family."
+
+???: "Right, and that lovely creature I saw you with before must be your sister then?"
+
+Delilah: "Mother and where were you?? I went for help and you disappeared!"
+
+???: "Oh, y'know, I was halfway between lakes. There and not there."
+
+Delilah: "How did you get like...this?"
+
+???: "Beats the hell out of me. Like I said, I was out picking flowers and ended up here." 
+
+Delilah: "Picking flowers? Really?"
+
+???: "Yeah, for my grandparents' flower shop. Is there something wrong with that?" 
+
+Delilah: "No, no, it's just- I wouldn't ever have guessed."
+
+???: "They're probably worried sick about me. Say, you haven't heard of a 'Schneider's Happy Petals' have you?
+
+Delilah: "Nothin like that around here."
+
+???: "Wow. Then I must really be far from home." He starts coughing violently. "Ouch."
+
+Delilah: "Are you okay?"
+
+???: "Yeah...No...Don't worry about it..."
+
+Delilah: "You're...dying again, aren't you?"
+
+???: "It sure feels like it. But, hey, at least I wasn't alone this time."
+
+Delilah: She looks up and down his body for any sign of injury, none to be found.
+
+???: "If you come around this way again...if I end up here dying again...you promise you'll wait it out with me again?"
+
+Delilah: "Yeah...yeah I promise."
+
+???: "Rad..."
+
+Delilah: "Hey, you never told me your name."
+
+???: "Oh, how rude of me...uh, it's Julian." He tilts his head back and the light drains from his eyes. 
+
+He's gone again. Delilah stares at his body, trying to process that she has now witnessed death twice in the same 24-hour period. 
+
+She lays back on the grass, next to Julian, her gaze going up to the stars in the sky. 
+
+Several feet above her, another nearly identical glowing flower dangles on the edge of a tree branch. 
+
+
+:: Take the flower {"position":"2200,1500","size":"100,100"}
 Once Delilah takes the glowing flower in hand, the boy goes limp. He's maybe a year or two older than her, she guesses. 
 
 Delilah: "Oh my God! Oh my God!" She looks around at the empty stillness of the night. "Somebody help! Somebody help! He's not moving!" 
@@ -269,6 +480,47 @@ The player can either [[go search for Julian]]
 Or [[go back inside]]
 
 
+:: get help {"position":"1200,1200","size":"100,100"}
+Delilah runs up the patio stairs and grabs the key from under the tacklebox. With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood.
+
+She looks across the foyer to see Cody pressing his nose against the window, banging his hand on the glass like a zombie.
+
+As soon as she opens the door, Delilah grabs her mom by the hand.
+
+Delilah: "There's a boy in the backyard! He needs help! Come on!"
+
+Sandra: "What? Hold on! Who is?"
+
+Delilah: "Some guy! I don't know who he is but he needs help!"
+
+Leading her down the patio stairs and down the hill towards the lake, they head to the lakeshore. 
+
+Sandra: "Is this where you saw him?" 
+
+Delilah: "Yes! He was right here!"
+
+Sandra: "Well...if he was here he's gone now."
+
+Delilah: "Should we look for him?"
+
+Sandra: "I mean...he's probably just one of the neighbor kids. Had too much to drink maybe? I'm sure he'll be fine."
+
+Delilah: "But he wasn't...he looked like he wasn't even from around here."
+
+Sandra: "Could've been one of the landscapers' kids then. Who knows? It hardly seems like any of our business, Del."
+
+Delilah: "Wow."
+
+Sandra: "What?"
+
+Delilah: "I'm somehow completely unsurprised and still shocked by you."
+
+Sandra: She turns around and starts her way back up the hill. "Let's just go try and have a normal evening together, yeah?"
+
+[["Fine."|Dinner scene second loop]]
+[[Go looking for the boy|Find Julian]]
+
+
 :: go back inside {"position":"1800,300","size":"100,100"}
 If the player goes back inside, Delilah experiences the dinner conversation again, except her attitude is much harsher with more options to antagonize Cody and Sandra. We get a few more clues as to what is truly upsetting Delilah but we don't outright know it yet. 
 
@@ -279,7 +531,7 @@ Or [[tell off her mom before going outside|Outside]]
 With the second option Delilah says some incredibly hurtful things, the sort that would make a relationship impossible to fix. It's obvious how hurt Sandra is. Then she goes back to the regular "outside" passage
 
 
-:: go back to the shore {"position":"1325,775","size":"100,100"}
+:: go back to the shore {"position":"1375,650","size":"100,100"}
 Delilah goes to the shore to find Julian there again. They're both confused as to how they're alive but they think the Selene Lillies are the source of this. They talk a bit about the time loop situation they're in. Julian shares what he knows about the Selene Lillies: that they're extremely rare and mysterious flowers local to his world. Julian explains that he was in the process of making a bouquet when he found himself here. He thinks that by getting all five flowers he might be able to break the loop and go home. Because of his unstable physical state, he needs Delilah to find all five flowers on her own. 
 
 The player can come back to this scene at any time during the third loop to engage in optional dialogue with Julian. 
@@ -296,7 +548,7 @@ Delilah goes outside to look for the boy she saw. She walks down the shoreline f
 [[Stay with him]]
 
 
-:: going to the shore for the fourth time {"position":"1200,1000","size":"100,100"}
+:: going to the shore for the fourth time {"position":"1375,800","size":"100,100"}
 At the shore, Julian is standing there waiting for you to meet with him. Delilah tells him about the conversation she just had with Cody, how difficult it was. Julian feels for her and apologizes for her having to go through that. This confuses Delilah since his life is at stake. Sort of dwarfs in comparison. Julian doesn't see it that way. His martyr complex comes through in this moment. 
 
 They discuss that there are only two flowers left to find. Delilah is confounded by where it could be. Julian then notices it just floating in the water near their feet. Easy peasy, right? Not quite.
@@ -320,7 +572,7 @@ Delilah has three possible choices she can follow from here:
 - Delilah can agree to remain in the time loop with him as the game simply restarts and the time loop begins again. 
 
 
-:: investigate the lake shore {"position":"1300,300","size":"100,100"}
+:: investigate the lake shore {"position":"1300,200","size":"100,100"}
 Delilah goes by the shore to find Julian standing there confused. He remembers Delilah and then everything fading to black. He's afraid of you but then starts to remember that she took the flower from him before everything went black. 
 
 As the two talk, Julian keels over in pain. Delilah asks what's wrong but not even he knows. Delilah's mom calls for her. She leaves to go get help. 
@@ -328,7 +580,7 @@ As the two talk, Julian keels over in pain. Delilah asks what's wrong but not ev
 [[Open the door]]
 
 
-:: notice shadowy figure {"position":"800,1600","size":"100,100"}
+:: notice shadowy figure {"position":"850,1700","size":"100,100"}
 Along the shoreline is what looks like a person standing there, but it's hard to make out.
 
 ["Hey! You there!"]
@@ -340,7 +592,7 @@ They move behind a tree and disappear completely, as if vanishing in thin air.
 [[Whatever. Probably one of the landscapers.|Ignore shadowy figure]]
 
 
-:: smoke break {"position":"1700,800","size":"100,100"}
+:: smoke break {"position":"1825,625","size":"100,100"}
 Delilah and Sandra talk. Delilah considers telling her about Julian but doesn't even bother since she's already seen that her mom doesn't care and will do nothing. In this scene, Delilah reveals to her mom that she knows about her father's infidelity. Sandra is shocked at first, not sure what to make of this discovery. She apologizes for not saying something sooner, but justifies her actions as best as she can. Sandra really is just doing her best while trying to hide her broken heart from her children. 
 
 She ends the conversation by saying "don't tell your brother, I don't think he could handle it." 
@@ -356,11 +608,11 @@ Opening the door immediately will lead the player back to the same loop.
 
 
 
-:: start loop 3 {"position":"1100,650","size":"100,100"}
+:: start loop 3 {"position":"1150,575","size":"100,100"}
 Delilah sees that she now has two flowers in hand and is back at the start of the evening. From here the player can immediately [[go back to the shore]] or [[Open the door]]
 
 
-:: start loop 4 {"position":"1000,900","size":"100,100"}
+:: start loop 4 {"position":"1100,725","size":"100,100"}
 At the start of the fourth loop, Delilah is remorseful of having to put Cody through that. When she interacts with him again in the opening sequence, he is completely ignorant of the conversation they just had. Delilah makes a mental note not to put him through that again. 
 
 She takes inventory and reminds herself that there are only two flowers left to find. 
@@ -370,7 +622,7 @@ The player can continue with the story by going and [[opening the door for her m
 Or [[going to the shore for the fourth time]]
 
 
-:: unlock the door for her mom {"position":"1500,800","size":"100,100"}
+:: unlock the door for her mom {"position":"1600,650","size":"100,100"}
 Now looking for the Selene Lillies, Delilah proceeds with the previously established dinner scene with Cody and her mom. However, she is a bit less antagonistic of them as she now has a new goal of saving Julian. During dinner, she notices something glowing in Cody's pocket. Sandra steps out to have a smoke while Cody and Delilah clean up the kitchen. 
 
 In this scene, the player talks with Cody and discovers that he found one of the glowing flowers in the front yard. If Delilah asks for it back he attempts to bargain for it, but, being a little brat, tears it apart instead of giving it to you. You can reattempt the conversation as many times as you want, trying different options each time, even explaining the situation with Julian to him, but he laughs and rips the flower up every time. 
