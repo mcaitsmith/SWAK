@@ -8,6 +8,6 @@ label smoke_break:
     # delilah goes back inside
     hide sandra onlayer characters with dissolve
     show bg scene2 with dissolve
-    show cody happy onlayer characters at center_left with dissolve
+    show cody happy onlayer characters at center with dissolve
     $ smoke_break = True
     return

@@ -68,6 +68,7 @@ init python:
 define narrator = Character(None,callback=None,what_style="centered_text", window_style="centered_window")
 define delilah = Character("Delilah",image="delilah",callback=inctime)
 define delilah_run2 = Character("Delilah",image="delilah",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define delilah_run3 = Character("Delilah",image="delilah",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
 define delilah_thoughts = Character("Delilah",image="delilah",what_prefix='(', what_suffix=')', what_italic=True,callback=inctime)
 define delilah_thoughts_run2 = Character("Delilah",image="delilah",what_prefix='{color=#f00}(', what_suffix='){/color}', what_italic=True,callback=inctime)
 define delilah_thoughts_run3 = Character("Delilah",image="delilah",what_prefix='{color=#0f0}(', what_suffix='){/color}', what_italic=True,callback=inctime)
@@ -78,8 +79,10 @@ define boy = Character("???",image="julian",callback=inctime)
 define boy_run2 = Character("???",image="julian",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define cody = Character("Cody",image="cody",callback=inctime)
 define cody_run2 = Character("Cody",image="cody",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define cody_run3 = Character("Cody",image="cody",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
 define sandra = Character("Sandra",image="sandra",callback=inctime)
 define sandra_run2 = Character("Sandra",image="sandra",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define sandra_run3 = Character("Sandra",image="sandra",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
 
 # define animated fade sprite for Julian
 image julian fade:

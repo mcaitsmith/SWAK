@@ -16,7 +16,20 @@ label open_door:
         "8 PM"
         pause 1.0
 
+        call unlock_door
+
+        sandra "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed." (callback = functools.partial(inctime,checkskip=True))
+        
+        show cody happy onlayer characters at center_right
+        
+        cody "Yes, very gracious."
+
+        hide cody onlayer characters
+        hide sandra onlayer characters
+        with dissolve
+        
         jump dinner_convo
+
     elif run == 2 and loop2_investigate:
 
         call unlock_door from _call_unlock_door
@@ -57,25 +70,54 @@ label open_door:
 
 label dinner_convo:
     if run == 3 and loop3_investigate:
-        delilah "Now looking for the Selene Lillies, Delilah proceeds with the previously established dinner scene with Cody and her mom. However, she is a bit less antagonistic of them as she now has a new goal of saving Julian. During dinner, she notices something glowing in Cody's pocket. Sandra steps out to have a smoke while Cody and Delilah clean up the kitchen."
+        call argument
+
+        delilah_thoughts_run3 "The three of us sit in silence for a moment."
+        cody_run3 "I found a weird flower in the yard!"
+        delilah_thoughts_run3 "I perk up."
+        sandra_run3 "Oooh, very cool. Is it a rose?"
+        cody_run3 "Nope!"
+        sandra_run3 "Is it....a daisy?"
+        cody_run3 "Nope!"
+        delilah_run3 "Does it glow?"
+        cody_run3 "Yeah! How'd you know?"
+        menu:
+            delilah " " (callback = functools.partial(inctime))
+            "{color=#0f0}I saw some outside.{/color}":
+                delilah_run3 "I saw some outside."
+            "{color=#0f0}I heard they were local to the area.{/color}":
+                delilah_run3 "I heard they were local to the area."
+        cody_run3 "Well, it's mine now. Think I'll make it into a bookmark."
+        delilah_run3 "Do you think you could give it to me?"
+        cody_run3 "Heck no! Finders keepers, Del!"
+
+        call incphase
+
+        delilah_thoughts_run3 "Mom stands up from the table."
+        sandra_run3 "I can see this conversation is going in a fun direction. I'll be having a smoke outside if you need me."
+
+        # delilah "Now looking for the Selene Lillies, Delilah proceeds with the previously established dinner scene with Cody and her mom. However, she is a bit less antagonistic of them as she now has a new goal of saving Julian. During dinner, she notices something glowing in Cody's pocket. Sandra steps out to have a smoke while Cody and Delilah clean up the kitchen."
         hide sandra onlayer characters with dissolve
         menu:
-            delilah "Dialogue choice" (callback = functools.partial(inctime))
-            "go with Sandra":
+            delilah " " (callback = functools.partial(inctime))
+            "{color=#0f0}Follow her outside{/color}":
+                delilah_thoughts_run3 "Follow her outside"
                 hide cody onlayer characters with dissolve
                 call smoke_break from _call_smoke_break
-            "stay inside":
+            "{color=#0f0}Stay with Cody{/color}":
+                delilah_thoughts_run3 "Stay with Cody"
                 delilah "In this scene, the player talks with Cody and discovers that he found one of the glowing flowers in the front yard. If Delilah asks for it back he attempts to bargain for it, but, being a little brat, tears it apart instead of giving it to you. You can reattempt the conversation as many times as you want, trying different options each time, even explaining the situation with Julian to him, but he laughs and rips the flower up every time."
                 show sandra neutral onlayer characters at center_right with dissolve
                 delilah "After Cody rips up the flower, the player can punch Cody just as Sandra walks in. Delilah gets in trouble and Sandra tells her to come outside."
         if smoke_break:
             delilah "If the player has completed the smoke break conversation, a new dialogue option is available with Cody in which she can tell him everything about their father's infidelity. Just as Sandra said, the news is devastating and he refuses to accept it, but you go further and further by sharing details from the letter Delilah read. Each detail hurts him more and more. He looks at the flower for a moment, questioning everything he's ever known, and then leaves it on the counter."
             if not flowers.flower3:
+                call screen flower3_pick
                 delilah "Delilah gets the flower and is able to roll back and start the fourth loop." (callback = functools.partial(inctime, fnum=3))
             else:
                 pass
             # sandra returns, delilah goes outside
-            show sandra neutral onlayer characters at center with dissolve
+            show sandra neutral onlayer characters at center_right with dissolve
         hide cody onlayer characters with dissolve
         hide sandra onlayer characters with dissolve
         jump outside
@@ -98,15 +140,11 @@ label dinner_convo:
 label unlock_door:
     # add footsteps/ backdoor opening sfx
     delilah_thoughts "Sure enough, the key was still under the tacklebox, just where Dad always kept it." (callback = functools.partial(inctime,checkskip=True))
-    # delilah_thoughts "Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house." (callback = functools.partial(inctime, g4=True))
 
     if run == 1:
         "With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood." (callback = functools.partial(inctime,checkskip=True))
-
-    # delilah_thoughts "With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood." (callback = functools.partial(inctime,checkskip=True))
     
     delilah_thoughts "Cody's pressing his nose against the window, banging his hand on the glass like a zombie." (callback = functools.partial(inctime,checkskip=True))
-    # delilah_thoughts "She looks across the foyer to see Cody pressing his nose against the window, banging his hand on the glass like a zombie." (callback = functools.partial(inctime,checkskip=True))
     delilah_thoughts "Open the door" (callback = functools.partial(inctime,checkskip=True))
     
     # add open door sound here to replace line above
@@ -126,16 +164,23 @@ label argument:
     delilah_thoughts "He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it." (callback = functools.partial(inctime,checkskip=True))
     # replace this line below with expression change
     delilah_thoughts "Delilah watches in horror." (callback = functools.partial(inctime,checkskip=True))
-    delilah "Can't even eat pizza like a normal person?" (callback = functools.partial(inctime,checkskip=True))
+    if not (run == 3 and loop3_investigate):
+        delilah "Can't even eat pizza like a normal person?" (callback = functools.partial(inctime,checkskip=True))
     cody "I can't help it if my eccentricities extend to my dining preferences." (callback = functools.partial(inctime,checkskip=True))
-    delilah "Eccentricities? Is that what they're calling being a little weirdo now?" (callback = functools.partial(inctime,checkskip=True))
+    if run == 3 and loop3_investigate:
+        delilah_run3 "I didn't say anything this time."
+    else:
+        delilah "Eccentricities? Is that what they're calling being a little weirdo now?" (callback = functools.partial(inctime,checkskip=True))
     delilah_thoughts "Mom sits down at the table with nothing but a salad on her plate." (callback = functools.partial(inctime,checkskip=True))
-    # delilah_thoughts "Sandra sits down at the table with nothing but a salad on her plate." (callback = functools.partial(inctime,checkskip=True))
     
     show sandra neutral onlayer characters at right
     
     sandra "Oh, hush, Del, you used to have particular eating habits too." (callback = functools.partial(inctime,checkskip=True))
-    if run == 2 and loop2_investigate:
+    if run == 3 and loop3_investigate:
+        delilah_run3 "I didn't even say anything!"
+        sandra_run3 "..Oh...I could've sworn that you had..."
+        return
+    elif run == 2 and loop2_investigate:
         delilah_run2 "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway." (callback = functools.partial(inctime,checkskip=True))
         cody_run2 "Wastoid. I can't believe we're related." (callback = functools.partial(inctime,checkskip=True))
         delilah_run2 "At the rate Dad's going, I wouldn't be surprised if we weren't related afterall." (callback = functools.partial(inctime,checkskip=True))

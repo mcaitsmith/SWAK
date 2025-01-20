@@ -2,6 +2,9 @@
 
 label search_for_julian:
 
+    "8 PM" (callback = functools.partial(inctime))
+    pause 1.0
+
     # sfx/bg change
     if run == 2:
         "{color=#f00}This guy, whoever he is, would die if they did nothing. So, Delilah went walking along the lakeshore, hopping across fences and docks.{/color}"

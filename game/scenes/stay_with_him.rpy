@@ -44,15 +44,15 @@ label stay_with_him:
     hide julian onlayer characters with dissolve
 
     call incphase from _call_incphase_14
+    "9 PM" (callback = functools.partial(inctime))
+    pause 1.0
 
     delilah_thoughts_run2 "He's gone again. I stare at his body, trying to process that I've now witnessed death twice in the same 24-hour period."
-    # delilah_thoughts "He's gone again. Delilah stares at his body, trying to process that she has now witnessed death twice in the same 24-hour period."
 
     if run == 2:
         "{color=#f00}She lays back on the grass, next to Julian, her gaze going up to the stars in the sky.{/color}"
     if not flowers.flower2:
         delilah_thoughts_run2 "Several feet above me, another nearly identical glowing flower dangles on the edge of a tree branch."
-        # delilah_thoughts "Several feet above her, another nearly identical glowing flower dangles on the edge of a tree branch."
         pause 1.0
     if not flowers.flower2:
         if run == 2:
@@ -68,26 +68,42 @@ label stay_with_him:
             call screen flower_glitch
         else:
             call screen flower2_pick
-    if not flowers.flower2:
-        # disable rollback temporarily here
+    
+    if flowers.flower2 and not config.rollback_enabled:
         delilah_thoughts_run2 "Once it's in my hand I immediately feel different."
-    if not flowers.flower2:
+    else:
+        $ config.rollback_enabled = True
+    if flowers.flower2 and not config.rollback_enabled:
         delilah_thoughts_run2 "Something emanates from the petals of the flower into my mind."
-    if not flowers.flower2:
+    else:
+        $ config.rollback_enabled = True
+    if flowers.flower2 and not config.rollback_enabled:
         delilah_thoughts_run2 "I'm able to remember things in other ways and somehow remember things that would have been."
-    if not flowers.flower2:
+    else:
+        $ config.rollback_enabled = True
+    if flowers.flower2 and not config.rollback_enabled:
         if run == 2:
             "{color=#f00}As soon as she feels this, the branch cracks under her and the ground throws itself at her.{/color}"
-    if not flowers.flower2:
+    else:
+        $ config.rollback_enabled = True
+    if flowers.flower2 and not config.rollback_enabled:
         show bg black with dissolve
-    if not flowers.flower2:
+    else:
+        $ config.rollback_enabled = True
+    if flowers.flower2 and not config.rollback_enabled:
         if run == 2:
             "{color=#f00}Her neck slams against the rocks and audibly snaps.{/color}"
-    if not flowers.flower2:
+    else:
+        $ config.rollback_enabled = True
+    if flowers.flower2 and not config.rollback_enabled:
         if run == 2:
             "{color=#f00}She lays there facing Julian, staring into his eyes. As the light in her fades she notices how many colors can be seen in his irises.{/color}"
-
     else:
-        pass
+        $ config.rollback_enabled = True
+    $ config.rollback_enabled = True # re-enable rollback
+
+    # else:
+    #     pass
+
     $ phase = 0
     return
