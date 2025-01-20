@@ -58,9 +58,6 @@ label intro:
         "The house is lifeless, suspended in time until the two weekends per year that they use the place. Nearly every house on the block is someone's home away from home, loved only by the landscaping and housekeeping staff that keep them from becoming a cobweb metropolis of wild animals."
         "Delilah's thinking a lot lately about the difference between a house and a home. For most of her life, she thought they were synonymous. But recently she's realized that a home is a place you feel at home, a house is a place you lived in."
         "She doesn't feel at home anywhere. Not anymore."
-    # delilah_thoughts "The house was lifeless, suspended in time until the two weekends per year that they used the place. Nearly every house on the block was someone's home away from home, loved only by the landscaping and housekeeping staff that kept them from becoming a cobweb metropolis of wild animals."
-    # delilah_thoughts "Delilah was thinking a lot lately about the difference between a house and a home. For most of her life, she thought they were synonymous. But recently she realized that a home was a place you felt at home, a house was a place you lived in."
-    # delilah_thoughts "She didn't feel at home anywhere. Not anymore."
 
     call incphase from _call_incphase_4
 
@@ -91,7 +88,6 @@ label intro:
 
     if run == 1:
         "Each house in the neighborhood backs up to the lake, a fleet of boats and jetskis parked at each private dock. It was fun to spend the summer here as a kid, when Dad would take them out on the water, but now...well, things are different."
-    # delilah_thoughts "Each house in the neighborhood backed up to the lake, a fleet of boats and jetskis parked at each private dock. It was fun to spend the summer here as a kid, when Dad would take them out on the water, but now...well, things were different."
     pause 1.0
 
     show julian fade onlayer characters at center:
@@ -114,9 +110,9 @@ label intro:
                 "{color=#f00}Wait...I'm getting a sense of Deja Vu...{/color}" if run == 2:
                     delilah_thoughts_run2 "Wait...I'm getting a sense of Deja Vu..."
                     jump start_loop2
-                # "Oh god that hurt" if run == 3:
-                #     delilah "Oh god that hurt"
-                #     jump start_loop3
+                "{color=#0f0}Ow, that really really hurt{/color}" if run == 3:
+                    delilah_thoughts_run3 "Ow, that really really hurt!"
+                    jump start_loop3
                 # "Im sorry I had to do that" if run == 4:
                 #     delilah_thoughts "Im sorry I had to do that"
                 #     jump start_loop4

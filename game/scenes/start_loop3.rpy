@@ -1,11 +1,17 @@
 ﻿# The script of the game goes in this file.
 
 label start_loop3:
-    delilah "Delilah sees that she now has two flowers in hand and is back at the start of the evening. From here the player can immediately"
+    delilah_thoughts_run3 "I trace my fingers along the back of my neck, remembering the feeling of it snapping on the rocks."
+    delilah_thoughts_run3 "I look down to see two glowing flowers in my other hand."
+    delilah_thoughts_run3 "There's no denying the reality of the situation anymore. Me and Julian are stuck in a loop together and these flowers are the cause."
+
     menu:
-        delilah "Dialogue choice" (callback = functools.partial(inctime))
-        "go back to the shore":
-            jump back_to_shore
-        "Open the door":
-            hide julian onlayer characters with dissolve
+        delilah " " (callback = functools.partial(inctime))
+        "Open the door for mom and Cody":
+            hide julian onlayer characters
+            with { "characters" : Dissolve(3.0) }
+            delilah_thoughts_run3 "Open the door for Mom and Cody"
             jump open_door
+        "Go find Julian at the shore":
+            delilah_thoughts_run3 "Go find Julian at the shore"
+            jump back_to_shore

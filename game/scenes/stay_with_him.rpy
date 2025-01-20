@@ -53,14 +53,40 @@ label stay_with_him:
     if not flowers.flower2:
         delilah_thoughts_run2 "Several feet above me, another nearly identical glowing flower dangles on the edge of a tree branch."
         # delilah_thoughts "Several feet above her, another nearly identical glowing flower dangles on the edge of a tree branch."
+        pause 1.0
+    if not flowers.flower2:
+        if run == 2:
+            "{color=#f00}Something inside Delilah compels her to get that glowing flower. The way Julian mentioned gathering them before he ended up here and the way she suddenly was able to travel backwards by getting the first one, she felt that if she got another that maybe she'd get an answer as to why this was happening.{/color}"
+    if not flowers.flower2:
+        if run == 2:
+            "{color=#f00}She used to climb trees all the time as a kid. Her dad would hoist her up and she'd cling to a branch like a koala. She thinks of this while planting her foot onto a knot on the side of its trunk. Higher and higher she reaches, farther and farther the ground becomes.{/color}"
+    if not flowers.flower2:
+        delilah_thoughts_run2 "I inch my way across the tree's feeble branch and reach for the flower..."
     if not flowers.flower2:
         if not solves.loop2:
             $ puzzles.loop2 = True # unlock puzzle
             call screen flower_glitch
         else:
             call screen flower2_pick
-        # delilah "After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option."
-        # delilah "After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option." (callback = functools.partial(inctime, fnum=2))
+    if not flowers.flower2:
+        # disable rollback temporarily here
+        delilah_thoughts_run2 "Once it's in my hand I immediately feel different."
+    if not flowers.flower2:
+        delilah_thoughts_run2 "Something emanates from the petals of the flower into my mind."
+    if not flowers.flower2:
+        delilah_thoughts_run2 "I'm able to remember things in other ways and somehow remember things that would have been."
+    if not flowers.flower2:
+        if run == 2:
+            "{color=#f00}As soon as she feels this, the branch cracks under her and the ground throws itself at her.{/color}"
+    if not flowers.flower2:
+        show bg black with dissolve
+    if not flowers.flower2:
+        if run == 2:
+            "{color=#f00}Her neck slams against the rocks and audibly snaps.{/color}"
+    if not flowers.flower2:
+        if run == 2:
+            "{color=#f00}She lays there facing Julian, staring into his eyes. As the light in her fades she notices how many colors can be seen in his irises.{/color}"
+
     else:
         pass
     $ phase = 0
