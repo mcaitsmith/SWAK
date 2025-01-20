@@ -12,7 +12,7 @@ SWAK Outline
 }
 
 
-:: "Wait...I'm getting a sense of Deja Vu..." {"position":"800,1300","size":"100,100"}
+:: "Wait...I'm getting a sense of Deja Vu..." {"position":"825,1325","size":"100,100"}
 Deliliah looks down to see a glowing flower in her hand. A dam ruptures and she can see the image of that boy dying on the lakeshore burned into her mind. 
 
 This has already happened. The dinner. The fight. The boy dying in their backyard. 
@@ -20,6 +20,20 @@ This has already happened. The dinner. The fight. The boy dying in their backyar
 [[Go to the lakeshore]]
 
 [[Open the backdoor for Mom and Cody|Ignore shadowy figure]]
+
+
+:: Climb the tree {"position":"2000,800","size":"100,100"}
+Something inside Delilah compels her to get that glowing flower. The way Julian mentioned gathering them before he ended up here and the way she suddenly was able to travel backwards by getting the first one, she felt that if she got another that maybe she'd get an answer as to why this was happening.
+
+She used to climb trees all the time as a kid. Her dad would hoist her up and she'd cling to a branch like a koala. She thinks of this while planting her foot onto a knot on the side of its trunk. Higher and higher she reaches, farther and farther the ground becomes.
+
+She inches her way across the tree's feeble branch and reaches for the flower. Once its in her hand she immediately feels different. Something eminates from the pedals of the flower into her mind. She's able to remember things in other ways and somehow remember things that would have been.
+
+As soon as she feels this, the branch cracks under her and the ground throws itself at her. Her neck slams against the rocks and audibly snaps. She lays there facing Julian, staring into his eyes. As the light in her fades she notices how many colors can be seen in his irises. 
+
+The End.
+
+[[Player can roll back again from here.|Game Start]]
 
 
 :: Dinner scene first loop {"position":"1400,1500","size":"100,100"}
@@ -118,7 +132,7 @@ Delilah: "That's what I thought. I'll be outside."
 [[Go outside|Outside second loop]]
 
 
-:: Find Julian {"position":"1450,1050","size":"100,100"}
+:: Find Julian {"position":"1400,1100","size":"100,100"}
 This guy, whoever he is, would die if they did nothing. So, Delilah went walking along the lakeshore, hopping across fences and docks. 
 
 She thought to call out for him, but remembered that she didn't know his name. What would she yell out? "Boy!" "Hello? I'm looking for a boy!" No. Instead, she walked around in the dark.
@@ -215,6 +229,8 @@ Each house in the neighborhood backed up to the lake, a fleet of boats and jetsk
 If the player has previously gotten a single flower
 [["Wait...I'm getting a sense of Deja Vu..."]]
 
+If the player has gotten a second flower
+[[Ow, that really really hurt]]
 
 
 :: General Notes {"position":"700,200","size":"100,100"}
@@ -246,13 +262,51 @@ Julian:
 - In this new place, he's worried what will happen to his grandparents if he doesn't get back soon. 
 
 
+:: Go find Julian at the shore {"position":"1000,1900","size":"100,100"}
+When she gets to the bottom of the hill, Julian is already waiting for her. 
+
+Julian: "Back so soon?"
+
+Delilah: "After you died, I found this." She holds out the second flower.
+
+Julian: "Ah, pretty. Why thank you," He says dryly.
+
+Delilah: "Yeah, I broke my neck to get it."
+
+Julian: "You broke...? Oh, God, I'm so sorry. Why?"
+
+Delilah: "Call it a hunch, but I'm guessing these have something to do with this condition of ours. What do you know about them?"
+
+Julian: "These? They're Selene Lillies. Extremely rare luminescent flowers. They're what I was gathering before."
+
+Delilah: "You don't think they have something to do with all of...this?"
+
+Julian: "I think that's a bit out there, Delilah. I think it's bizarre, and a bit of a reach. But then again, I've died multiple times in the past twelve hours, so I'm liable to believe whatever you tell me."
+
+Delilah: "When I got this second flower I noticed...I don't know...something new. I was suddenly able to see more possible outcomes if that makes sense."
+
+Julian: "Not really."
+
+Delilah: "How many flowers did you have before you wound up here?"
+
+Julian: "Four. Was putting together a bouquet for my folks' shop. Just four Selene Lillies would sell for enough to keep the lights on for a year. 
+
+Delilah: "So maybe if we get all four together we can send you home and break the loop?"
+
+Julian: "Couldn't hurt to try, I suppose. We're halfway there already."
+
+Delilah: "Where do you think we should start looking?" 
+
+Julian: "You know the area better than I do."
+
+
 :: Go get help {"position":"2100,100","size":"100,100"}
 If the player rejects this idea and goes for help, she runs down the street, finds a payphone, and calls for an ambulance. By the time paramedics arrive, there is nobody on the lakeshore. 
 
 The game stops here unless the player uses the history function to try a different choice. 
 
 
-:: Go get help loop 2 {"position":"1675,1075","size":"100,100"}
+:: Go get help loop 2 {"position":"1800,1075","size":"100,100"}
 Delilah: "No, no, you need help!"
 
 ???: "Please...just stay..."
@@ -286,7 +340,7 @@ Delilah: "It's okay! You're okay! Just stay here, I'll get help!"
 [[get help]]
 
 
-:: Ignore shadowy figure {"position":"1000,1500","size":"100,100"}
+:: Ignore shadowy figure {"position":"1100,1500","size":"100,100"}
 Sure enough, the key is still under the tacklebox, just where Dad always kept it. The backdoor unlocks and Delilah enters the house.
 
 With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood.
@@ -322,7 +376,7 @@ When they arrive, it's close to sunset. The key to the front door isn't working 
 [[Im sorry I had to do that|start loop 4]]
 
 
-:: Open the door {"position":"1550,525","size":"100,100"}
+:: Open the door {"position":"1500,500","size":"100,100"}
 Delilah lingers in the house for a moment, taking in childhood memories at the lake house. She examines a few artifacts of her father's presence before her mother and brother start banging on the door. She lets them in and thinks a bit about the figure she saw on the shoreline. 
 
 Fast forward to dinner. Things are tense. Cody tries to break the silence by being his quippy doofusy self and Delilah tears him a new one. A brief, bitter exchange occurs and Mom quickly shuts them down. This is a mistake. Now the attention is on her and the elephant in the room: Where is dad? The player is presented with several dialogue choices in this conversation, all with the same results but conveying different pieces of information about who these people are.
@@ -390,6 +444,16 @@ Along the shoreline, by the rocks, she sees that shadowy figure once again stand
  The End.
 
 
+:: Ow, that really really hurt {"position":"825,1775","size":"100,100"}
+Delilah traces her fingers along the back of her neck, remembering the feeling of it snapping on the rocks. She looks down to see two glowing flowers in her other hand. 
+
+There's no denying the reality of the situation anymore. She and Julian were stuck in a loop together and these flowers were the cause. 
+
+[[Open the door for mom and Cody|Ignore shadowy figure]]
+
+[[Go find Julian at the shore]]
+
+
 :: Stay with him {"position":"2100,300","size":"100,100"}
 (if the player already tried to get help, there is an additional line about deciding that the only option is to just stay here with him)
 
@@ -400,7 +464,7 @@ After a moderately lengthy conversation in which Delilah and Julian start a budd
 After he dies, Delilah notices in the tree above them is one of the glowing flowers on a branch. The player is presented with the choice to climb the tree and grab the flower. After they do, Delilah falls from the tree, bashing her neck against the rocks below. She can't move. Her mom calls out to her while Delilah tries to scream but finds herself unable to. With the two flowers in her hand, she is able to rollback in time to the start of the game with a new loop option. 
 
 
-:: Stay with him loop 2 {"position":"1675,950","size":"100,100"}
+:: Stay with him loop 2 {"position":"1825,950","size":"100,100"}
 Delilah: "Okay. I'll stay with you." She sits down on a patch of grass just above his head. 
 
 ???: "Thank you."
@@ -409,7 +473,7 @@ Delilah: "So...what do you want to do to fill the time? It could be a while till
 
 ???: "Hmm. Why don't you tell me about yourself? What's your name? What brings you out here to this fine patch of jagged rocks?"
 
-Delilah: She chuckles painfully. "I'm Delilah. Uh, just here on a short weekend trip with the family."
+Delilah: She chuckles reluctantly "I'm Delilah. Uh, just here on a short weekend trip with the family."
 
 ???: "Right, and that lovely creature I saw you with before must be your sister then?"
 
@@ -459,8 +523,10 @@ She lays back on the grass, next to Julian, her gaze going up to the stars in th
 
 Several feet above her, another nearly identical glowing flower dangles on the edge of a tree branch. 
 
+[[Climb the tree]]
 
-:: Take the flower {"position":"2200,1500","size":"100,100"}
+
+:: Take the flower {"position":"2100,1500","size":"100,100"}
 Once Delilah takes the glowing flower in hand, the boy goes limp. He's maybe a year or two older than her, she guesses. 
 
 Delilah: "Oh my God! Oh my God!" She looks around at the empty stillness of the night. "Somebody help! Somebody help! He's not moving!" 
@@ -548,7 +614,7 @@ Delilah goes outside to look for the boy she saw. She walks down the shoreline f
 [[Stay with him]]
 
 
-:: going to the shore for the fourth time {"position":"1375,800","size":"100,100"}
+:: going to the shore for the fourth time {"position":"1525,700","size":"100,100"}
 At the shore, Julian is standing there waiting for you to meet with him. Delilah tells him about the conversation she just had with Cody, how difficult it was. Julian feels for her and apologizes for her having to go through that. This confuses Delilah since his life is at stake. Sort of dwarfs in comparison. Julian doesn't see it that way. His martyr complex comes through in this moment. 
 
 They discuss that there are only two flowers left to find. Delilah is confounded by where it could be. Julian then notices it just floating in the water near their feet. Easy peasy, right? Not quite.
@@ -580,7 +646,7 @@ As the two talk, Julian keels over in pain. Delilah asks what's wrong but not ev
 [[Open the door]]
 
 
-:: notice shadowy figure {"position":"850,1700","size":"100,100"}
+:: notice shadowy figure {"position":"800,1600","size":"100,100"}
 Along the shoreline is what looks like a person standing there, but it's hard to make out.
 
 ["Hey! You there!"]
@@ -608,11 +674,11 @@ Opening the door immediately will lead the player back to the same loop.
 
 
 
-:: start loop 3 {"position":"1150,575","size":"100,100"}
+:: start loop 3 {"position":"1175,575","size":"100,100"}
 Delilah sees that she now has two flowers in hand and is back at the start of the evening. From here the player can immediately [[go back to the shore]] or [[Open the door]]
 
 
-:: start loop 4 {"position":"1100,725","size":"100,100"}
+:: start loop 4 {"position":"1200,700","size":"100,100"}
 At the start of the fourth loop, Delilah is remorseful of having to put Cody through that. When she interacts with him again in the opening sequence, he is completely ignorant of the conversation they just had. Delilah makes a mental note not to put him through that again. 
 
 She takes inventory and reminds herself that there are only two flowers left to find. 
@@ -622,7 +688,7 @@ The player can continue with the story by going and [[opening the door for her m
 Or [[going to the shore for the fourth time]]
 
 
-:: unlock the door for her mom {"position":"1600,650","size":"100,100"}
+:: unlock the door for her mom {"position":"1650,625","size":"100,100"}
 Now looking for the Selene Lillies, Delilah proceeds with the previously established dinner scene with Cody and her mom. However, she is a bit less antagonistic of them as she now has a new goal of saving Julian. During dinner, she notices something glowing in Cody's pocket. Sandra steps out to have a smoke while Cody and Delilah clean up the kitchen. 
 
 In this scene, the player talks with Cody and discovers that he found one of the glowing flowers in the front yard. If Delilah asks for it back he attempts to bargain for it, but, being a little brat, tears it apart instead of giving it to you. You can reattempt the conversation as many times as you want, trying different options each time, even explaining the situation with Julian to him, but he laughs and rips the flower up every time. 
