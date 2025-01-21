@@ -78,7 +78,7 @@ label init_screens:
             yalign 0.6
             idle "images/props/flower.png"
             hover "images/props/flower_hover.png"
-            action [SetVariable("flowers.flower1", 1), Hide("flower1_pick"), Return()]
+            action [SetVariable("flowers.flower1", 1), SetVariable("config.rollback_enabled", False), Hide("flower1_pick"), Return()]
     screen flower2_pick:
         imagebutton:
             xalign 0.5

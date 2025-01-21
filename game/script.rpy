@@ -150,6 +150,11 @@ image flower_run3:
     0.25
     repeat
 
+image flower_glitch_image:
+    Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+    xalign 0.5
+    yalign 0.5
+
 # define custom positions for sprites
 transform center_left:
     xalign 0.3 yalign 1.0
@@ -239,6 +244,33 @@ label hints_run2:
             $ renpy.play("orex_sfx_sparkle.ogg") # solved!
             $ solves.loop2 = True
             return
+label hints_run3:
+    if hints.loop3_1:
+        delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
+    if hints.loop3_2:
+        delilah_thoughts_run3 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
+    if hints.loop3_3:
+        delilah_thoughts_run3 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
+    menu:
+        narrator "Need a hint?" (callback = functools.partial(inctime,checkskip=True))
+        "Yes" if not hints.loop3_1:
+            delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
+            $ hints.loop3_1 = True
+            return
+        "Get another hint" if hints.loop3_1 and not hints.loop3_2:
+            delilah_thoughts_run3 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
+            $ hints.loop3_2 = True
+            return
+        "Get final hint" if hints.loop3_2 and not hints.loop3_3:
+            delilah_thoughts_run3 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
+            $ hints.loop3_3 = True
+            return
+        "No" if not hints.loop3_3:
+            return
+        "Skip puzzle":
+            $ renpy.play("orex_sfx_sparkle.ogg") # solved!
+            $ solves.loop3 = True
+            return
 
 # The game starts here.
 
@@ -277,7 +309,7 @@ label start:
     #     xalign 0.5
     #     yalign 0.05
 
-    with { "master" : Dissolve(1.0) }
+    # with { "master" : Dissolve(1.0) }
     call checkrun from _call_checkrun
 
     jump mainrun

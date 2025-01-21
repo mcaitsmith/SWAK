@@ -112,7 +112,19 @@ label dinner_convo:
         if smoke_break:
             delilah "If the player has completed the smoke break conversation, a new dialogue option is available with Cody in which she can tell him everything about their father's infidelity. Just as Sandra said, the news is devastating and he refuses to accept it, but you go further and further by sharing details from the letter Delilah read. Each detail hurts him more and more. He looks at the flower for a moment, questioning everything he's ever known, and then leaves it on the counter."
             if not flowers.flower3:
-                call screen flower3_pick
+                if not solves.loop3:
+                    show flower_glitch_image
+                    delilah_thoughts_run3 "Static again! Like it's caught between worlds..."
+            if not flowers.flower3:
+                if not solves.loop3:
+                    $ puzzles.loop3 = True # unlock puzzle
+                    call screen flower_glitch
+                    hide flower_glitch_image
+                else:
+                    call screen flower3_pick
+
+            if flowers.flower3:
+                # call screen flower3_pick
                 delilah "Delilah gets the flower and is able to roll back and start the fourth loop." (callback = functools.partial(inctime, fnum=3))
             else:
                 pass

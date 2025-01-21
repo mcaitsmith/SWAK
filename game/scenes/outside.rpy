@@ -65,21 +65,21 @@ label outside:
 
     if not flowers.flower1:
         call screen flower1_pick
-    if not flowers.flower1:
+    if flowers.flower1 and not config.rollback_enabled:
         delilah_thoughts "The boy goes limp. He's maybe a year or two older than me, I guess."
-        # delilah_thoughts "Once Delilah takes the glowing flower in hand, the boy goes limp. He's maybe a year or two older than her, she guesses."
-    if not flowers.flower1:
+    if flowers.flower1 and not config.rollback_enabled:
         hide julian onlayer characters with Dissolve(3.0)
-    if not flowers.flower1:
+    if flowers.flower1 and not config.rollback_enabled:
         delilah "Oh my God! Oh my God!"
-    if not flowers.flower1:
+    if flowers.flower1 and not config.rollback_enabled:
         delilah_thoughts "She looks around at the empty stillness of the night." # replace with animated sprite
-    if not flowers.flower1:
+    if flowers.flower1 and not config.rollback_enabled:
         delilah "Somebody help! Somebody help! He's not moving!" 
+
+    $ config.rollback_enabled = True # re-enable rollback
 
     if flowers.flower1:
         
-        # delilah "If the flower has already been taken on a first loop, there is nothing in Julian's hands. Instead he just collapses then and there. The game stops until the player uses history to try a different passage option. Same happens if Delilah searches for Julian after dinner on the second loop."
         hide julian onlayer characters with Dissolve(3.0)
 
     # PLACEHOLDER LINE
