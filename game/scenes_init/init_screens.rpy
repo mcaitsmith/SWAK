@@ -94,10 +94,17 @@ label init_screens:
             hover "images/props/flower_hover.png"
             action [SetVariable("flowers.flower3", 1), Hide("flower3_pick"), Return()]
     screen flower_glitch:
-        imagebutton:
-            xalign 0.5
-            yalign 0.5
-            idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        if puzzles.loop2:
+            imagebutton:
+                xalign 0.5
+                yalign 0.5
+                idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        else:
+            add Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") xalign 0.5 yalign 0.5
+            # imagebutton:
+            #     xalign 0.5
+            #     yalign 0.5
+            #     Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 
     screen howtoplay:
         text "[playtext]" xalign 0.5 yalign 0.5 text_align 0.5

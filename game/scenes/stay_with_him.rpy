@@ -65,12 +65,14 @@ label stay_with_him:
     if not flowers.flower2:
         if not solves.loop2:
             show flower_glitch_image
+            # call screen flower_glitch
             delilah_thoughts_run2 "Huh...it looks strange. Staticky."
     if not flowers.flower2:
         if not solves.loop2:
             $ puzzles.loop2 = True # unlock puzzle
             call screen flower_glitch
             hide flower_glitch_image
+
         else:
             call screen flower2_pick
     

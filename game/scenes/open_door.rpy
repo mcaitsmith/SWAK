@@ -111,6 +111,8 @@ label dinner_convo:
                 delilah "After Cody rips up the flower, the player can punch Cody just as Sandra walks in. Delilah gets in trouble and Sandra tells her to come outside."
         if smoke_break:
             delilah "If the player has completed the smoke break conversation, a new dialogue option is available with Cody in which she can tell him everything about their father's infidelity. Just as Sandra said, the news is devastating and he refuses to accept it, but you go further and further by sharing details from the letter Delilah read. Each detail hurts him more and more. He looks at the flower for a moment, questioning everything he's ever known, and then leaves it on the counter."
+            hide cody onlayer characters with dissolve
+
             if not flowers.flower3:
                 if not solves.loop3:
                     show flower_glitch_image

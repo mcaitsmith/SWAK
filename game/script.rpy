@@ -58,7 +58,8 @@ init python:
     def history_time_callback(x):
         global gametime
         global run
-        x.what = "RUN " + str(run) + " | TIME " + str(gametime) + "\n" + x.what
+        # x.what = "RUN " + str(run) + " | TIME " + str(gametime) + "\n" + x.what
+        x.what = "RUN " + str(run) + "\n" + x.what
     config.history_callbacks.append(history_time_callback)
     # Add new function to the history callbacks
     # if history_trigger_callback not in config.history_callbacks:
@@ -241,6 +242,7 @@ label hints_run2:
         "No" if not hints.loop2_3:
             return
         "Skip puzzle":
+            hide flower_glitch_image
             $ renpy.play("orex_sfx_sparkle.ogg") # solved!
             $ solves.loop2 = True
             return
@@ -268,6 +270,7 @@ label hints_run3:
         "No" if not hints.loop3_3:
             return
         "Skip puzzle":
+            hide flower_glitch_image
             $ renpy.play("orex_sfx_sparkle.ogg") # solved!
             $ solves.loop3 = True
             return

@@ -31,6 +31,12 @@ label init_classes:
                 self.loop2_1 = False
                 self.loop2_2 = False
                 self.loop2_3 = False
+                self.loop3_1 = False
+                self.loop3_2 = False
+                self.loop3_3 = False
+                self.loop4_1 = False
+                self.loop4_2 = False
+                self.loop4_3 = False
 
         # create persistent class for solved puzzles
         class MoonGlitches(NoRollback):
