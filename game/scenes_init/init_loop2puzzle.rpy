@@ -30,20 +30,28 @@ label init_loop2puzzle:
                 if g2==True and not renpy.in_rollback() and not renpy.is_skipping() and moonglitches.glitch1: # if did not roll back or skip from 1 to 2
                     moonglitches.glitch2 = True
                 elif g2==True:
-                    moonglitches.glitch2 = False
+                    # moonglitches.glitch2 = False
+                    moonglitches.glitch2 = True
                     moonglitches.glitch1 = False
 
                 if g3==True and not renpy.in_rollback() and moonglitches.glitch2 and moonglitches.glitch1: # if did not rollback to 3
                     moonglitches.glitch3 = True
+                elif g3==True and renpy.in_rollback():
+                    moonglitches.glitch4 = False
+                    moonglitches.glitch3 = True
+                    moonglitches.glitch2 = False
+                    moonglitches.glitch1 = False
                 elif g3==True:
-                    moonglitches.glitch3 = False
+                    # moonglitches.glitch3 = False
+                    moonglitches.glitch3 = True
                     moonglitches.glitch2 = False
                     moonglitches.glitch1 = False
 
                 if g4==True and not renpy.in_rollback() and not renpy.is_skipping() and moonglitches.glitch3 and moonglitches.glitch2 and moonglitches.glitch1: # if did not rollback to 4:
                     moonglitches.glitch4 = True
                 elif g4==True:
-                    moonglitches.glitch4 = False
+                    # moonglitches.glitch4 = False
+                    moonglitches.glitch4 = True
                     moonglitches.glitch3 = False
                     moonglitches.glitch2 = False
                     moonglitches.glitch1 = False
@@ -51,7 +59,8 @@ label init_loop2puzzle:
                 if g5==True and moonglitches.glitch4 == True and moonglitches.glitch3 and moonglitches.glitch2 and moonglitches.glitch1:
                     moonglitches.glitch5 = True
                 elif g5==True:
-                    moonglitches.glitch5 = False
+                    # moonglitches.glitch5 = False
+                    moonglitches.glitch5 = True
                     moonglitches.glitch4 = False
                     moonglitches.glitch3 = False
                     moonglitches.glitch2 = False

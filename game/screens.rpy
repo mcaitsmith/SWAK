@@ -249,7 +249,12 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
+            if flowers.flower1 and run == 1:
+                textbutton _("{color=#f00}Back{/color}") action Rollback()
+            elif flowers.flower2 and run == 2 and config.rollback_enabled:
+                textbutton _("{color=#0f0}Back{/color}") action Rollback()
+            else:
+                textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
@@ -257,6 +262,8 @@ screen quick_menu():
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
+            if run == 2 and puzzles.loop2 and not solves.loop2 and not renpy.get_screen("flower_glitch"):
+                textbutton _("{color=#f00}What now?{/color}") action Call('hints_run2')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
