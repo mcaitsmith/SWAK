@@ -79,6 +79,16 @@ label outside:
         delilah_thoughts "She looks around at the empty stillness of the night." # replace with animated sprite
     if flowers.flower1 and not config.rollback_enabled:
         delilah "Somebody help! Somebody help! He's not moving!" 
+    if flowers.flower1 and not config.rollback_enabled:
+        pause 1.0
+    if flowers.flower1 and not config.rollback_enabled:
+        delilah_thoughts "Holding the flower, I feel something in me change."
+    if flowers.flower1 and not config.rollback_enabled:
+        delilah_thoughts "At the center of my mind is a flower, its petals closed tightly like a fist. Then with a glimmer of light, it opens, releasing a cloud of golden aura into the air."
+    if flowers.flower1 and not config.rollback_enabled:
+        delilah_thoughts "With each breath I take, I can feel myself here and now as well as in the past simultaneously. I remember being in the car with my family, arriving at the lake, and the ability to remember my choices...differently."
+    if flowers.flower1 and not config.rollback_enabled:
+        delilah_thoughts "What has changed in my history?"
 
     $ config.rollback_enabled = True # re-enable rollback
 
@@ -87,7 +97,7 @@ label outside:
         hide julian onlayer characters with Dissolve(3.0)
 
     # PLACEHOLDER LINE
-    "(add some line here to hint to player that they have to rollback to first screen)"
+    # "(add some line here to hint to player that they have to rollback to first screen)"
 
     $ phase = 0 # reset
 
