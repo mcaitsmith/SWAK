@@ -18,7 +18,7 @@ label open_door:
 
         call unlock_door
 
-        sandra "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed." (callback = functools.partial(inctime,checkskip=True))
+        sandra "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed."
         
         show cody happy onlayer characters at center_right
         
@@ -35,32 +35,31 @@ label open_door:
         call unlock_door from _call_unlock_door
 
         if run == 2:
-            "{color=#f00}As soon as she opens the door, Delilah grabs her mom by the hand.{/color}" (callback = functools.partial(inctime, checkskip=True))
+            "{color=#f00}As soon as she opens the door, Delilah grabs her mom by the hand.{/color}"
         delilah_run2 "There's a boy in the backyard! He needs help! Come on!"
         sandra_run2 "What? Hold on! Who is?"
         delilah_run2 "Some guy! I don't know who he is but he needs help!"
 
-        # delilah "With one flower in possession, Delilah is quick to let her mom and brother in. She tells them that there's a boy by the lake who needs medical attention." (callback = functools.partial(inctime, checkskip=True))
-        # hide cody onlayer characters with dissolve
         jump back_to_lake
+
     else:
         
         call incphase from _call_incphase_6
 
-        "8 PM" (callback = functools.partial(inctime,checkskip=True))
+        "8 PM"
         pause 1.0
 
         call unlock_door from _call_unlock_door_1
         
-        sandra "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed." (callback = functools.partial(inctime,checkskip=True))
+        sandra "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed."
         
         show cody happy onlayer characters at center_right
         
-        cody "Yes, very gracious." (callback = functools.partial(inctime,checkskip=True))
-        delilah "Hey, are there still landscapers working in the yard?" (callback = functools.partial(inctime,checkskip=True))
-        sandra "Landscapers? Not at this hour, no. Why do you ask?" (callback = functools.partial(inctime,checkskip=True))
-        delilah "Could've sworn I saw someone out back. Thought it might have been a landscaper." (callback = functools.partial(inctime,checkskip=True))
-        sandra "Probably just one of the neighbor kids, I wouldn't worry about it." (callback = functools.partial(inctime,checkskip=True))
+        cody "Yes, very gracious."
+        delilah "Hey, are there still landscapers working in the yard?"
+        sandra "Landscapers? Not at this hour, no. Why do you ask?"
+        delilah "Could've sworn I saw someone out back. Thought it might have been a landscaper."
+        sandra "Probably just one of the neighbor kids, I wouldn't worry about it."
         
         hide cody onlayer characters
         hide sandra onlayer characters
@@ -138,7 +137,7 @@ label dinner_convo:
     elif run == 2 and loop2_investigate:
         call incphase from _call_incphase_7
 
-        "8 PM" (callback = functools.partial(inctime,checkskip=True))
+        "8 PM"
         pause 1.0
 
         call argument from _call_argument
@@ -153,13 +152,16 @@ label dinner_convo:
 
 label unlock_door:
     # add footsteps/ backdoor opening sfx
-    delilah_thoughts "Sure enough, the key was still under the tacklebox, just where Dad always kept it." (callback = functools.partial(inctime,checkskip=True))
+    delilah_thoughts "Sure enough, the key was still under the tacklebox, just where Dad always kept it."
 
     if run == 1:
-        "With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood." (callback = functools.partial(inctime,checkskip=True))
+        "With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood."
     
-    delilah_thoughts "Cody's pressing his nose against the window, banging his hand on the glass like a zombie." (callback = functools.partial(inctime,checkskip=True))
-    delilah_thoughts "Open the door" (callback = functools.partial(inctime,checkskip=True))
+    delilah_thoughts "Cody's pressing his nose against the window, banging his hand on the glass like a zombie."
+    menu:
+        delilah " " (callback = functools.partial(inctime))
+        "Open the door":
+            delilah_thoughts "Open the door"
     
     # add open door sound here to replace line above
     pause 1.0
@@ -171,93 +173,88 @@ label unlock_door:
 label argument:
     show bg scene2 with Dissolve(2.0)
     
-    delilah_thoughts "Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate." (callback = functools.partial(inctime,checkskip=True))
+    delilah_thoughts "Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate."
     
     show cody happy onlayer characters at center
     
-    delilah_thoughts "He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it." (callback = functools.partial(inctime,checkskip=True))
+    delilah_thoughts "He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it."
     # replace this line below with expression change
-    delilah_thoughts "Delilah watches in horror." (callback = functools.partial(inctime,checkskip=True))
+    delilah_thoughts "Delilah watches in horror."
     if not (run == 3 and loop3_investigate):
-        delilah "Can't even eat pizza like a normal person?" (callback = functools.partial(inctime,checkskip=True))
-    cody "I can't help it if my eccentricities extend to my dining preferences." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Can't even eat pizza like a normal person?"
+    cody "I can't help it if my eccentricities extend to my dining preferences."
     if run == 3 and loop3_investigate:
         delilah_run3 "I didn't say anything this time."
     else:
-        delilah "Eccentricities? Is that what they're calling being a little weirdo now?" (callback = functools.partial(inctime,checkskip=True))
-    delilah_thoughts "Mom sits down at the table with nothing but a salad on her plate." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Eccentricities? Is that what they're calling being a little weirdo now?"
+    delilah_thoughts "Mom sits down at the table with nothing but a salad on her plate."
     
     show sandra neutral onlayer characters at right
     
-    sandra "Oh, hush, Del, you used to have particular eating habits too." (callback = functools.partial(inctime,checkskip=True))
+    sandra "Oh, hush, Del, you used to have particular eating habits too."
     if run == 3 and loop3_investigate:
         delilah_run3 "I didn't even say anything!"
         sandra_run3 "..Oh...I could've sworn that you had..."
         return
     elif run == 2 and loop2_investigate:
-        delilah_run2 "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway." (callback = functools.partial(inctime,checkskip=True))
-        cody_run2 "Wastoid. I can't believe we're related." (callback = functools.partial(inctime,checkskip=True))
-        delilah_run2 "At the rate Dad's going, I wouldn't be surprised if we weren't related afterall." (callback = functools.partial(inctime,checkskip=True))
-        sandra_run2 "What do you mean by that?" (callback = functools.partial(inctime,checkskip=True))
+        delilah_run2 "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway."
+        cody_run2 "Wastoid. I can't believe we're related."
+        delilah_run2 "At the rate Dad's going, I wouldn't be surprised if we weren't related afterall."
+        sandra_run2 "What do you mean by that?"
     else:
-        delilah "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!" (callback = functools.partial(inctime,checkskip=True))
-        cody "I'm not exactly shouting from the roof tops about being related to a wastoid either." (callback = functools.partial(inctime,checkskip=True))
-        delilah "Bite me!" (callback = functools.partial(inctime,checkskip=True))
-    cody "Bitch..." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!"
+        cody "I'm not exactly shouting from the roof tops about being related to a wastoid either."
+        delilah "Bite me!"
+    cody "Bitch..."
     # make line above small text to replace line below
-    cody "he says under his breath." (callback = functools.partial(inctime,checkskip=True))
+    cody "he says under his breath."
     if run == 2 and loop2_investigate:
-        delilah_run2 "Fuck you." (callback = functools.partial(inctime,checkskip=True))
+        delilah_run2 "Fuck you."
     else:
-        delilah "You little!" (callback = functools.partial(inctime,checkskip=True))
+        delilah "You little!"
         # replace line below with animated sprites
-        delilah_thoughts "She stands up and raises her fist like she's going to punch him from across the table." (callback = functools.partial(inctime,checkskip=True))
-    sandra "Hey! Hey! Relax!" (callback = functools.partial(inctime,checkskip=True))
+        delilah_thoughts "She stands up and raises her fist like she's going to punch him from across the table."
+    sandra "Hey! Hey! Relax!"
     if run == 2 and loop2_investigate:
-        delilah_run2 "Oh, now you want to intervene?" (callback = functools.partial(inctime,checkskip=True))
+        delilah_run2 "Oh, now you want to intervene?"
     else:
-        delilah "Make him apologize!" (callback = functools.partial(inctime,checkskip=True))
-    sandra "Cody...will you please apologize to your sister for calling her a b-word?" (callback = functools.partial(inctime,checkskip=True))
-    cody "She started it!" (callback = functools.partial(inctime,checkskip=True))
-    sandra "Cody...things are hard enough as is..." (callback = functools.partial(inctime,checkskip=True))
+        delilah "Make him apologize!"
+    sandra "Cody...will you please apologize to your sister for calling her a b-word?"
+    cody "She started it!"
+    sandra "Cody...things are hard enough as is..."
     # replace line below with animated sprite
-    delilah_thoughts "Delilah crosses her arms and raises an eyebrow." (callback = functools.partial(inctime,checkskip=True))
-    cody "I'm sorry...that you're a bitch." (callback = functools.partial(inctime,checkskip=True))
-    sandra "That's it! Upstairs, now!" (callback = functools.partial(inctime,checkskip=True))
-    delilah_thoughts "He drops his bare crusts in the trash dramatically then heads for the stairs." (callback = functools.partial(inctime,checkskip=True))
-    cody "I wonder why Dad prefers his business trips to being here!" (callback = functools.partial(inctime,checkskip=True))
+    delilah_thoughts "Delilah crosses her arms and raises an eyebrow."
+    cody "I'm sorry...that you're a bitch."
+    sandra "That's it! Upstairs, now!"
+    delilah_thoughts "He drops his bare crusts in the trash dramatically then heads for the stairs."
+    cody "I wonder why Dad prefers his business trips to being here!"
     
     hide cody onlayer characters with dissolve
 
     call incphase from _call_incphase_8
 
-    # glitch 5 - phase 2
-    if run == 2:
-        $ moonglitch5 = True
     menu:
-        delilah " " (callback = functools.partial(inctime, g5=True))
+        delilah " " (callback = functools.partial(inctime))
         "What a little brat" if not (run == 2 and loop2_investigate):
-            if run == 2:
-                $ moonglitch5 = False
             delilah "What a little brat"
         "I can't believe you let him get away with that." if not (run == 2 and loop2_investigate):
-            if run == 2:
-                $ moonglitch5 = False
             delilah "I can't believe you let him get away with that."
         "{color=#f00}He's right you know.{/color}" if run == 2 and loop2_investigate:
-            if run == 2:
-                $ moonglitch5 = False
             delilah_run2 "He's right you know."
         "{color=#f00}Setting a great example for your kids, Sandra.{/color}" if run == 2 and loop2_investigate:
-            if run == 2:
-                $ moonglitch5 = False
             delilah_run2 "Setting a great example for your kids, Sandra."
     sandra "Well, Del, you don't exactly make it easy by antagonizing him."
     if run == 2 and loop2_investigate:
-        delilah_run2 "I'm not doing anything. I'm just like you, Sandra."
-        sandra_run2 "What is this about?"
-        delilah_thoughts_run2 "She laughs." # replace with sfx
-        delilah_run2 "You know what really pisses me off about this whole situation? You won't even admit to what we already know."
+        # start loop 2 glitch
+        delilah_run2 "I'm not doing anything. I'm just like you, Sandra." (callback = functools.partial(inctime,g1=True))
+        if run == 2:
+            $ moonglitch5 = True
+        if run == 2 and not solves.loop2:
+            sandra_run2 "What is this about?" (callback = functools.partial(inctime,checkskip=True))
+        if run == 2 and not solves.loop2:
+            delilah_thoughts_run2 "I laugh." (callback = functools.partial(inctime,checkskip=True))
+        if run == 2 and not solves.loop2:
+            delilah_run2 "You know what really pisses me off about this whole situation? You won't even admit to what we already know." (callback = functools.partial(inctime,checkskip=True))
     else:
         delilah "I don't antagonize him..."
         delilah_thoughts "Those last words he said before storming off..."
@@ -266,15 +263,30 @@ label argument:
         sandra "Your dad wishes he could be here more than anything in the world. Work has been brutal lately."
         delilah_thoughts "She laughs." # add laugh sound to replace this or just (haha)
         delilah "Yeah, I'm sure."
-    sandra "What's that supposed to mean?"
-    delilah "I think you know what I mean."
-    sandra "No, I don't, and you should watch what you say or you'll regret it."
+    if not (run == 2 and loop2_investigate and solves.loop2):
+        sandra "What's that supposed to mean?" (callback = functools.partial(inctime,checkskip=True))
+    if not (run == 2 and loop2_investigate and solves.loop2):
+        delilah "I think you know what I mean." (callback = functools.partial(inctime,checkskip=True))
+    if not (run == 2 and loop2_investigate and solves.loop2):
+        sandra "No, I don't, and you should watch what you say or you'll regret it." (callback = functools.partial(inctime,checkskip=True))
     if run == 2 and loop2_investigate:
-        delilah_run2 "I dare you to be honest with me. Just show a single shred of honesty and respect to your children and just tell us: why isn't Dad here?"
-        pause 1.0
-        delilah_thoughts_run2 "Her throat trembles, like she's choking on the words."
-        sandra_run2 "He's on a business trip, Del."
-        delilah_run2 "That's what I thought. I'll be outside."
+        if run == 2 and not solves.loop2:
+            delilah_run2 "I dare you to be honest with me. Just show a single shred of honesty and respect to your children and just tell us: why isn't Dad here?" (callback = functools.partial(inctime,checkskip=True))
+        if run == 2 and not solves.loop2:
+            pause 1.0
+        if run == 2 and not solves.loop2:
+            delilah_thoughts_run2 "Mom's throat trembles, like she's choking on the words." (callback = functools.partial(inctime,checkskip=True))
+        if run == 2 and not solves.loop2:
+            sandra_run2 "He's on a business trip, Del." (callback = functools.partial(inctime,checkskip=True))
+        if run == 2 and not solves.loop2:
+            delilah_run2 "That's what I thought." (callback = functools.partial(inctime,checkskip=True))
+        if run == 2:
+            $ moonglitch5 = False
+        menu:
+            delilah " " (callback = functools.partial(inctime,g2=True))
+            "{color=#f00}I'll be outside.{/color}":
+                delilah_run2 "I'll be outside."
+
     else:
         delilah "Is that a promise?"
         sandra "Don't you start."
@@ -287,7 +299,11 @@ label argument:
             "This family is a joke.":
                 delilah "This family is a joke."
         sandra "Upstairs. Now."
-        delilah "Fuck you, I'm going for a walk."
+        # delilah "Fuck you, I'm going for a walk."
+        menu:
+            delilah " " (callback = functools.partial(inctime))
+            "Fuck you, I'm going for a walk.":
+                delilah "Fuck you, I'm going for a walk."
 
     hide sandra onlayer characters with dissolve
 

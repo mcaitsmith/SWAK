@@ -305,7 +305,7 @@ label start:
 
     scene bg black with dissolve
 
-    show screen moonglitchscreen onlayer interface
+    # show screen moonglitchscreen onlayer interface
     show screen flowerscreen onlayer interface
 
     # show rearview:
