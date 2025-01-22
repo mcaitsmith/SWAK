@@ -113,9 +113,9 @@ label intro:
                 "{color=#0f0}Ow, that really really hurt{/color}" if run == 3:
                     delilah_thoughts_run3 "Ow, that really really hurt!"
                     jump start_loop3
-                # "Im sorry I had to do that" if run == 4:
-                #     delilah_thoughts "Im sorry I had to do that"
-                #     jump start_loop4
+                "{color=#0ff}Look over at Cody{/color}" if run == 4:
+                    delilah_thoughts_run4 "Look over at Cody"
+                    jump start_loop4
 
             hide julian fade onlayer characters with Dissolve(3.0)
             pause 2.0

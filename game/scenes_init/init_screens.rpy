@@ -69,14 +69,17 @@ label init_screens:
             if solves.loop2:
                 add 'images/props/flower_hover.png' zoom 0.5 xpos 0.1 ypos 0.0
             else:
-                add 'images/props/flower.png':
-                    zoom 0.5
-                    xpos 0.1
-                    ypos 0.0
+                add 'images/props/flower.png' zoom 0.5 xpos 0.1 ypos 0.0
         if flowers.flower3:
-            add 'images/props/flower_hover.png' zoom 0.5 xpos 0.15 ypos 0.0
+            if solves.loop3:
+                add 'images/props/flower_hover.png' zoom 0.5 xpos 0.15 ypos 0.0
+            else:
+                add 'images/props/flower.png' zoom 0.5 xpos 0.15 ypos 0.0
         if flowers.flower4:
-            add 'images/props/flower_hover.png' zoom 0.5 xpos 0.2 ypos 0.0
+            if solves.loop4:
+                add 'images/props/flower_hover.png' zoom 0.5 xpos 0.2 ypos 0.0
+            else:
+                add 'images/props/flower.png' zoom 0.5 xpos 0.2 ypos 0.0
 
     screen flower1_pick:
         imagebutton:
@@ -98,8 +101,23 @@ label init_screens:
             yalign 0.6
             idle "images/props/flower.png"
             hover "images/props/flower_hover.png"
-            action [SetVariable("flowers.flower3", 1), Hide("flower3_pick"), Return()]
+            action [SetVariable("flowers.flower3", 1), SetVariable("config.rollback_enabled", False), Hide("flower3_pick"), Return()]
+    screen flower4_pick:
+        imagebutton:
+            xalign 0.5
+            yalign 0.6
+            idle "images/props/flower.png"
+            hover "images/props/flower_hover.png"
+            action [SetVariable("flowers.flower4", 1), SetVariable("config.rollback_enabled", False), Hide("flower4_pick"), Return()]
     screen flower_glitch:
+        if puzzles.loop2:
+            imagebutton:
+                xalign 0.5
+                yalign 0.5
+                idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        else:
+            add Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") xalign 0.5 yalign 0.5
+    screen flower_glitch_final: # 3 flowers glitched
         if puzzles.loop2:
             imagebutton:
                 xalign 0.5
@@ -114,6 +132,20 @@ label init_screens:
             idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
             hover Glitch("images/props/flower_hover.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
             action [SetVariable("flowers.flower2", 1), SetVariable("config.rollback_enabled", False), Hide("flower2_pick"), Return()]
+    screen flower3_glitch_pick:
+        imagebutton:
+            xalign 0.5
+            yalign 0.5
+            idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+            hover Glitch("images/props/flower_hover.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+            action [SetVariable("flowers.flower3", 1), SetVariable("config.rollback_enabled", False), Hide("flower3_pick"), Return()]
+    screen flower4_glitch_pick: # 3 flowers glitched
+        imagebutton:
+            xalign 0.5
+            yalign 0.5
+            idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+            hover Glitch("images/props/flower_hover.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+            action [SetVariable("flowers.flower4", 1), SetVariable("config.rollback_enabled", False), Hide("flower4_pick"), Return()]
 
 
     screen howtoplay:

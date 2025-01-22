@@ -73,12 +73,15 @@ define narrator = Character(None,callback=None,what_style="centered_text", windo
 define delilah = Character("Delilah",image="delilah",callback=inctime)
 define delilah_run2 = Character("Delilah",image="delilah",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define delilah_run3 = Character("Delilah",image="delilah",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define delilah_run4 = Character("Delilah",image="delilah",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
 define delilah_thoughts = Character("Delilah",image="delilah",what_prefix='(', what_suffix=')', what_italic=True,callback=inctime)
 define delilah_thoughts_run2 = Character("Delilah",image="delilah",what_prefix='{color=#f00}(', what_suffix='){/color}', what_italic=True,callback=inctime)
 define delilah_thoughts_run3 = Character("Delilah",image="delilah",what_prefix='{color=#0f0}(', what_suffix='){/color}', what_italic=True,callback=inctime)
+define delilah_thoughts_run4 = Character("Delilah",image="delilah",what_prefix='{color=#0ff}(', what_suffix='){/color}', what_italic=True,callback=inctime)
 define julian = Character("Julian",image="julian",callback=inctime)
 define julian_run2 = Character("Julian",image="julian",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define julian_run3 = Character("Julian",image="julian",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define julian_run4 = Character("Julian",image="julian",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
 define boy = Character("???",image="julian",callback=inctime)
 define boy_run2 = Character("???",image="julian",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define cody = Character("Cody",image="cody",callback=inctime)
@@ -87,6 +90,7 @@ define cody_run3 = Character("Cody",image="cody",what_prefix='{color=#0f0}', wha
 define sandra = Character("Sandra",image="sandra",callback=inctime)
 define sandra_run2 = Character("Sandra",image="sandra",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define sandra_run3 = Character("Sandra",image="sandra",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define sandra_run4 = Character("Sandra",image="sandra",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
 
 # define animated fade sprite for Julian
 image julian fade:
@@ -158,6 +162,10 @@ image flower_glitch_image:
     Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
     xalign 0.5
     yalign 0.5
+image flower_glitch_image_final: # bouquet of 3
+    Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+    xalign 0.5
+    yalign 0.5
 
 # define custom positions for sprites
 transform center_left:
@@ -219,35 +227,6 @@ label incphase:
     show screen eclipse onlayer background_overlay with Dissolve(2.0)
     pause 1.0
     return
-
-label hints_run3:
-    if hints.loop3_1:
-        delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
-    if hints.loop3_2:
-        delilah_thoughts_run3 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
-    if hints.loop3_3:
-        delilah_thoughts_run3 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
-    menu:
-        narrator "Need a hint?" (callback = functools.partial(inctime,checkskip=True))
-        "Yes" if not hints.loop3_1:
-            delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
-            $ hints.loop3_1 = True
-            return
-        "Get another hint" if hints.loop3_1 and not hints.loop3_2:
-            delilah_thoughts_run3 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
-            $ hints.loop3_2 = True
-            return
-        "Get final hint" if hints.loop3_2 and not hints.loop3_3:
-            delilah_thoughts_run3 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
-            $ hints.loop3_3 = True
-            return
-        "No" if not hints.loop3_3:
-            return
-        "Skip puzzle":
-            hide flower_glitch_image
-            $ renpy.play("orex_sfx_sparkle.ogg") # solved!
-            $ solves.loop3 = True
-            return
 
 # The game starts here.
 
