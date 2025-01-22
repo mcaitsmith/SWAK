@@ -262,10 +262,10 @@ screen quick_menu():
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
-            if run == 2 and puzzles.loop2 and not solves.loop2 and not renpy.get_screen("flower_glitch"):
-                textbutton _("{color=#f00}What now?{/color}") action Call('hints_run2')
-            if run == 3 and puzzles.loop3 and not solves.loop3 and not renpy.get_screen("flower_glitch"):
-                textbutton _("{color=#0f0}What now?{/color}") action Call('hints_run3')
+            # if run == 2 and puzzles.loop2 and not solves.loop2 and not renpy.get_screen("flower_glitch"):
+            #     textbutton _("{color=#f00}What now?{/color}") action Call('hints_run2')
+            # if run == 3 and puzzles.loop3 and not solves.loop3 and not renpy.get_screen("flower_glitch"):
+            #     textbutton _("{color=#0f0}What now?{/color}") action Call('hints_run3')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever

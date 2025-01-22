@@ -66,6 +66,10 @@ label outside:
     if not flowers.flower1:
         call screen flower1_pick
     if flowers.flower1 and not config.rollback_enabled:
+        $ renpy.choice_for_skipping()
+    if flowers.flower1 and not config.rollback_enabled:
+        $ _skipping = False
+    if flowers.flower1 and not config.rollback_enabled:
         delilah_thoughts "The boy goes limp. He's maybe a year or two older than me, I guess."
     if flowers.flower1 and not config.rollback_enabled:
         hide julian onlayer characters with Dissolve(3.0)

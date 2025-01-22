@@ -62,11 +62,61 @@ label stay_with_him:
             "{color=#f00}She used to climb trees all the time as a kid. Her dad would hoist her up and she'd cling to a branch like a koala. She thinks of this while planting her foot onto a knot on the side of its trunk. Higher and higher she reaches, farther and farther the ground becomes.{/color}"
     if not flowers.flower2:
         delilah_thoughts_run2 "I inch my way across the tree's feeble branch and reach for the flower..."
-    if not flowers.flower2:
-        if not solves.loop2:
-            show flower_glitch_image
+    if not flowers.flower2 and not solves.loop2:
+        show flower_glitch_image
+    else:
+        hide flower_glitch_image
             # call screen flower_glitch
-            delilah_thoughts_run2 "Huh...it looks strange. Staticky."
+    if not flowers.flower2 and not solves.loop2:
+        delilah_thoughts_run2 "Huh...it looks strange. Staticky."
+    else:
+        hide flower_glitch_image
+
+    # puzzle hints
+    if not flowers.flower2:
+        if not flowers.flower2 and puzzles.loop2 and not solves.loop2 and hints.loop2_1:
+            delilah_thoughts_run2 "That staticky glitch...there's something {i}wrong{/i} about it. Have I seen that static somewhere before?"
+        if not flowers.flower2 and puzzles.loop2 and not solves.loop2 and hints.loop2_2:
+            delilah_thoughts_run2 "I don't know what's going on, but I feel like that glitch doesn't belong in this world. Something's {i}pulling{/i} it here. Maybe if I seal it off somewhere else the flower will become real again."
+        if not flowers.flower2 and puzzles.loop2 and not solves.loop2 and hints.loop2_3:
+            delilah_thoughts_run2 "Is there a way to SKIP past points in time that are glitched? Wait, what am I talking about? There's no such thing as time travel."
+        if not flowers.flower2 and puzzles.loop2 and not solves.loop2:
+            menu:
+                narrator "Need a hint?" (callback = functools.partial(inctime))
+                "Yes" if not hints.loop2_1 and not flowers.flower2:
+                    if not flowers.flower2 and puzzles.loop2 and not solves.loop2:
+                        delilah_thoughts_run2 "That staticky glitch...there's something {i}wrong{/i} about it. Have I seen that static somewhere before?"
+                        $ hints.loop2_1 = True
+                    # if puzzles.loop2 and not solves.loop2:
+                    #     jump pick_flower2
+                "Get another hint" if hints.loop2_1 and not hints.loop2_2 and not flowers.flower2:
+                    if not flowers.flower2 and puzzles.loop2 and not solves.loop2:
+                        delilah_thoughts_run2 "I don't know what's going on, but I feel like that glitch doesn't belong in this world. Something's {i}pulling{/i} it here. Maybe if I seal it off somewhere else the flower will become real again."
+                        $ hints.loop2_2 = True
+                    # if not flowers.flower2:
+                    #     jump pick_flower2
+                "Get final hint" if hints.loop2_2 and not hints.loop2_3 and not flowers.flower2:
+                    if not flowers.flower2 and puzzles.loop2 and not solves.loop2:
+                        delilah_thoughts_run2 "Is there a way to SKIP past points in time that are glitched? Wait, what am I talking about? There's no such thing as time travel."
+                        $ hints.loop2_3 = True
+                    # if not flowers.flower2:
+                    #     jump pick_flower2
+                "No" if not hints.loop2_3 and not flowers.flower2:
+                    pass
+                    # if not flowers.flower2:
+                    #     jump pick_flower2
+                "Pick the flower anyway" if not flowers.flower2:
+                    # if not flowers.flower2 and puzzles.loop2 and not solves.loop2:
+                    hide flower_glitch_image
+                    if not flowers.flower2 and puzzles.loop2 and not solves.loop2:
+                        $ skip_puzzle2 = True
+                    if not flowers.flower2 and puzzles.loop2 and not solves.loop2:
+                        call screen flower2_glitch_pick
+        else:
+            hide flower_glitch_image
+    else:
+        hide flower_glitch_image
+
     if not flowers.flower2:
         if not solves.loop2:
             $ puzzles.loop2 = True # unlock puzzle
@@ -75,7 +125,11 @@ label stay_with_him:
 
         else:
             call screen flower2_pick
-    
+
+    if flowers.flower2 and not config.rollback_enabled:
+        $ renpy.choice_for_skipping()
+    if flowers.flower2 and not config.rollback_enabled:
+        $ _skipping = False
     if flowers.flower2 and not config.rollback_enabled:
         delilah_thoughts_run2 "Once it's in my hand I immediately feel different."
     else:

@@ -18,6 +18,9 @@ init python:
     moonglitch3 = False
     moonglitch4 = False
     moonglitch5 = False
+    skip_puzzle2 = False
+    skip_puzzle3 = False
+    skip_puzzle4 = False
 
     # How to play text
 init:
@@ -217,35 +220,6 @@ label incphase:
     pause 1.0
     return
 
-# puzzle hints
-label hints_run2:
-    if hints.loop2_1:
-        delilah_thoughts_run2 "Something's different since I took that first flower Julian gave me. Time isn't behaving like it should. I've seen that static somewhere before..."
-    if hints.loop2_2:
-        delilah_thoughts_run2 "The moon! It's been staticky too. And...in the wrong order? Almost like the glitched-up version is part of a different timeline."
-    if hints.loop2_3:
-        delilah_thoughts_run2 "Maybe I need to fix that other timeline. Is there a way to SKIP past points in time that aren't glitched? Wait, what am I talking about? There's no such thing as time travel."
-    menu:
-        narrator "Need a hint?" (callback = functools.partial(inctime,checkskip=True))
-        "Yes" if not hints.loop2_1:
-            delilah_thoughts_run2 "Something's different since I took that first flower Julian gave me. Time isn't behaving like it should. I've seen that static somewhere before..."
-            $ hints.loop2_1 = True
-            return
-        "Get another hint" if hints.loop2_1 and not hints.loop2_2:
-            delilah_thoughts_run2 "The moon! It's been staticky too. And...in the wrong order? Almost like the glitched-up version is part of a different timeline."
-            $ hints.loop2_2 = True
-            return
-        "Get final hint" if hints.loop2_2 and not hints.loop2_3:
-            delilah_thoughts_run2 "Maybe I need to fix that other timeline. Is there a way to SKIP past points in time that aren't glitched? Wait, what am I talking about? There's no such thing as time travel."
-            $ hints.loop2_3 = True
-            return
-        "No" if not hints.loop2_3:
-            return
-        "Skip puzzle":
-            hide flower_glitch_image
-            $ renpy.play("orex_sfx_sparkle.ogg") # solved!
-            $ solves.loop2 = True
-            return
 label hints_run3:
     if hints.loop3_1:
         delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."

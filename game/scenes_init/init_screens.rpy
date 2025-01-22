@@ -63,14 +63,20 @@ label init_screens:
 
     screen flowerscreen: # screen for showing flowers
         if flowers.flower1:
-            add 'images/props/flower.png' zoom 0.5 xpos 0.05 ypos 0.0
+            add 'images/props/flower_hover.png' zoom 0.5 xpos 0.05 ypos 0.0
             # text "Flower 1" xpos 0.1 ypos 0.15
         if flowers.flower2:
-            add 'images/props/flower.png' zoom 0.5 xpos 0.1 ypos 0.0
+            if solves.loop2:
+                add 'images/props/flower_hover.png' zoom 0.5 xpos 0.1 ypos 0.0
+            else:
+                add 'images/props/flower.png':
+                    zoom 0.5
+                    xpos 0.1
+                    ypos 0.0
         if flowers.flower3:
-            add 'images/props/flower.png' zoom 0.5 xpos 0.15 ypos 0.0
+            add 'images/props/flower_hover.png' zoom 0.5 xpos 0.15 ypos 0.0
         if flowers.flower4:
-            add 'images/props/flower.png' zoom 0.5 xpos 0.2 ypos 0.0
+            add 'images/props/flower_hover.png' zoom 0.5 xpos 0.2 ypos 0.0
 
     screen flower1_pick:
         imagebutton:
@@ -101,10 +107,14 @@ label init_screens:
                 idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
         else:
             add Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") xalign 0.5 yalign 0.5
-            # imagebutton:
-            #     xalign 0.5
-            #     yalign 0.5
-            #     Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+    screen flower2_glitch_pick:
+        imagebutton:
+            xalign 0.5
+            yalign 0.5
+            idle Glitch("images/props/flower.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+            hover Glitch("images/props/flower_hover.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+            action [SetVariable("flowers.flower2", 1), SetVariable("config.rollback_enabled", False), Hide("flower2_pick"), Return()]
+
 
     screen howtoplay:
         text "[playtext]" xalign 0.5 yalign 0.5 text_align 0.5
