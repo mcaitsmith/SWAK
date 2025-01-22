@@ -20,7 +20,8 @@ label init_loop2puzzle:
             elif checkskip and renpy.is_skipping() and not renpy.get_screen("choice"):
                 pass
             else:
-                if g1==True: # initiate cycle from 1
+                # if g1==True: # initiate cycle from 1
+                if g1==True and not renpy.is_skipping(): # initiate cycle from 1
                     moonglitches.glitch1 = True
                     moonglitches.glitch2 = False
                     moonglitches.glitch3 = False
