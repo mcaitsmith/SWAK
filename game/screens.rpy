@@ -253,6 +253,8 @@ screen quick_menu():
                 textbutton _("{color=#f00}Back{/color}") action Rollback()
             elif flowers.flower2 and run == 2 and config.rollback_enabled:
                 textbutton _("{color=#0f0}Back{/color}") action Rollback()
+            elif flowers.flower3 and run == 3 and config.rollback_enabled:
+                textbutton _("{color=#0ff}Back{/color}") action Rollback()
             else:
                 textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')

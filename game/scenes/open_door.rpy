@@ -366,7 +366,7 @@ label argument:
     
     delilah_thoughts "He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it."
     # replace this line below with expression change
-    delilah_thoughts "Delilah watches in horror."
+    delilah_thoughts "I watch in horror."
     if not (run == 3 and loop3_investigate):
         delilah "Can't even eat pizza like a normal person?"
     cody "I can't help it if my eccentricities extend to my dining preferences."
@@ -392,15 +392,15 @@ label argument:
         delilah "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!"
         cody "I'm not exactly shouting from the roof tops about being related to a wastoid either."
         delilah "Bite me!"
-    cody "Bitch..."
+    cody "{size=15}Bitch...{/size}"
     # make line above small text to replace line below
-    cody "he says under his breath."
+    # cody "he says under his breath."
     if run == 2 and loop2_investigate:
         delilah_run2 "Fuck you."
     else:
         delilah "You little!"
         # replace line below with animated sprites
-        delilah_thoughts "She stands up and raises her fist like she's going to punch him from across the table."
+        delilah_thoughts "I stand up and raise my fist like I'm going to punch him from across the table."
     sandra "Hey! Hey! Relax!"
     if run == 2 and loop2_investigate:
         delilah_run2 "Oh, now you want to intervene?"
@@ -410,7 +410,7 @@ label argument:
     cody "She started it!"
     sandra "Cody...things are hard enough as is..."
     # replace line below with animated sprite
-    delilah_thoughts "Delilah crosses her arms and raises an eyebrow."
+    delilah_thoughts "I cross my arms and raise an eyebrow."
     cody "I'm sorry...that you're a bitch."
     sandra "That's it! Upstairs, now!"
     delilah_thoughts "He drops his bare crusts in the trash dramatically then heads for the stairs."
@@ -445,10 +445,9 @@ label argument:
     else:
         delilah "I don't antagonize him..."
         delilah_thoughts "Those last words he said before storming off..."
-        # delilah_thoughts "she thought about the last words he said before storming off."
         delilah "He's right though, about Dad, I mean."
         sandra "Your dad wishes he could be here more than anything in the world. Work has been brutal lately."
-        delilah_thoughts "She laughs." # add laugh sound to replace this or just (haha)
+        delilah_thoughts "I laugh." # add laugh sound to replace this or just (haha)
         delilah "Yeah, I'm sure."
     if not (run == 2 and loop2_investigate and solves.loop2):
         sandra "What's that supposed to mean?" (callback = functools.partial(inctime,checkskip=True))

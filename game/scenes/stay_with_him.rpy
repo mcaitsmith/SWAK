@@ -14,7 +14,7 @@ label stay_with_him:
     
     delilah_run2 "So...what do you want to do to fill the time? It could be a while till you, y'know..."
     boy_run2 "Hmm. Why don't you tell me about yourself? What's your name? What brings you out here to this fine patch of jagged rocks?"
-    delilah_thoughts_run2 "She chuckles painfully." # replace
+    delilah_thoughts_run2 "I chuckle painfully." # replace
     delilah_run2 "I'm Delilah. Uh, just here on a short weekend trip with the family."
     boy_run2 "Right, and that lovely creature I saw you with before must be your sister then?"
     delilah_run2 "Mother and where were you?? I went for help and you disappeared!"

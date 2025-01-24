@@ -35,7 +35,7 @@ label intro:
     show cody happy onlayer characters at center_left
     cody "Ugh, I can't wait for you to be gone."
     delilah "Shut up, insect."
-    delilah_thoughts "She punches her little brother in the arm." # add punch sfx to replace + shake cody sprite
+    delilah_thoughts "I punch my little brother in the arm." # add punch sfx to replace + shake cody sprite
     cody "Ow!"
     sandra "Oh hush, you'll be missing her when she's gone. Just you wait."
     cody "Yeah right. She'll be back every weekend, I bet, if she doesn't flunk out that is." 
@@ -77,8 +77,8 @@ label intro:
     sandra "Thanks, Del. You're a peach."
     show cody happy onlayer characters at center_right
     cody "Yeah, Del, thanks."
-    cody "He laughs." # add laugh sound to replace
-    delilah_thoughts "Delilah stamped her feet, making sure the earth could feel how unfair this situation was." # replace with animation/sfx
+    delilah_thoughts "He laughs." # add laugh sound to replace
+    delilah_thoughts "I stamp my feet, making sure the earth can feel how unfair this situation is." # replace with animation/sfx
 
     hide cody onlayer characters
     hide sandra onlayer characters

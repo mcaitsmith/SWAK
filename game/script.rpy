@@ -177,6 +177,13 @@ transform center_right:
 define config.layers = [ 'master', 'background','background_overlay','characters','transient', 'screens', 'overlay', 'interface' ]
 $ config.tag_layer['bg'] = 'background'
 
+# define music
+define loop1music = "audio/music/SWAK Loop 1 MSTR V1.ogg"
+define loop2music = "audio/music/SWAK Loop 1 MSTR V1.ogg"
+define loop3music = "audio/music/SWAK Loop 3 MSTR V1.ogg"
+define loop4music = "audio/music/SWAK Loop 4 MSTR V1.ogg"
+# define endingmusic = ""
+
 # check run number at beginning to progress runs
 label checkrun:
     if flowers.flower3:
@@ -192,6 +199,7 @@ label checkrun:
         show flower_run3:
             xalign 0.5
             yalign 0.6
+        play music loop4music
     elif flowers.flower2:
         $ run = 3
         show flower_run1:
@@ -202,13 +210,16 @@ label checkrun:
             xalign 0.49
             yalign 0.6
             rotate -15
+        play music loop3music
     elif flowers.flower1:
         $ run = 2
         show flower_run1:
             xalign 0.5
             yalign 0.6
+        play music loop2music
     else:
         $ run = 1
+        play music loop1music
     # if run >= 2:
     #     show reflection:
     #         xalign 0.5
@@ -245,6 +256,13 @@ label start:
     $ loop2_investigate = False
     $ loop3_investigate = False
     $ smoke_break = False
+
+    # temporary disable puzzles
+    $ solves.loop2 = True
+    $ solves.loop3 = True
+    $ solves.loop4 = True
+
+    stop music fadeout 2.0
 
     show screen howtoplay
     $ renpy.pause()

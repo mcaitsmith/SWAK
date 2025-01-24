@@ -53,7 +53,7 @@ label back_to_shore_final:
 
     menu:
         delilah " " (callback = functools.partial(inctime))
-        "{color=#0ff}Give Julian the flowers{/color}":
+        "{color=#0ff}Give Julian the flowers (secret ending){/color}":
             delilah_thoughts_run4 "Give Julian the flowers"
             # at this point the 3 flowers show up glitched
 
@@ -122,6 +122,7 @@ label back_to_shore_final:
             delilah_thoughts_run4 "I lean closer to him."
             pause 1.0
             # show kiss CG
+            delilah_thoughts_run4 "(show CG)"
             $ flowers.flower4 = False
             $ flowers.flower3 = False
             $ flowers.flower2 = False

@@ -43,7 +43,7 @@ label outside:
     delilah_thoughts "The figure stumbles for a moment and then collapses on the rocks."
     delilah "Hey!"
     # replace line below with running sfx + moving/zoom bg
-    delilah_thoughts "She runs down the hill towards the lakeshore."
+    delilah_thoughts "I run down the hill towards the lakeshore."
     delilah "Hey, are you okay?!"
 
     # now have Julian appear full
@@ -57,7 +57,7 @@ label outside:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching a glowing flower."
     else:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching...nothing."
-    delilah_thoughts "He looks at Delilah with equal parts desperation and shock." # replace with expression change
+    delilah_thoughts "He looks at me with equal parts desperation and shock." # replace with expression change
 
     if not flowers.flower1:
 
@@ -76,7 +76,7 @@ label outside:
     if flowers.flower1 and not config.rollback_enabled:
         delilah "Oh my God! Oh my God!"
     if flowers.flower1 and not config.rollback_enabled:
-        delilah_thoughts "She looks around at the empty stillness of the night." # replace with animated sprite
+        delilah_thoughts "I look around at the empty stillness of the night." # replace with animated sprite
     if flowers.flower1 and not config.rollback_enabled:
         delilah "Somebody help! Somebody help! He's not moving!" 
     if flowers.flower1 and not config.rollback_enabled:
