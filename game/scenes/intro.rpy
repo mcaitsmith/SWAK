@@ -22,7 +22,7 @@ label intro:
         #     yalign 0.05
         # with { "master" : Dissolve(1.0) }
 
-        "Delilah is stuck. Between the tumultuous indignities of adolescence and the quiet ennui of adulthood, frozen in place before this choice that life has presented her with. Right on the line of 'too old to be acting like this' and 'too young to be trusted.'"
+        "Delilah is stuck.\nBetween the tumultuous indignities of adolescence and the quiet ennui of adulthood,\nfrozen in place before this choice that life has presented her with.\nRight on the line of 'too old to be acting like this' and 'too young to be trusted.'"
     pause 1.0
     # hide reflection with dissolve
     # pause 1.0
@@ -56,7 +56,7 @@ label intro:
 
     if run == 1:
         "The house is lifeless, suspended in time until the two weekends per year that they use the place. Nearly every house on the block is someone's home away from home, loved only by the landscaping and housekeeping staff that keep them from becoming a cobweb metropolis of wild animals."
-        "Delilah's thinking a lot lately about the difference between a house and a home. For most of her life, she thought they were synonymous. But recently she's realized that a home is a place you feel at home, a house is a place you lived in."
+        "Delilah's thinking a lot lately about the difference between a house and a home.\nFor most of her life, she thought they were synonymous. But recently she's realized that a home is a place you feel at home, a house is a place you lived in."
         "She doesn't feel at home anywhere. Not anymore."
 
     call incphase from _call_incphase_4
@@ -87,7 +87,7 @@ label intro:
     pause 2.0 # possible transition to new bg or maybe zoom in current one
 
     if run == 1:
-        "Each house in the neighborhood backs up to the lake, a fleet of boats and jetskis parked at each private dock. It was fun to spend the summer here as a kid, when Dad would take them out on the water, but now...well, things are different."
+        "Each house in the neighborhood backs up to the lake, a fleet of boats and jetskis parked at each private dock.\nIt was fun to spend the summer here as a kid, when Dad would take them out on the water, but now...\nwell, things are different."
     pause 1.0
 
     show julian fade onlayer characters at center:

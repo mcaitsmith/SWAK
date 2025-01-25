@@ -2,13 +2,13 @@
 
 label search_for_julian:
 
-    "8 PM" (callback = functools.partial(inctime))
+    time_centered "8 PM" (callback = functools.partial(inctime))
     pause 1.0
 
     # sfx/bg change
     if run == 2:
-        "{color=#f00}This guy, whoever he is, would die if they did nothing. So, Delilah went walking along the lakeshore, hopping across fences and docks.{/color}"
-        "{color=#f00}She thought to call out for him, but remembered that she didn't know his name. What would she yell out? \"Boy!\" \"Hello? I'm looking for a boy!\" No. Instead, she walked around in the dark.{/color}"
+        "{color=#f00}This guy, whoever he is, will die if they do nothing.\nSo, Delilah goes walking along the lakeshore, hopping across fences and docks.{/color}"
+        "{color=#f00}She thinks to call out for him, but remembers that she doesn't know his name.\nWhat would she yell out? \"Boy!\" \"Hello? I'm looking for a boy!\" No.\nInstead, she walks around in the dark.{/color}"
     pause 1.0
     delilah_thoughts_run2 "Stepping across a pile of rocks, I feel something person-shaped under my heel."
     # delilah_thoughts "Delilah, stepping across a pile of rocks, feels something person-shaped under her heel."

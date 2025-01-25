@@ -69,32 +69,33 @@ init python:
     #     config.history_callbacks.append(history_time_callback)
 
 # Declare characters used by this game.
-define narrator = Character(None,callback=None,what_style="centered_text", window_style="centered_window")
-define delilah = Character("Delilah",image="delilah",callback=inctime)
-define delilah_run2 = Character("Delilah",image="delilah",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
-define delilah_run3 = Character("Delilah",image="delilah",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
-define delilah_run4 = Character("Delilah",image="delilah",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
-define delilah_thoughts = Character("Delilah",image="delilah",what_prefix='(', what_suffix=')', what_italic=True,callback=inctime)
-define delilah_thoughts_run2 = Character("Delilah",image="delilah",what_prefix='{color=#f00}(', what_suffix='){/color}', what_italic=True,callback=inctime)
-define delilah_thoughts_run3 = Character("Delilah",image="delilah",what_prefix='{color=#0f0}(', what_suffix='){/color}', what_italic=True,callback=inctime)
-define delilah_thoughts_run4 = Character("Delilah",image="delilah",what_prefix='{color=#0ff}(', what_suffix='){/color}', what_italic=True,callback=inctime)
-define julian = Character("Julian",image="julian",callback=inctime)
-define julian_run2 = Character("Julian",image="julian",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
-define julian_run3 = Character("Julian",image="julian",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
-define julian_run4 = Character("Julian",image="julian",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
-define boy = Character("???",image="julian",callback=inctime)
-define boy_run2 = Character("???",image="julian",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
-define cody = Character("Cody",image="cody",callback=inctime)
-define cody_run2 = Character("Cody",image="cody",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
-define cody_run3 = Character("Cody",image="cody",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
-define sandra = Character("Sandra",image="sandra",callback=inctime)
-define sandra_run2 = Character("Sandra",image="sandra",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
-define sandra_run3 = Character("Sandra",image="sandra",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
-define sandra_run4 = Character("Sandra",image="sandra",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
+define narrator = Character(None,callback=None,what_style="centered_text", window_style="centered_window",what_outlines=[(2,"#000000",0,0)])
+define time_centered = Character(None,callback=None,what_style="centered_text", window_style="centered_window",what_font="retro_party.ttf",what_size = 100, what_outlines=[(2,"#000000",0,0)])
+define delilah = Character("Delilah",image="delilah",color="#EB28D2",callback=inctime)
+define delilah_run2 = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define delilah_run3 = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define delilah_run4 = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
+define delilah_thoughts = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='(', what_suffix=')', what_italic=True,callback=inctime)
+define delilah_thoughts_run2 = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='{color=#f00}(', what_suffix='){/color}', what_italic=True,callback=inctime)
+define delilah_thoughts_run3 = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='{color=#0f0}(', what_suffix='){/color}', what_italic=True,callback=inctime)
+define delilah_thoughts_run4 = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='{color=#0ff}(', what_suffix='){/color}', what_italic=True,callback=inctime)
+define julian = Character("Julian",image="julian",color="#71A4B0",callback=inctime)
+define julian_run2 = Character("Julian",image="julian",color="#71A4B0",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define julian_run3 = Character("Julian",image="julian",color="#71A4B0",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define julian_run4 = Character("Julian",image="julian",color="#71A4B0",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
+define boy = Character("???",image="julian",color="#71A4B0",callback=inctime)
+define boy_run2 = Character("???",image="julian",color="#71A4B0",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define cody = Character("Cody",image="cody",color="#aa2b3a",callback=inctime)
+define cody_run2 = Character("Cody",image="cody",color="#aa2b3a",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define cody_run3 = Character("Cody",image="cody",color="#aa2b3a",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define sandra = Character("Sandra",image="sandra",color="#F0D193",callback=inctime)
+define sandra_run2 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define sandra_run3 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define sandra_run4 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
 
 # define animated fade sprite for Julian
 image julian fade:
-    "images/chars/julian neutral.png"
+    "images/chars/julianshadow.png"
     alpha 0.0
     linear 0.05 alpha 0.03
     linear 0.05 alpha 0.0
@@ -105,6 +106,21 @@ image julian fade:
     linear 0.05 alpha 0.06
     linear 0.05 alpha 0.0
     0.5
+    repeat
+image julian blur = im.Blur("images/chars/julian neutral.png", 2.5)
+image julian glitch:
+    "images/chars/julianglitch_1.png"
+    0.1
+    "images/chars/julianglitch_2.png"
+    0.1
+    "images/chars/julianglitch_3.png"
+    0.1
+    "images/chars/julianglitch_4.png"
+    0.1
+    "images/chars/julianglitch_3.png"
+    0.1
+    "images/chars/julianglitch_2.png"
+    0.1
     repeat
 
 # define scene bgs (placeholder)
@@ -174,7 +190,7 @@ transform center_right:
     xalign 0.7 yalign 1.0
 
 # define screen layers
-define config.layers = [ 'master', 'background','background_overlay','characters','transient', 'screens', 'overlay', 'interface' ]
+define config.layers = [ 'master', 'background','background_overlay','characters','transient', 'interface', 'screens', 'overlay' ]
 $ config.tag_layer['bg'] = 'background'
 
 # define music
@@ -225,7 +241,7 @@ label checkrun:
     #         xalign 0.5
     #         yalign 0.05
     #     with { "master" : Dissolve(1.0) }
-    "7 PM"
+    time_centered "7 PM"
     hide flower_run1
     hide flower_run2
     hide flower_run3

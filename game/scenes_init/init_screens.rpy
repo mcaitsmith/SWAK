@@ -152,6 +152,6 @@ label init_screens:
         text "[playtext]" xalign 0.5 yalign 0.5 text_align 0.5
         
     screen endscreen:
-        text "END" xalign 0.5 yalign 0.5
+        text "{size=100}END{/size}" xalign 0.5 yalign 0.5
 
     return

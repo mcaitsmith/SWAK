@@ -6,14 +6,14 @@ label outside:
     
     show bg scene3 with dissolve
 
-    "9 PM"
+    time_centered "9 PM"
     pause 1.0
 
     delilah_thoughts "The door slams behind me." # replace with door slam sfx
     # delilah_thoughts "The door slams behind Delilah." # replace with door slam sfx
 
     if run == 1:
-        "She stands on the back patio and gazes out at the water for a moment. What would happen if she just started walking? The thought creeps into her mind. What if she just picked a direction and started walking indefinitely? Would she find peace? It's a possibility."
+        "She stands on the back patio and gazes out at the water for a moment.\nWhat would happen if she just started walking? The thought creeps into her mind.\nWhat if she just picked a direction and started walking indefinitely? Would she find peace?\nIt's a possibility."
     # delilah_thoughts "She stands on the back patio and gazes out at the water for a moment. What would happen if she just started walking? The thought creeps into her mind. What if she just picked a direction and started walking indefinitely? Would she find peace? It was a possibility."
 
     pause 1.0
@@ -59,9 +59,13 @@ label outside:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching...nothing."
     delilah_thoughts "He looks at me with equal parts desperation and shock." # replace with expression change
 
+
     if not flowers.flower1:
 
         delilah_thoughts "He holds out the flower."
+    if not flowers.flower1:
+
+        show julian blur onlayer characters with dissolve
 
     if not flowers.flower1:
         call screen flower1_pick
@@ -70,9 +74,13 @@ label outside:
     if flowers.flower1 and not config.rollback_enabled:
         $ _skipping = False
     if flowers.flower1 and not config.rollback_enabled:
+        show julian neutral onlayer characters with dissolve
+    if flowers.flower1 and not config.rollback_enabled:
         delilah_thoughts "The boy goes limp. He's maybe a year or two older than me, I guess."
     if flowers.flower1 and not config.rollback_enabled:
-        hide julian onlayer characters with Dissolve(3.0)
+        show julian glitch onlayer characters with dissolve
+    if flowers.flower1 and not config.rollback_enabled:
+        hide julian glitch onlayer characters with Dissolve(3.0)
     if flowers.flower1 and not config.rollback_enabled:
         delilah "Oh my God! Oh my God!"
     if flowers.flower1 and not config.rollback_enabled:
@@ -92,12 +100,9 @@ label outside:
 
     $ config.rollback_enabled = True # re-enable rollback
 
-    if flowers.flower1:
-        
+    if flowers.flower1 and renpy.showing("julian neutral","characters"):
+        show julian glitch onlayer characters with dissolve
         hide julian onlayer characters with Dissolve(3.0)
-
-    # PLACEHOLDER LINE
-    # "(add some line here to hint to player that they have to rollback to first screen)"
 
     $ phase = 0 # reset
 

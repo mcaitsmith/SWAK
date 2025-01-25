@@ -5,7 +5,8 @@ label start_loop4:
     show cody happy onlayer characters at center with dissolve
     delilah_thoughts_run4 "I think about how he reacted to the news of our father's infidelity, how he seemed so long, and how the entire revelation was undone in an instant."
     delilah_thoughts_run4 "He still has life in his eyes."
-    delilah_thoughts_run4 "Good, I think to myself, holding three of the four flowers. Never do that to Cody again."
+    delilah_thoughts_run4 "Good. Never do that to Cody again."
+    # delilah_thoughts_run4 "Good, I think to myself, holding three of the four flowers. Never do that to Cody again."
 
     menu:
         delilah " " (callback = functools.partial(inctime))

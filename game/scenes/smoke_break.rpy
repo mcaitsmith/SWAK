@@ -20,13 +20,13 @@ label smoke_break:
     delilah_run3 "You don't have any idea what changed?" 
     sandra_run3 "I don't know. Teenage angst?"
     if run == 3:
-        "{color=#0f0}The image of that letter was burned into her mind forever. Curiosity got the best of her, she went looking through her dad's belongings, and found what she suspected but couldn't imagine.{/color}"
+        "{color=#0f0}The image of that letter is burned into her mind forever.\nCuriosity got the best of her, she went looking through her dad's belongings, and found what she suspected but couldn't imagine.{/color}"
         hide sandra onlayer characters
         show bg black
         with dissolve
-        "{color=#0f0}'You are so special to me' the letter said. 'I wish we could see each other more. Your scent on my pillow haunts me like a sexy ghost.' 'When you're with me, I feel at home. You are my home.' 'There will always be a place for you here. Love, Charice'{/color}"
-        "{color=#0f0}The first time she read it, she thought it must have been a joke or at the very worst a one-time affair. Rich men slept with women all the time, right? That's what they do. Men can't help themselves.{/color}"
-        "{color=#0f0}She kept the letter. For days, she watched her dad's mannerisms carefully. She searched the way he reached for his drink at the dinner table for any semblance of guilt. She looked into the creases of his smile for any sly deceitfulness. When none could be found, she wondered if she ever knew her dad to begin with. She wondered if her mom ever knew her husband to begin with. Was her entire family built on a lie?{/color}"
+        "{color=#0f0}'You are so special to me' the letter said.\n'I wish we could see each other more. Your scent on my pillow haunts me like a sexy ghost.'\n'When you're with me, I feel at home. You are my home.'\n'There will always be a place for you here. Love, Charice'{/color}"
+        "{color=#0f0}The first time she read it, she thought it must have been a joke or at the very worst a one-time affair.\nRich men slept with women all the time, right? That's what they do. Men can't help themselves.{/color}"
+        "{color=#0f0}She kept the letter.\nFor days, she watched her dad's mannerisms carefully.\nShe searched the way he reached for his drink at the dinner table for any semblance of guilt.\nShe looked into the creases of his smile for any sly deceitfulness.\nWhen none could be found, she wondered if she ever knew her dad to begin with.\nShe wondered if her mom ever knew her husband to begin with.\nWas her entire family built on a lie?{/color}"
         "{color=#0f0}Delilah took the letter and placed it in Sandra's dresser drawer, hoping to raise alarms.{/color}"
         show bg scene3
         show sandra neutral onlayer characters at center

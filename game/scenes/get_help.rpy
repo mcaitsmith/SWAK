@@ -14,7 +14,7 @@ label get_help:
     # delilah_thoughts "But before she could answer him, her feet were already carrying her to the nearest road."
 
     show bg black with dissolve
-    "9 PM" (callback = functools.partial(inctime))
+    time_centered "9 PM" (callback = functools.partial(inctime))
     pause 1.0
 
     delilah_thoughts_run2 "Along the dark roads, illuminated by street lamps, I try to find a payphone. After fifteen minutes of searching I find one and dial 9-1-1."

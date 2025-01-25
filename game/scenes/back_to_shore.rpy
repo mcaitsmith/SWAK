@@ -65,7 +65,7 @@ label back_to_shore:
                 "{color=#0f0}Call him out{/color}":
                     delilah_thoughts_run3 "Call him out"
 
-                    call incphase
+                    call incphase from _call_incphase_15
 
                     delilah_run3 "There you go again! Why do you need to do that?"
                     julian_run3 "Old habits. After I lost my folks, my grandparents took me in. They did their best but, y'know, their age shows pretty often. I take care of them more than they take care of me."
@@ -81,8 +81,8 @@ label back_to_shore:
                     pause 1.0
                     delilah_thoughts_run3 "We stare into each others' eyes, holding onto the moment for as long as possible."
 
-                    call incphase
-                    "9 PM" (callback = functools.partial(inctime)) # intentionally skip 8pm for this ending
+                    call incphase from _call_incphase_16
+                    time_centered "9 PM" (callback = functools.partial(inctime)) # intentionally skip 8pm for this ending
                     pause 1.0
 
                     delilah_thoughts_run3 "Julian's knees start to shake and abruptly fold underneath him."
@@ -103,12 +103,14 @@ label back_to_shore:
                     delilah_run3 "I really enjoyed talking to you for a bit, Julian."
                     julian_run3 "Likewise. You're good company. Talk again soon?"
                     delilah_run3 "Yeah, I come around here often."
-                    hide julian onlayer characters with Dissolve(3.0)
+                    # hide julian onlayer characters with Dissolve(3.0)
+                    show julian glitch onlayer characters with dissolve
+                    hide julian glitch onlayer characters with Dissolve(3.0)
 
-                    call incphase
+                    call incphase from _call_incphase_17
                     
                     if run == 3:
-                        "{color=#0f0}She holds his hand and smiles till he goes limp, thinking of how nice it would be to spend another loop with him.{/color}"
+                        "{color=#0f0}She holds his hand and smiles till he goes limp,\nthinking of how nice it would be to spend another loop with him.{/color}"
                     $ phase = 0 # reset
 
                     return

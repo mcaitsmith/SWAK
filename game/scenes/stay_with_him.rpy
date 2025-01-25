@@ -41,10 +41,12 @@ label stay_with_him:
     delilah_run2 "Hey, you never told me your name."
     julian_run2 "Oh, how rude of me...uh, it's Julian."
     delilah_thoughts_run2 "He tilts his head back and the light drains from his eyes."
-    hide julian onlayer characters with dissolve
+    # hide julian onlayer characters with dissolve
+    show julian glitch onlayer characters with dissolve
+    hide julian glitch onlayer characters with Dissolve(3.0)
 
     call incphase from _call_incphase_14
-    "9 PM" (callback = functools.partial(inctime))
+    time_centered "9 PM" (callback = functools.partial(inctime))
     pause 1.0
 
     delilah_thoughts_run2 "He's gone again. I stare at his body, trying to process that I've now witnessed death twice in the same 24-hour period."
@@ -56,10 +58,10 @@ label stay_with_him:
         pause 1.0
     if not flowers.flower2:
         if run == 2:
-            "{color=#f00}Something inside Delilah compels her to get that glowing flower. The way Julian mentioned gathering them before he ended up here and the way she suddenly was able to travel backwards by getting the first one, she felt that if she got another that maybe she'd get an answer as to why this was happening.{/color}"
+            "{color=#f00}Something inside Delilah compels her to get that glowing flower.\nThe way Julian mentioned gathering them before he ended up here\nand the way she suddenly was able to travel backwards by getting the first one,\nshe feels that if she gets another that maybe she'll get an answer as to why this is happening.{/color}"
     if not flowers.flower2:
         if run == 2:
-            "{color=#f00}She used to climb trees all the time as a kid. Her dad would hoist her up and she'd cling to a branch like a koala. She thinks of this while planting her foot onto a knot on the side of its trunk. Higher and higher she reaches, farther and farther the ground becomes.{/color}"
+            "{color=#f00}She used to climb trees all the time as a kid.\nHer dad would hoist her up and she'd cling to a branch like a koala.\nShe thinks of this while planting her foot onto a knot on the side of its trunk. Higher and higher she reaches, farther and farther the ground becomes.{/color}"
     if not flowers.flower2:
         delilah_thoughts_run2 "I inch my way across the tree's feeble branch and reach for the flower..."
     if not flowers.flower2 and not solves.loop2:
@@ -158,7 +160,7 @@ label stay_with_him:
         $ config.rollback_enabled = True
     if flowers.flower2 and not config.rollback_enabled:
         if run == 2:
-            "{color=#f00}She lays there facing Julian, staring into his eyes. As the light in her fades she notices how many colors can be seen in his irises.{/color}"
+            "{color=#f00}She lays there facing Julian, staring into his eyes.\nAs the light in her fades she notices how many colors can be seen in his irises.{/color}"
     else:
         $ config.rollback_enabled = True
     $ config.rollback_enabled = True # re-enable rollback

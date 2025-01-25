@@ -6,7 +6,7 @@ label back_to_shore_final:
 
     call incphase from _call_incphase
 
-    "8 PM"
+    time_centered "8 PM"
     pause 1.0
 
     delilah_thoughts_run4 "By the time I reach the lake shore, Julian is already standing there with an adorable smile on his face."

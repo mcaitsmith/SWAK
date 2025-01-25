@@ -13,10 +13,10 @@ label open_door:
     if run == 3 and loop3_investigate:
         call incphase from _call_incphase_5
 
-        "8 PM"
+        time_centered "8 PM"
         pause 1.0
 
-        call unlock_door
+        call unlock_door from _call_unlock_door_2
 
         sandra "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed."
         
@@ -46,7 +46,7 @@ label open_door:
         
         call incphase from _call_incphase_6
 
-        "8 PM"
+        time_centered "8 PM"
         pause 1.0
 
         call unlock_door from _call_unlock_door_1
@@ -69,7 +69,7 @@ label open_door:
 
 label dinner_convo:
     if run == 3 and loop3_investigate:
-        call argument
+        call argument from _call_argument_2
 
         delilah_thoughts_run3 "The three of us sit in silence for a moment."
         if not flowers.flower3:
@@ -104,7 +104,7 @@ label dinner_convo:
         if not flowers.flower3:
             cody_run3 "Heck no! Finders keepers, Del!"
 
-        call incphase
+        call incphase from _call_incphase_18
 
         delilah_thoughts_run3 "Mom stands up from the table."
         sandra_run3 "I can see this conversation is going in a fun direction. I'll be having a smoke outside if you need me."
@@ -126,192 +126,193 @@ label dinner_convo:
             delilah_run3 "You want to show me that flower you found?"
         if not flowers.flower3:
             cody_run3 "Why? So you can take it?"
-        if not flowers.flower3:
-            menu:
-                delilah " " (callback = functools.partial(inctime))
-                "{color=#0f0}It's really important that you give it to me.{/color}":
-                    delilah_run3 "It's really important that you give it to me."
-                    cody_run3 "Why?"
-                    delilah_run3 "It just is."
-                    cody_run3 "That's not an explanation."
-                    menu:
-                        delilah " " (callback = functools.partial(inctime))
-                        "{color=#0f0}Explain the whole situation{/color}":
-                            delilah_thoughts_run3 "Explain the whole situation"
-                            delilah_thoughts_run3 "I go into great detail, explaining everything I've experienced up to this moment. No details spared."
-                            call chase_cody
-                        "{color=#0f0}Tell him just enough{/color}":
-                            delilah_thoughts_run3 "Tell him just enough"
-                            call chase_cody
-                        "{color=#0f0}You just have to believe me!{/color}":
-                            delilah_run3 "You just have to believe me!"
-                            cody_run3 "Why?"
-                            delilah_run3 "You just do."
-                            cody_run3 "Why?"
-                            delilah_run3 "Because."
-                            cody_run3 "Because why?"
-                            delilah_run3 "Because seriously bad stuff will happen if you don't."
-                            cody_run3 "Like what?"
-                            delilah_run3 "I don't have time to tell you."
-                            cody_run3 "Why?"
-                            delilah_run3 "Quit being a brat and just give me the flower!"
-                            delilah_thoughts_run3 "He slowly steps back."
-                            cody_run3 "Okay, let me go get it for you..."
-                            delilah_thoughts_run3 "Before I can say anything more, he turns and runs towards the stairs."
-                            call cody_in_room
-                "{color=#0f0}Just tell me where it is or I'll pummel you.{/color}":
-                    delilah_run3 "Just tell me where it is or I'll pummel you."
-                    cody_run3 "Testy, testy."
-                    delilah_thoughts_run3 "He looks at me for a moment."
-                    cody_run3 "Okay. You can have it. Just follow me upstairs."
-                    delilah_thoughts_run3 "We start our way up the stairs but before I can say anything, he turns and makes a break for it."
-                    call cody_in_room
-                "{color=#0f0}I'll give you $20 to give me that flower.{/color}":
-                    delilah_run3 "I'll give you $20 to give me that flower."
-                    cody_run3 "You'll give me $20?"
-                    delilah_run3 "That's right."
-                    cody_run3 "You don't even have $20."
-                    delilah_run3 "I'll give you $20 once I get my next allowance."
-                    delilah_thoughts_run3 "He thinks about it for a moment."
-                    cody_run3 "$100."
-                    menu:
-                        delilah " " (callback = functools.partial(inctime))
-                        "{color=#0f0}$30.{/color}":
-                            delilah_run3 "$30."
-                        "{color=#0f0}$50.{/color}":
-                            delilah_run3 "$50."
-                    cody_run3 "$90."
-                    menu:
-                        delilah " " (callback = functools.partial(inctime))
-                        "{color=#0f0}$65.{/color}":
-                            delilah_run3 "$65."
-                        "{color=#0f0}$70.{/color}":
-                            delilah_run3 "$70."
-                    cody_run3 "$80 and one dollar from every allowance until your 18th birthday..."
-                    menu:
-                        delilah " " (callback = functools.partial(inctime))
-                        "{color=#0f0}Absolutely not!{/color}":
-                            delilah_run3 "Absolutely not!"
-                    cody_run3 "Then it looks like you're shit out of luck..."
-                    menu:
-                        delilah " " (callback = functools.partial(inctime))
-                        "{color=#0f0}Fine.{/color}":
-                            delilah_run3 "Fine."
-                    cody_run3 "Pleasure doing business with you. Just follow me upstairs."
-                    delilah_thoughts_run3 "I follow him up the stairs but before we get to the door to his bedroom, he leaps inside and slams the door."
-                    hide cody onlayer characters
-                    scene bg black
-                    with dissolve
-                    delilah_run3 "Hey! We had a deal, dick!"
-                    cody_run3 "We did, but you know, I thought about how much money you offered and, truthfully, the satisfaction I'll get from destroying something you want is worth more than any amount of money!"
-                    delilah_run3 "No! Stop!"
-                    delilah_thoughts_run3 "The shredded petals of the Selene lilly are slid beneath the door. The light slowly bleeds away from them before they become as brittle as paper in my hands."
-                "{color=#0f0}You know Dad is having an affair right?{/color}" if smoke_break and not flowers.flower3:
-                    if not flowers.flower3:
-                        delilah_run3 "You know Dad is having an affair right?"
-                    if not flowers.flower3:
-                        cody_run3 "What?"
-                    if not flowers.flower3:
-                        delilah_thoughts_run3 "He laughs."
-                    if not flowers.flower3:
-                        delilah_run3 "Yeah. It's true. I found a letter in his suitcase from some woman, probably a stripper."
-                    if not flowers.flower3:
-                        cody_run3 "Dad wouldn't do something like that, quit making stuff up!"
-                    if not flowers.flower3:
-                        delilah_run3 "She talked about how much she liked sleeping with him. They're probably together right now, Cody. That's why he isn't here..."
-                    if not flowers.flower3:
-                        cody_run3 "No...Dad's on a business trip..."
-                    if not flowers.flower3:
-                        delilah_run3 "Yeah! BUSINESS trip. That's a good one. Mom knows about it too. She's divorcing him soon and then you won't have a family anymore while I'm at college."
-                    if not flowers.flower3:
-                        delilah_thoughts_run3 "He looks at his feet and turns red, like he's about to start crying. Instead, something wells up in him and then dissipates in a long breath."
-                    if not flowers.flower3:
-                        cody_run3 "Oh."
-                    if not flowers.flower3:
-                        delilah_run3 "Oh?"
-                    if not flowers.flower3:
-                        cody_run3 "Yeah. Oh. I guess I sort of knew already. Now that you point it out, it does make a lot of sense. I just didn't think it was possible. I think I need to go for a walk."
-                    if not flowers.flower3:
-                        delilah_thoughts_run3 "I look into his eyes to find what little life is in there slowly dimish into nothing. He didn't just lose his innocence, I ripped it out of him."
-                    if not flowers.flower3:
-                        delilah_run3 "Uh, Cody, the flower?"
-                    if not flowers.flower3:
-                        cody_run3 "Oh, that. Yeah, it's in my room. Feel free to take it. I...don't think I'll need it anymore."
+        # if not flowers.flower3:
+        menu:
+            delilah " " (callback = functools.partial(inctime))
+            "{color=#0f0}It's really important that you give it to me.{/color}" if not flowers.flower3:
+                delilah_run3 "It's really important that you give it to me."
+                cody_run3 "Why?"
+                delilah_run3 "It just is."
+                cody_run3 "That's not an explanation."
+                menu:
+                    delilah " " (callback = functools.partial(inctime))
+                    "{color=#0f0}Explain the whole situation{/color}":
+                        delilah_thoughts_run3 "Explain the whole situation"
+                        delilah_thoughts_run3 "I go into great detail, explaining everything I've experienced up to this moment. No details spared."
+                        call chase_cody from _call_chase_cody
+                    "{color=#0f0}Tell him just enough{/color}":
+                        delilah_thoughts_run3 "Tell him just enough"
+                        call chase_cody from _call_chase_cody_1
+                    "{color=#0f0}You just have to believe me!{/color}":
+                        delilah_run3 "You just have to believe me!"
+                        cody_run3 "Why?"
+                        delilah_run3 "You just do."
+                        cody_run3 "Why?"
+                        delilah_run3 "Because."
+                        cody_run3 "Because why?"
+                        delilah_run3 "Because seriously bad stuff will happen if you don't."
+                        cody_run3 "Like what?"
+                        delilah_run3 "I don't have time to tell you."
+                        cody_run3 "Why?"
+                        delilah_run3 "Quit being a brat and just give me the flower!"
+                        delilah_thoughts_run3 "He slowly steps back."
+                        cody_run3 "Okay, let me go get it for you..."
+                        delilah_thoughts_run3 "Before I can say anything more, he turns and runs towards the stairs."
+                        call cody_in_room from _call_cody_in_room
+            "{color=#0f0}Just tell me where it is or I'll pummel you.{/color}" if not flowers.flower3:
+                delilah_run3 "Just tell me where it is or I'll pummel you."
+                cody_run3 "Testy, testy."
+                delilah_thoughts_run3 "He looks at me for a moment."
+                cody_run3 "Okay. You can have it. Just follow me upstairs."
+                delilah_thoughts_run3 "We start our way up the stairs but before I can say anything, he turns and makes a break for it."
+                call cody_in_room from _call_cody_in_room_1
+            "{color=#0f0}I'll give you $20 to give me that flower.{/color}" if not flowers.flower3:
+                delilah_run3 "I'll give you $20 to give me that flower."
+                cody_run3 "You'll give me $20?"
+                delilah_run3 "That's right."
+                cody_run3 "You don't even have $20."
+                delilah_run3 "I'll give you $20 once I get my next allowance."
+                delilah_thoughts_run3 "He thinks about it for a moment."
+                cody_run3 "$100."
+                menu:
+                    delilah " " (callback = functools.partial(inctime))
+                    "{color=#0f0}$30.{/color}":
+                        delilah_run3 "$30."
+                    "{color=#0f0}$50.{/color}":
+                        delilah_run3 "$50."
+                cody_run3 "$90."
+                menu:
+                    delilah " " (callback = functools.partial(inctime))
+                    "{color=#0f0}$65.{/color}":
+                        delilah_run3 "$65."
+                    "{color=#0f0}$70.{/color}":
+                        delilah_run3 "$70."
+                cody_run3 "$80 and one dollar from every allowance until your 18th birthday..."
+                menu:
+                    delilah " " (callback = functools.partial(inctime))
+                    "{color=#0f0}Absolutely not!{/color}":
+                        delilah_run3 "Absolutely not!"
+                cody_run3 "Then it looks like you're shit out of luck..."
+                menu:
+                    delilah " " (callback = functools.partial(inctime))
+                    "{color=#0f0}Fine.{/color}":
+                        delilah_run3 "Fine."
+                cody_run3 "Pleasure doing business with you. Just follow me upstairs."
+                delilah_thoughts_run3 "I follow him up the stairs but before we get to the door to his bedroom, he leaps inside and slams the door."
+                hide cody onlayer characters
+                scene bg black
+                with dissolve
+                delilah_run3 "Hey! We had a deal, dick!"
+                cody_run3 "We did, but you know, I thought about how much money you offered and, truthfully, the satisfaction I'll get from destroying something you want is worth more than any amount of money!"
+                delilah_run3 "No! Stop!"
+                delilah_thoughts_run3 "The shredded petals of the Selene lilly are slid beneath the door. The light slowly bleeds away from them before they become as brittle as paper in my hands."
+            # "{color=#0f0}You know Dad is having an affair right?{/color}" if smoke_break and not flowers.flower3:
+            "{color=#0f0}You know Dad is having an affair right?{/color}" if smoke_break:
+                # if not flowers.flower3:
+                delilah_run3 "You know Dad is having an affair right?"
+                # if not flowers.flower3:
+                cody_run3 "What?"
+                # if not flowers.flower3:
+                delilah_thoughts_run3 "He laughs."
+                # if not flowers.flower3:
+                delilah_run3 "Yeah. It's true. I found a letter in his suitcase from some woman, probably a stripper."
+                # if not flowers.flower3:
+                cody_run3 "Dad wouldn't do something like that, quit making stuff up!"
+                # if not flowers.flower3:
+                delilah_run3 "She talked about how much she liked sleeping with him. They're probably together right now, Cody. That's why he isn't here..."
+                # if not flowers.flower3:
+                cody_run3 "No...Dad's on a business trip..."
+                # if not flowers.flower3:
+                delilah_run3 "Yeah! BUSINESS trip. That's a good one. Mom knows about it too. She's divorcing him soon and then you won't have a family anymore while I'm at college."
+                # if not flowers.flower3:
+                delilah_thoughts_run3 "He looks at his feet and turns red, like he's about to start crying. Instead, something wells up in him and then dissipates in a long breath."
+                # if not flowers.flower3:
+                cody_run3 "Oh."
+                # if not flowers.flower3:
+                delilah_run3 "Oh?"
+                # if not flowers.flower3:
+                cody_run3 "Yeah. Oh. I guess I sort of knew already. Now that you point it out, it does make a lot of sense. I just didn't think it was possible. I think I need to go for a walk."
+                # if not flowers.flower3:
+                delilah_thoughts_run3 "I look into his eyes to find what little life is in there slowly dimish into nothing. He didn't just lose his innocence, I ripped it out of him."
+                if not flowers.flower3:
+                    delilah_run3 "Uh, Cody, the flower?"
+                if not flowers.flower3:
+                    cody_run3 "Oh, that. Yeah, it's in my room. Feel free to take it. I...don't think I'll need it anymore."
 
-                    if not flowers.flower3:
-                        hide cody onlayer characters with dissolve
+                if not flowers.flower3:
+                    hide cody onlayer characters with dissolve
 
-                    if not flowers.flower3:
-                        delilah_thoughts_run3 "He leaves out the frontdoor into the night."
+                if not flowers.flower3:
+                    delilah_thoughts_run3 "He leaves out the frontdoor into the night."
 
-                    if not flowers.flower3:
-                        show bg black with dissolve
-                    if not flowers.flower3:
-                        delilah_thoughts_run3 "I don't stop him, instead going up the stairs to his bedroom to find the glowing flower sitting on his bed."
+                if not flowers.flower3:
+                    show bg black with dissolve
+                if not flowers.flower3:
+                    delilah_thoughts_run3 "I don't stop him, instead going up the stairs to his bedroom to find the glowing flower sitting on his bed."
 
-                    if not flowers.flower3 and not solves.loop3:
-                        show flower_glitch_image
+                if not flowers.flower3 and not solves.loop3:
+                    show flower_glitch_image
+                else:
+                    hide flower_glitch_image
+                if not flowers.flower3 and not solves.loop3:
+                    delilah_thoughts_run3 "Static again! Like it's caught between worlds..."
+                else:
+                    hide flower_glitch_image
+
+                # puzzle hints
+                if not flowers.flower3:
+                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3 and hints.loop3_1:
+                        delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
+                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3 and hints.loop3_2:
+                        delilah_thoughts_run3 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
+                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3 and hints.loop3_3:
+                        delilah_thoughts_run3 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
+                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
+                        menu:
+                            narrator "Need a hint?" (callback = functools.partial(inctime))
+                            "Yes" if not hints.loop3_1 and not flowers.flower3:
+                                if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
+                                    delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
+                                    $ hints.loop3_1 = True
+                            "Get another hint" if hints.loop3_1 and not hints.loop3_2 and not flowers.flower3:
+                                if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
+                                    delilah_thoughts_run3 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
+                                    $ hints.loop3_2 = True
+                            "Get final hint" if hints.loop3_2 and not hints.loop3_3 and not flowers.flower3:
+                                if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
+                                    delilah_thoughts_run3 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
+                                    $ hints.loop3_3 = True
+                            "No" if not hints.loop3_3 and not flowers.flower3:
+                                pass
+                            "Pick the flower anyway" if not flowers.flower3:
+                                hide flower_glitch_image
+                                if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
+                                    $ skip_puzzle3 = True
+                                if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
+                                    call screen flower3_glitch_pick
                     else:
                         hide flower_glitch_image
-                    if not flowers.flower3 and not solves.loop3:
-                        delilah_thoughts_run3 "Static again! Like it's caught between worlds..."
-                    else:
+                else:
+                    hide flower_glitch_image
+
+                if not flowers.flower3:
+                    if not solves.loop3:
+                        $ puzzles.loop3 = True # unlock puzzle
+                        call screen flower_glitch
                         hide flower_glitch_image
-
-                    # puzzle hints
-                    if not flowers.flower3:
-                        if not flowers.flower3 and puzzles.loop3 and not solves.loop3 and hints.loop3_1:
-                            delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
-                        if not flowers.flower3 and puzzles.loop3 and not solves.loop3 and hints.loop3_2:
-                            delilah_thoughts_run3 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
-                        if not flowers.flower3 and puzzles.loop3 and not solves.loop3 and hints.loop3_3:
-                            delilah_thoughts_run3 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
-                        if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
-                            menu:
-                                narrator "Need a hint?" (callback = functools.partial(inctime))
-                                "Yes" if not hints.loop3_1 and not flowers.flower3:
-                                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
-                                        delilah_thoughts_run3 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
-                                        $ hints.loop3_1 = True
-                                "Get another hint" if hints.loop3_1 and not hints.loop3_2 and not flowers.flower3:
-                                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
-                                        delilah_thoughts_run3 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
-                                        $ hints.loop3_2 = True
-                                "Get final hint" if hints.loop3_2 and not hints.loop3_3 and not flowers.flower3:
-                                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
-                                        delilah_thoughts_run3 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
-                                        $ hints.loop3_3 = True
-                                "No" if not hints.loop3_3 and not flowers.flower3:
-                                    pass
-                                "Pick the flower anyway" if not flowers.flower3:
-                                    hide flower_glitch_image
-                                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
-                                        $ skip_puzzle3 = True
-                                    if not flowers.flower3 and puzzles.loop3 and not solves.loop3:
-                                        call screen flower3_glitch_pick
-                        else:
-                            hide flower_glitch_image
                     else:
-                        hide flower_glitch_image
+                        call screen flower3_pick
 
-                    if not flowers.flower3:
-                        if not solves.loop3:
-                            $ puzzles.loop3 = True # unlock puzzle
-                            call screen flower_glitch
-                            hide flower_glitch_image
-                        else:
-                            call screen flower3_pick
+                if flowers.flower3 and not config.rollback_enabled:
+                    $ renpy.choice_for_skipping()
+                if flowers.flower3 and not config.rollback_enabled:
+                    $ _skipping = False
+                if flowers.flower3 and not config.rollback_enabled:
+                    delilah_thoughts_run3 "As I take it, I find my memory expanding once again. "
+                else:
+                    $ config.rollback_enabled = True
 
-                    if flowers.flower3 and not config.rollback_enabled:
-                        $ renpy.choice_for_skipping()
-                    if flowers.flower3 and not config.rollback_enabled:
-                        $ _skipping = False
-                    if flowers.flower3 and not config.rollback_enabled:
-                        delilah_thoughts_run3 "As I take it, I find my memory expanding once again. "
-                    else:
-                        $ config.rollback_enabled = True
-
-                    $ config.rollback_enabled = True # re-enable rollback
+                $ config.rollback_enabled = True # re-enable rollback
 
         menu:
             delilah " " (callback = functools.partial(inctime))
@@ -324,7 +325,7 @@ label dinner_convo:
     elif run == 2 and loop2_investigate:
         call incphase from _call_incphase_7
 
-        "8 PM"
+        time_centered "8 PM"
         pause 1.0
 
         call argument from _call_argument
@@ -342,7 +343,7 @@ label unlock_door:
     delilah_thoughts "Sure enough, the key was still under the tacklebox, just where Dad always kept it."
 
     if run == 1:
-        "With the dust floating in the air like flakes, for a moment Delilah thinks she's walked into a snowglobe of her own childhood."
+        "With the dust floating in the air like flakes,\nfor a moment Delilah thinks she's walked into a snowglobe of her own childhood."
     
     delilah_thoughts "Cody's pressing his nose against the window, banging his hand on the glass like a zombie."
     menu:
@@ -503,7 +504,7 @@ label chase_cody:
     delilah_run3 "I'm not crazy! You have to give me that flower!"
     delilah_thoughts_run3 "Before I can say anything more, he turns and runs towards the stairs, shouting."
     cody_run3 "Help! Help! My sister's gone crazy!"
-    call cody_in_room
+    call cody_in_room from _call_cody_in_room_2
     return
 
 label cody_in_room:
