@@ -9,6 +9,11 @@ label mainrun:
 
     call intro from _call_intro
 
+    if restart_vars:
+        hide screen eclipse onlayer background_overlay with dissolve
+        $ _skipping = True
+        jump runstart
+
     $ renpy.choice_for_skipping() # stop skipping
     $ _skipping = False
 

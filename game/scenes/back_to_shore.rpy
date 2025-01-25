@@ -89,17 +89,59 @@ label back_to_shore:
                     delilah_run3 "Julian!"
                     delilah_thoughts_run3 "His eyes start to wander around. His arm quickly reaches up and I catch his hand."
                     julian_run3 "It's happening again..."
-                    delilah_run3 "Oh God, oh shit, oh no. I'm here! I'm here!"
-                    delilah_thoughts_run3 "He laughs."
-                    delilah_run3 "What? What's funny?"
-                    julian_run3 "We talked for so long we forgot to go look for the flowers."
-                    delilah_run3 "Oh shit. We did."
-                    delilah_thoughts_run3 "I laugh."
-                    delilah_run3 "My mom and brother have probably been standing waiting for me to open the front door this entire time."
-                    julian_run3 "For like hours!"
-                    delilah_run3 "Do you think they're still just standing there?"
-                    julian_run3 "No way, they had to have figured you left or something."
-                    delilah_thoughts_run3 "He chuckles then coughs up a bit of blood."
+                    delilah_run3 "Oh God, oh shit, oh no. I'm here! I'm here!" (callback = functools.partial(inctime,g3=True))
+                    # start glitch
+                    if run == 3 and not solves.loop3_1:
+                        show julian puzzle onlayer characters
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        delilah_thoughts_run3 "He laughs." (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        delilah_run3 "What? What's funny?" (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        julian_run3 "We talked for so long we forgot to go look for the flowers." (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        delilah_run3 "Oh shit. We did." (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        delilah_thoughts_run3 "I laugh." (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        delilah_run3 "My mom and brother have probably been standing waiting for me to open the front door this entire time." (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        julian_run3 "For like hours!" (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        delilah_run3 "Do you think they're still just standing there?" (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        julian_run3 "No way, they had to have figured you left or something." (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        delilah_thoughts_run3 "He chuckles then coughs up a bit of blood." (callback = functools.partial(inctime,checkskip=True))
+                    else:
+                        show julian neutral onlayer characters
+                    if run == 3 and not solves.loop3_1:
+                        show julian neutral onlayer characters
+
+                    menu:
+                        delilah " " (callback = functools.partial(inctime,g4=True))
+                        "{color=#0f0}Say goodbye{/color}":
+                            delilah_thoughts_run3 "Say goodbye"
                     delilah_run3 "I really enjoyed talking to you for a bit, Julian."
                     julian_run3 "Likewise. You're good company. Talk again soon?"
                     delilah_run3 "Yeah, I come around here often."

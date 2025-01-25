@@ -53,68 +53,79 @@ label back_to_shore_final:
 
     menu:
         delilah " " (callback = functools.partial(inctime))
-        "{color=#0ff}Give Julian the flowers (secret ending){/color}":
+        "{color=#0ff}Give Julian the flowers{/color}" if solves.loop2 and solves.loop3_1 and solves.loop3_2 and solves.loop3_3 and solves.loop4:
             delilah_thoughts_run4 "Give Julian the flowers"
             # at this point the 3 flowers show up glitched
 
-            if not flowers.flower4 and not solves.loop4:
-                show flower_glitch_image_final onlayer characters
-            else:
-                hide flower_glitch_image_final onlayer characters
-                    # call screen flower_glitch
-            if not flowers.flower4 and not solves.loop4:
-                delilah_thoughts_run4 "Huh...it looks strange. Staticky."
-            else:
-                hide flower_glitch_image_final onlayer characters
+            # if not flowers.flower4 and not solves.loop4:
+            #     show flower_glitch_image_final onlayer characters
+            # else:
+            #     hide flower_glitch_image_final onlayer characters
+            #         # call screen flower_glitch
+            # if not flowers.flower4 and not solves.loop4:
+            #     delilah_thoughts_run4 "Huh...it looks strange. Staticky."
+            # else:
+            #     hide flower_glitch_image_final onlayer characters
 
-            # puzzle hints
+            # # puzzle hints
+            # if not flowers.flower4:
+            #     if not flowers.flower4 and puzzles.loop4 and not solves.loop4 and hints.loop4_1:
+            #         delilah_thoughts_run4 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
+            #     if not flowers.flower4 and puzzles.loop4 and not solves.loop4 and hints.loop4_2:
+            #         delilah_thoughts_run4 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
+            #     if not flowers.flower4 and puzzles.loop4 and not solves.loop4 and hints.loop4_3:
+            #         delilah_thoughts_run4 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
+            #     if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
+            #         menu:
+            #             narrator "Need a hint?" (callback = functools.partial(inctime))
+            #             "Yes" if not hints.loop4_1 and not flowers.flower4:
+            #                 if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
+            #                     delilah_thoughts_run4 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
+            #                     $ hints.loop4_1 = True
+            #             "Get another hint" if hints.loop4_1 and not hints.loop4_2 and not flowers.flower4:
+            #                 if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
+            #                     delilah_thoughts_run4 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
+            #                     $ hints.loop4_2 = True
+            #             "Get final hint" if hints.loop4_2 and not hints.loop4_3 and not flowers.flower4:
+            #                 if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
+            #                     delilah_thoughts_run4 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
+            #                     $ hints.loop4_3 = True
+            #             "No" if not hints.loop4_3 and not flowers.flower4:
+            #                 pass
+            #             "Pick the flower anyway" if not flowers.flower4:
+            #                 hide flower_glitch_image_final onlayer characters
+            #                 if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
+            #                     $ skip_puzzle4 = True
+            #                 if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
+            #                     call screen flower4_glitch_pick
+            #     else:
+            #         hide flower_glitch_image_final onlayer characters
+            # else:
+            #     hide flower_glitch_image_final onlayer characters
+
+            # if not flowers.flower4:
+            #     if not solves.loop4:
+            #         $ puzzles.loop4 = True # unlock puzzle
+            #         call screen flower_glitch_final
+            #         hide flower_glitch_image_final onlayer characters
+
+            #     else:
+            #         call screen flower4_pick
+
+            delilah_thoughts_run4 "I reach out to take the final flower."
+
             if not flowers.flower4:
-                if not flowers.flower4 and puzzles.loop4 and not solves.loop4 and hints.loop4_1:
-                    delilah_thoughts_run4 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
-                if not flowers.flower4 and puzzles.loop4 and not solves.loop4 and hints.loop4_2:
-                    delilah_thoughts_run4 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
-                if not flowers.flower4 and puzzles.loop4 and not solves.loop4 and hints.loop4_3:
-                    delilah_thoughts_run4 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
-                if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
-                    menu:
-                        narrator "Need a hint?" (callback = functools.partial(inctime))
-                        "Yes" if not hints.loop4_1 and not flowers.flower4:
-                            if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
-                                delilah_thoughts_run4 "I've been seeing glitched-up ghosts of Julian appearing where my family should be. Creepy."
-                                $ hints.loop4_1 = True
-                        "Get another hint" if hints.loop4_1 and not hints.loop4_2 and not flowers.flower4:
-                            if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
-                                delilah_thoughts_run4 "Their words are the same but their identities are all garbled. If only I could REMEMBER who they really are..."
-                                $ hints.loop4_2 = True
-                        "Get final hint" if hints.loop4_2 and not hints.loop4_3 and not flowers.flower4:
-                            if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
-                                delilah_thoughts_run4 "Those glitched-up Julians probably need to get fixed in time and space, like I did with the moon. But how?"
-                                $ hints.loop4_3 = True
-                        "No" if not hints.loop4_3 and not flowers.flower4:
-                            pass
-                        "Pick the flower anyway" if not flowers.flower4:
-                            hide flower_glitch_image_final onlayer characters
-                            if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
-                                $ skip_puzzle4 = True
-                            if not flowers.flower4 and puzzles.loop4 and not solves.loop4:
-                                call screen flower4_glitch_pick
-                else:
-                    hide flower_glitch_image_final onlayer characters
-            else:
-                hide flower_glitch_image_final onlayer characters
+
+                show julian blur onlayer characters with dissolve
 
             if not flowers.flower4:
-                if not solves.loop4:
-                    $ puzzles.loop4 = True # unlock puzzle
-                    call screen flower_glitch_final
-                    hide flower_glitch_image_final onlayer characters
-
-                else:
-                    call screen flower4_pick
+                call screen flower4_pick
 
             $ config.rollback_enabled = False # prevent rollback from here
             $ renpy.choice_for_skipping() # prevent skipping
             $ _skipping = False
+
+            show julian neutral onlayer characters with dissolve
 
             stop music fadeout 1.0
 
@@ -176,22 +187,55 @@ label back_to_shore_final:
         "{color=#0ff}Toss the flowers in the lake{/color}":
             delilah_thoughts_run4 "Toss the flowers in the lake"
             # have a few are you sure choices
+            show black behind bg
             delilah_run4 "I could do for a couple more go arounds."
             julian_run4 "See you around then."
 
             # delilah_thoughts_run4 "I lean in closer to him."
             # (Show image of kiss)
 
-            $ config.rollback_enabled = False # prevent rollback from here
-            $ renpy.choice_for_skipping() # prevent skipping
-            $ _skipping = False
-            $ flowers.flower3 = False
-            $ flowers.flower2 = False
-            $ flowers.flower1 = False
+            if not renpy.is_skipping() and not solves.loop4:
+                $ flowers.flower3 = False
+            else:
+                $ config.rollback_enabled = True
+            if not renpy.is_skipping() and not solves.loop4:
+                $ flowers.flower2 = False
+            else:
+                $ config.rollback_enabled = True
+            if not renpy.is_skipping() and not solves.loop4:
+                $ flowers.flower1 = False
+            else:
+                $ config.rollback_enabled = True
+            if not renpy.is_skipping() and not solves.loop4:
+                $ config.rollback_enabled = False # prevent rollback from here
+            else:
+                $ config.rollback_enabled = True
+            if not renpy.is_skipping() and not solves.loop4:
+                $ renpy.choice_for_skipping() # prevent skipping
+            else:
+                $ config.rollback_enabled = True
+            if not renpy.is_skipping() and not solves.loop4:
+                $ _skipping = False
+            else:
+                $ config.rollback_enabled = True
             hide julian onlayer characters
-            show bg black
+            # if not renpy.is_skipping():
+            if not solves.loop4:
+                show bg scene3 glitch
             with { "master" : Dissolve(3.0) }
-            delilah_thoughts_run4 "As I release the flowers into the water, they're pulled under by the ripples of the water and slowly disappear."
+            # if not renpy.is_skipping():
+            if not solves.loop4:
+                delilah_thoughts_run4 "As I release the flowers into the water, they're pulled under by the ripples of the water and slowly disappear."
+            # else:
+            if renpy.is_skipping() and not solves.loop4:
+                $ renpy.play("orex_sfx_sparkle.ogg") # solved!
+                $ solves.loop4 = True
+            if solves.loop4:
+                $ config.rollback_enabled = True
+            # if not renpy.is_skipping():
+            hide bg scene3 glitch with dissolve
+            if not solves.loop4:
+                $ restart_vars = True # return to beginning loop with vars re-initialized (except for glitches)
 
     return
 

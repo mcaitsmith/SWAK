@@ -35,7 +35,7 @@ init:
 
 init python:
     # define function to increment time by 1 every line of dialogue + add flowers/triggers
-    def inctime(event, interact=True, fnum=None, g1=False, g2=False,g3=False,g4=False,g5=False, checkskip=False,**kwargs):
+    def inctime(event, interact=True, fnum=None, g1=False, g2=False,g3=False,g4=False,g5=False,g6=False, g7=False,g8=False,g9=False,g10=False, checkskip=False,**kwargs):
         global gametime
         global flowers
         # global moonglitches
@@ -54,7 +54,16 @@ init python:
                 flowers.flower4 = True
 
             if puzzles.loop2 and not solves.loop2:
-                check_loop2puzzle(g1,g2,g3,g4,g5,checkskip) # defined in init_loop2puzzle
+                # check_loop2puzzle(g1,g2,g3,g4,g5,checkskip) # defined in init_loop2puzzle
+                check_loop2puzzle(g1,g2,checkskip) # defined in init_loop2puzzle
+            if puzzles.loop3 and not solves.loop3_1:
+                check_loop3_1puzzle(g3,g4,checkskip) # defined in init_loop3puzzle
+            if puzzles.loop3 and not solves.loop3_2:
+                check_loop3_2puzzle(g5,g6,checkskip) # defined in init_loop3puzzle
+            if puzzles.loop3 and not solves.loop3_3:
+                check_loop3_3puzzle(g7,g8,checkskip) # defined in init_loop3puzzle
+            if puzzles.loop4 and not solves.loop4:
+                check_loop4puzzle(g9,g10,checkskip) # defined in init_loop4puzzle
         return
 
     # config.character_callback = inctime # set callback for character statements to increase time
@@ -94,6 +103,9 @@ define sandra_run2 = Character("Sandra",image="sandra",color="#F0D193",what_pref
 define sandra_run3 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
 define sandra_run4 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
 
+image side delilah glitch = Glitch("images/chars/side delilah neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image cody glitch = Glitch("images/chars/cody neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+
 # define animated fade sprite for Julian
 image julian fade:
     "images/chars/julianshadow.png"
@@ -123,6 +135,8 @@ image julian glitch:
     "images/chars/julianglitch_2.png"
     0.1
     repeat
+image julian puzzle:
+    Glitch("images/chars/julian neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 
 # define scene bgs (placeholder)
 # image bg scene1 = "#4680bd"
@@ -132,6 +146,9 @@ image bg scene2 = "images/bgs/lakehouseinside.png"
 # image bg scene3 = "#5646bd"
 image bg scene3 = "images/bgs/lakehouseoutside_late.png"
 image bg black = "#000000"
+
+image bg scene3 glitch:
+    Glitch("images/bgs/lakehouseoutside_late.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 
 image kiss_cg = "images/kiss_cg.png"
 
@@ -286,9 +303,14 @@ label start:
     $ smoke_break = False
 
     # temporary disable puzzles
-    $ solves.loop2 = True
-    $ solves.loop3 = True
-    $ solves.loop4 = True
+    # $ solves.loop2 = True
+    # $ solves.loop3_1 = True
+    # $ solves.loop3_2 = True
+    # $ solves.loop3_3 = True
+    # $ solves.loop4 = True
+    $ puzzles.loop2 = True
+    $ puzzles.loop3 = True
+    $ puzzles.loop4 = True
 
     stop music fadeout 2.0
 
@@ -297,23 +319,44 @@ label start:
     hide screen howtoplay
 
     # "BEGIN"
+
     pause 2.0
 
-    $ renpy.block_rollback() # prevent rollback before this point
-    $ config.rollback_enabled = True # re-enable rollback
+    label runstart:
 
-    scene bg black with dissolve
+        if restart_vars:
+            call reinit_vars
 
-    # show screen moonglitchscreen onlayer interface
-    show screen flowerscreen onlayer interface
+        $ renpy.block_rollback() # prevent rollback before this point
+        $ config.rollback_enabled = True # re-enable rollback
 
-    # show rearview:
-    #     xalign 0.5
-    #     yalign 0.05
+        scene bg black with dissolve
 
-    # with { "master" : Dissolve(1.0) }
-    call checkrun from _call_checkrun
+        # show screen moonglitchscreen onlayer interface
+        show screen flowerscreen onlayer interface
 
-    jump mainrun
+        # show rearview:
+        #     xalign 0.5
+        #     yalign 0.05
 
-    # return
+        # with { "master" : Dissolve(1.0) }
+        call checkrun from _call_checkrun
+
+        jump mainrun
+
+        # return
+
+label reinit_vars:
+    $ gametime = 0 #initialize time
+    $ phase = 0 # initialize phase
+    $ run = 1 # initialize run
+
+    # initialize story vars
+    $ in_house = False
+    $ loop2_investigate = False
+    $ loop3_investigate = False
+    $ smoke_break = False
+
+    $ restart_vars = False
+
+    return

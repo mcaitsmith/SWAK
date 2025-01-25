@@ -54,49 +54,52 @@ label init_screens:
                 add 'images/props/moon.png' xalign 0.5 ypos 0.05
         elif phase == 1:
             if in_house:
-                add 'images/props/moon_phase1.png' xalign 1.0 ypos 0.17
+                add 'moon_phase1' xalign 1.0 ypos 0.17
             else:
-                add 'images/props/moon_phase1.png' xalign 0.5 ypos 0.05
+                add 'moon_phase1' xalign 0.5 ypos 0.05
         elif phase == 2:
             if in_house:
-                add 'images/props/moon_phase2.png' xalign 1.0 ypos 0.17
+                add 'moon_phase2' xalign 1.0 ypos 0.17
             else:
-                add 'images/props/moon_phase2.png' xalign 0.5 ypos 0.05
+                add 'moon_phase2' xalign 0.5 ypos 0.05
         elif phase == 3:
             if in_house:
-                add 'images/props/moon_phase3.png' xalign 1.0 ypos 0.17
+                add 'moon_phase3' xalign 1.0 ypos 0.17
             else:
-                add 'images/props/moon_phase3.png' xalign 0.5 ypos 0.05
+                add 'moon_phase3' xalign 0.5 ypos 0.05
         elif phase == 4:
             if in_house:
-                add 'images/props/moon_phase4.png' xalign 1.0 ypos 0.17
+                add 'moon_phase4' xalign 1.0 ypos 0.17
             else:
-                add 'images/props/moon_phase4.png' xalign 0.5 ypos 0.05
+                add 'moon_phase4' xalign 0.5 ypos 0.05
         elif phase == 5:
             if in_house:
-                add 'images/props/moon_phase5.png' xalign 1.0 ypos 0.17
+                add 'moon_phase5' xalign 1.0 ypos 0.17
             else:
-                add 'images/props/moon_phase5.png' xalign 0.5 ypos 0.05
+                add 'moon_phase5' xalign 0.5 ypos 0.05
 
     screen flowerscreen: # screen for showing flowers
         if flowers.flower1:
-            add 'images/props/flower_hover.png' zoom 0.5 xpos 0.05 ypos 0.0
+            add 'images/props/flower.png' zoom 0.5 xpos 0.05 ypos 0.0
             # text "Flower 1" xpos 0.1 ypos 0.15
         if flowers.flower2:
-            if solves.loop2:
-                add 'images/props/flower_hover.png' zoom 0.5 xpos 0.1 ypos 0.0
-            else:
-                add 'images/props/flower.png' zoom 0.5 xpos 0.1 ypos 0.0
+            add 'images/props/flower.png' zoom 0.5 xpos 0.1 ypos 0.0
+            # if solves.loop2:
+            #     add 'images/props/flower_hover.png' zoom 0.5 xpos 0.1 ypos 0.0
+            # else:
+            #     add 'images/props/flower.png' zoom 0.5 xpos 0.1 ypos 0.0
         if flowers.flower3:
-            if solves.loop3:
-                add 'images/props/flower_hover.png' zoom 0.5 xpos 0.15 ypos 0.0
-            else:
-                add 'images/props/flower.png' zoom 0.5 xpos 0.15 ypos 0.0
+            add 'images/props/flower.png' zoom 0.5 xpos 0.15 ypos 0.0
+            # if solves.loop3:
+            #     add 'images/props/flower_hover.png' zoom 0.5 xpos 0.15 ypos 0.0
+            # else:
+            #     add 'images/props/flower.png' zoom 0.5 xpos 0.15 ypos 0.0
         if flowers.flower4:
-            if solves.loop4:
-                add 'images/props/flower_hover.png' zoom 0.5 xpos 0.2 ypos 0.0
-            else:
-                add 'images/props/flower.png' zoom 0.5 xpos 0.2 ypos 0.0
+            add 'images/props/flower.png' zoom 0.5 xpos 0.2 ypos 0.0
+            # if solves.loop4:
+            #     add 'images/props/flower_hover.png' zoom 0.5 xpos 0.2 ypos 0.0
+            # else:
+            #     add 'images/props/flower.png' zoom 0.5 xpos 0.2 ypos 0.0
 
     screen flower1_pick:
         imagebutton:

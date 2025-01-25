@@ -1,22 +1,21 @@
 ﻿# This script runs before game start and defines the function to run the loop 2 puzzle
 
-# Moon puzzle loop 2
-# 1 starts at phase 2 - rollback to 2 (1) - skip to 3 (2) - click right choice to 4 (3) - skip to 5 (4)
-# note need to have "Unseen Text" or "After Choices" selected in prefs for skipping to work
+# Glitch puzzle loop 2
 
 label init_loop2puzzle:
 
     init python:
-        def check_loop2puzzle(g1,g2,g3,g4,g5,checkskip):
+        # def check_loop2puzzle(g1,g2,g3,g4,g5,checkskip):
+        def check_loop2puzzle(g1,g2,checkskip):
             global moonglitches
             global puzzles
             global solves
             if g1==False and checkskip and not renpy.is_skipping():
                 moonglitches.glitch1 = False
                 moonglitches.glitch2 = False
-                moonglitches.glitch3 = False
-                moonglitches.glitch4 = False
-                moonglitches.glitch5 = False
+                # moonglitches.glitch3 = False
+                # moonglitches.glitch4 = False
+                # moonglitches.glitch5 = False
             elif checkskip and renpy.is_skipping() and not renpy.get_screen("choice"):
                 pass
             else:
@@ -24,9 +23,9 @@ label init_loop2puzzle:
                 if g1==True and not renpy.is_skipping(): # initiate cycle from 1
                     moonglitches.glitch1 = True
                     moonglitches.glitch2 = False
-                    moonglitches.glitch3 = False
-                    moonglitches.glitch4 = False
-                    moonglitches.glitch5 = False
+                    # moonglitches.glitch3 = False
+                    # moonglitches.glitch4 = False
+                    # moonglitches.glitch5 = False
 
                 # if g2==True and not renpy.in_rollback() and not renpy.is_skipping() and moonglitches.glitch1: # if did not roll back or skip from 1 to 2
                 if g2==True and not renpy.in_rollback() and renpy.is_skipping() and moonglitches.glitch1: # if did not roll back or skip from 1 to 2
@@ -68,10 +67,11 @@ label init_loop2puzzle:
                 #     moonglitches.glitch2 = False
                 #     moonglitches.glitch1 = False
 
-                if g1 == False and g2 == False and g3 == False and g4 == False and g5 == False:
-                    moonglitches.glitch5 = False
-                    moonglitches.glitch4 = False
-                    moonglitches.glitch3 = False
+                # if g1 == False and g2 == False and g3 == False and g4 == False and g5 == False:
+                if g1 == False and g2 == False:
+                    # moonglitches.glitch5 = False
+                    # moonglitches.glitch4 = False
+                    # moonglitches.glitch3 = False
                     moonglitches.glitch2 = False
                     moonglitches.glitch1 = False
 

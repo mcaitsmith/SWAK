@@ -22,7 +22,9 @@ label init_classes:
         class Solves(NoRollback):
             def __init__(self):
                 self.loop2 = False
-                self.loop3 = False
+                self.loop3_1 = False
+                self.loop3_2 = False
+                self.loop3_3 = False
                 self.loop4 = False
 
         # create persistent class for puzzle hints
@@ -46,6 +48,11 @@ label init_classes:
                 self.glitch3 = False
                 self.glitch4 = False
                 self.glitch5 = False
+                self.glitch6 = False
+                self.glitch7 = False
+                self.glitch8 = False
+                self.glitch9 = False
+                self.glitch10 = False
 
         # create persistent endings class
         class Endings(NoRollback):

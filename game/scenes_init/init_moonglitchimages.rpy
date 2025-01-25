@@ -41,5 +41,15 @@ label init_moonglitchimages:
         # linear 1
         # "images/props/moon_phase5.png"
         Glitch("images/props/moon_phase2.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        2.0
+        Glitch("images/props/moon_phase5.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        2.0
+        Glitch("images/props/moon_phase3.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        2.0
+        Glitch("images/props/moon_phase1.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        2.0
+        Glitch("images/props/moon_phase4.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+        2.0
+        repeat
 
     return
