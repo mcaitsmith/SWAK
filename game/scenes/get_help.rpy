@@ -30,6 +30,11 @@ label get_help:
     delilah_thoughts_run2 "When we get there, the boy has disappeared once again. Not a trace of him is left behind."
     # delilah_thoughts "When they get there, the boy has disappeared once again. Not a trace of him is left behind."
     
+    if not hints.hint4 and run > 1:
+        # play animation to indicate new hint
+        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ hintlist.list.append(hint_4)
+        $ hints.hint4 = True
     # delilah "The game stops here unless the player uses the history function to try a different choice."
     
     $ phase = 0 # reset

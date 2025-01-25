@@ -100,6 +100,16 @@ label outside:
     if flowers.flower1 and not config.rollback_enabled:
         delilah_thoughts "What has changed in my history?"
 
+    if not hints.hint1:
+        # play animation to indicate new hint
+        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ hintlist.list.append(hint_1)
+        $ hints.hint1 = True
+    if not hints.hint4 and run > 1:
+        # play animation to indicate new hint
+        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ hintlist.list.append(hint_4)
+        $ hints.hint4 = True
     $ config.rollback_enabled = True # re-enable rollback
 
     if flowers.flower1 and renpy.showing("julian","characters"):

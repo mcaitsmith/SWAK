@@ -32,6 +32,7 @@ label init_loop3puzzle:
             if moonglitches.glitch3 == True and moonglitches.glitch4 == True:
                 renpy.play("orex_sfx_sparkle.ogg") # solved!
                 solves.loop3_1 = True
+                hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
 
         def check_loop3_2puzzle(g5,g6,checkskip):
             global moonglitches
@@ -60,6 +61,7 @@ label init_loop3puzzle:
             if moonglitches.glitch5 == True and moonglitches.glitch6 == True:
                 renpy.play("orex_sfx_sparkle.ogg") # solved!
                 solves.loop3_2 = True
+                hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
 
         def check_loop3_3puzzle(g7,g8,checkskip):
             global moonglitches
@@ -89,5 +91,6 @@ label init_loop3puzzle:
             if moonglitches.glitch7 == True and moonglitches.glitch8 == True and flowers.flower3:
                 renpy.play("orex_sfx_sparkle.ogg") # solved!
                 solves.loop3_3 = True
+                hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
 
     return

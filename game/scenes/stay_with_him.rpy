@@ -164,6 +164,12 @@ label stay_with_him:
             "{color=#f00}She lays there facing Julian, staring into his eyes.\nAs the light in her fades she notices how many colors can be seen in his irises.{/color}"
     else:
         $ config.rollback_enabled = True
+
+    # if not hints.hint9:
+    #     # play animation to indicate new hint
+    #     $ renpy.play("orex_sfx_sparkle.ogg")
+    #     $ hintlist.list.append(hint_9)
+    #     $ hints.hint9 = True
     $ config.rollback_enabled = True # re-enable rollback
 
     # else:

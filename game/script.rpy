@@ -12,6 +12,8 @@ init python:
     loop2_investigate = False
     loop3_investigate = False
     smoke_break = False
+    
+    restart_vars = False
 
     # initialize puzzle vars
     moonglitch1 = False
@@ -26,6 +28,14 @@ init python:
     # How to play text
 init:
     default playtext = "HOW TO PLAY\nMake choices to control your future.\nRoll back with the Back button to return to the past.\nSkip across time with the Skip button.\nReview your History to remember what happened.\nNot everything follows the rules of time and space."
+    default hint_1 = "What has changed in the past? Use the scrollwheel to ROLLBACK past points in time that may have changed.\n"
+    default hint_2 = "There's something glitchy in the timeline. Something {i}wrong{/i}. Is there a way to SKIP past it and seal it off from this world?\n"
+    default hint_3 = "Once you've seen dialogue for the first time in any playthrough, you can SKIP past it until you reach a fork in the timeline (an action or choice).\n"
+    default hint_4 = "If you reach the end of the night, roll back and make different CHOICES to search for a better outcome.\n"
+    default hint_5 = "The glitches are spreading across timelines. They seem to show up whenever you make a choice that hurts someone...\n"
+    default hint_6 = "There was a glitch at the point when you threw away the flowers. What would happen if you SKIPPED past that point?\n"
+    default hint_7 = "When you seal off all 5 glitches, a new choice may appear at a pivotal moment.\n"
+    default hint_8 = "The loop has reset but don't despair...the state of the glitches remain.\n"
 
 init:
     call init_screens from _call_init_screens # define UI screens
@@ -296,11 +306,13 @@ label start:
     $ hints = Hints() # initialize puzzle hints vars
     $ moonglitches = MoonGlitches() # initialize moon glitch vars
     $ endings = Endings() # initialize endings vars
+    $ hintlist = HintList() # initialize hint list
 
     # initialize story vars
     $ loop2_investigate = False
     $ loop3_investigate = False
     $ smoke_break = False
+
 
     # temporary disable puzzles
     # $ solves.loop2 = True
@@ -358,5 +370,11 @@ label reinit_vars:
     $ smoke_break = False
 
     $ restart_vars = False
+
+    if not hints.hint8:
+        # play animation to indicate new hint
+        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ hintlist.list.append(hint_8)
+        $ hints.hint8 = True
 
     return

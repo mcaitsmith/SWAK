@@ -95,6 +95,11 @@ label back_to_shore:
                         show julian puzzle onlayer characters
                     else:
                         show julian neutral onlayer characters
+                    if not hints.hint5:
+                        $ hintlist.list.append(hint_5)
+                        $ renpy.play("orex_sfx_sparkle.ogg")
+                        # play animation to indicate new hint
+                        $ hints.hint5 = True
                     if run == 3 and not solves.loop3_1:
                         delilah_thoughts_run3 "He laughs." (callback = functools.partial(inctime,checkskip=True))
                     else:
@@ -153,6 +158,13 @@ label back_to_shore:
                     
                     if run == 3:
                         "{color=#0f0}She holds his hand and smiles till he goes limp,\nthinking of how nice it would be to spend another loop with him.{/color}"
+
+                    if not hints.hint4 and run > 1:
+                        # play animation to indicate new hint
+                        $ renpy.play("orex_sfx_sparkle.ogg")
+                        $ hintlist.list.append(hint_4)
+                        $ hints.hint4 = True
+
                     $ phase = 0 # reset
 
                     return

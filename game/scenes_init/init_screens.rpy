@@ -174,4 +174,46 @@ label init_screens:
     screen endscreen:
         text "{size=100}END{/size}" xalign 0.5 yalign 0.5
 
+    screen hintstory:
+
+        tag menu
+
+        ## Avoid predicting this screen, as it can be very large.
+        predict False
+
+        use game_menu(_("Hintstory"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+
+            style_prefix "history"
+
+            # for h in _history_list:
+            # for h in [] + ([hint_1] if hints.hint1 else []) + ([hint_2] if hints.hint2 else []) + ([hint_3] if hints.hint3 else []):
+            for h in hintlist.list:
+
+                window:
+
+                    ## This lays things out properly if history_height is None.
+                    has fixed:
+                        yfit True
+
+                    # if h.who:
+
+                    #     label h.who:
+                    #         style "history_name"
+                    #         substitute False
+
+                    #         ## Take the color of the who text from the Character, if
+                    #         ## set.
+                    #         if "color" in h.who_args:
+                    #             text_color h.who_args["color"]
+
+                    # $ what = renpy.filter_text_tags(h, allow=gui.history_allow_tags)
+                    $ what = renpy.filter_text_tags(h, allow=['i','b'])
+
+                    # $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                    text what:
+                        substitute False
+
+            # if not _history_list:
+            #     label _("The dialogue history is empty.")
+
     return

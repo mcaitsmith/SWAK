@@ -28,17 +28,22 @@ label init_classes:
                 self.loop4 = False
 
         # create persistent class for puzzle hints
+        class HintList(NoRollback):
+            def __init__(self):
+                self.list = []
+
+        # create persistent class for puzzle hints
         class Hints(NoRollback):
             def __init__(self):
-                self.loop2_1 = False
-                self.loop2_2 = False
-                self.loop2_3 = False
-                self.loop3_1 = False
-                self.loop3_2 = False
-                self.loop3_3 = False
-                self.loop4_1 = False
-                self.loop4_2 = False
-                self.loop4_3 = False
+                self.hint1 = False
+                self.hint2 = False
+                self.hint3 = False
+                self.hint4 = False
+                self.hint5 = False
+                self.hint6 = False
+                self.hint7 = False
+                self.hint8 = False
+                self.hint9 = False
 
         # create persistent class for solved puzzles
         class MoonGlitches(NoRollback):

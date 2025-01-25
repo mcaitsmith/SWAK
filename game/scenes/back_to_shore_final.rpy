@@ -229,11 +229,25 @@ label back_to_shore_final:
             # else:
             if renpy.is_skipping() and not solves.loop4:
                 $ renpy.play("orex_sfx_sparkle.ogg") # solved!
+            if renpy.is_skipping() and not solves.loop4:
                 $ solves.loop4 = True
+                $ hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
+            if solves.loop4:
+                if not hints.hint7:
+                    # play animation to indicate new hint
+                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ hintlist.list.append(hint_7)
+                    $ hints.hint7 = True
             if solves.loop4:
                 $ config.rollback_enabled = True
             # if not renpy.is_skipping():
             hide bg scene3 glitch with dissolve
+            if not solves.loop4:
+                if not hints.hint6:
+                    # play animation to indicate new hint
+                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ hintlist.list.append(hint_6)
+                    $ hints.hint6 = True
             if not solves.loop4:
                 $ restart_vars = True # return to beginning loop with vars re-initialized (except for glitches)
 
