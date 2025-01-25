@@ -351,6 +351,10 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    outlines [(2,"#000000",0,0)]
+    size 40
+    idle_color "#ffffff"
+    selected_color '#0066cc'
 
 
 ## Main Menu screen ############################################################
@@ -379,11 +383,11 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
+            text "{i}[config.name!t]{/i}":
                 style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+            # text "[config.version]":
+            #     style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -402,11 +406,13 @@ style main_menu_vbox:
     xalign 1.0
     xoffset -30
     xmaximum 1200
-    yalign 1.0
+    # yalign 1.0
+    yalign 0.05
     yoffset -30
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
+    outlines [(2,"#000000",0,0)]
 
 style main_menu_title:
     properties gui.text_properties("title")

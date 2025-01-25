@@ -127,18 +127,39 @@ label back_to_shore_final:
             delilah_thoughts_run4 "I lean closer to him."
             pause 1.0
             # show kiss CG
-            delilah_thoughts_run4 "(show CG)"
+            show kiss_cg onlayer cg with Dissolve(3.0)
             $ flowers.flower4 = False
             $ flowers.flower3 = False
             $ flowers.flower2 = False
             $ flowers.flower1 = False
+            show flower1 onlayer characters:
+                xalign 0.5
+                yalign 0.625
+            show flower2 onlayer characters:
+                xalign 0.515
+                yalign 0.75
+                rotate 20
+            show flower3 onlayer characters:
+                xalign 0.485
+                yalign 0.75
+                rotate -20
+            show flower4 onlayer characters:
+                xalign 0.5
+                yalign 0.775
+            $ renpy.pause()
+            hide kiss_cg onlayer cg with Dissolve(3.0)
+
             delilah_thoughts_run4 "Julian stands there completely frozen, holding the flowers."
             julian_run4 "That was...cool..."
             delilah_thoughts_run4 "I laugh."
             delilah_run4 "Yeah. Goodbye, Julian."
             hide julian onlayer characters
+            hide flower1 onlayer characters
+            hide flower2 onlayer characters
+            hide flower3 onlayer characters
+            hide flower4 onlayer characters
             with { "characters" : Dissolve(3.0) }
-            pause 1.0
+            pause 3.0
             delilah_thoughts_run4 "He fades into thin air and finally disappears completely."
             pause 2.0
             delilah_thoughts_run4 "I'm left standing here. Just me and the sound of the waves splashing along the lakeshore."

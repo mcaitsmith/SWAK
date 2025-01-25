@@ -133,11 +133,18 @@ image bg scene2 = "images/bgs/lakehouseinside.png"
 image bg scene3 = "images/bgs/lakehouseoutside_late.png"
 image bg black = "#000000"
 
+image kiss_cg = "images/kiss_cg.png"
+
 image rearview = "images/props/rearview.png"
 image reflection = "images/props/rearview_reflection.png"
 image windshield = "images/props/windshield.png"
 
 # define flower images
+image flower1 = "images/props/flower.png"
+image flower2 = "images/props/flower.png"
+image flower3 = "images/props/flower.png"
+image flower4 = "images/props/flower.png"
+
 image flower_run1:
     "images/props/flower.png"
     zoom 0.6
@@ -194,7 +201,7 @@ transform center_right:
     xalign 0.7 yalign 1.0
 
 # define screen layers
-define config.layers = [ 'master', 'background','background_overlay','characters','transient', 'interface', 'screens', 'overlay' ]
+define config.layers = [ 'master', 'background','background_overlay','characters','transient', 'interface', 'cg','screens', 'overlay' ]
 $ config.tag_layer['bg'] = 'background'
 
 # define music

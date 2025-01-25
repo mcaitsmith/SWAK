@@ -1,6 +1,9 @@
 ﻿# The script of the game goes in this file.
 
 label smoke_break:
+
+    $ in_house = False
+
     show bg scene3 with dissolve
     show sandra neutral onlayer characters at center with dissolve
     delilah_thoughts_run3 "Mom leans over the railing holding an unlit cigarrette between her fingers. I get as close as I can stomach."
@@ -64,6 +67,7 @@ label smoke_break:
             delilah_thoughts_run3 "Go back inside"
 
     hide sandra onlayer characters with dissolve
+    $ in_house = True
     show bg scene2 with dissolve
     show cody happy onlayer characters at center with dissolve
     delilah_thoughts_run3 "Cody's still sitting at the table."
