@@ -321,6 +321,7 @@ label dinner_convo:
         hide cody onlayer characters
         hide sandra onlayer characters
         with dissolve
+
         jump outside
     elif run == 2 and loop2_investigate:
         call incphase from _call_incphase_7
@@ -359,6 +360,9 @@ label unlock_door:
     return
 
 label argument:
+
+    $ in_house = True
+
     show bg scene2 with Dissolve(2.0)
     
     delilah_thoughts "Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate."

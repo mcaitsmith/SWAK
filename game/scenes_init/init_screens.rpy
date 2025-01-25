@@ -48,18 +48,35 @@ label init_screens:
     screen eclipse: # screen for showing eclipse
 
         if phase == 0 or phase > 5:
-            add 'images/props/moon.png' xalign 0.5 ypos 0.05
+            if in_house:
+                add 'images/props/moon.png' xalign 1.0 ypos 0.17
+            else:
+                add 'images/props/moon.png' xalign 0.5 ypos 0.05
         elif phase == 1:
-            add 'moon_phase1' xalign 0.5 ypos 0.05
-            # text "test" xalign 0.5 ypos 0.2
+            if in_house:
+                add 'images/props/moon_phase1.png' xalign 1.0 ypos 0.17
+            else:
+                add 'images/props/moon_phase1.png' xalign 0.5 ypos 0.05
         elif phase == 2:
-            add 'moon_phase2' xalign 0.5 ypos 0.05
+            if in_house:
+                add 'images/props/moon_phase2.png' xalign 1.0 ypos 0.17
+            else:
+                add 'images/props/moon_phase2.png' xalign 0.5 ypos 0.05
         elif phase == 3:
-            add "moon_phase3" xalign 0.5 ypos 0.05
+            if in_house:
+                add 'images/props/moon_phase3.png' xalign 1.0 ypos 0.17
+            else:
+                add 'images/props/moon_phase3.png' xalign 0.5 ypos 0.05
         elif phase == 4:
-            add "moon_phase4" xalign 0.5 ypos 0.05
+            if in_house:
+                add 'images/props/moon_phase4.png' xalign 1.0 ypos 0.17
+            else:
+                add 'images/props/moon_phase4.png' xalign 0.5 ypos 0.05
         elif phase == 5:
-            add "moon_phase5" xalign 0.5 ypos 0.05
+            if in_house:
+                add 'images/props/moon_phase5.png' xalign 1.0 ypos 0.17
+            else:
+                add 'images/props/moon_phase5.png' xalign 0.5 ypos 0.05
 
     screen flowerscreen: # screen for showing flowers
         if flowers.flower1:

@@ -8,6 +8,7 @@ init python:
     run = 1 # initialize run
 
     # initialize story vars
+    in_house = False
     loop2_investigate = False
     loop3_investigate = False
     smoke_break = False
@@ -124,9 +125,12 @@ image julian glitch:
     repeat
 
 # define scene bgs (placeholder)
-image bg scene1 = "#4680bd"
-image bg scene2 = "#f0c047"
-image bg scene3 = "#5646bd"
+# image bg scene1 = "#4680bd"
+image bg scene1 = "images/bgs/lakehouseoutside.png"
+# image bg scene2 = "#f0c047"
+image bg scene2 = "images/bgs/lakehouseinside.png"
+# image bg scene3 = "#5646bd"
+image bg scene3 = "images/bgs/lakehouseoutside.png"
 image bg black = "#000000"
 
 image rearview = "images/props/rearview.png"

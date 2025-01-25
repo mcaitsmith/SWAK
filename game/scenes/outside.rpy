@@ -3,6 +3,8 @@
 label outside:
 
     call incphase from _call_incphase_9
+
+    $ in_house = False
     
     show bg scene3 with dissolve
 
