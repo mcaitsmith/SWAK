@@ -130,7 +130,7 @@ image bg scene1 = "images/bgs/lakehouseoutside.png"
 # image bg scene2 = "#f0c047"
 image bg scene2 = "images/bgs/lakehouseinside.png"
 # image bg scene3 = "#5646bd"
-image bg scene3 = "images/bgs/lakehouseoutside.png"
+image bg scene3 = "images/bgs/lakehouseoutside_late.png"
 image bg black = "#000000"
 
 image rearview = "images/props/rearview.png"
