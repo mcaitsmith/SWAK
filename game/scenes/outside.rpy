@@ -100,7 +100,7 @@ label outside:
 
     $ config.rollback_enabled = True # re-enable rollback
 
-    if flowers.flower1 and renpy.showing("julian neutral","characters"):
+    if flowers.flower1 and renpy.showing("julian","characters"):
         show julian glitch onlayer characters with dissolve
         hide julian onlayer characters with Dissolve(3.0)
 

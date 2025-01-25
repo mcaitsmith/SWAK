@@ -116,8 +116,13 @@ label back_to_shore_final:
             $ renpy.choice_for_skipping() # prevent skipping
             $ _skipping = False
 
+            stop music fadeout 1.0
+
             delilah_run4 "What am I thinking...I can't keep you here, Julian."
             julian_run4 "I know...it's a nice thought, but we should both face the music. Go back to our lives."
+            
+            play music endingmusic
+            
             delilah_run4 "Aside from everything that sucked...I really liked meeting you."
             delilah_thoughts_run4 "I lean closer to him."
             pause 1.0

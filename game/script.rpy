@@ -194,11 +194,12 @@ define config.layers = [ 'master', 'background','background_overlay','characters
 $ config.tag_layer['bg'] = 'background'
 
 # define music
-define loop1music = "audio/music/SWAK Loop 1 MSTR V1.ogg"
-define loop2music = "audio/music/SWAK Loop 1 MSTR V1.ogg"
-define loop3music = "audio/music/SWAK Loop 3 MSTR V1.ogg"
-define loop4music = "audio/music/SWAK Loop 4 MSTR V1.ogg"
-# define endingmusic = ""
+# define mainmenumusic = "audio/music/Main Menu MSTRLOOP.ogg"
+define loop1music = "audio/music/Loop 1 MSTRLOOP.ogg"
+define loop2music = "audio/music/Loop 2 MSTRLOOP.ogg"
+define loop3music = "audio/music/Loop 3 MSTRLOOP.ogg"
+define loop4music = "audio/music/Loop 4 MSTRLOOP.ogg"
+define endingmusic = "audio/music/Ending MSTRLOOP.ogg"
 
 # check run number at beginning to progress runs
 label checkrun:

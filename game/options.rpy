@@ -62,7 +62,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "audio/music/SWAK Main Menu MSTR V1.ogg"
+define config.main_menu_music = "audio/music/Main Menu MSTRLOOP.ogg"
 
 
 ## Transitions #################################################################
