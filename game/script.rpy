@@ -337,7 +337,7 @@ label start:
     label runstart:
 
         if restart_vars:
-            call reinit_vars
+            call reinit_vars from _call_reinit_vars
 
         $ renpy.block_rollback() # prevent rollback before this point
         $ config.rollback_enabled = True # re-enable rollback

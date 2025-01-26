@@ -30,7 +30,7 @@ label intro:
     sandra "So, have you considered what colleges you want to tour next summer?"
     # delilah_thoughts "She waited till the end of the ride to ask her daughter this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
     delilah_thoughts neutral "Mom waited till the end of the ride to ask me this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
-    delilah "That's not for another nine months."
+    delilah angry "That's not for another nine months."
     sandra "Sooner than you think, Del. Always good to get a head start. Plus, I have my friend who teaches at State. Could get you a tour any time you like!"
     show cody happy onlayer characters at center_left
     cody "Ugh, I can't wait for you to be gone."
@@ -63,22 +63,22 @@ label intro:
 
     show sandra neutral onlayer characters at center
     sandra "Hey, Del, my front door key isn't working."
-    delilah "So?"
+    delilah neutral "So?"
     sandra "So...can you go try the backdoor? The spare should still be under the tacklebox next to the hottub."
     menu:
-        delilah " " (callback = functools.partial(inctime))
+        delilah neutral " " (callback = functools.partial(inctime))
         "Fine.":
             delilah "Fine."
         "Make Cody do it!":
-            delilah "Make Cody do it!"
+            delilah angry "Make Cody do it!"
         "Do it yourself.":
-            delilah "Do it yourself."
+            delilah angry "Do it yourself."
 
     sandra "Thanks, Del. You're a peach."
     show cody happy onlayer characters at center_right
     cody "Yeah, Del, thanks."
-    delilah_thoughts "He laughs." # add laugh sound to replace
-    delilah_thoughts "I stamp my feet, making sure the earth can feel how unfair this situation is." # replace with animation/sfx
+    delilah_thoughts neutral "He laughs." # add laugh sound to replace
+    delilah_thoughts angry "I stamp my feet, making sure the earth can feel how unfair this situation is." # replace with animation/sfx
 
     hide cody onlayer characters
     hide sandra onlayer characters
@@ -95,7 +95,7 @@ label intro:
     pause 3.0
 
     menu:
-        delilah " " (callback = functools.partial(inctime))
+        delilah neutral " " (callback = functools.partial(inctime))
         "Wait, who is that?":
             delilah "Wait, who is that?"
             delilah_thoughts "Along the shoreline is what looks like a person standing there, but it's hard to make out."
