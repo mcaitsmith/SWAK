@@ -134,8 +134,6 @@ image side delilah glitch = Glitch("images/chars/side delilah neutral.png", glit
 image cody glitch = Glitch("images/chars/cody neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 
 # define sprites for Julian
-image julian happy = "images/chars/julian happy.png"
-# image julian sad = "images/chars/julian sad.png"
 image julian fade:
     "images/chars/julianshadow.png"
     alpha 0.0

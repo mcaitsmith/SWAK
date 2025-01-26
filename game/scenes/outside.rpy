@@ -40,7 +40,7 @@ label outside:
         "Silently approach":
             delilah_thoughts "Silently approach"
 
-    show julian neutral onlayer characters at center with dissolve:
+    show julian worried onlayer characters at center with dissolve:
         zoom 0.7
     pause 1.0
 
@@ -51,20 +51,27 @@ label outside:
     delilah "Hey, are you okay?!"
 
     # now have Julian appear full
-    show julian neutral onlayer characters at center:
+    show julian worried onlayer characters at center:
         zoom 1.0
     pause 2.0
 
     call incphase from _call_incphase_10
 
-    # show julian happy onlayer characters
+    # show julian pain onlayer characters
 
     # julian "test"
+    # show julian worried onlayer characters
+
+    # julian "test2"
+    # show julian happy onlayer characters
+
+    # julian "test3"
 
     if not flowers.flower1:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching a glowing flower."
     else:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching...nothing."
+    show julian pain onlayer characters
     delilah_thoughts "He looks at me with equal parts desperation and shock." # replace with expression change
 
 
@@ -82,7 +89,7 @@ label outside:
     if flowers.flower1 and not config.rollback_enabled:
         $ _skipping = False
     if flowers.flower1 and not config.rollback_enabled:
-        show julian neutral onlayer characters with dissolve
+        show julian worried onlayer characters with dissolve
     if flowers.flower1 and not config.rollback_enabled:
         delilah_thoughts "The boy goes limp. He's maybe a year or two older than me, I guess."
     if flowers.flower1 and not config.rollback_enabled:
