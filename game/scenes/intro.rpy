@@ -68,11 +68,11 @@ label intro:
     menu:
         delilah neutral " " (callback = functools.partial(inctime))
         "Fine.":
-            delilah "Fine."
+            delilah laugh "Fine."
         "Make Cody do it!":
             delilah angry "Make Cody do it!"
         "Do it yourself.":
-            delilah angry "Do it yourself."
+            delilah happy "Do it yourself."
 
     sandra "Thanks, Del. You're a peach."
     show cody happy onlayer characters at center_right
