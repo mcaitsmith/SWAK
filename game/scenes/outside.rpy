@@ -55,6 +55,10 @@ label outside:
 
     call incphase from _call_incphase_10
 
+    # show julian happy onlayer characters
+
+    # julian "test"
+
     if not flowers.flower1:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching a glowing flower."
     else:
