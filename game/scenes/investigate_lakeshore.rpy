@@ -16,7 +16,7 @@ label investigate_lakeshore:
 
     delilah_thoughts_run2 "He gasps for air, looking around frantically."
     delilah_run2 "Oh my God, you're..."
-    boy_run2 "S-stay away from me..."
+    boy_run2_d "S-stay away from me..."
     delilah_thoughts_run2 "He clutches his side, trying and failing to hold himself up."
     delilah_run2 "It's okay! You're okay! Just stay here, I'll get help!"
 

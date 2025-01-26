@@ -8,7 +8,7 @@ label smoke_break:
     show sandra neutral onlayer characters at center with dissolve
     delilah_thoughts_run3 "Mom leans over the railing holding an unlit cigarrette between her fingers. I get as close as I can stomach."
     delilah_thoughts_run3 "Dad used to always say how nasty they smelled. Mom quit for a long time because of it."
-    sandra_run3 "I know, I know. You don't have to say it."
+    sandra_run3_d "I know, I know. You don't have to say it."
     menu:
         delilah " " (callback = functools.partial(inctime))
         "{color=#0f0}Mention Julian{/color}":
@@ -17,11 +17,11 @@ label smoke_break:
             delilah_thoughts_run3 "Don't mention Julian"
     delilah_thoughts_run3 "The thought enters my mind to mention Julian, his condition, and the magical glowing flower that I need to get from my brother. But then I remember how Mom reacted in the previous loop with complete and utter indifference."
     delilah_run3 "I don't care, smoke all you want, Sandra."
-    sandra_run3 "You know, it wasn't that long ago you used to call me 'Mom'."
+    sandra_run3_d "You know, it wasn't that long ago you used to call me 'Mom'."
     delilah_run3 "Really? Feels like a lifetime ago."
-    sandra_run3 "Yeah, a whole three months. I kept track. The first time came as a bit of a shock."
+    sandra_run3_d "Yeah, a whole three months. I kept track. The first time came as a bit of a shock."
     delilah_run3 "You don't have any idea what changed?" 
-    sandra_run3 "I don't know. Teenage angst?"
+    sandra_run3_d "I don't know. Teenage angst?"
     if run == 3:
         "{color=#0f0}The image of that letter is burned into her mind forever.\nCuriosity got the best of her, she went looking through her dad's belongings, and found what she suspected but couldn't imagine.{/color}"
         hide sandra onlayer characters
@@ -35,26 +35,26 @@ label smoke_break:
         show sandra neutral onlayer characters at center
         with dissolve
     delilah_run3 "You saw the letter."
-    sandra_run3 "The what?"
+    sandra_run3_d "The what?"
     delilah_run3 "The letter. Unless you haven't changed socks in three months, I know you saw it."
-    sandra_run3 "I don't know what you're referring..."
+    sandra_run3_d "I don't know what you're referring..."
     delilah_run3 "Fuck, Sandra, stop it! I'm the one who put the letter there! I know you read it! You know Dad is cheating on you! So why are you pretending like everything is normal?!"
     delilah_thoughts_run3 "Mom turns to ice. The cigarette in her hand starts to lightly scorch the edges of her fingers."
-    sandra_run3 "How long have you known?"
+    sandra_run3_d "How long have you known?"
     delilah_thoughts_run3 "Her voice is like a pile of glass shards embedded in her throat."
     delilah_run3 "Like I said, the entire time. I've known longer than you have."
-    sandra_run3 "Del...I wanted to protect you..."
+    sandra_run3_d "Del...I wanted to protect you..."
     delilah_run3 "Well, what a great job you did!"
-    sandra_run3 "I've been making arrangements, setting myself up to leave. I wanted to wait till things were ready to tell you."
+    sandra_run3_d "I've been making arrangements, setting myself up to leave. I wanted to wait till things were ready to tell you."
     delilah_run3 "And then what? Just drop it on us? 'Hey, kids, our family is a sham! Thanks and goodbye?'"
-    sandra_run3 "I...I didn't mean to hurt you, Del. I'm sorry. Please, just try to understand that I truly am doing my best. You're not the only one who doesn't know what to believe in anymore after all this."
+    sandra_run3_d "I...I didn't mean to hurt you, Del. I'm sorry. Please, just try to understand that I truly am doing my best. You're not the only one who doesn't know what to believe in anymore after all this."
     delilah_run3 "Yeah, well, I had to go through it alone."
-    sandra_run3 "So did I."
+    sandra_run3_d "So did I."
     delilah_run3 "Well...you don't have to. We can go through it together."
-    sandra_run3 "Yeah. I think I'd like that."
+    sandra_run3_d "Yeah. I think I'd like that."
     if run == 3:
         "{color=#0f0}For the first time in a while, Delilah felt the experience of belonging in her family. Things weren't resolved, not by a longshot, but she knew she wasn't alone.{/color}"
-    sandra_run3 "Maybe we leave Cody out of this for now though? I don't think he could handle this. He looks up to his dad so much. It would destroy his world."
+    sandra_run3_d "Maybe we leave Cody out of this for now though? I don't think he could handle this. He looks up to his dad so much. It would destroy his world."
     delilah_run3 "Yeah. I'll be careful not to tell him."
     delilah_thoughts_run3 "We share a pleasant silence for a moment."
 

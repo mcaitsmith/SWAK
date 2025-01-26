@@ -13,41 +13,41 @@ label back_to_shore_final:
     show julian neutral onlayer characters at center:
         zoom 1.0
     pause 1.0
-    julian_run4 "Back so soon?"
+    julian_run4_d "Back so soon?"
     delilah_run4 "Got the third flower."
-    julian_run4 "Nicely done! Where was it."
+    julian_run4_d "Nicely done! Where was it."
     delilah_run4 "My brother had it. But to get it I had to tell him our parents were getting a divorce. It really messed with his head."
-    julian_run4 "Oh, I'm so sorry, is he okay?"
+    julian_run4_d "Oh, I'm so sorry, is he okay?"
     delilah_run4 "Yeah, he is now that everything reset but he wasn't when I told him."
-    julian_run4 "Delilah, I'm so sorry. I would never have asked you to do that if I knew."
+    julian_run4_d "Delilah, I'm so sorry. I would never have asked you to do that if I knew."
     delilah_run4 "It's fine. Like I said, it's like it never happened now. He doesn't remember it."
-    julian_run4 "Yeah, but you do. I'm sorry for that."
+    julian_run4_d "Yeah, but you do. I'm sorry for that."
     delilah_run4 "You don't have to apologize, Julian. Let's focus on getting you home. Now, where to start with that last flower?"
-    julian_run4 "I'm not sure. It could be anywhere."
+    julian_run4_d "I'm not sure. It could be anywhere."
     pause 1.0
     delilah_thoughts_run4 "I notice something glowing in his jacket pocket."
-    julian_run4 "What?"
+    julian_run4_d "What?"
     delilah_run4 "Is that the last flower?"
-    julian_run4 "No."
-    julian_run4 "Yes."
+    julian_run4_d "No."
+    julian_run4_d "Yes."
     delilah_run4 "Why did you lie?"
-    julian_run4 "I just...I'm not ready to go yet."
+    julian_run4_d "I just...I'm not ready to go yet."
     delilah_run4 "Not ready?! You're dying!"
-    julian_run4 "I know but...I'm worried about you..."
+    julian_run4_d "I know but...I'm worried about you..."
     delilah_run4 "Oh, Julian."
-    julian_run4 "I know things have been really tough for you right now. I want to be there for you for it. I'm frustrated because I physically can't."
+    julian_run4_d "I know things have been really tough for you right now. I want to be there for you for it. I'm frustrated because I physically can't."
     delilah_run4 "We just met..."
-    julian_run4 "I know but...I still care. You're cooler than anyone I know."
+    julian_run4_d "I know but...I still care. You're cooler than anyone I know."
     delilah_run4 "You live with your grandparents."
     delilah_thoughts_run4 "I laugh."
     delilah_run4 "You don't know many people."
-    julian_run4 "Fair. Even so. I wish we could still see each other."
+    julian_run4_d "Fair. Even so. I wish we could still see each other."
     delilah_run4 "Maybe we can."
-    julian_run4 "What do you mean?"
+    julian_run4_d "What do you mean?"
     delilah_run4 "Well, I could just...throw these away. We'd forget about them and spend a bit more time together."
-    julian_run4 "But then...you'd be stuck here too."
+    julian_run4_d "But then...you'd be stuck here too."
     delilah_run4 "There are worse fates."
-    julian_run4 "Only if you want it."
+    julian_run4_d "Only if you want it."
 
     call incphase from _call_incphase_1 # should end up at totality for final choice
 
@@ -130,7 +130,7 @@ label back_to_shore_final:
             stop music fadeout 1.0
 
             delilah_run4 "What am I thinking...I can't keep you here, Julian."
-            julian_run4 "I know...it's a nice thought, but we should both face the music. Go back to our lives."
+            julian_run4_d "I know...it's a nice thought, but we should both face the music. Go back to our lives."
             
             play music endingmusic
             
@@ -182,6 +182,9 @@ label back_to_shore_final:
             with { "master" : Dissolve(3.0) }
             delilah_thoughts_run4 "I turn away from the lake, ready to be with my family."
 
+            # jump to credits here
+            $ true_ending = True
+
             # hide julian onlayer characters with dissolve
             # jump open_door
         "{color=#0ff}Toss the flowers in the lake{/color}":
@@ -189,7 +192,7 @@ label back_to_shore_final:
             # have a few are you sure choices
             show black behind bg
             delilah_run4 "I could do for a couple more go arounds."
-            julian_run4 "See you around then."
+            julian_run4_d "See you around then."
 
             # delilah_thoughts_run4 "I lean in closer to him."
             # (Show image of kiss)

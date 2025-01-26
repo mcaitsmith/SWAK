@@ -31,17 +31,17 @@ label intro:
     # delilah_thoughts "She waited till the end of the ride to ask her daughter this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
     delilah_thoughts neutral "Mom waited till the end of the ride to ask me this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
     delilah angry "That's not for another nine months."
-    sandra "Sooner than you think, Del. Always good to get a head start. Plus, I have my friend who teaches at State. Could get you a tour any time you like!"
+    sandra_d "Sooner than you think, Del. Always good to get a head start. Plus, I have my friend who teaches at State. Could get you a tour any time you like!"
     show cody happy onlayer characters at center_left
-    cody "Ugh, I can't wait for you to be gone."
+    cody_d "Ugh, I can't wait for you to be gone."
     delilah "Shut up, insect."
     delilah_thoughts "I punch my little brother in the arm." # add punch sfx to replace + shake cody sprite
-    cody "Ow!"
-    sandra "Oh hush, you'll be missing her when she's gone. Just you wait."
-    cody "Yeah right. She'll be back every weekend, I bet, if she doesn't flunk out that is." 
-    delilah "I said shut up!"
-    cody "Make me!" 
-    sandra "Quiet! We're here!"
+    cody_d "Ow!"
+    sandra_d neutral "Oh hush, you'll be missing her when she's gone. Just you wait."
+    cody_d "Yeah right. She'll be back every weekend, I bet, if she doesn't flunk out that is." 
+    delilah angry "I said shut up!"
+    cody_d "Make me!" 
+    sandra_d "Quiet! We're here!"
 
     hide cody onlayer characters
     hide sandra onlayer characters
@@ -64,7 +64,7 @@ label intro:
     show sandra neutral onlayer characters at center
     sandra "Hey, Del, my front door key isn't working."
     delilah neutral "So?"
-    sandra "So...can you go try the backdoor? The spare should still be under the tacklebox next to the hottub."
+    sandra_d "So...can you go try the backdoor? The spare should still be under the tacklebox next to the hottub."
     menu:
         delilah neutral " " (callback = functools.partial(inctime))
         "Fine.":
@@ -74,9 +74,9 @@ label intro:
         "Do it yourself.":
             delilah happy "Do it yourself."
 
-    sandra "Thanks, Del. You're a peach."
+    sandra_d "Thanks, Del. You're a peach."
     show cody happy onlayer characters at center_right
-    cody "Yeah, Del, thanks."
+    cody_d "Yeah, Del, thanks."
     delilah_thoughts neutral "He laughs." # add laugh sound to replace
     delilah_thoughts angry "I stamp my feet, making sure the earth can feel how unfair this situation is." # replace with animation/sfx
 

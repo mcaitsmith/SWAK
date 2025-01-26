@@ -11,7 +11,7 @@ label outside:
     time_centered "9 PM"
     pause 1.0
 
-    delilah_thoughts "The door slams behind me." # replace with door slam sfx
+    delilah_thoughts neutral "The door slams behind me." # replace with door slam sfx
     # delilah_thoughts "The door slams behind Delilah." # replace with door slam sfx
 
     if run == 1:
@@ -26,7 +26,9 @@ label outside:
     
     delilah_thoughts "Along the shoreline, by the rocks, that shadowy figure once again stands just out of view."
     # delilah_thoughts "Along the shoreline, by the rocks, she sees that shadowy figure once again standing just out of view."
-    
+
+    show julian shadow onlayer characters at center with dissolve:
+        zoom 0.7 # in distance
     menu:
         delilah " " (callback = functools.partial(inctime))
         "Hey, I can see you!" if run == 1:
@@ -38,7 +40,7 @@ label outside:
         "Silently approach":
             delilah_thoughts "Silently approach"
 
-    show julian neutral onlayer characters at center:
+    show julian neutral onlayer characters at center with dissolve:
         zoom 0.7
     pause 1.0
 

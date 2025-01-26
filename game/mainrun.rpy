@@ -14,31 +14,39 @@ label mainrun:
         $ _skipping = True
         jump runstart
 
-    $ renpy.choice_for_skipping() # stop skipping
-    $ _skipping = False
+    if true_ending:
+        "CREDITS HERE"
+        hide screen eclipse onlayer background_overlay
+        stop music fadeout 1.0
+        pause 1.0
 
-    # delilah neutral "Dialogue END"
-    pause 2.0
-    show screen endscreen
-    $ renpy.pause()
-    # "END"
+    else:
 
-    # hide delilah with dissolve
+        $ renpy.choice_for_skipping() # stop skipping
+        $ _skipping = False
 
-    show bg black
-    hide screen flowerscreen onlayer interface
-    with dissolve
+        # delilah neutral "Dialogue END"
+        pause 2.0
+        show screen endscreen
+        $ renpy.pause()
+        # "END"
 
-    $ renpy.pause()
+        # hide delilah with dissolve
 
-    hide screen eclipse onlayer background_overlay
-    hide screen endscreen
-    show screen endscreenq
-    with dissolve
+        show bg black
+        hide screen flowerscreen onlayer interface
+        with dissolve
 
-    $ renpy.pause()
+        $ renpy.pause()
 
-    stop music fadeout 1.0
-    hide screen endscreenq with dissolve
+        hide screen eclipse onlayer background_overlay
+        hide screen endscreen
+        show screen endscreenq
+        with dissolve
+
+        $ renpy.pause()
+
+        stop music fadeout 1.0
+        hide screen endscreenq with dissolve
 
     return

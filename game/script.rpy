@@ -15,6 +15,8 @@ init python:
     
     restart_vars = False
 
+    true_ending = False
+
     # initialize puzzle vars
     moonglitch1 = False
     moonglitch2 = False
@@ -102,18 +104,31 @@ define delilah_thoughts_run2 = Character("Delilah",image="delilah",color="#EB28D
 define delilah_thoughts_run3 = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='{color=#0f0}(', what_suffix='){/color}', what_italic=True,callback=inctime)
 define delilah_thoughts_run4 = Character("Delilah",image="delilah",color="#EB28D2",what_prefix='{color=#0ff}(', what_suffix='){/color}', what_italic=True,callback=inctime)
 define julian = Character("Julian",image="julian",color="#71A4B0",callback=inctime)
+define julian_d = Character("Julian",image="delilah",color="#71A4B0",callback=inctime)
 define julian_run2 = Character("Julian",image="julian",color="#71A4B0",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define julian_run2_d = Character("Julian",image="delilah",color="#71A4B0",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define julian_run3 = Character("Julian",image="julian",color="#71A4B0",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define julian_run3_d = Character("Julian",image="delilah",color="#71A4B0",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
 define julian_run4 = Character("Julian",image="julian",color="#71A4B0",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
+define julian_run4_d = Character("Julian",image="delilah",color="#71A4B0",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
 define boy = Character("???",image="julian",color="#71A4B0",callback=inctime)
+define boy_d = Character("???",image="delilah",color="#71A4B0",callback=inctime)
 define boy_run2 = Character("???",image="julian",color="#71A4B0",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define boy_run2_d = Character("???",image="delilah",color="#71A4B0",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define cody = Character("Cody",image="cody",color="#aa2b3a",callback=inctime)
+define cody_d = Character("Cody",image="delilah",color="#aa2b3a",callback=inctime)
 define cody_run2 = Character("Cody",image="cody",color="#aa2b3a",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define cody_run2_d = Character("Cody",image="delilah",color="#aa2b3a",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define cody_run3 = Character("Cody",image="cody",color="#aa2b3a",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define cody_run3_d = Character("Cody",image="delilah",color="#aa2b3a",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
 define sandra = Character("Sandra",image="sandra",color="#F0D193",callback=inctime)
+define sandra_d = Character("Sandra",image="delilah",color="#F0D193",callback=inctime)
 define sandra_run2 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
+define sandra_run2_d = Character("Sandra",image="delilah",color="#F0D193",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define sandra_run3 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
+define sandra_run3_d = Character("Sandra",image="delilah",color="#F0D193",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
 define sandra_run4 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
+define sandra_run4_d = Character("Sandra",image="delilah",color="#F0D193",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
 
 image side delilah glitch = Glitch("images/chars/side delilah neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image cody glitch = Glitch("images/chars/cody neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
