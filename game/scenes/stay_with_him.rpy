@@ -165,11 +165,12 @@ label stay_with_him:
     else:
         $ config.rollback_enabled = True
 
-    # if not hints.hint9:
-    #     # play animation to indicate new hint
-    #     $ renpy.play("orex_sfx_sparkle.ogg")
-    #     $ hintlist.list.append(hint_9)
-    #     $ hints.hint9 = True
+    if not hints.hint10:
+        # play animation to indicate new hint
+        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ hintlist.list.append(hint_10)
+        $ hints.hint10 = True
+        $ hints.seen_hint = False
     $ config.rollback_enabled = True # re-enable rollback
 
     # else:

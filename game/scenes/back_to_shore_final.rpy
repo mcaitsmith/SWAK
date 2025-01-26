@@ -238,6 +238,7 @@ label back_to_shore_final:
                     $ renpy.play("orex_sfx_sparkle.ogg")
                     $ hintlist.list.append(hint_7)
                     $ hints.hint7 = True
+                    $ hints.seen_hint = False
             if solves.loop4:
                 $ config.rollback_enabled = True
             # if not renpy.is_skipping():
@@ -248,6 +249,7 @@ label back_to_shore_final:
                     $ renpy.play("orex_sfx_sparkle.ogg")
                     $ hintlist.list.append(hint_6)
                     $ hints.hint6 = True
+                    $ hints.seen_hint = False
             if not solves.loop4:
                 $ restart_vars = True # return to beginning loop with vars re-initialized (except for glitches)
 

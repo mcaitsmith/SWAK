@@ -265,11 +265,12 @@ screen quick_menu():
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
             if (flowers.flower1 and run == 1 and config.rollback_enabled) or hints.hint1:
-                textbutton _("{color=#0066cc}{b}Hintstory{/b}{/color}") action ShowMenu('hintstory')
+                if not hints.seen_hint:
+                    textbutton _("{size=20}{swap=New @Hint@0.5}Hint{/swap}{/size}") action [ShowMenu('hintstory'),SetVariable("hints.seen_hint",True)]
+                else:
+                    textbutton _("{b}Hints{/b}") action ShowMenu('hintstory')
             # if run == 2 and puzzles.loop2 and not solves.loop2 and not renpy.get_screen("flower_glitch"):
             #     textbutton _("{color=#f00}What now?{/color}") action Call('hints_run2')
-            # if run == 3 and puzzles.loop3 and not solves.loop3 and not renpy.get_screen("flower_glitch"):
-            #     textbutton _("{color=#0f0}What now?{/color}") action Call('hints_run3')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever

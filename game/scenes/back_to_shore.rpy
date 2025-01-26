@@ -3,7 +3,7 @@
 label back_to_shore:
     # zoom bg plus sfx
     delilah_thoughts_run3 "When I get to the bottom of the hill, Julian is already waiting for me."
-    show julian neutral onlayer characters at center:
+    show julian neutral onlayer characters at center with dissolve:
         zoom 1.0
     pause 1.0
     julian_run3 "Back so soon?"
@@ -100,6 +100,7 @@ label back_to_shore:
                         $ renpy.play("orex_sfx_sparkle.ogg")
                         # play animation to indicate new hint
                         $ hints.hint5 = True
+                        $ hints.seen_hint = False
                     if run == 3 and not solves.loop3_1:
                         delilah_thoughts_run3 "He laughs." (callback = functools.partial(inctime,checkskip=True))
                     else:
@@ -164,6 +165,7 @@ label back_to_shore:
                         $ renpy.play("orex_sfx_sparkle.ogg")
                         $ hintlist.list.append(hint_4)
                         $ hints.hint4 = True
+                        $ hints.seen_hint = False
 
                     $ phase = 0 # reset
 

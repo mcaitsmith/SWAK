@@ -35,6 +35,7 @@ label get_help:
         $ renpy.play("orex_sfx_sparkle.ogg")
         $ hintlist.list.append(hint_4)
         $ hints.hint4 = True
+        $ hints.seen_hint = False
     # delilah "The game stops here unless the player uses the history function to try a different choice."
     
     $ phase = 0 # reset

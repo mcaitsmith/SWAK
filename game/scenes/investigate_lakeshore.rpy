@@ -7,7 +7,7 @@ label investigate_lakeshore:
     delilah_thoughts_run2 "Did I imagine the whole thing? That must be it. There is no boy dying on the lakeshore."
     # delilah_thoughts "Did she imagine the whole thing? That must be it. There is no boy dying on the lakeshore."
     pause 1.0
-    show julian neutral onlayer characters at center:
+    show julian neutral onlayer characters at center with dissolve:
         zoom 0.7
     pause 1.0
     if run == 2:

@@ -173,6 +173,8 @@ label init_screens:
         
     screen endscreen:
         text "{size=100}END{/size}" xalign 0.5 yalign 0.5
+    screen endscreenq:
+        text "{size=100}END?{/size}" xalign 0.5 yalign 0.5
 
     screen hintstory:
 
@@ -181,7 +183,7 @@ label init_screens:
         ## Avoid predicting this screen, as it can be very large.
         predict False
 
-        use game_menu(_("Hintstory"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+        use game_menu(_("Hints"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
 
             style_prefix "history"
 

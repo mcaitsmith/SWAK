@@ -44,6 +44,8 @@ label init_classes:
                 self.hint7 = False
                 self.hint8 = False
                 self.hint9 = False
+                self.hint10 = False
+                self.seen_hint = False
 
         # create persistent class for solved puzzles
         class MoonGlitches(NoRollback):

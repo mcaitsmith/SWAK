@@ -275,6 +275,7 @@ label dinner_convo:
                         $ renpy.play("orex_sfx_sparkle.ogg")
                         # play animation to indicate new hint
                         $ hints.hint5 = True
+                        $ hints.seen_hint = False
                 if run == 3 and not solves.loop3_3:
                     delilah_thoughts_run3 "I look into his eyes to find what little life is in there slowly dimish into nothing. He didn't just lose his innocence, I ripped it out of him." (callback = functools.partial(inctime,checkskip=True))
                 else:
@@ -502,6 +503,7 @@ label argument:
             $ renpy.play("orex_sfx_sparkle.ogg")
             # play animation to indicate new hint
             $ hints.hint2 = True
+            $ hints.seen_hint = False
         if run == 2 and not solves.loop2:
             sandra_run2 "What is this about?" (callback = functools.partial(inctime,checkskip=True))
         if run == 2 and not solves.loop2:
@@ -539,6 +541,7 @@ label argument:
             # play animation to indicate new hint
             $ renpy.play("orex_sfx_sparkle.ogg")
             $ hints.hint3 = True
+            $ hints.seen_hint = False
         menu:
             delilah " " (callback = functools.partial(inctime,g2=True))
             "{color=#f00}I'll be outside.{/color}":
@@ -600,6 +603,7 @@ label cody_in_room:
         # play animation to indicate new hint
         $ renpy.play("orex_sfx_sparkle.ogg")
         $ hints.hint5 = True
+        $ hints.seen_hint = False
     if run == 3 and not solves.loop3_2:
         delilah_thoughts_run3 glitch "The shredded petals of the Selene lilly are slid beneath the door. The light slowly bleeds away from them before they become as brittle as paper in my hands." (callback = functools.partial(inctime,checkskip=True))
     return

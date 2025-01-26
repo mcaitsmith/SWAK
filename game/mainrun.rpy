@@ -32,11 +32,13 @@ label mainrun:
     $ renpy.pause()
 
     hide screen eclipse onlayer background_overlay
+    hide screen endscreen
+    show screen endscreenq
     with dissolve
 
     $ renpy.pause()
 
     stop music fadeout 1.0
-    hide screen endscreen with dissolve
+    hide screen endscreenq with dissolve
 
     return

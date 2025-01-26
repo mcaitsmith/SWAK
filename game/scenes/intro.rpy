@@ -98,6 +98,8 @@ label intro:
         delilah neutral " " (callback = functools.partial(inctime))
         "Wait, who is that?":
             delilah "Wait, who is that?"
+            show julian shadow onlayer characters at center:
+                zoom 0.7 # in distance
             delilah_thoughts "Along the shoreline is what looks like a person standing there, but it's hard to make out."
             menu:
                 delilah " " (callback = functools.partial(inctime,checkskip=True))
@@ -117,12 +119,12 @@ label intro:
                     delilah_thoughts_run4 "Look over at Cody"
                     jump start_loop4
 
-            hide julian fade onlayer characters with Dissolve(3.0)
+            hide julian onlayer characters with Dissolve(3.0)
             pause 2.0
 
             delilah "Whatever. Probably one of the landscapers."
         "Just open the damn door.":
-            hide julian fade onlayer characters
+            hide julian onlayer characters
             with { "characters" : Dissolve(3.0) }
 
             delilah_thoughts "Just open the damn door."
