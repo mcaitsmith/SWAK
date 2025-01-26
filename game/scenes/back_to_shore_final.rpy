@@ -51,6 +51,13 @@ label back_to_shore_final:
 
     call incphase from _call_incphase_1 # should end up at totality for final choice
 
+    if not hints.hint7:
+        # play animation to indicate new hint
+        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ hintlist.list.append(hint_7)
+        $ hints.hint7 = True
+        $ hints.seen_hint = False
+
     menu:
         delilah " " (callback = functools.partial(inctime))
         "{color=#0ff}Give Julian the flowers{/color}" if solves.loop2 and solves.loop3_1 and solves.loop3_2 and solves.loop3_3 and solves.loop4:
@@ -235,6 +242,7 @@ label back_to_shore_final:
             if renpy.is_skipping() and not solves.loop4:
                 $ solves.loop4 = True
                 $ hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
+                $ hints.seen_hint = False
             if solves.loop4:
                 if not hints.hint7:
                     # play animation to indicate new hint
