@@ -34,9 +34,9 @@ label outside:
         "Hey, I can see you!" if run == 1:
             delilah "Hey, I can see you!"
         "This is private property, asshole!" if run == 1:
-            delilah "This is private property, asshole!"
+            delilah angry "This is private property, asshole!"
         "Hey! Do you need help?!" if run == 2:
-            delilah "Hey! Do you need help?!"
+            delilah worried "Hey! Do you need help?!"
         "Silently approach":
             delilah_thoughts "Silently approach"
 
@@ -44,8 +44,8 @@ label outside:
         zoom 0.7
     pause 1.0
 
-    delilah_thoughts "The figure stumbles for a moment and then collapses on the rocks."
-    delilah "Hey!"
+    delilah_thoughts neutral "The figure stumbles for a moment and then collapses on the rocks."
+    delilah worried "Hey!"
     # replace line below with running sfx + moving/zoom bg
     delilah_thoughts "I run down the hill towards the lakeshore."
     delilah "Hey, are you okay?!"
@@ -77,7 +77,7 @@ label outside:
 
     if not flowers.flower1:
 
-        delilah_thoughts "He holds out the flower."
+        delilah_thoughts neutral "He holds out the flower."
     if not flowers.flower1:
 
         show julian blur onlayer characters with dissolve
@@ -97,7 +97,7 @@ label outside:
     if flowers.flower1 and not config.rollback_enabled:
         hide julian glitch onlayer characters with Dissolve(3.0)
     if flowers.flower1 and not config.rollback_enabled:
-        delilah "Oh my God! Oh my God!"
+        delilah worried "Oh my God! Oh my God!"
     if flowers.flower1 and not config.rollback_enabled:
         delilah_thoughts "I look around at the empty stillness of the night." # replace with animated sprite
     if flowers.flower1 and not config.rollback_enabled:
@@ -105,7 +105,7 @@ label outside:
     if flowers.flower1 and not config.rollback_enabled:
         pause 1.0
     if flowers.flower1 and not config.rollback_enabled:
-        delilah_thoughts "Holding the flower, I feel something in me change."
+        delilah_thoughts neutral "Holding the flower, I feel something in me change."
     if flowers.flower1 and not config.rollback_enabled:
         delilah_thoughts "At the center of my mind is a flower, its petals closed tightly like a fist. Then with a glimmer of light, it opens, releasing a cloud of golden aura into the air."
     if flowers.flower1 and not config.rollback_enabled:

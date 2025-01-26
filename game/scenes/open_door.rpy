@@ -58,7 +58,7 @@ label open_door:
         cody_d "Yes, very gracious."
         delilah "Hey, are there still landscapers working in the yard?"
         sandra_d "Landscapers? Not at this hour, no. Why do you ask?"
-        delilah "Could've sworn I saw someone out back. Thought it might have been a landscaper."
+        delilah worried "Could've sworn I saw someone out back. Thought it might have been a landscaper."
         sandra_d "Probably just one of the neighbor kids, I wouldn't worry about it."
         
         hide cody onlayer characters
@@ -422,38 +422,38 @@ label argument:
 
     show bg scene2 with Dissolve(2.0)
     
-    delilah_thoughts "Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate."
+    delilah_thoughts neutral "Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate."
     
     show cody happy onlayer characters at center
     
     delilah_thoughts "He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it."
     # replace this line below with expression change
-    delilah_thoughts "I watch in horror."
+    delilah_thoughts worried "I watch in horror."
     if not (run == 3 and loop3_investigate):
-        delilah "Can't even eat pizza like a normal person?"
+        delilah angry "Can't even eat pizza like a normal person?"
     cody_d "I can't help it if my eccentricities extend to my dining preferences."
     if run == 3 and loop3_investigate:
-        delilah_run3 "I didn't say anything this time."
+        delilah_run3 neutral "I didn't say anything this time."
     else:
         delilah "Eccentricities? Is that what they're calling being a little weirdo now?"
-    delilah_thoughts "Mom sits down at the table with nothing but a salad on her plate."
+    delilah_thoughts neutral "Mom sits down at the table with nothing but a salad on her plate."
     
     show sandra neutral onlayer characters at right
     
     sandra_d "Oh, hush, Del, you used to have particular eating habits too."
     if run == 3 and loop3_investigate:
-        delilah_run3 "I didn't even say anything!"
+        delilah_run3 worried "I didn't even say anything!"
         sandra_run3_d "..Oh...I could've sworn that you had..."
         return
     elif run == 2 and loop2_investigate:
-        delilah_run2 "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway."
+        delilah_run2 angry "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway."
         cody_run2_d "Wastoid. I can't believe we're related."
         delilah_run2 "At the rate Dad's going, I wouldn't be surprised if we weren't related afterall."
         sandra_run2_d "What do you mean by that?"
     else:
-        delilah "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!"
+        delilah laugh "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!"
         cody_d "I'm not exactly shouting from the roof tops about being related to a wastoid either."
-        delilah "Bite me!"
+        delilah angry "Bite me!"
     cody_d "{size=15}Bitch...{/size}"
     # make line above small text to replace line below
     # cody "he says under his breath."
@@ -472,7 +472,7 @@ label argument:
     cody_d "She started it!"
     sandra_d "Cody...things are hard enough as is..."
     # replace line below with animated sprite
-    delilah_thoughts "I cross my arms and raise an eyebrow."
+    delilah_thoughts neutral "I cross my arms and raise an eyebrow."
     cody_d "I'm sorry...that you're a bitch."
     sandra_d "That's it! Upstairs, now!"
     delilah_thoughts "He drops his bare crusts in the trash dramatically then heads for the stairs."
