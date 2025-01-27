@@ -11,7 +11,7 @@ label back_to_lake:
     sandra_run2_d "I mean...he's probably just one of the neighbor kids. Had too much to drink maybe? I'm sure he'll be fine."
     delilah_run2 "But he wasn't...he looked like he wasn't even from around here."
     sandra_run2_d "Could've been one of the landscapers' kids then. Who knows? It hardly seems like any of our business, Del."
-    delilah_run2 "Wow."
+    delilah_run2 angry "Wow."
     sandra_run2_d "What?"
     delilah_run2 "I'm somehow completely unsurprised and still shocked by you."
     # replace below with animation/sfx

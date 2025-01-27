@@ -5,6 +5,7 @@ label get_help:
     call incphase from _call_incphase_2
 
     delilah_run2 "No, no, you need help!"
+    show julian worried onlayer characters
     boy_run2_d "Please...just stay..."
     
     hide julian onlayer characters

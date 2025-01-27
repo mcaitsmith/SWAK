@@ -4,7 +4,7 @@ label start_loop4:
     delilah_thoughts_run4 "Before turning to go look for Julian, I stop to examine Cody."
     show cody happy onlayer characters at center with dissolve
     delilah_thoughts_run4 "I think about how he reacted to the news of our father's infidelity, how he seemed so lost, and how the entire revelation was undone in an instant."
-    delilah_thoughts_run4 "He still has life in his eyes."
+    delilah_thoughts_run4 happy "He still has life in his eyes."
     delilah_thoughts_run4 "Good. Never do that to Cody again."
     # delilah_thoughts_run4 "Good, I think to myself, holding three of the four flowers. Never do that to Cody again."
 

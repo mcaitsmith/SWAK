@@ -9,42 +9,52 @@ label back_to_shore_final:
     time_centered "8 PM"
     pause 1.0
 
-    delilah_thoughts_run4 "By the time I reach the lake shore, Julian is already standing there with an adorable smile on his face."
-    show julian neutral onlayer characters at center:
+    delilah_thoughts_run4 happy "By the time I reach the lake shore, Julian is already standing there with an adorable smile on his face."
+    show julian happy onlayer characters at center:
         zoom 1.0
     pause 1.0
-    julian_run4_d "Back so soon?"
-    delilah_run4 "Got the third flower."
+    julian_run4_d happy "Back so soon?"
+    delilah_run4 neutral "Got the third flower."
+    show julian neutral onlayer characters
     julian_run4_d "Nicely done! Where was it."
-    delilah_run4 "My brother had it. But to get it I had to tell him our parents were getting a divorce. It really messed with his head."
+    delilah_run4 worried "My brother had it. But to get it I had to tell him our parents were getting a divorce. It really messed with his head."
+    show julian worried onlayer characters
     julian_run4_d "Oh, I'm so sorry, is he okay?"
-    delilah_run4 "Yeah, he is now that everything reset but he wasn't when I told him."
+    delilah_run4 worried "Yeah, he is now that everything reset but he wasn't when I told him."
     julian_run4_d "Delilah, I'm so sorry. I would never have asked you to do that if I knew."
-    delilah_run4 "It's fine. Like I said, it's like it never happened now. He doesn't remember it."
+    delilah_run4 happy "It's fine. Like I said, it's like it never happened now. He doesn't remember it."
+    show julian neutral onlayer characters
     julian_run4_d "Yeah, but you do. I'm sorry for that."
     delilah_run4 "You don't have to apologize, Julian. Let's focus on getting you home. Now, where to start with that last flower?"
     julian_run4_d "I'm not sure. It could be anywhere."
     pause 1.0
-    delilah_thoughts_run4 "I notice something glowing in his jacket pocket."
+    delilah_thoughts_run4 neutral "I notice something glowing in his jacket pocket."
     julian_run4_d "What?"
-    delilah_run4 "Is that the last flower?"
+    delilah_run4 worried "Is that the last flower?"
+    show julian worried onlayer characters
     julian_run4_d "No."
+    show julian happy onlayer characters
     julian_run4_d "Yes."
-    delilah_run4 "Why did you lie?"
+    delilah_run4 angry "Why did you lie?"
+    show julian worried onlayer characters
     julian_run4_d "I just...I'm not ready to go yet."
     delilah_run4 "Not ready?! You're dying!"
     julian_run4_d "I know but...I'm worried about you..."
-    delilah_run4 "Oh, Julian."
+    delilah_run4 happy "Oh, Julian."
     julian_run4_d "I know things have been really tough for you right now. I want to be there for you for it. I'm frustrated because I physically can't."
     delilah_run4 "We just met..."
+    show julian neutral onlayer characters
     julian_run4_d "I know but...I still care. You're cooler than anyone I know."
-    delilah_run4 "You live with your grandparents."
-    delilah_thoughts_run4 "I laugh."
+    delilah_run4 laugh "You live with your grandparents."
+    # delilah_thoughts_run4 "I laugh."
     delilah_run4 "You don't know many people."
+    show julian happy onlayer characters
     julian_run4_d "Fair. Even so. I wish we could still see each other."
-    delilah_run4 "Maybe we can."
+    delilah_run4 happy "Maybe we can."
+    show julian neutral onlayer characters
     julian_run4_d "What do you mean?"
     delilah_run4 "Well, I could just...throw these away. We'd forget about them and spend a bit more time together."
+    show julian worried onlayer characters
     julian_run4_d "But then...you'd be stuck here too."
     delilah_run4 "There are worse fates."
     julian_run4_d "Only if you want it."
@@ -119,6 +129,7 @@ label back_to_shore_final:
             #     else:
             #         call screen flower4_pick
 
+            show julian neutral onlayer characters
             delilah_thoughts_run4 "I reach out to take the final flower."
 
             if not flowers.flower4:
@@ -198,6 +209,7 @@ label back_to_shore_final:
             delilah_thoughts_run4 "Toss the flowers in the lake"
             # have a few are you sure choices
             show black behind bg
+            show julian neutral onlayer characters
             delilah_run4 "I could do for a couple more go arounds."
             julian_run4_d "See you around then."
 
@@ -228,11 +240,11 @@ label back_to_shore_final:
                 $ _skipping = False
             else:
                 $ config.rollback_enabled = True
-            hide julian onlayer characters
             # if not renpy.is_skipping():
             if not solves.loop4:
                 show bg scene3 glitch
-            with { "master" : Dissolve(3.0) }
+            hide julian onlayer characters
+            with { "characters" : Dissolve(3.0) }
             # if not renpy.is_skipping():
             if not solves.loop4:
                 delilah_thoughts_run4 "As I release the flowers into the water, they're pulled under by the ripples of the water and slowly disappear."

@@ -260,9 +260,18 @@ screen quick_menu():
             textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
+            if not config.rollback_enabled:
+                textbutton _("Save")
+            else:
+                textbutton _("Save") action ShowMenu('save')
+            if not config.rollback_enabled:
+                textbutton _("Q.Save")
+            else:
+                textbutton _("Q.Save") action QuickSave()
+            if not config.rollback_enabled:
+                textbutton _("Q.Load")
+            else:
+                textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
             if (flowers.flower1 and run == 1 and config.rollback_enabled) or hints.hint1:
                 if not hints.seen_hint:
@@ -317,9 +326,15 @@ screen navigation():
 
             textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            if not config.rollback_enabled:
+                textbutton _("Save")
+            else:
+                textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        if not config.rollback_enabled:
+            textbutton _("Load")
+        else:
+            textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
@@ -329,7 +344,10 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            if not config.rollback_enabled:
+                textbutton _("Main Menu")
+            else:
+                textbutton _("Main Menu") action MainMenu()
 
         textbutton _("About") action ShowMenu("about")
 

@@ -163,8 +163,13 @@ image julian glitch:
     "images/chars/julianglitch_2.png"
     0.1
     repeat
-image julian puzzle:
+image julian puzzle_happy:
+    Glitch("images/chars/julian happy.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image julian puzzle_neutral:
     Glitch("images/chars/julian neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image julian puzzle_pain:
+    Glitch("images/chars/julian pain.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+
 
 # define scene bgs (placeholder)
 # image bg scene1 = "#4680bd"

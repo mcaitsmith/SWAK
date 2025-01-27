@@ -71,11 +71,11 @@ label dinner_convo:
     if run == 3 and loop3_investigate:
         call argument from _call_argument_2
 
-        delilah_thoughts_run3 "The three of us sit in silence for a moment."
+        delilah_thoughts_run3 neutral "The three of us sit in silence for a moment."
         if not flowers.flower3:
             cody_run3_d "I found a weird flower in the yard!"
         if not flowers.flower3:
-            delilah_thoughts_run3 "I perk up."
+            delilah_thoughts_run3 worried "I perk up."
         if not flowers.flower3:
             sandra_run3_d "Oooh, very cool. Is it a rose?"
         if not flowers.flower3:
@@ -93,10 +93,10 @@ label dinner_convo:
                 delilah " " (callback = functools.partial(inctime))
                 "{color=#0f0}I saw some outside.{/color}" if not flowers.flower3:
                     if not flowers.flower3:
-                        delilah_run3 "I saw some outside."
+                        delilah_run3 neutral "I saw some outside."
                 "{color=#0f0}I heard they were local to the area.{/color}" if not flowers.flower3:
                     if not flowers.flower3:
-                        delilah_run3 "I heard they were local to the area."
+                        delilah_run3 neutral "I heard they were local to the area."
         if not flowers.flower3:
             cody_run3_d "Well, it's mine now. Think I'll make it into a bookmark."
         if not flowers.flower3:
@@ -119,42 +119,42 @@ label dinner_convo:
                 hide cody onlayer characters with dissolve
                 call smoke_break from _call_smoke_break
             "{color=#0f0}Stay with Cody{/color}":
-                delilah_thoughts_run3 "Stay with Cody"
+                delilah_thoughts_run3 neutral "Stay with Cody"
         if not flowers.flower3:
-            delilah_thoughts_run3 "I lean toward Cody."
+            delilah_thoughts_run3 neutral "I lean toward Cody."
         if not flowers.flower3:
-            delilah_run3 "You want to show me that flower you found?"
+            delilah_run3 laugh "You want to show me that flower you found?"
         if not flowers.flower3:
             cody_run3_d "Why? So you can take it?"
         # if not flowers.flower3:
         menu:
             delilah " " (callback = functools.partial(inctime))
             "{color=#0f0}It's really important that you give it to me.{/color}" if not flowers.flower3:
-                delilah_run3 "It's really important that you give it to me."
+                delilah_run3 worried "It's really important that you give it to me."
                 cody_run3_d "Why?"
-                delilah_run3 "It just is."
-                cody_run3_d "That's not an explanation."
+                delilah_run3 angry "It just is."
+                cody_run3_d neutral "That's not an explanation."
                 menu:
                     delilah " " (callback = functools.partial(inctime))
                     "{color=#0f0}Explain the whole situation{/color}":
-                        delilah_thoughts_run3 "Explain the whole situation"
+                        delilah_thoughts_run3 worried "Explain the whole situation"
                         delilah_thoughts_run3 "I go into great detail, explaining everything I've experienced up to this moment. No details spared."
                         call chase_cody from _call_chase_cody
                     "{color=#0f0}Tell him just enough{/color}":
                         delilah_thoughts_run3 "Tell him just enough"
                         call chase_cody from _call_chase_cody_1
                     "{color=#0f0}You just have to believe me!{/color}":
-                        delilah_run3 "You just have to believe me!"
+                        delilah_run3 worried "You just have to believe me!"
                         cody_run3_d "Why?"
                         delilah_run3 "You just do."
                         cody_run3_d "Why?"
-                        delilah_run3 "Because."
+                        delilah_run3 neutral "Because."
                         cody_run3_d "Because why?"
                         delilah_run3 "Because seriously bad stuff will happen if you don't."
                         cody_run3_d "Like what?"
                         delilah_run3 "I don't have time to tell you."
                         cody_run3_d "Why?"
-                        delilah_run3 "Quit being a brat and just give me the flower!"
+                        delilah_run3 angry "Quit being a brat and just give me the flower!"
                         delilah_thoughts_run3 "He slowly steps back."
                         cody_run3_d "Okay, let me go get it for you..."
                         delilah_thoughts_run3 "Before I can say anything more, he turns and runs towards the stairs."
@@ -164,14 +164,14 @@ label dinner_convo:
                 cody_run3_d "Testy, testy."
                 delilah_thoughts_run3 "He looks at me for a moment."
                 cody_run3_d "Okay. You can have it. Just follow me upstairs."
-                delilah_thoughts_run3 "We start our way up the stairs but before I can say anything, he turns and makes a break for it."
+                delilah_thoughts_run3 neutral "We start our way up the stairs but before I can say anything, he turns and makes a break for it."
                 call cody_in_room from _call_cody_in_room_1
             "{color=#0f0}I'll give you $20 to give me that flower.{/color}" if not flowers.flower3:
                 delilah_run3 "I'll give you $20 to give me that flower."
                 cody_run3_d "You'll give me $20?"
                 delilah_run3 "That's right."
                 cody_run3_d "You don't even have $20."
-                delilah_run3 "I'll give you $20 once I get my next allowance."
+                delilah_run3 neutral "I'll give you $20 once I get my next allowance."
                 delilah_thoughts_run3 "He thinks about it for a moment."
                 cody_run3_d "$100."
                 menu:
@@ -191,20 +191,20 @@ label dinner_convo:
                 menu:
                     delilah " " (callback = functools.partial(inctime))
                     "{color=#0f0}Absolutely not!{/color}":
-                        delilah_run3 "Absolutely not!"
+                        delilah_run3 angry "Absolutely not!"
                 cody_run3_d "Then it looks like you're shit out of luck..."
                 menu:
                     delilah " " (callback = functools.partial(inctime))
                     "{color=#0f0}Fine.{/color}":
-                        delilah_run3 "Fine."
+                        delilah_run3 neutral "Fine."
                 cody_run3_d "Pleasure doing business with you. Just follow me upstairs."
                 delilah_thoughts_run3 "I follow him up the stairs but before we get to the door to his bedroom, he leaps inside and slams the door."
                 hide cody onlayer characters
                 show bg black
                 with dissolve
-                delilah_run3 "Hey! We had a deal, dick!"
+                delilah_run3 angry "Hey! We had a deal, dick!"
                 cody_run3_d "We did, but you know, I thought about how much money you offered and, truthfully, the satisfaction I'll get from destroying something you want is worth more than any amount of money!"
-                delilah_run3 "No! Stop!" (callback = functools.partial(inctime,g5=True))
+                delilah_run3 worried "No! Stop!" (callback = functools.partial(inctime,g5=True))
                 # glitch 3
                 if run == 3 and not solves.loop3_2:
                     delilah_thoughts_run3 glitch "The shredded petals of the Selene lilly are slid beneath the door. The light slowly bleeds away from them before they become as brittle as paper in my hands." (callback = functools.partial(inctime,checkskip=True))
@@ -277,7 +277,7 @@ label dinner_convo:
                         $ hints.hint5 = True
                         $ hints.seen_hint = False
                 if run == 3 and not solves.loop3_3:
-                    delilah_thoughts_run3 "I look into his eyes to find what little life is in there slowly dimish into nothing. He didn't just lose his innocence, I ripped it out of him." (callback = functools.partial(inctime,checkskip=True))
+                    delilah_thoughts_run3 worried "I look into his eyes to find what little life is in there slowly dimish into nothing. He didn't just lose his innocence, I ripped it out of him." (callback = functools.partial(inctime,checkskip=True))
                 else:
                     show cody neutral onlayer characters
                 if flowers.flower3 and run == 3 and not solves.loop3_3:
@@ -289,7 +289,7 @@ label dinner_convo:
                 #             if not flowers.flower3:
                 #                 delilah_thoughts_run3 "Get the flower"
                 if not flowers.flower3:
-                    delilah_run3 "Uh, Cody, the flower?"
+                    delilah_run3 worried "Uh, Cody, the flower?"
                 if not flowers.flower3:
                     cody_run3_d "Oh, that. Yeah, it's in my room. Feel free to take it. I...don't think I'll need it anymore."
 
@@ -302,7 +302,7 @@ label dinner_convo:
                 if not flowers.flower3:
                     show bg black with dissolve
                 if not flowers.flower3:
-                    delilah_thoughts_run3 "I don't stop him, instead going up the stairs to his bedroom to find the glowing flower sitting on his bed."
+                    delilah_thoughts_run3 neutral "I don't stop him, instead going up the stairs to his bedroom to find the glowing flower sitting on his bed."
 
                 # if not flowers.flower3 and not solves.loop3:
                 #     show flower_glitch_image
@@ -507,7 +507,7 @@ label argument:
         if run == 2 and not solves.loop2:
             sandra_run2_d "What is this about?" (callback = functools.partial(inctime,checkskip=True))
         if run == 2 and not solves.loop2:
-            delilah_thoughts_run2 "I laugh." (callback = functools.partial(inctime,checkskip=True))
+            delilah_thoughts_run2 laugh "I laugh." (callback = functools.partial(inctime,checkskip=True))
         if run == 2 and not solves.loop2:
             delilah_run2 "You know what really pisses me off about this whole situation? You won't even admit to what we already know." (callback = functools.partial(inctime,checkskip=True))
     else:
@@ -574,7 +574,7 @@ label chase_cody:
     cody_run3_d "Wow. I can't believe it."
     delilah_run3 "Well, it's true. All of it."
     cody_run3_d "I mean, I can't believe how completely nuts you are. I knew you were a mental case, sure, but imaginary boys? Magic flowers? Someone's getting sent to the funny farm..."
-    delilah_run3 "I'm not crazy! You have to give me that flower!"
+    delilah_run3 worried "I'm not crazy! You have to give me that flower!"
     delilah_thoughts_run3 "Before I can say anything more, he turns and runs towards the stairs, shouting."
     cody_run3_d "Help! Help! My sister's gone crazy!"
     call cody_in_room from _call_cody_in_room_2
@@ -582,13 +582,13 @@ label chase_cody:
 
 label cody_in_room:
     hide cody onlayer characters with dissolve
-    delilah_run3 "Come back here you little turd!"
+    delilah_run3 angry "Come back here you little turd!"
     delilah_thoughts_run3 "I chase after him."
     show bg black with dissolve
     delilah_thoughts_run3 "He runs into his bedroom and slams the door behind him."
     delilah_run3 "Open up before I kill you!"
     cody_run3_d "I'm gonna rip up the flower!"
-    delilah_run3 "You don't know what you're doing!"
+    delilah_run3 worried "You don't know what you're doing!"
     cody_run3_d "You can't stop me!"
     menu:
         delilah " " (callback = functools.partial(inctime))

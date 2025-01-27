@@ -30,11 +30,11 @@ label intro:
     sandra "So, have you considered what colleges you want to tour next summer?"
     # delilah_thoughts "She waited till the end of the ride to ask her daughter this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
     delilah_thoughts neutral "Mom waited till the end of the ride to ask me this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
-    delilah angry "That's not for another nine months."
-    sandra_d "Sooner than you think, Del. Always good to get a head start. Plus, I have my friend who teaches at State. Could get you a tour any time you like!"
+    delilah laugh "That's not for another nine months."
+    sandra_d neutral "Sooner than you think, Del. Always good to get a head start. Plus, I have my friend who teaches at State. Could get you a tour any time you like!"
     show cody happy onlayer characters at center_left
     cody_d "Ugh, I can't wait for you to be gone."
-    delilah "Shut up, insect."
+    delilah angry "Shut up, insect."
     delilah_thoughts "I punch my little brother in the arm." # add punch sfx to replace + shake cody sprite
     cody_d "Ow!"
     sandra_d neutral "Oh hush, you'll be missing her when she's gone. Just you wait."
@@ -110,13 +110,13 @@ label intro:
                 "Quietly move closer":
                     delilah_thoughts "Quietly move closer"
                 "{color=#f00}Wait...I'm getting a sense of Deja Vu...{/color}" if run == 2:
-                    delilah_thoughts_run2 "Wait...I'm getting a sense of Deja Vu..."
+                    delilah_thoughts_run2 worried "Wait...I'm getting a sense of Deja Vu..."
                     jump start_loop2
                 "{color=#0f0}Ow, that really really hurt{/color}" if run == 3:
-                    delilah_thoughts_run3 "Ow, that really really hurt!"
+                    delilah_thoughts_run3 worried "Ow, that really really hurt!"
                     jump start_loop3
                 "{color=#0ff}Look over at Cody{/color}" if run == 4:
-                    delilah_thoughts_run4 "Look over at Cody"
+                    delilah_thoughts_run4 worried "Look over at Cody"
                     jump start_loop4
 
             hide julian onlayer characters with Dissolve(3.0)

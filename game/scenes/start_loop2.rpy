@@ -1,7 +1,7 @@
 ﻿# The script of the game goes in this file.
 
 label start_loop2:
-    delilah_thoughts_run2 "There's a glowing flower in my hand."
+    delilah_thoughts_run2 worried "There's a glowing flower in my hand."
 
     call incphase from _call_incphase_12
     
@@ -17,5 +17,5 @@ label start_loop2:
         "{color=#f00}Open the backdoor for Mom and Cody{/color}":
             hide julian onlayer characters
             with { "characters" : Dissolve(3.0) }
-            delilah_thoughts_run2 "Open the backdoor for Mom and Cody"
+            delilah_thoughts_run2 neutral "Open the backdoor for Mom and Cody"
             jump open_door
