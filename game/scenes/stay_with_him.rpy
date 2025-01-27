@@ -5,7 +5,7 @@ label stay_with_him:
     delilah_run2 neutral "Okay. I'll stay with you."
 
     delilah_thoughts_run2 "I sit down on a patch of grass just above his head."
-    pause 1.0
+    # pause 1.0
 
     boy_run2_d "Thank you."
 

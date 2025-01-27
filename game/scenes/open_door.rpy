@@ -526,8 +526,8 @@ label argument:
     if run == 2 and loop2_investigate:
         if run == 2 and not solves.loop2:
             delilah_run2 "I dare you to be honest with me. Just show a single shred of honesty and respect to your children and just tell us: why isn't Dad here?" (callback = functools.partial(inctime,checkskip=True))
-        if run == 2 and not solves.loop2:
-            pause 1.0
+        # if run == 2 and not solves.loop2:
+        #     pause 1.0
         if run == 2 and not solves.loop2:
             delilah_thoughts_run2 "Mom's throat trembles, like she's choking on the words." (callback = functools.partial(inctime,checkskip=True))
         if run == 2 and not solves.loop2:

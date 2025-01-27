@@ -27,7 +27,7 @@ label back_to_shore_final:
     julian_run4_d "Yeah, but you do. I'm sorry for that."
     delilah_run4 "You don't have to apologize, Julian. Let's focus on getting you home. Now, where to start with that last flower?"
     julian_run4_d "I'm not sure. It could be anywhere."
-    pause 1.0
+    # pause 1.0
     delilah_thoughts_run4 neutral "I notice something glowing in his jacket pocket."
     julian_run4_d "What?"
     delilah_run4 worried "Is that the last flower?"

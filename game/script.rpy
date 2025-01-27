@@ -121,8 +121,8 @@ define cody_run2 = Character("Cody",image="cody",color="#aa2b3a",what_prefix='{c
 define cody_run2_d = Character("Cody",image="delilah",color="#aa2b3a",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define cody_run3 = Character("Cody",image="cody",color="#aa2b3a",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
 define cody_run3_d = Character("Cody",image="delilah",color="#aa2b3a",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
-define sandra = Character("Sandra",image="sandra",color="#F0D193",callback=inctime)
-define sandra_d = Character("Sandra",image="delilah",color="#F0D193",callback=inctime)
+define sandra = Character("Sandra",image="sandra",color="#F0D193")
+define sandra_d = Character("Sandra",image="delilah",color="#F0D193")
 define sandra_run2 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define sandra_run2_d = Character("Sandra",image="delilah",color="#F0D193",what_prefix='{color=#f00}', what_suffix='{/color}',callback=inctime)
 define sandra_run3 = Character("Sandra",image="sandra",color="#F0D193",what_prefix='{color=#0f0}', what_suffix='{/color}',callback=inctime)
@@ -169,7 +169,6 @@ image julian puzzle_neutral:
     Glitch("images/chars/julian neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image julian puzzle_pain:
     Glitch("images/chars/julian pain.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-
 
 # define scene bgs (placeholder)
 # image bg scene1 = "#4680bd"

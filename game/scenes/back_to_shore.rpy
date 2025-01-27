@@ -93,7 +93,7 @@ label back_to_shore:
                     show julian neutral onlayer characters
                     delilah_thoughts_run3 "He snorts nervously."
                     julian_run3_d "Just some kid who works at a flowershop."
-                    pause 1.0
+                    # pause 1.0
                     delilah_thoughts_run3 happy "We stare into each others' eyes, holding onto the moment for as long as possible."
 
                     call incphase from _call_incphase_16
