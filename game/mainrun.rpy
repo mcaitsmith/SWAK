@@ -49,4 +49,6 @@ label mainrun:
         stop music fadeout 1.0
         hide screen endscreenq with dissolve
 
+    $ config.rollback_enabled = True
+
     return
