@@ -176,6 +176,13 @@ label init_screens:
     screen endscreenq:
         text "{size=100}END?{/size}" xalign 0.5 yalign 0.5
 
+    transform endflip:
+        xalign 0.5 
+        yalign 0.5 
+        xzoom -1.0
+    screen endscreenqr:
+        text "{size=100}END?{/size}" at endflip
+
     screen hintstory:
 
         tag menu

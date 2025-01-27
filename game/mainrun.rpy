@@ -10,14 +10,18 @@ label mainrun:
     call intro from _call_intro
 
     if restart_vars:
+        $ renpy.choice_for_skipping() # prevent skipping
+        $ _skipping = False
         hide screen eclipse onlayer background_overlay with dissolve
+        $ renpy.pause()
+        hide screen endscreenqr with dissolve
         $ _skipping = True
         jump runstart
 
     if true_ending:
         "CREDITS HERE"
-        hide screen eclipse onlayer background_overlay
-        stop music fadeout 1.0
+        stop music fadeout 2.0
+        hide screen eclipse onlayer background_overlay with dissolve
         pause 1.0
 
     else:

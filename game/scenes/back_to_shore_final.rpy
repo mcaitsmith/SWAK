@@ -22,7 +22,7 @@ label back_to_shore_final:
     julian_run4_d "Oh, I'm so sorry, is he okay?"
     delilah_run4 worried "Yeah, he is now that everything reset but he wasn't when I told him."
     julian_run4_d "Delilah, I'm so sorry. I would never have asked you to do that if I knew."
-    delilah_run4 happy "It's fine. Like I said, it's like it never happened now. He doesn't remember it."
+    delilah_run4 happy "It's fine. Like I said, it's like it never happened now. It was my choice, plus he doesn't even remember it."
     show julian neutral onlayer characters
     julian_run4_d "Yeah, but you do. I'm sorry for that."
     delilah_run4 "You don't have to apologize, Julian. Let's focus on getting you home. Now, where to start with that last flower?"
@@ -54,10 +54,12 @@ label back_to_shore_final:
     show julian neutral onlayer characters
     julian_run4_d "What do you mean?"
     delilah_run4 "Well, I could just...throw these away. We'd forget about them and spend a bit more time together."
+    julian_run4_d "But what would even happen? Would we forget about each other?"
+    delilah_run4 "I'll find you again."
     show julian worried onlayer characters
-    julian_run4_d "But then...you'd be stuck here too."
+    julian_run4_d "You'll be stuck here, you'll be trapped here in this moment with me."
     delilah_run4 "There are worse fates."
-    julian_run4_d "Only if you want it."
+    julian_run4_d "No, Del, think really carefully about this. Are you sure it's what you want?"
 
     call incphase from _call_incphase_1 # should end up at totality for final choice
 
@@ -153,6 +155,7 @@ label back_to_shore_final:
             play music endingmusic
             
             delilah_run4 "Aside from everything that sucked...I really liked meeting you."
+            julian_run4_d "I don't think I'll ever be able to forget you for as long as I live."
             delilah_thoughts_run4 "I lean closer to him."
             pause 1.0
             # show kiss CG
@@ -179,9 +182,9 @@ label back_to_shore_final:
             hide kiss_cg onlayer cg with Dissolve(3.0)
 
             delilah_thoughts_run4 "Julian stands there completely frozen, holding the flowers."
-            julian_run4 "That was...cool..."
+            julian_run4_d "That was...cool..."
             delilah_thoughts_run4 "I laugh."
-            delilah_run4 "Yeah. Goodbye, Julian."
+            delilah_run4 "Yeah. I don't think I'll be able to forget you either, Julian."
             hide julian onlayer characters
             hide flower1 onlayer characters
             hide flower2 onlayer characters
@@ -189,16 +192,19 @@ label back_to_shore_final:
             hide flower4 onlayer characters
             with { "characters" : Dissolve(3.0) }
             pause 3.0
-            delilah_thoughts_run4 "He fades into thin air and finally disappears completely."
-            pause 2.0
-            delilah_thoughts_run4 "I'm left standing here. Just me and the sound of the waves splashing along the lakeshore."
-            pause 3.0
-            sandra_run4 "Delilah!"
+            delilah_thoughts_run4 "He fades into thin air, his smile being the last thing to disappear completely."
+            # pause 2.0
+            delilah_thoughts_run4 "I'm left standing here. Just me and the sound of the waves splashing along the lakeshore. It's calm."
+            delilah_thoughts_run4 "I turn to look at the house, thinking about all of the things that I'll have to face when I get there. My family is still holding together by a thread."
+            # pause 3.0
+            sandra_run4_d "Delilah!"
             delilah_thoughts_run4 "I hear Mom call from the front yard."
-            pause 1.0
-            show bg black
-            with { "master" : Dissolve(3.0) }
-            delilah_thoughts_run4 "I turn away from the lake, ready to be with my family."
+            # pause 1.0
+            # show bg black
+            # with { "master" : Dissolve(3.0) }
+            delilah_thoughts_run4 "It'll be difficult, but I'll be able to handle it. Knowing that Julian is out there somewhere will make it all easier."
+
+            show bg black with Dissolve(3.0)
 
             # jump to credits here
             $ true_ending = True
@@ -211,7 +217,12 @@ label back_to_shore_final:
             show black behind bg
             show julian neutral onlayer characters
             delilah_run4 "I could do for a couple more go arounds."
-            julian_run4_d "See you around then."
+            julian_run4_d "You're sure?"
+            delilah_run4 "Yeah. I'm sure. Besides, who's to say this is the first time we've done this?"
+            show julian happy onlayer characters
+            julian_run4_d "I suppose it's possible. How would we remember if we had."
+            show julian neutral onlayer characters
+            delilah_run4 "I'd choose to stay with you every time."
 
             # delilah_thoughts_run4 "I lean in closer to him."
             # (Show image of kiss)
@@ -264,8 +275,7 @@ label back_to_shore_final:
                     $ hints.seen_hint = False
             if solves.loop4:
                 $ config.rollback_enabled = True
-            # if not renpy.is_skipping():
-            hide bg scene3 glitch with dissolve
+
             if not solves.loop4:
                 if not hints.hint6:
                     # play animation to indicate new hint
@@ -274,7 +284,16 @@ label back_to_shore_final:
                     $ hints.hint6 = True
                     $ hints.seen_hint = False
             if not solves.loop4:
-                $ restart_vars = True # return to beginning loop with vars re-initialized (except for glitches)
+                delilah_thoughts_run4 "Am I refusing to let go of Julian? Or am I running from things I need to face?"
+            show bg scene3
+            $ renpy.choice_for_skipping() # prevent skipping
+            $ _skipping = False
+            show screen endscreenqr with dissolve
+            $ renpy.pause()
+            # if not renpy.is_skipping():
+            hide bg scene3 with dissolve
+            # if not solves.loop4:
+            $ restart_vars = True # return to beginning loop with vars re-initialized (except for glitches)
 
     return
 

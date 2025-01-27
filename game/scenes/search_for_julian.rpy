@@ -34,6 +34,8 @@ label search_for_julian:
     boy_run2_d "None. I haven't lost any. But I AM dying, unfortunately."
     delilah_run2 "What? How?"
     boy_run2_d "It already happened once before. You were there, and it's about to happen again."
+    delilah_run2 "How could you know that you're dying?"
+    boy_run2_d "Death has a very unmistakable taste to it. Very metallic."
     delilah_run2 "What can I do to help? Should I go get an ambulance?"
     show julian neutral onlayer characters
     boy_run2_d "Something tells me that won't help...honestly what I'd really appreciate is if you stuck around and kept me company. Y'know, just stay till the last light goes out."
