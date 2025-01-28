@@ -49,32 +49,32 @@ label init_screens:
 
         if phase == 0 or phase > 5:
             if in_house:
-                add 'images/props/moon.png' zoom 0.8 xalign 1.0 ypos 0.17
+                add 'images/props/moon.png' zoom 0.8 xalign 1.0 ypos 0.19
             else:
                 add 'images/props/moon.png' zoom 0.8 xalign 0.68 ypos 0.05
         elif phase == 1:
             if in_house:
-                add 'moon_phase1' zoom 0.8 xalign 1.0 ypos 0.17
+                add 'moon_phase1' zoom 0.8 xalign 1.0 ypos 0.19
             else:
                 add 'moon_phase1' zoom 0.8 xalign 0.68 ypos 0.05
         elif phase == 2:
             if in_house:
-                add 'moon_phase2' zoom 0.8 xalign 1.0 ypos 0.17
+                add 'moon_phase2' zoom 0.8 xalign 1.0 ypos 0.19
             else:
                 add 'moon_phase2' zoom 0.8 xalign 0.68 ypos 0.05
         elif phase == 3:
             if in_house:
-                add 'moon_phase3' zoom 0.8 xalign 1.0 ypos 0.17
+                add 'moon_phase3' zoom 0.8 xalign 1.0 ypos 0.19
             else:
                 add 'moon_phase3' zoom 0.8 xalign 0.68 ypos 0.05
         elif phase == 4:
             if in_house:
-                add 'moon_phase4' zoom 0.8 xalign 1.0 ypos 0.17
+                add 'moon_phase4' zoom 0.8 xalign 1.0 ypos 0.19
             else:
                 add 'moon_phase4' zoom 0.8 xalign 0.68 ypos 0.05
         elif phase == 5:
             if in_house:
-                add 'moon_phase5' zoom 0.8 xalign 1.0 ypos 0.17
+                add 'moon_phase5' zoom 0.8 xalign 1.0 ypos 0.19
             else:
                 add 'moon_phase5' zoom 0.8 xalign 0.68 ypos 0.05
 
