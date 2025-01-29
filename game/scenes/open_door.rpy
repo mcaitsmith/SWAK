@@ -463,6 +463,7 @@ label argument:
         delilah "You little!"
         # replace line below with animated sprites
         delilah_thoughts "I stand up and raise my fist like I'm going to punch him from across the table."
+    show sandra angry onlayer characters
     sandra_d "Hey! Hey! Relax!"
     if run == 2 and loop2_investigate:
         delilah_run2 "Oh, now you want to intervene?"
@@ -492,6 +493,7 @@ label argument:
             delilah_run2 "He's right you know."
         "{color=#f00}Setting a great example for your kids, Sandra.{/color}" if run == 2 and loop2_investigate:
             delilah_run2 "Setting a great example for your kids, Sandra."
+    show sandra neutral onlayer characters
     sandra_d "Well, Del, you don't exactly make it easy by antagonizing him."
     if run == 2 and loop2_investigate:
         # start loop 2 glitch
