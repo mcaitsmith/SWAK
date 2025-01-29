@@ -12,6 +12,8 @@ init python:
     loop2_investigate = False
     loop3_investigate = False
     smoke_break = False
+
+    choose_timeline = False
     
     restart_vars = False
 
@@ -263,6 +265,42 @@ define endingmusic = "audio/music/Ending MSTRLOOP.ogg"
 
 # check run number at beginning to progress runs
 label checkrun:
+    if choose_timeline:
+        if run == 1:
+            play music loop1music
+            time_centered "7 PM"
+        elif run == 2:
+            play music loop2music
+            time_centered "7 PM"
+        elif run == 3:
+            play music loop3music
+            time_centered "7 PM"
+        elif run == 4:
+            play music loop4music
+            time_centered "7 PM"
+
+        menu:
+            delilah_thoughts "Hmm...I can choose a timeline here."
+            "Run 1":
+                $ flowers.flower1 = False
+                $ flowers.flower2 = False
+                $ flowers.flower3 = False
+                $ run = 1
+            "Run 2":
+                $ flowers.flower1 = True
+                $ flowers.flower2 = False
+                $ flowers.flower3 = False
+                $ run = 2
+            "Run 3":
+                $ flowers.flower1 = True
+                $ flowers.flower2 = True
+                $ flowers.flower3 = False
+                $ run = 3
+            "Run 4":
+                $ flowers.flower1 = True
+                $ flowers.flower2 = True
+                $ flowers.flower3 = True
+                $ run = 4
     if flowers.flower3:
         $ run = 4
         show flower_run1:
@@ -335,7 +373,6 @@ label start:
     $ loop3_investigate = False
     $ smoke_break = False
 
-
     # temporary disable puzzles
     # $ solves.loop2 = True
     # $ solves.loop3_1 = True
@@ -390,6 +427,12 @@ label reinit_vars:
     $ loop2_investigate = False
     $ loop3_investigate = False
     $ smoke_break = False
+
+    $ flowers.flower3 = False
+    $ flowers.flower2 = False
+    $ flowers.flower1 = False
+
+    $ choose_timeline = True
 
     $ restart_vars = False
 
