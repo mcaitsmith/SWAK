@@ -106,7 +106,7 @@ label back_to_shore:
                     delilah_run3 worried "Julian!"
                     show julian worried onlayer characters
                     delilah_thoughts_run3 "His eyes start to wander around. His arm quickly reaches up and I catch his hand."
-                    julian_run3_d "It's happening again..."
+                    julian_run3_d "It's happening again..." (callback = functools.partial(inctime))
                     delilah_run3 "Oh God, oh shit, oh no. I'm here! I'm here!" (callback = functools.partial(inctime,g3=True))
                     # start glitch
                     if run == 3 and not solves.loop3_1:
@@ -119,7 +119,7 @@ label back_to_shore:
                         # play animation to indicate new hint
                         $ hints.hint2 = True
                         $ hints.seen_hint = False
-                    if hints.hint2 and not hints.hint5 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
+                    if hints.hint2 and not hints.hint5 and not solves.loop3_1 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
                         $ hintlist.list.append(hint_5)
                         $ renpy.play("orex_sfx_sparkle.ogg")
                         # play animation to indicate new hint

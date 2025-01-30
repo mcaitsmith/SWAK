@@ -38,5 +38,10 @@ label init_loop4puzzle:
                 flowers.flower2 = True
                 flowers.flower3 = True
                 config.rollback_enabled = True
+            elif g10 == True and renpy.is_skipping() and hints.hint2 and not hints.hint9:
+                renpy.play("orex_sfx_sparkle.ogg")
+                hintlist.list.append(hint_9)
+                hints.hint9 = True
+                hints.seen_hint = False
 
     return

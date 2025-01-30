@@ -203,7 +203,7 @@ label dinner_convo:
                 show bg black
                 with dissolve
                 delilah_run3 angry "Hey! We had a deal, dick!"
-                cody_run3_d "We did, but you know, I thought about how much money you offered and, truthfully, the satisfaction I'll get from destroying something you want is worth more than any amount of money!"
+                cody_run3_d "We did, but you know, I thought about how much money you offered and, truthfully, the satisfaction I'll get from destroying something you want is worth more than any amount of money!" (callback = functools.partial(inctime))
                 delilah_run3 worried "No! Stop!" (callback = functools.partial(inctime,g5=True))
                 # glitch 3
                 if run == 3 and not solves.loop3_2 and not hints.hint2:
@@ -235,7 +235,7 @@ label dinner_convo:
                 # if not flowers.flower3:
                 delilah_thoughts_run3 "He laughs."
                 # if not flowers.flower3:
-                delilah_run3 "Yeah. It's true. I found a letter in his suitcase from some woman, probably a stripper."
+                delilah_run3 "Yeah. It's true. I found a letter in his suitcase from some woman, probably a stripper." (callback = functools.partial(inctime))
                 # if not flowers.flower3:
                 cody_run3_d "Dad wouldn't do something like that, quit making stuff up!" (callback = functools.partial(inctime,g7=True))
                 # glitch 4
@@ -524,7 +524,7 @@ label argument:
         "{color=#f00}Setting a great example for your kids, Sandra.{/color}" if run == 2 and loop2_investigate:
             delilah_run2 "Setting a great example for your kids, Sandra."
     show sandra neutral onlayer characters
-    sandra_d "Well, Del, you don't exactly make it easy by antagonizing him."
+    sandra_d "Well, Del, you don't exactly make it easy by antagonizing him." (callback = functools.partial(inctime))
     if run == 2 and loop2_investigate:
         # start loop 2 glitch
         delilah_run2 neutral "I'm not doing anything. I'm just like you, Sandra." (callback = functools.partial(inctime,g1=True))
@@ -621,7 +621,7 @@ label cody_in_room:
     delilah_run3 "Open up before I kill you!"
     cody_run3_d "I'm gonna rip up the flower!"
     delilah_run3 worried "You don't know what you're doing!"
-    cody_run3_d "You can't stop me!"
+    cody_run3_d "You can't stop me!" (callback = functools.partial(inctime))
     menu:
         delilah " " (callback = functools.partial(inctime))
         "{color=#0f0}Please, Cody!{/color}":

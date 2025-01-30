@@ -220,7 +220,7 @@ label back_to_shore_final:
             julian_run4_d "You're sure?"
             delilah_run4 "Yeah. I'm sure. Besides, who's to say this is the first time we've done this?"
             show julian happy onlayer characters
-            julian_run4_d "I suppose it's possible. How would we remember if we had."
+            julian_run4_d "I suppose it's possible. How would we remember if we had." (callback = functools.partial(inctime))
             show julian neutral onlayer characters
             delilah_run4 "I'd choose to stay with you every time." (callback = functools.partial(inctime,g9=True))
 
@@ -315,7 +315,7 @@ label back_to_shore_final:
             $ restart_vars = True # return to beginning loop with vars re-initialized (except for glitches)
             $ sealed_glitches = str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]))
             "{b}Sealed glitches [sealed_glitches] of 5{/b}"
-            "Something's preventing you from moving forward.\n\nYou've now unlocked timeline select. Explore different branches and outcomes to find and seal whatever's corrupting the timelines."
+            "Something's preventing you from moving forward.\nThe anomaly that sent Julian to this world is bleeding across timelines.\n\nYou've now unlocked timeline select. Explore different branches and outcomes to find and seal whatever's corrupting the timelines."
             "[hint_7]"
     return
 

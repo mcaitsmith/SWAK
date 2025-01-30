@@ -33,14 +33,14 @@ init python:
 init:
     default playtext = "HOW TO PLAY\nMake choices to control your future.\nRoll back with the Back button to return to the past.\nSkip across time with the Skip button.\nReview your History to remember what happened.\nNot everything follows the rules of time and space."
     default hint_1 = "What has changed in the past? Use the scrollwheel to ROLLBACK past points in time that may have changed. (Chime sound indicates a new hint is available.)\n"
-    default hint_2 = "There's something glitchy in the timeline. Something {i}wrong{/i}. Is there a way to SKIP past it and seal it off from this world?\n"
+    default hint_2 = "There's something glitchy in the timeline. Something {i}wrong{/i}. Is there a way to seal it off from this world?\n"
     default hint_3 = "Once you've seen dialogue for the first time in any playthrough, you can SKIP past it until you reach a fork in the timeline (an action or choice).\n"
     default hint_4 = "If you reach the end of the night, roll back and make different CHOICES to search for a better outcome.\n"
     default hint_5 = "The glitches are spreading across timelines. They seem to show up whenever you make a choice that hurts someone...\n"
     default hint_6 = "There was a glitch at the point when you threw away the flowers. What would happen if you SKIPPED past that point?\n"
     default hint_7 = "When you seal off all 5 glitches, a new choice may appear at a pivotal moment.\n"
     default hint_8 = "The loop has reset but don't despair...the state of the glitches remain. Explore different branches and outcomes to find and seal whatever's corrupting the timelines.\n"
-    #default hint_9 = "You sense a disturbance hidden somewhere in this timeline. Maybe you should go looking for it?\n"
+    default hint_9 = "To seal the glitch properly, you'll have to create a new timeline that prevents it ever existing. (Proceed through dialogue normally, then start skipping at just the right point.)\n"
     default hint_10 = "Getting each flower creates a new timeline when you roll back to the start of the evening. But it also erases that flower from the current one.\n"
 
 init:
