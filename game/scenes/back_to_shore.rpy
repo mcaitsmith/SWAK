@@ -110,7 +110,7 @@ label back_to_shore:
                     delilah_run3 "Oh God, oh shit, oh no. I'm here! I'm here!" (callback = functools.partial(inctime,g3=True))
                     # start glitch
                     if run == 3 and not solves.loop3_1:
-                        show julian puzzle onlayer characters
+                        show julian puzzle_pain onlayer characters
                     else:
                         show julian pain onlayer characters
                     if run == 3 and not solves.loop3_1 and not hints.hint2:
