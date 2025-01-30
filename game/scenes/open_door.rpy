@@ -206,8 +206,26 @@ label dinner_convo:
                 cody_run3_d "We did, but you know, I thought about how much money you offered and, truthfully, the satisfaction I'll get from destroying something you want is worth more than any amount of money!"
                 delilah_run3 worried "No! Stop!" (callback = functools.partial(inctime,g5=True))
                 # glitch 3
+                if run == 3 and not solves.loop3_2 and not hints.hint2:
+                    $ hintlist.list.append(hint_2)
+                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    # play animation to indicate new hint
+                    $ hints.hint2 = True
+                    $ hints.seen_hint = False
+                if run == 3 and not solves.loop3_2 and hints.hint2 and not hints.hint5 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
+                    $ hintlist.list.append(hint_5)
+                    # play animation to indicate new hint
+                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ hints.hint5 = True
+                    $ hints.seen_hint = False
                 if run == 3 and not solves.loop3_2:
                     delilah_thoughts_run3 glitch "The shredded petals of the Selene lilly are slid beneath the door. The light slowly bleeds away from them before they become as brittle as paper in my hands." (callback = functools.partial(inctime,checkskip=True))
+                if run == 3 and not solves.loop3_2 and not hints.hint3:
+                    $ hintlist.list.append(hint_3)
+                    # play animation to indicate new hint
+                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ hints.hint3 = True
+                    $ hints.seen_hint = False
             # "{color=#0f0}You know Dad is having an affair right?{/color}" if smoke_break and not flowers.flower3:
             "{color=#0f0}You know Dad is having an affair right?{/color}" if smoke_break:
                 # if not flowers.flower3:
@@ -270,18 +288,30 @@ label dinner_convo:
                 if flowers.flower3 and run == 3 and not solves.loop3_3:
                     show cody glitch onlayer characters
                 if flowers.flower3 and run == 3 and not solves.loop3_3:
-                    if not hints.hint5:
+                    if not hints.hint5 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
                         $ hintlist.list.append(hint_5)
                         $ renpy.play("orex_sfx_sparkle.ogg")
                         # play animation to indicate new hint
                         $ hints.hint5 = True
                         $ hints.seen_hint = False
+                if flowers.flower3 and run == 3 and not solves.loop3_3 and not hints.hint2:
+                    $ hintlist.list.append(hint_2)
+                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    # play animation to indicate new hint
+                    $ hints.hint2 = True
+                    $ hints.seen_hint = False
                 if run == 3 and not solves.loop3_3:
                     delilah_thoughts_run3 worried "I look into his eyes to find what little life is in there slowly dimish into nothing. He didn't just lose his innocence, I ripped it out of him." (callback = functools.partial(inctime,checkskip=True))
                 else:
                     show cody neutral onlayer characters
                 if flowers.flower3 and run == 3 and not solves.loop3_3:
                     show cody neutral onlayer characters
+                if flowers.flower3 and run == 3 and not solves.loop3_3 and hints.hint2 and not hints.hint3:
+                    $ hintlist.list.append(hint_3)
+                    # play animation to indicate new hint
+                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ hints.hint3 = True
+                    $ hints.seen_hint = False
                 # if not flowers.flower3:
                 #     menu:
                 #         delilah " " (callback = functools.partial(inctime,g8=True))
@@ -598,9 +628,15 @@ label cody_in_room:
             delilah_run3 "Please, Cody!" (callback = functools.partial(inctime,g5=True))
         "{color=#0f0}Don't you dare!{/color}":
             delilah_run3 "Don't you dare!" (callback = functools.partial(inctime,g5=True))
-    pause 1.0
+    # pause 1.0
     # glitch 3
-    if not hints.hint5:
+    if not solves.loop3_2 and not hints.hint2:
+        $ hintlist.list.append(hint_2)
+        $ renpy.play("orex_sfx_sparkle.ogg")
+        # play animation to indicate new hint
+        $ hints.hint2 = True
+        $ hints.seen_hint = False
+    if run == 3 and not solves.loop3_2 and hints.hint2 and not hints.hint5 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
         $ hintlist.list.append(hint_5)
         # play animation to indicate new hint
         $ renpy.play("orex_sfx_sparkle.ogg")
@@ -608,4 +644,10 @@ label cody_in_room:
         $ hints.seen_hint = False
     if run == 3 and not solves.loop3_2:
         delilah_thoughts_run3 glitch "The shredded petals of the Selene lilly are slid beneath the door. The light slowly bleeds away from them before they become as brittle as paper in my hands." (callback = functools.partial(inctime,checkskip=True))
+    if run == 3 and not solves.loop3_2 and not hints.hint3:
+        $ hintlist.list.append(hint_3)
+        # play animation to indicate new hint
+        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ hints.hint3 = True
+        $ hints.seen_hint = False
     return

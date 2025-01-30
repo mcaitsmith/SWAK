@@ -39,8 +39,8 @@ init:
     default hint_5 = "The glitches are spreading across timelines. They seem to show up whenever you make a choice that hurts someone...\n"
     default hint_6 = "There was a glitch at the point when you threw away the flowers. What would happen if you SKIPPED past that point?\n"
     default hint_7 = "When you seal off all 5 glitches, a new choice may appear at a pivotal moment.\n"
-    default hint_8 = "The loop has reset but don't despair...the state of the glitches remain.\n"
-    default hint_9 = "You sense a disturbance hidden somewhere in this timeline. Maybe you should go looking for it?\n"
+    default hint_8 = "The loop has reset but don't despair...the state of the glitches remain. Explore different branches and outcomes to find and seal whatever's corrupting the timelines.\n"
+    #default hint_9 = "You sense a disturbance hidden somewhere in this timeline. Maybe you should go looking for it?\n"
     default hint_10 = "Getting each flower creates a new timeline when you roll back to the start of the evening. But it also erases that flower from the current one.\n"
 
 init:

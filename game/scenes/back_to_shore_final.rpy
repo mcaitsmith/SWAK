@@ -63,7 +63,7 @@ label back_to_shore_final:
 
     call incphase from _call_incphase_1 # should end up at totality for final choice
 
-    if not hints.hint7:
+    if not hints.hint7 and choose_timeline: # shows up if on second runthrough
         # play animation to indicate new hint
         $ renpy.play("orex_sfx_sparkle.ogg")
         $ hintlist.list.append(hint_7)
@@ -259,6 +259,12 @@ label back_to_shore_final:
             # if not renpy.is_skipping():
             if not solves.loop4:
                 show bg scene3 glitch
+            if not solves.loop4 and not hints.hint2:
+                $ hintlist.list.append(hint_2)
+                $ renpy.play("orex_sfx_sparkle.ogg")
+                # play animation to indicate new hint
+                $ hints.hint2 = True
+                $ hints.seen_hint = False
             hide julian onlayer characters
             with { "characters" : Dissolve(3.0) }
             # if not renpy.is_skipping():
@@ -278,13 +284,13 @@ label back_to_shore_final:
             # $ renpy.choice_for_skipping() # prevent skipping
             # $ _skipping = False
 
-            if solves.loop4:
-                if not hints.hint7:
-                    # play animation to indicate new hint
-                    $ renpy.play("orex_sfx_sparkle.ogg")
-                    $ hintlist.list.append(hint_7)
-                    $ hints.hint7 = True
-                    $ hints.seen_hint = False
+            # if solves.loop4:
+            #     if not hints.hint7:
+            #         # play animation to indicate new hint
+            #         $ renpy.play("orex_sfx_sparkle.ogg")
+            #         $ hintlist.list.append(hint_7)
+            #         $ hints.hint7 = True
+            #         $ hints.seen_hint = False
             if solves.loop4:
                 $ config.rollback_enabled = True
 
@@ -302,11 +308,15 @@ label back_to_shore_final:
                     pass
             # show screen endscreenqr with dissolve
             # $ renpy.pause()
-            # if not renpy.is_skipping():
+            $ renpy.choice_for_skipping() # prevent skipping
+            $ _skipping = False
             hide bg scene3 with dissolve
             # if not solves.loop4:
             $ restart_vars = True # return to beginning loop with vars re-initialized (except for glitches)
-
+            $ sealed_glitches = str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]))
+            "{b}Sealed glitches [sealed_glitches] of 5{/b}"
+            "Something's preventing you from moving forward.\n\nYou've now unlocked timeline select. Explore different branches and outcomes to find and seal whatever's corrupting the timelines."
+            "[hint_7]"
     return
 
             # hide cody onlayer characters with dissolve

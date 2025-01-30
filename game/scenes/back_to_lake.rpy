@@ -18,16 +18,16 @@ label back_to_lake:
     delilah_thoughts_run2 "Mom turns around and starts her way back up the hill."
     sandra_run2_d "Let's just go try and have a normal evening together, yeah?"
 
-    if run == 2 and flowers.flower2 and not hints.hint9 and not solves.loop2:
-        $ config.rollback_enabled = False
-        # play animation to indicate new hint
-        $ renpy.play("orex_sfx_sparkle.ogg")
-        $ hintlist.list.append(hint_9)
-        $ hints.hint9 = True
-        $ hints.seen_hint = False
-        $ renpy.pause()
+    # if run == 2 and flowers.flower2 and not hints.hint9 and not solves.loop2:
+    #     # $ config.rollback_enabled = False
+    #     # play animation to indicate new hint
+    #     $ renpy.play("orex_sfx_sparkle.ogg")
+    #     $ hintlist.list.append(hint_9)
+    #     $ hints.hint9 = True
+    #     $ hints.seen_hint = False
+    #     $ renpy.pause()
 
-    $ config.rollback_enabled = True
+    # # $ config.rollback_enabled = True
 
     menu:
         delilah " " (callback = functools.partial(inctime))
