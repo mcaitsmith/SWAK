@@ -222,35 +222,40 @@ label back_to_shore_final:
             show julian happy onlayer characters
             julian_run4_d "I suppose it's possible. How would we remember if we had."
             show julian neutral onlayer characters
-            delilah_run4 "I'd choose to stay with you every time."
+            delilah_run4 "I'd choose to stay with you every time." (callback = functools.partial(inctime,g9=True))
 
             # delilah_thoughts_run4 "I lean in closer to him."
             # (Show image of kiss)
 
-            if not renpy.is_skipping() and not solves.loop4:
+            if not solves.loop4:
+            # if not renpy.is_skipping() and not solves.loop4:
                 $ flowers.flower3 = False
-            else:
-                $ config.rollback_enabled = True
-            if not renpy.is_skipping() and not solves.loop4:
+            # else:
+            #     $ config.rollback_enabled = True
+            if not solves.loop4:
+            # if not renpy.is_skipping() and not solves.loop4:
                 $ flowers.flower2 = False
-            else:
-                $ config.rollback_enabled = True
-            if not renpy.is_skipping() and not solves.loop4:
+            # else:
+            #     $ config.rollback_enabled = True
+            if not solves.loop4:
+            # if not renpy.is_skipping() and not solves.loop4:
                 $ flowers.flower1 = False
-            else:
-                $ config.rollback_enabled = True
-            if not renpy.is_skipping() and not solves.loop4:
+            # else:
+            #     $ config.rollback_enabled = True
+            if not solves.loop4:
+            # # if not renpy.is_skipping() and not solves.loop4:
                 $ config.rollback_enabled = False # prevent rollback from here
-            else:
-                $ config.rollback_enabled = True
-            if not renpy.is_skipping() and not solves.loop4:
-                $ renpy.choice_for_skipping() # prevent skipping
-            else:
-                $ config.rollback_enabled = True
-            if not renpy.is_skipping() and not solves.loop4:
-                $ _skipping = False
-            else:
-                $ config.rollback_enabled = True
+            # else:
+            #     $ config.rollback_enabled = True
+
+            # if not renpy.is_skipping() and not solves.loop4:
+            #     $ renpy.choice_for_skipping() # prevent skipping
+            # else:
+            #     $ config.rollback_enabled = True
+            # if not renpy.is_skipping() and not solves.loop4:
+            #     $ _skipping = False
+            # else:
+            #     $ config.rollback_enabled = True
             # if not renpy.is_skipping():
             if not solves.loop4:
                 show bg scene3 glitch
@@ -258,14 +263,21 @@ label back_to_shore_final:
             with { "characters" : Dissolve(3.0) }
             # if not renpy.is_skipping():
             if not solves.loop4:
-                delilah_thoughts_run4 "As I release the flowers into the water, they're pulled under by the ripples of the water and slowly disappear."
+                delilah_thoughts_run4 "As I release the flowers into the water, they're pulled under by the ripples of the water and slowly disappear." (callback = functools.partial(inctime,checkskip=True))
             # else:
-            if renpy.is_skipping() and not solves.loop4:
-                $ renpy.play("orex_sfx_sparkle.ogg") # solved!
-            if renpy.is_skipping() and not solves.loop4:
-                $ solves.loop4 = True
-                $ hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
-                $ hints.seen_hint = False
+            # if renpy.is_skipping() and not solves.loop4:
+            #     $ renpy.play("orex_sfx_sparkle.ogg") # solved!
+            # if renpy.is_skipping() and not solves.loop4:
+            #     $ solves.loop4 = True
+            #     $ hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
+            #     $ hints.seen_hint = False
+
+            if not solves.loop4:
+                delilah_thoughts_run4 "Am I refusing to let go of Julian? Or am I running from things I need to face?" (callback = functools.partial(inctime,checkskip=True))
+            show bg scene3
+            # $ renpy.choice_for_skipping() # prevent skipping
+            # $ _skipping = False
+
             if solves.loop4:
                 if not hints.hint7:
                     # play animation to indicate new hint
@@ -283,13 +295,13 @@ label back_to_shore_final:
                     $ hintlist.list.append(hint_6)
                     $ hints.hint6 = True
                     $ hints.seen_hint = False
-            if not solves.loop4:
-                delilah_thoughts_run4 "Am I refusing to let go of Julian? Or am I running from things I need to face?"
-            show bg scene3
-            $ renpy.choice_for_skipping() # prevent skipping
-            $ _skipping = False
-            show screen endscreenqr with dissolve
-            $ renpy.pause()
+
+            menu:
+                delilah " " (callback = functools.partial(inctime,g10=True))
+                "Restart loop":
+                    pass
+            # show screen endscreenqr with dissolve
+            # $ renpy.pause()
             # if not renpy.is_skipping():
             hide bg scene3 with dissolve
             # if not solves.loop4:

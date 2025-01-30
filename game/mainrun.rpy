@@ -13,8 +13,8 @@ label mainrun:
         $ renpy.choice_for_skipping() # prevent skipping
         $ _skipping = False
         hide screen eclipse onlayer background_overlay with dissolve
-        $ renpy.pause()
-        hide screen endscreenqr with dissolve
+        # $ renpy.pause()
+        # hide screen endscreenqr with dissolve
         $ _skipping = True
         jump runstart
 

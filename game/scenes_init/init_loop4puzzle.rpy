@@ -9,6 +9,7 @@ label init_loop4puzzle:
             global moonglitches
             global puzzles
             global solves
+            global flowers
             if g9==False and checkskip and not renpy.is_skipping():
                 moonglitches.glitch9 = False
                 moonglitches.glitch10 = False
@@ -31,5 +32,11 @@ label init_loop4puzzle:
             if moonglitches.glitch9 == True and moonglitches.glitch10 == True:
                 renpy.play("orex_sfx_sparkle.ogg") # solved!
                 solves.loop4 = True
+                hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
+                hints.seen_hint = False
+                flowers.flower1 = True
+                flowers.flower2 = True
+                flowers.flower3 = True
+                config.rollback_enabled = True
 
     return
