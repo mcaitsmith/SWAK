@@ -404,8 +404,12 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "{i}[config.name!t]{/i}":
-                style "main_menu_title"
+            # text "{i}[config.name!t]{/i}":
+            #     style "main_menu_title"
+
+            add "images/title_text.png":
+                xalign 0.5
+                yalign 0.5
 
             # text "[config.version]":
             #     style "main_menu_version"
