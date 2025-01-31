@@ -18,6 +18,7 @@ label open_door:
 
         call unlock_door from _call_unlock_door_2
 
+        show sandra sad onlayer characters
         sandra_d "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed."
         
         show cody happy onlayer characters at center_right
@@ -37,6 +38,7 @@ label open_door:
         if run == 2:
             "{color=#f00}As soon as she opens the door, Delilah grabs her mom by the hand.{/color}"
         delilah_run2 "There's a boy in the backyard! He needs help! Come on!"
+        show sandra sad onlayer characters
         sandra_run2_d "What? Hold on! Who is?"
         delilah_run2 "Some guy! I don't know who he is but he needs help!"
 
@@ -51,15 +53,18 @@ label open_door:
 
         call unlock_door from _call_unlock_door_1
         
+        show sandra sad onlayer characters
         sandra_d "Oh, how gracious of you to finally decide to let us in, Del. Very gracious indeed."
         
         show cody happy onlayer characters at center_right
         
         cody_d "Yes, very gracious."
-        delilah "Hey, are there still landscapers working in the yard?"
+
+        delilah worried "Hey, are there still landscapers working in the yard?"
+        show sandra neutral onlayer characters
         sandra_d "Landscapers? Not at this hour, no. Why do you ask?"
         delilah worried "Could've sworn I saw someone out back. Thought it might have been a landscaper."
-        sandra_d "Probably just one of the neighbor kids, I wouldn't worry about it."
+        sandra_d neutral "Probably just one of the neighbor kids, I wouldn't worry about it."
         
         hide cody onlayer characters
         hide sandra onlayer characters
@@ -71,15 +76,23 @@ label dinner_convo:
     if run == 3 and loop3_investigate:
         call argument from _call_argument_2
 
+        show sandra neutral onlayer characters
+        show cody neutral onlayer characters
         delilah_thoughts_run3 neutral "The three of us sit in silence for a moment."
+        if not flowers.flower3:
+            show cody happy onlayer characters
         if not flowers.flower3:
             cody_run3_d "I found a weird flower in the yard!"
         if not flowers.flower3:
             delilah_thoughts_run3 worried "I perk up."
         if not flowers.flower3:
+            show sandra laugh onlayer characters
+        if not flowers.flower3:
             sandra_run3_d "Oooh, very cool. Is it a rose?"
         if not flowers.flower3:
             cody_run3_d "Nope!"
+        if not flowers.flower3:
+            show sandra neutral onlayer characters
         if not flowers.flower3:
             sandra_run3_d "Is it....a daisy?"
         if not flowers.flower3:
@@ -98,9 +111,13 @@ label dinner_convo:
                     if not flowers.flower3:
                         delilah_run3 neutral "I heard they were local to the area."
         if not flowers.flower3:
+            show cody neutral onlayer characters
+        if not flowers.flower3:
             cody_run3_d "Well, it's mine now. Think I'll make it into a bookmark."
         if not flowers.flower3:
             delilah_run3 "Do you think you could give it to me?"
+        if not flowers.flower3:
+            show cody angry onlayer characters
         if not flowers.flower3:
             cody_run3_d "Heck no! Finders keepers, Del!"
 
@@ -121,10 +138,12 @@ label dinner_convo:
             "{color=#0f0}Stay with Cody{/color}":
                 delilah_thoughts_run3 neutral "Stay with Cody"
         if not flowers.flower3:
+            show cody neutral onlayer characters
             delilah_thoughts_run3 neutral "I lean toward Cody."
         if not flowers.flower3:
             delilah_run3 laugh "You want to show me that flower you found?"
         if not flowers.flower3:
+            show cody angry onlayer characters
             cody_run3_d "Why? So you can take it?"
         # if not flowers.flower3:
         menu:
@@ -133,6 +152,7 @@ label dinner_convo:
                 delilah_run3 worried "It's really important that you give it to me."
                 cody_run3_d "Why?"
                 delilah_run3 angry "It just is."
+                show cody neutral onlayer characters
                 cody_run3_d neutral "That's not an explanation."
                 menu:
                     delilah " " (callback = functools.partial(inctime))
@@ -153,26 +173,33 @@ label dinner_convo:
                         delilah_run3 "Because seriously bad stuff will happen if you don't."
                         cody_run3_d "Like what?"
                         delilah_run3 "I don't have time to tell you."
+                        show cody happy onlayer characters
                         cody_run3_d "Why?"
                         delilah_run3 angry "Quit being a brat and just give me the flower!"
+                        show cody neutral onlayer characters
                         delilah_thoughts_run3 "He slowly steps back."
                         cody_run3_d "Okay, let me go get it for you..."
+                        show cody happy onlayer characters
                         delilah_thoughts_run3 "Before I can say anything more, he turns and runs towards the stairs."
                         call cody_in_room from _call_cody_in_room
             "{color=#0f0}Just tell me where it is or I'll pummel you.{/color}" if not flowers.flower3:
                 delilah_run3 "Just tell me where it is or I'll pummel you."
+                show cody neutral onlayer characters
                 cody_run3_d "Testy, testy."
                 delilah_thoughts_run3 "He looks at me for a moment."
                 cody_run3_d "Okay. You can have it. Just follow me upstairs."
+                show cody happy onlayer characters
                 delilah_thoughts_run3 neutral "We start our way up the stairs but before I can say anything, he turns and makes a break for it."
                 call cody_in_room from _call_cody_in_room_1
             "{color=#0f0}I'll give you $20 to give me that flower.{/color}" if not flowers.flower3:
                 delilah_run3 "I'll give you $20 to give me that flower."
                 cody_run3_d "You'll give me $20?"
                 delilah_run3 "That's right."
+                show cody neutral onlayer characters
                 cody_run3_d "You don't even have $20."
                 delilah_run3 neutral "I'll give you $20 once I get my next allowance."
                 delilah_thoughts_run3 "He thinks about it for a moment."
+                show cody happy onlayer characters
                 cody_run3_d "$100."
                 menu:
                     delilah " " (callback = functools.partial(inctime))
@@ -231,8 +258,10 @@ label dinner_convo:
                 # if not flowers.flower3:
                 delilah_run3 "You know Dad is having an affair right?"
                 # if not flowers.flower3:
+                show cody neutral onlayer characters
                 cody_run3_d "What?"
                 # if not flowers.flower3:
+                show cody happy onlayer characters
                 delilah_thoughts_run3 "He laughs."
                 # if not flowers.flower3:
                 delilah_run3 "Yeah. It's true. I found a letter in his suitcase from some woman, probably a stripper." (callback = functools.partial(inctime))
@@ -259,8 +288,9 @@ label dinner_convo:
                     show cody glitch onlayer characters
                 if run == 3 and not solves.loop3_3:
                     delilah_run3 "Yeah! BUSINESS trip. That's a good one. Mom knows about it too. She's divorcing him soon and then you won't have a family anymore while I'm at college." (callback = functools.partial(inctime,checkskip=True))
+                    show cody angry onlayer characters
                 else:
-                    show cody neutral onlayer characters
+                    show cody angry onlayer characters
                 if flowers.flower3 and run == 3 and not solves.loop3_3:
                     show cody glitch onlayer characters
                 if run == 3 and not solves.loop3_3:
@@ -305,7 +335,7 @@ label dinner_convo:
                 else:
                     show cody neutral onlayer characters
                 if flowers.flower3 and run == 3 and not solves.loop3_3:
-                    show cody neutral onlayer characters
+                    show cody angry onlayer characters
                 if flowers.flower3 and run == 3 and not solves.loop3_3 and hints.hint2 and not hints.hint3:
                     $ hintlist.list.append(hint_3)
                     # play animation to indicate new hint
@@ -454,13 +484,14 @@ label argument:
     
     delilah_thoughts neutral "Not even a minute after Sandra tips the pizza delivery driver, Cody has two slices on his plate."
     
-    show cody happy onlayer characters at center
+    show cody neutral onlayer characters at center
     
     delilah_thoughts "He pulls the cheese off and eats it separately, then licks the sauce off the crust before eating it."
     # replace this line below with expression change
     delilah_thoughts worried "I watch in horror."
     if not (run == 3 and loop3_investigate):
         delilah angry "Can't even eat pizza like a normal person?"
+    show cody happy onlayer characters
     cody_d "I can't help it if my eccentricities extend to my dining preferences."
     if run == 3 and loop3_investigate:
         delilah_run3 neutral "I didn't say anything this time."
@@ -473,12 +504,14 @@ label argument:
     sandra_d "Oh, hush, Del, you used to have particular eating habits too."
     if run == 3 and loop3_investigate:
         delilah_run3 worried "I didn't even say anything!"
+        show sandra sad onlayer characters
         sandra_run3_d "..Oh...I could've sworn that you had..."
         return
     elif run == 2 and loop2_investigate:
         delilah_run2 angry "I'm not talking to you. And it's not like he's about to stop being a little cretin anyway."
         cody_run2_d "Wastoid. I can't believe we're related."
         delilah_run2 "At the rate Dad's going, I wouldn't be surprised if we weren't related afterall."
+        show sandra sad onlayer characters
         sandra_run2_d "What do you mean by that?"
     else:
         delilah laugh "Yeah, when I was five. Cody's almost in high school. God help my reputation if anyone finds out we're related!"
@@ -499,12 +532,15 @@ label argument:
         delilah_run2 "Oh, now you want to intervene?"
     else:
         delilah "Make him apologize!"
+    show sandra sad onlayer characters
     sandra_d "Cody...will you please apologize to your sister for calling her a b-word?"
+    show cody angry onlayer characters
     cody_d "She started it!"
     sandra_d "Cody...things are hard enough as is..."
     # replace line below with animated sprite
     delilah_thoughts neutral "I cross my arms and raise an eyebrow."
     cody_d "I'm sorry...that you're a bitch."
+    show sandra angry onlayer characters
     sandra_d "That's it! Upstairs, now!"
     delilah_thoughts "He drops his bare crusts in the trash dramatically then heads for the stairs."
     cody_d "I wonder why Dad prefers his business trips to being here!"
@@ -523,11 +559,11 @@ label argument:
             delilah_run2 "He's right you know."
         "{color=#f00}Setting a great example for your kids, Sandra.{/color}" if run == 2 and loop2_investigate:
             delilah_run2 "Setting a great example for your kids, Sandra."
-    show sandra neutral onlayer characters
+    show sandra sad onlayer characters
     sandra_d "Well, Del, you don't exactly make it easy by antagonizing him." (callback = functools.partial(inctime))
     if run == 2 and loop2_investigate:
         # start loop 2 glitch
-        delilah_run2 neutral "I'm not doing anything. I'm just like you, Sandra." (callback = functools.partial(inctime,g1=True))
+        delilah_run2 laugh "I'm not doing anything. I'm just like you, Sandra." (callback = functools.partial(inctime,g1=True))
         if run == 2:
             $ moonglitch5 = True
         if run == 2 and loop2_investigate and not hints.hint2:
@@ -546,6 +582,7 @@ label argument:
         delilah neutral "I don't antagonize him..."
         delilah_thoughts worried "Those last words he said before storming off..."
         delilah "He's right though, about Dad, I mean."
+        show sandra neutral onlayer characters
         sandra_d neutral "Your dad wishes he could be here more than anything in the world. Work has been brutal lately."
         delilah_thoughts laugh "I laugh." # add laugh sound to replace this or just (haha)
         delilah "Yeah, I'm sure."
@@ -554,15 +591,17 @@ label argument:
     if not (run == 2 and loop2_investigate and solves.loop2):
         delilah "I think you know what I mean." (callback = functools.partial(inctime,checkskip=True))
     if not (run == 2 and loop2_investigate and solves.loop2):
+        show sandra sad onlayer characters
         sandra_d "No, I don't, and you should watch what you say or you'll regret it." (callback = functools.partial(inctime,checkskip=True))
     if run == 2 and loop2_investigate:
         if run == 2 and not solves.loop2:
-            delilah_run2 "I dare you to be honest with me. Just show a single shred of honesty and respect to your children and just tell us: why isn't Dad here?" (callback = functools.partial(inctime,checkskip=True))
+            delilah_run2 angry "I dare you to be honest with me. Just show a single shred of honesty and respect to your children and just tell us: why isn't Dad here?" (callback = functools.partial(inctime,checkskip=True))
         # if run == 2 and not solves.loop2:
         #     pause 1.0
         if run == 2 and not solves.loop2:
             delilah_thoughts_run2 "Mom's throat trembles, like she's choking on the words." (callback = functools.partial(inctime,checkskip=True))
         if run == 2 and not solves.loop2:
+            show sandra angry onlayer characters
             sandra_run2_d "He's on a business trip, Del." (callback = functools.partial(inctime,checkskip=True))
         if run == 2 and not solves.loop2:
             delilah_run2 "That's what I thought." (callback = functools.partial(inctime,checkskip=True))
@@ -580,7 +619,8 @@ label argument:
                 delilah_run2 "I'll be outside."
 
     else:
-        delilah "Is that a promise?"
+        delilah angry "Is that a promise?"
+        show sandra angry onlayer characters
         sandra_d "Don't you start."
         menu:
             delilah " " (callback = functools.partial(inctime))
@@ -602,9 +642,11 @@ label argument:
     return
 
 label chase_cody:
+    show cody angry onlayer characters
     delilah_thoughts_run3 "Cody looks at me astonished."
     cody_run3_d "Wow. I can't believe it."
     delilah_run3 "Well, it's true. All of it."
+    show cody happy onlayer characters
     cody_run3_d "I mean, I can't believe how completely nuts you are. I knew you were a mental case, sure, but imaginary boys? Magic flowers? Someone's getting sent to the funny farm..."
     delilah_run3 worried "I'm not crazy! You have to give me that flower!"
     delilah_thoughts_run3 "Before I can say anything more, he turns and runs towards the stairs, shouting."

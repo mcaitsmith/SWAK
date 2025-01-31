@@ -21,6 +21,7 @@ label back_to_shore_final:
     show julian worried onlayer characters
     julian_run4_d "Oh, I'm so sorry, is he okay?"
     delilah_run4 worried "Yeah, he is now that everything reset but he wasn't when I told him."
+    show julian sad onlayer characters
     julian_run4_d "Delilah, I'm so sorry. I would never have asked you to do that if I knew."
     delilah_run4 happy "It's fine. Like I said, it's like it never happened now. It was my choice, plus he doesn't even remember it."
     show julian neutral onlayer characters
@@ -31,19 +32,20 @@ label back_to_shore_final:
     delilah_thoughts_run4 neutral "I notice something glowing in his jacket pocket."
     julian_run4_d "What?"
     delilah_run4 worried "Is that the last flower?"
-    show julian worried onlayer characters
+    show julian blush onlayer characters
     julian_run4_d "No."
     show julian happy onlayer characters
     julian_run4_d "Yes."
     delilah_run4 angry "Why did you lie?"
-    show julian worried onlayer characters
+    show julian blush onlayer characters
     julian_run4_d "I just...I'm not ready to go yet."
     delilah_run4 "Not ready?! You're dying!"
+    show julian worried onlayer characters
     julian_run4_d "I know but...I'm worried about you..."
     delilah_run4 happy "Oh, Julian."
     julian_run4_d "I know things have been really tough for you right now. I want to be there for you for it. I'm frustrated because I physically can't."
     delilah_run4 "We just met..."
-    show julian neutral onlayer characters
+    show julian serious onlayer characters
     julian_run4_d "I know but...I still care. You're cooler than anyone I know."
     delilah_run4 laugh "You live with your grandparents."
     # delilah_thoughts_run4 "I laugh."
@@ -59,6 +61,7 @@ label back_to_shore_final:
     show julian worried onlayer characters
     julian_run4_d "You'll be stuck here, you'll be trapped here in this moment with me."
     delilah_run4 "There are worse fates."
+    show julian serious onlayer characters
     julian_run4_d "No, Del, think really carefully about this. Are you sure it's what you want?"
 
     call incphase from _call_incphase_1 # should end up at totality for final choice
@@ -131,7 +134,7 @@ label back_to_shore_final:
             #     else:
             #         call screen flower4_pick
 
-            show julian neutral onlayer characters
+            # show julian neutral onlayer characters
             delilah_thoughts_run4 "I reach out to take the final flower."
 
             if not flowers.flower4:
@@ -145,7 +148,7 @@ label back_to_shore_final:
             $ renpy.choice_for_skipping() # prevent skipping
             $ _skipping = False
 
-            show julian neutral onlayer characters with dissolve
+            show julian serious onlayer characters with dissolve
 
             stop music fadeout 1.0
 
@@ -215,15 +218,16 @@ label back_to_shore_final:
             delilah_thoughts_run4 "Toss the flowers in the lake"
             # have a few are you sure choices
             show black behind bg
-            show julian neutral onlayer characters
+            show julian serious onlayer characters
             delilah_run4 "I could do for a couple more go arounds."
+            show julian blush onlayer characters
             julian_run4_d "You're sure?"
             delilah_run4 "Yeah. I'm sure. Besides, who's to say this is the first time we've done this?"
             show julian happy onlayer characters
             julian_run4_d "I suppose it's possible. How would we remember if we had." (callback = functools.partial(inctime))
-            show julian neutral onlayer characters
+            # show julian neutral onlayer characters
             delilah_run4 "I'd choose to stay with you every time." (callback = functools.partial(inctime,g9=True))
-
+            show julian neutral onlayer characters
             # delilah_thoughts_run4 "I lean in closer to him."
             # (Show image of kiss)
 

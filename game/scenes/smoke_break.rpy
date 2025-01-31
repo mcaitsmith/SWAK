@@ -8,6 +8,7 @@ label smoke_break:
     show sandra neutral onlayer characters at center with dissolve
     delilah_thoughts_run3 "Mom leans over the railing holding an unlit cigarrette between her fingers. I get as close as I can stomach."
     delilah_thoughts_run3 "Dad used to always say how nasty they smelled. Mom quit for a long time because of it."
+    show sandra sad onlayer characters
     sandra_run3_d "I know, I know. You don't have to say it."
     menu:
         delilah " " (callback = functools.partial(inctime))
@@ -17,10 +18,13 @@ label smoke_break:
             delilah_thoughts_run3 "Don't mention Julian"
     delilah_thoughts_run3 "The thought enters my mind to mention Julian, his condition, and the magical glowing flower that I need to get from my brother. But then I remember how Mom reacted in the previous loop with complete and utter indifference."
     delilah_run3 angry "I don't care, smoke all you want, Sandra."
+    show sandra neutral onlayer characters
     sandra_run3_d "You know, it wasn't that long ago you used to call me 'Mom'."
     delilah_run3 "Really? Feels like a lifetime ago."
+    show sandra laugh onlayer characters
     sandra_run3_d "Yeah, a whole three months. I kept track. The first time came as a bit of a shock."
     delilah_run3 "You don't have any idea what changed?" 
+    show sandra neutral onlayer characters
     sandra_run3_d "I don't know. Teenage angst?"
     if run == 3:
         "{color=#0f0}The image of that letter is burned into her mind forever.\nCuriosity got the best of her, she went looking through her dad's belongings, and found what she suspected but couldn't imagine.{/color}"
@@ -39,18 +43,23 @@ label smoke_break:
     delilah_run3 angry "The letter. Unless you haven't changed socks in three months, I know you saw it."
     sandra_run3_d "I don't know what you're referring..."
     delilah_run3 "Fuck, Sandra, stop it! I'm the one who put the letter there! I know you read it! You know Dad is cheating on you! So why are you pretending like everything is normal?!"
+    show sandra sad onlayer characters
     delilah_thoughts_run3 "Mom turns to ice. The cigarette in her hand starts to lightly scorch the edges of her fingers."
+    show sandra angry onlayer characters
     sandra_run3_d "How long have you known?"
     delilah_thoughts_run3 "Her voice is like a pile of glass shards embedded in her throat."
     delilah_run3 "Like I said, the entire time. I've known longer than you have."
     sandra_run3_d "Del...I wanted to protect you..."
     delilah_run3 "Well, what a great job you did!"
+    show sandra sad onlayer characters
     sandra_run3_d "I've been making arrangements, setting myself up to leave. I wanted to wait till things were ready to tell you."
     delilah_run3 worried "And then what? Just drop it on us? 'Hey, kids, our family is a sham! Thanks and goodbye?'"
+    show sandra angry onlayer characters
     sandra_run3_d "I...I didn't mean to hurt you, Del. I'm sorry. Please, just try to understand that I truly am doing my best. You're not the only one who doesn't know what to believe in anymore after all this."
     delilah_run3 "Yeah, well, I had to go through it alone."
     sandra_run3_d "So did I."
     delilah_run3 happy "Well...you don't have to. We can go through it together."
+    show sandra neutral onlayer characters
     sandra_run3_d "Yeah. I think I'd like that."
     if run == 3:
         "{color=#0f0}For the first time in a while, Delilah felt the experience of belonging in her family. Things weren't resolved, not by a longshot, but she knew she wasn't alone.{/color}"

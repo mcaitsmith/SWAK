@@ -7,14 +7,17 @@ label stay_with_him:
     delilah_thoughts_run2 "I sit down on a patch of grass just above his head."
     # pause 1.0
 
+    show julian neutral onlayer characters
     boy_run2_d "Thank you."
 
     call incphase from _call_incphase_13
     
     delilah_run2 happy "So...what do you want to do to fill the time? It could be a while till you, y'know..."
+    show julian serious onlayer characters
     boy_run2_d "Hmm. Why don't you tell me about yourself? What's your name? What brings you out here to this fine patch of jagged rocks?"
     delilah_thoughts_run2 laugh "I chuckle painfully." # replace
     delilah_run2 "I'm Delilah. Uh, just here on a short weekend trip with the family."
+    show julian blush onlayer characters
     boy_run2_d "Right, and that lovely creature I saw you with before must be your sister then?"
     delilah_run2 angry "Mother and where were you?? I went for help and you disappeared!"
     show julian happy onlayer characters
@@ -23,11 +26,13 @@ label stay_with_him:
     show julian neutral onlayer characters
     boy_run2_d "Beats the hell out of me. Like I said, I was out picking flowers and ended up here."
     delilah_run2 neutral "Picking flowers? Really?"
+    show julian blush onlayer characters
     boy_run2_d "Yeah, for my grandparents' flower shop. Is there something wrong with that?"
     delilah_run2 happy "No, no, it's just- I wouldn't ever have guessed."
     show julian worried onlayer characters
     boy_run2_d "They're probably worried sick about me. Say, you haven't heard of a 'Schneider's Happy Petals' have you?"
     delilah_run2 neutral "Nothing like that around here."
+    show julian sad onlayer characters
     boy_run2_d "Wow. Then I must really be far from home."
     show julian pain onlayer characters
     delilah_thoughts_run2 worried "He starts coughing violently."
@@ -40,6 +45,7 @@ label stay_with_him:
     delilah_thoughts_run2 "I look up and down his body for any sign of injury, none to be found."
     boy_run2_d "If you come around this way again...if I end up here dying again...you promise you'll wait it out with me again?"
     delilah_run2 happy "Yeah...yeah I promise."
+    show julian sad onlayer characters
     boy_run2_d "Rad..."
     delilah_run2 "Hey, you never told me your name."
     julian_run2_d "Oh, how rude of me...uh, it's Julian."

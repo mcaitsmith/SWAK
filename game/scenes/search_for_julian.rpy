@@ -37,7 +37,7 @@ label search_for_julian:
     delilah_run2 "How could you know that you're dying?"
     boy_run2_d "Death has a very unmistakable taste to it. Very metallic."
     delilah_run2 "What can I do to help? Should I go get an ambulance?"
-    show julian neutral onlayer characters
+    show julian serious onlayer characters
     boy_run2_d "Something tells me that won't help...honestly what I'd really appreciate is if you stuck around and kept me company. Y'know, just stay till the last light goes out."
     
     # delilah "Delilah goes outside to look for the boy she saw. She walks down the shoreline for a while before finding him laying on top of some rocks, fading in and out of consciousness. He's glad to see Delilah again and apologizes for disappearing. He's switching between her reality and his repeatedly and being in her reality is killing him. He describes it almost like \"being a weed in someone else's garden\". And that he is being pruned. Delilah panics and asks if there is anything she can do. He just asks that she stay with him for a while, talk to him while he dies."

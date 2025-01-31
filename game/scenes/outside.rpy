@@ -71,7 +71,7 @@ label outside:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching a glowing flower."
     else:
         delilah_thoughts "Laying on rocks, trembling in agony, is a boy clutching...nothing."
-    show julian pain onlayer characters
+    show julian sad onlayer characters
     delilah_thoughts "He looks at me with equal parts desperation and shock." # replace with expression change
 
 

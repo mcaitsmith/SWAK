@@ -31,16 +31,22 @@ label intro:
     # delilah_thoughts "She waited till the end of the ride to ask her daughter this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
     delilah_thoughts neutral "Mom waited till the end of the ride to ask me this question. Four hours in the car, pure silence, and she waited till the lakehouse was practically in sight to ask a question like that."
     delilah laugh "That's not for another nine months."
+    show sandra laugh onlayer characters
     sandra_d neutral "Sooner than you think, Del. Always good to get a head start. Plus, I have my friend who teaches at State. Could get you a tour any time you like!"
-    show cody happy onlayer characters at center_left
+    show sandra neutral onlayer characters
+    show cody neutral onlayer characters at center_left
     cody_d "Ugh, I can't wait for you to be gone."
     delilah angry "Shut up, insect."
     delilah_thoughts "I punch my little brother in the arm." # add punch sfx to replace + shake cody sprite
+    show cody angry onlayer characters
     cody_d "Ow!"
+    show sandra laugh onlayer characters
     sandra_d neutral "Oh hush, you'll be missing her when she's gone. Just you wait."
+    show cody happy onlayer characters
     cody_d "Yeah right. She'll be back every weekend, I bet, if she doesn't flunk out that is." 
     delilah angry "I said shut up!"
     cody_d "Make me!" 
+    show sandra neutral onlayer characters
     sandra_d "Quiet! We're here!"
 
     hide cody onlayer characters
@@ -74,7 +80,9 @@ label intro:
         "Do it yourself.":
             delilah happy "Do it yourself."
 
+    show sandra laugh onlayer characters
     sandra_d "Thanks, Del. You're a peach."
+    show sandra neutral onlayer characters
     show cody happy onlayer characters at center_right
     cody_d "Yeah, Del, thanks."
     delilah_thoughts neutral "He laughs." # add laugh sound to replace

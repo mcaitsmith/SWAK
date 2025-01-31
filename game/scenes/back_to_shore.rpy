@@ -6,6 +6,7 @@ label back_to_shore:
     show julian neutral onlayer characters at center with dissolve:
         zoom 1.0
     pause 1.0
+    show julian neutral onlayer characters
     julian_run3_d "Back so soon?"
     delilah_run3 happy "After you died, I found this."
     delilah_thoughts_run3 "I hold out the second flower."
@@ -15,7 +16,7 @@ label back_to_shore:
     show julian worried onlayer characters
     julian_run3_d "You broke...? Oh, God, I'm so sorry. Why?"
     delilah_run3 neutral "Call it a hunch, but I'm guessing these have something to do with this condition of ours. What do you know about them?"
-    show julian neutral onlayer characters
+    show julian serious onlayer characters
     julian_run3_d "These? They're Selene Lillies. Extremely rare luminescent flowers. They're what I was gathering before."
     # add some line around here about how the lilies are rumored to mess with time and space and cause "interference" (or just include in puzzle hint/solution text)
     delilah_run3 "You don't think they have something to do with all of...this?"
@@ -26,11 +27,13 @@ label back_to_shore:
     delilah_run3 "How many flowers did you have before you wound up here?"
     julian_run3_d "Four. Was putting together a bouquet for my folks' shop. Just four Selene Lillies would sell for enough to keep the lights on for a year."
     delilah_run3 "So maybe if we get all four together we can send you home and break the loop?"
+    show julian neutral onlayer characters
     julian_run3_d "Couldn't hurt to try, I suppose. We're halfway there already."
     delilah_run3 "Where do you think we should start looking?" 
-    show julian neutral onlayer characters
+    show julian worried onlayer characters
     julian_run3_d "That could be tricky. Part of the legend of the Selene lillies is that the only time they appear for you is if you aren't looking for them."
     delilah_run3 neutral "So if we go out searching for them we'll be stuck here forever."
+    show julian serious onlayer characters
     julian_run3_d "Exactly."
     delilah_run3 "What do you suggest then?"
     show julian worried onlayer characters
@@ -57,7 +60,7 @@ label back_to_shore:
             show julian worried onlayer characters
             julian_run3_d "I guess I'm lucky for that then. I lost my folks when I was young, so they'll always get to be perfect to me."
             delilah_run3 happy "Oh, Julian I'm so sorry. I had no idea."
-            show julian neutral onlayer characters
+            show julian serious onlayer characters
             julian_run3_d neutral "It was a long time ago...ancient history. I just meant to say that I AM fortunate for that part of it, painful as it may have been."
             delilah_run3 angry "Why do you do that?"
             julian_run3_d "Do what?"
@@ -82,18 +85,18 @@ label back_to_shore:
                     show julian worried onlayer characters
                     julian_run3_d "Old habits. After I lost my folks, my grandparents took me in. They did their best but, y'know, their age shows pretty often. I take care of them more than they take care of me."
                     delilah_run3 neutral "Does it feel so weird for me to be worried about you?"
-                    show julian neutral onlayer characters
+                    show julian sad onlayer characters
                     julian_run3_d neutral "In all honesty, yes. I'm not used to it. I don't...talk...to people much. Especially girls who are, y'know...pretty."
-                    show julian happy onlayer characters
+                    show julian blush onlayer characters
                     delilah_thoughts_run3 happy "I look at him confused, then smile."
                     julian_run3_d "That was weird to say, sorry."
                     delilah_thoughts_run3 laugh "I laugh."
                     delilah_run3 "Not at all. I guess I just took you for a bit of a casanova initially."
                     julian_run3_d neutral "Me? As if."
-                    show julian neutral onlayer characters
+                    show julian happy onlayer characters
                     delilah_thoughts_run3 "He snorts nervously."
                     julian_run3_d "Just some kid who works at a flowershop."
-                    # pause 1.0
+                    show julian serious onlayer characters
                     delilah_thoughts_run3 happy "We stare into each others' eyes, holding onto the moment for as long as possible."
 
                     call incphase from _call_incphase_16

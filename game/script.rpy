@@ -133,7 +133,7 @@ define sandra_run4 = Character("Sandra",image="sandra",color="#F0D193",what_pref
 define sandra_run4_d = Character("Sandra",image="delilah",color="#F0D193",what_prefix='{color=#0ff}', what_suffix='{/color}',callback=inctime)
 
 image side delilah glitch = Glitch("images/chars/side delilah neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image cody glitch = Glitch("images/chars/cody neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image cody glitch = Glitch("images/chars/cody angry.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 
 # define sprites for Julian
 image julian fade:
