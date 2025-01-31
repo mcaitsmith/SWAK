@@ -30,12 +30,12 @@ label init_loop3puzzle:
                     moonglitches.glitch3 = False
 
             if moonglitches.glitch3 == True and moonglitches.glitch4 == True:
-                renpy.play("orex_sfx_sparkle.ogg") # solved!
+                renpy.play("chime.ogg") # solved!
                 solves.loop3_1 = True
                 hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
                 hints.seen_hint = False
             elif g4 == True and renpy.is_skipping() and hints.hint2 and hints.hint3 and not hints.hint9:
-                renpy.play("orex_sfx_sparkle.ogg")
+                renpy.play("chime.ogg")
                 hintlist.list.append(hint_9)
                 hints.hint9 = True
                 hints.seen_hint = False
@@ -65,12 +65,12 @@ label init_loop3puzzle:
                     moonglitches.glitch5 = False
 
             if moonglitches.glitch5 == True and moonglitches.glitch6 == True:
-                renpy.play("orex_sfx_sparkle.ogg") # solved!
+                renpy.play("chime.ogg") # solved!
                 solves.loop3_2 = True
                 hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
                 hints.seen_hint = False
             elif g6 == True and renpy.is_skipping() and hints.hint2 and hints.hint3 and not hints.hint9:
-                renpy.play("orex_sfx_sparkle.ogg")
+                renpy.play("chime.ogg")
                 hintlist.list.append(hint_9)
                 hints.hint9 = True
                 hints.seen_hint = False
@@ -101,12 +101,12 @@ label init_loop3puzzle:
                     moonglitches.glitch7 = False
 
             if moonglitches.glitch7 == True and moonglitches.glitch8 == True and flowers.flower3:
-                renpy.play("orex_sfx_sparkle.ogg") # solved!
+                renpy.play("chime.ogg") # solved!
                 solves.loop3_3 = True
                 hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
                 hints.seen_hint = False
             elif g8 == True and renpy.is_skipping() and hints.hint2 and hints.hint3 and not hints.hint9:
-                renpy.play("orex_sfx_sparkle.ogg")
+                renpy.play("chime.ogg")
                 hintlist.list.append(hint_9)
                 hints.hint9 = True
                 hints.seen_hint = False

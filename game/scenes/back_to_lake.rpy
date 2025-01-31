@@ -25,7 +25,7 @@ label back_to_lake:
     # if run == 2 and flowers.flower2 and not hints.hint9 and not solves.loop2:
     #     # $ config.rollback_enabled = False
     #     # play animation to indicate new hint
-    #     $ renpy.play("orex_sfx_sparkle.ogg")
+    #     $ renpy.play("chime.ogg")
     #     $ hintlist.list.append(hint_9)
     #     $ hints.hint9 = True
     #     $ hints.seen_hint = False

@@ -68,7 +68,7 @@ label back_to_shore_final:
 
     if not hints.hint7 and choose_timeline: # shows up if on second runthrough
         # play animation to indicate new hint
-        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ renpy.play("chime.ogg")
         $ hintlist.list.append(hint_7)
         $ hints.hint7 = True
         $ hints.seen_hint = False
@@ -265,7 +265,7 @@ label back_to_shore_final:
                 show bg scene3 glitch
             if not solves.loop4 and not hints.hint2:
                 $ hintlist.list.append(hint_2)
-                $ renpy.play("orex_sfx_sparkle.ogg")
+                $ renpy.play("chime.ogg")
                 # play animation to indicate new hint
                 $ hints.hint2 = True
                 $ hints.seen_hint = False
@@ -276,7 +276,7 @@ label back_to_shore_final:
                 delilah_thoughts_run4 "As I release the flowers into the water, they're pulled under by the ripples of the water and slowly disappear." (callback = functools.partial(inctime,checkskip=True))
             # else:
             # if renpy.is_skipping() and not solves.loop4:
-            #     $ renpy.play("orex_sfx_sparkle.ogg") # solved!
+            #     $ renpy.play("chime.ogg") # solved!
             # if renpy.is_skipping() and not solves.loop4:
             #     $ solves.loop4 = True
             #     $ hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
@@ -291,7 +291,7 @@ label back_to_shore_final:
             # if solves.loop4:
             #     if not hints.hint7:
             #         # play animation to indicate new hint
-            #         $ renpy.play("orex_sfx_sparkle.ogg")
+            #         $ renpy.play("chime.ogg")
             #         $ hintlist.list.append(hint_7)
             #         $ hints.hint7 = True
             #         $ hints.seen_hint = False
@@ -301,7 +301,7 @@ label back_to_shore_final:
             if not solves.loop4:
                 if not hints.hint6:
                     # play animation to indicate new hint
-                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ renpy.play("chime.ogg")
                     $ hintlist.list.append(hint_6)
                     $ hints.hint6 = True
                     $ hints.seen_hint = False

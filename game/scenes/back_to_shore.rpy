@@ -118,13 +118,13 @@ label back_to_shore:
                         show julian pain onlayer characters
                     if run == 3 and not solves.loop3_1 and not hints.hint2:
                         $ hintlist.list.append(hint_2)
-                        $ renpy.play("orex_sfx_sparkle.ogg")
+                        $ renpy.play("chime.ogg")
                         # play animation to indicate new hint
                         $ hints.hint2 = True
                         $ hints.seen_hint = False
                     if hints.hint2 and not hints.hint5 and not solves.loop3_1 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
                         $ hintlist.list.append(hint_5)
-                        $ renpy.play("orex_sfx_sparkle.ogg")
+                        $ renpy.play("chime.ogg")
                         # play animation to indicate new hint
                         $ hints.hint5 = True
                         $ hints.seen_hint = False
@@ -187,7 +187,7 @@ label back_to_shore:
                     if run == 3 and not solves.loop3_1 and not hints.hint3:
                         $ hintlist.list.append(hint_3)
                         # play animation to indicate new hint
-                        $ renpy.play("orex_sfx_sparkle.ogg")
+                        $ renpy.play("chime.ogg")
                         $ hints.hint3 = True
                         $ hints.seen_hint = False
                     menu:
@@ -210,7 +210,7 @@ label back_to_shore:
 
                     if not hints.hint4 and run > 1:
                         # play animation to indicate new hint
-                        $ renpy.play("orex_sfx_sparkle.ogg")
+                        $ renpy.play("chime.ogg")
                         $ hintlist.list.append(hint_4)
                         $ hints.hint4 = True
                         $ hints.seen_hint = False

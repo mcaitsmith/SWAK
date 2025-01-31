@@ -30,7 +30,7 @@ label init_loop4puzzle:
                     moonglitches.glitch9 = False
 
             if moonglitches.glitch9 == True and moonglitches.glitch10 == True:
-                renpy.play("orex_sfx_sparkle.ogg") # solved!
+                renpy.play("chime.ogg") # solved!
                 solves.loop4 = True
                 hintlist.list.append("{b}Sealed glitch " + str(sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4])) + " of 5{/b}\n")
                 hints.seen_hint = False
@@ -39,7 +39,7 @@ label init_loop4puzzle:
                 flowers.flower3 = True
                 config.rollback_enabled = True
             elif g10 == True and renpy.is_skipping() and hints.hint2 and not hints.hint9:
-                renpy.play("orex_sfx_sparkle.ogg")
+                renpy.play("chime.ogg")
                 hintlist.list.append(hint_9)
                 hints.hint9 = True
                 hints.seen_hint = False

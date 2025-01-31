@@ -115,13 +115,13 @@ label outside:
 
     if not hints.hint1:
         # play animation to indicate new hint
-        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ renpy.play("chime.ogg")
         $ hintlist.list.append(hint_1)
         $ hints.hint1 = True
         $ hints.seen_hint = False
     if not hints.hint4 and run > 1:
         # play animation to indicate new hint
-        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ renpy.play("chime.ogg")
         $ hintlist.list.append(hint_4)
         $ hints.hint4 = True
         $ hints.seen_hint = False

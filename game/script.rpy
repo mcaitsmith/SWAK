@@ -438,7 +438,7 @@ label reinit_vars:
 
     if not hints.hint8:
         # play animation to indicate new hint
-        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ renpy.play("chime.ogg")
         $ hintlist.list.append(hint_8)
         $ hints.hint8 = True
         $ hints.seen_hint = False

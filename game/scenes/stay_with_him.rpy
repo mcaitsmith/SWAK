@@ -178,7 +178,7 @@ label stay_with_him:
 
     if not hints.hint10:
         # play animation to indicate new hint
-        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ renpy.play("chime.ogg")
         $ hintlist.list.append(hint_10)
         $ hints.hint10 = True
         $ hints.seen_hint = False

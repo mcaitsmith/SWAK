@@ -235,14 +235,14 @@ label dinner_convo:
                 # glitch 3
                 if run == 3 and not solves.loop3_2 and not hints.hint2:
                     $ hintlist.list.append(hint_2)
-                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ renpy.play("chime.ogg")
                     # play animation to indicate new hint
                     $ hints.hint2 = True
                     $ hints.seen_hint = False
                 if run == 3 and not solves.loop3_2 and hints.hint2 and not hints.hint5 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
                     $ hintlist.list.append(hint_5)
                     # play animation to indicate new hint
-                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ renpy.play("chime.ogg")
                     $ hints.hint5 = True
                     $ hints.seen_hint = False
                 if run == 3 and not solves.loop3_2:
@@ -250,7 +250,7 @@ label dinner_convo:
                 if run == 3 and not solves.loop3_2 and not hints.hint3:
                     $ hintlist.list.append(hint_3)
                     # play animation to indicate new hint
-                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ renpy.play("chime.ogg")
                     $ hints.hint3 = True
                     $ hints.seen_hint = False
             # "{color=#0f0}You know Dad is having an affair right?{/color}" if smoke_break and not flowers.flower3:
@@ -320,13 +320,13 @@ label dinner_convo:
                 if flowers.flower3 and run == 3 and not solves.loop3_3:
                     if not hints.hint5 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
                         $ hintlist.list.append(hint_5)
-                        $ renpy.play("orex_sfx_sparkle.ogg")
+                        $ renpy.play("chime.ogg")
                         # play animation to indicate new hint
                         $ hints.hint5 = True
                         $ hints.seen_hint = False
                 if flowers.flower3 and run == 3 and not solves.loop3_3 and not hints.hint2:
                     $ hintlist.list.append(hint_2)
-                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ renpy.play("chime.ogg")
                     # play animation to indicate new hint
                     $ hints.hint2 = True
                     $ hints.seen_hint = False
@@ -339,7 +339,7 @@ label dinner_convo:
                 if flowers.flower3 and run == 3 and not solves.loop3_3 and hints.hint2 and not hints.hint3:
                     $ hintlist.list.append(hint_3)
                     # play animation to indicate new hint
-                    $ renpy.play("orex_sfx_sparkle.ogg")
+                    $ renpy.play("chime.ogg")
                     $ hints.hint3 = True
                     $ hints.seen_hint = False
                 # if not flowers.flower3:
@@ -568,7 +568,7 @@ label argument:
             $ moonglitch5 = True
         if run == 2 and loop2_investigate and not hints.hint2:
             $ hintlist.list.append(hint_2)
-            $ renpy.play("orex_sfx_sparkle.ogg")
+            $ renpy.play("chime.ogg")
             # play animation to indicate new hint
             $ hints.hint2 = True
             $ hints.seen_hint = False
@@ -610,7 +610,7 @@ label argument:
         if run == 2 and loop2_investigate and not hints.hint3:
             $ hintlist.list.append(hint_3)
             # play animation to indicate new hint
-            $ renpy.play("orex_sfx_sparkle.ogg")
+            $ renpy.play("chime.ogg")
             $ hints.hint3 = True
             $ hints.seen_hint = False
         menu:
@@ -674,14 +674,14 @@ label cody_in_room:
     # glitch 3
     if not solves.loop3_2 and not hints.hint2:
         $ hintlist.list.append(hint_2)
-        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ renpy.play("chime.ogg")
         # play animation to indicate new hint
         $ hints.hint2 = True
         $ hints.seen_hint = False
     if run == 3 and not solves.loop3_2 and hints.hint2 and not hints.hint5 and sum([solves.loop2,solves.loop3_1,solves.loop3_2,solves.loop3_3,solves.loop4]) > 0:
         $ hintlist.list.append(hint_5)
         # play animation to indicate new hint
-        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ renpy.play("chime.ogg")
         $ hints.hint5 = True
         $ hints.seen_hint = False
     if run == 3 and not solves.loop3_2:
@@ -689,7 +689,7 @@ label cody_in_room:
     if run == 3 and not solves.loop3_2 and not hints.hint3:
         $ hintlist.list.append(hint_3)
         # play animation to indicate new hint
-        $ renpy.play("orex_sfx_sparkle.ogg")
+        $ renpy.play("chime.ogg")
         $ hints.hint3 = True
         $ hints.seen_hint = False
     return
