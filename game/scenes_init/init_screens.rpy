@@ -176,12 +176,23 @@ label init_screens:
     screen endscreenq:
         text "{size=100}END?{/size}" xalign 0.5 yalign 0.5
 
-    transform endflip:
-        xalign 0.5 
-        yalign 0.5 
-        xzoom -1.0
+    # transform endflip:
+    #     xalign 0.5 
+    #     yalign 0.5 
+    #     xzoom -1.0
+    # screen endscreenqr:
+    #     text "{size=100}END?{/size}" at endflip
     screen endscreenqr:
-        text "{size=100}END?{/size}" at endflip
+        text "{size=100}END{/size}" xalign 0.5 yalign 0.8
+
+    screen creditscreen:
+        text "{font=retro_party.ttf}{size=100}CREDITS{/size}{/font}" xalign 0.5 yalign 0.2
+        text "{a=https://itch.io/profile/merrygold}Merrygold{/a} - Programmer and Designer" xalign 0.5 yalign 0.35
+        text "{a=https://itch.io/profile/patty-o}Patty-O{/a} - Writer" xalign 0.5 yalign 0.4
+        text "{a=https://ryu-san.itch.io/}Ryu_San{/a} - Character Artist" xalign 0.5 yalign 0.45
+        text "CorvidClowns & {a=https://tooooffeeart.itch.io/}TooooffeeArt{/a} - Background Artists" xalign 0.5 yalign 0.5
+        text "{a=www.circlesinthesky.com}Skyler Newsome{/a} - Composer" xalign 0.5 yalign 0.55
+        text "Special thanks to Vika for playtesting" xalign 0.5 yalign 0.65
 
     screen hintstory:
 

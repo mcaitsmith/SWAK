@@ -19,7 +19,12 @@ label mainrun:
         jump runstart
 
     if true_ending:
-        "CREDITS HERE"
+        # "CREDITS HERE"
+        show screen creditscreen
+        show screen endscreenqr
+        $ renpy.pause()
+        hide screen creditscreen
+        hide screen endscreenqr
         stop music fadeout 2.0
         hide screen eclipse onlayer background_overlay with dissolve
         pause 1.0
